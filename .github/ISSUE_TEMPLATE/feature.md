@@ -1,20 +1,20 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
-title: ''
+name: Feature
+about: Feature planned with details
+title: 'feat/'
 labels: type:feature
 assignees: Librarian-of-Stars
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+**Feature Overview**
+(what does it do?)
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+**Implemetation Details**
+(how does it do that?)
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+**Options/Choices**
+(what else would work?)
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+**Context/Links**
+(what is this related too?)
