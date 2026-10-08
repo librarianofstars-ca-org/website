@@ -4,6 +4,10 @@
 
 	// List of extensions which should be recommended for users of this workspace.
 	"recommendations": [
+		"yzhang.markdown-all-in-one",
+		"davidanson.vscode-markdownlint",
+		"redhat.vscode-yaml",
+		"oderwat.indent-rainbow"
 		
 	],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
