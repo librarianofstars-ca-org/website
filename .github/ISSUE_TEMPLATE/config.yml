@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Librarian Of Stars Email
-    url: "mailto:support@librarianofstars.ca"
-    about: Ask any questions you have here if not directly related to the code
+  - name: "Librarian Of Stars"
+    url: "https://contact.librarianofstars.ca"
+    about: "Ask any questions you have here (via email) if not directly related to the code."
