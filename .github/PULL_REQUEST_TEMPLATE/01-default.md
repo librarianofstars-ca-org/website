@@ -1,11 +1,17 @@
 # Pull Request
 
-Overview:
+(Overview of purpose)
 
-## The issue this pull request closes/is for
+## Issue
 
-## Description of the changes and/or additions made
+(The issue this pull request closes/is for)
 
-## Other thoughts for further plans
+## Changelog
 
-By Librarian Of Stars
+(Description of the changes and/or additions made, high to mid level abstraction)
+
+## Future
+
+(Other thoughts for further plans?)
+
+*By Librarian Of Stars*

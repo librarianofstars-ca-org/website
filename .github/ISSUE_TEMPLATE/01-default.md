@@ -1,20 +1,19 @@
 ---
-name: Feature
-about: Feature planned with details
-title: 'feat/'
-labels: type:feature
+name: Default
+about: Misc Issue / custom style
+title: ''
+labels: 
 assignees: Librarian-of-Stars
-
 ---
 
-**Feature Overview**
-(what does it do?)
+**Overview**
+(what are you issueing this for?)
 
-**Implemetation Details**
-(how does it do that?)
+**Details**
+(what would we need to do to complete this?)
 
 **Options/Choices**
-(what else would work?)
+(what other ways would work?)
 
 **Context/Links**
 (what is this related too?)
