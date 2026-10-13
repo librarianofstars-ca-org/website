@@ -9,8 +9,11 @@ This readme is still under constuction! come back later
 
 ### Version
 
-    Currently: 0.0.0
+    Currently: 0.0.1
 
 ### Changes
 
-    - nothing yet
+### 0.0.1
+
+- feat/templates for issue and pull requests, useful for issue-driven development.
+- feat/page landing for a simmple homepage for the site.
