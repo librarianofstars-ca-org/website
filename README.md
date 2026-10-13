@@ -3,4 +3,14 @@
 *readme*
 The main `librarianofstars.ca` website content, including design, projects and links, and more.
 
-This readme is still under constuction! come back later 
+This readme is still under constuction! come back later
+
+## Updates
+
+### Version
+
+    Currently: 0.0.0
+
+### Changes
+
+    - nothing yet
