@@ -7,7 +7,14 @@
 		"yzhang.markdown-all-in-one",
 		"davidanson.vscode-markdownlint",
 		"redhat.vscode-yaml",
-		"oderwat.indent-rainbow"
+		"oderwat.indent-rainbow",
+		"pkief.material-icon-theme",
+		"sdras.night-owl",
+		"ms-vscode-remote.remote-wsl",
+		"dbaeumer.vscode-eslint",
+		"github.vscode-pull-request-github",
+		"stylelint.vscode-stylelint",
+		"dotjoshjohnson.xml"
 		
 	],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
