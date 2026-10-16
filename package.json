@@ -1,0 +1,25 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "my website",
+  "keywords": [
+    "website",
+    "site",
+    "personal"
+  ],
+  "homepage": "https://github.com/librarianofstars-ca-org/website#readme",
+  "bugs": {
+    "url": "https://github.com/librarianofstars-ca-org/website/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/librarianofstars-ca-org/website.git"
+  },
+  "license": "ISC",
+  "author": "Librarian of Stars",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"no tests yet!\""
+  }
+}
