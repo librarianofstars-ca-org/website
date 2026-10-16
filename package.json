@@ -21,6 +21,8 @@
   },
   "license": "ISC",
   "author": "Librarian of Stars",
+  "dependencies": {},
+  "devDependencies": {},
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
