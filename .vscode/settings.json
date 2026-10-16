@@ -8,5 +8,14 @@
     "**/app/**/template.tsx": "${dirname(1)}/${dirname} - template.tsx",
     "**/app/**/default.tsx": "${dirname(1)}/${dirname} - default.tsx",
     "**/app/**/route.ts": "${dirname(1)}/${dirname} - route.ts"
-  }
+  },
+  "editor.detectIndentation": false,
+  "editor.tabSize": 4,
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.tabSize": 2
+  },
+  "editor.insertSpaces": true
 }
