@@ -31,9 +31,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint",
-    "lint:fix": "eslint --fix"
+    "start": "next start"
   },
   "devDependencies": {
     "@types/node": "26.6.5",
