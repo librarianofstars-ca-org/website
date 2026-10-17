@@ -1,4 +1,4 @@
-import Head from "@/components/meta";
+import { PageHead, PageBody } from "@/components/meta";
 
 import "@/styles/base.css";
 
@@ -12,8 +12,8 @@ export default function RootLayout({
       lang="en"
       className="style-root"
     >
-      <Head />
-      <body>{children}</body>
+      <PageHead />
+      <PageBody>{children}</PageBody>
     </html>
   );
 }
