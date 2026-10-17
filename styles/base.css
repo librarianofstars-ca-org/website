@@ -1,5 +1,5 @@
 html.style-root {
     /* Some Vars Set */
     --text-small: 16px;
-    --text-large: var(--text-small) * 2;
+    --text-large: calc(var(--text-small) * 2);
 }
