@@ -5,6 +5,9 @@ import Header from "@/components/page_structure/header";
 import Sidebar from "@/components/page_structure/sidebar";
 import Main from "@/components/page_structure/sidebar";
 
+import "@/styles/shared.css";
+import "@/styles/app/homepage.css";
+
 export default function RootPage() {
   return (
     <>

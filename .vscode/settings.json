@@ -33,5 +33,54 @@
   "inlineChat.fixDiagnostics": false,
   "chat.disableAIFeatures": true,
   "html.format.indentInnerHtml": true,
-  "html.format.wrapAttributes": "force-expand-multiline"
+  "html.format.wrapAttributes": "force-expand-multiline",
+  "githubPullRequests.queries": [
+	{
+		"label": "My Review Needed",
+		"query": "is:open review-requested:${user}"
+	},
+	{
+		"label": "Assigned To Me",
+		"query": "is:open assignee:${user}"
+	},
+	{
+		"label": "Created By Me",
+		"query": "author:${user}"
+	},
+	{
+		"label": "Mentions Me",
+		"query": "is:open mentions:${user}"
+	},
+	{
+		"label": "Other Open In My Repo",
+		"query": "is:open -assignee:${user} repo:${owner}/${repository}"
+	}
+  ],
+  "githubIssues.queries": [
+    {
+      "label": "My Issues",
+      "query": "is:open assignee:${user} repo:${owner}/${repository}",
+      "groupBy": [
+        "milestone"
+      ]
+    },
+    {
+      "label": "Open Issues",
+      "query": "state:open repo:${owner}/${repository} sort:name"
+    },
+    {
+      "label": "Recent Issues",
+      "query": "state:open repo:${owner}/${repository} sort:updated-desc"
+    }
+  ],
+  "githubIssues.issueBranchTitle": "${user}/${sanitizedLowercaseIssueTitle}",
+  "githubIssues.workingBaseBranch": "prompt",
+  "githubPullRequests.createDefaultBaseBranch": "createdFromBranch",
+  "githubPullRequests.deleteBranchAfterMerge": true,
+  "githubPullRequests.defaultDeletionMethod.selectLocalBranch": true,
+  "githubPullRequests.defaultDeletionMethod.selectRemote": true,
+  "githubPullRequests.postDone": "checkoutPullRequestBaseBranchAndPull",
+  "githubPullRequests.ignoreSubmodules": true,
+  "githubPullRequests.labelCreated": ["status:ready",]
+
 }
