@@ -67,4 +67,14 @@
       "query": "state:open repo:${owner}/${repository} sort:updated-desc"
     }
   ],
+  "githubIssues.issueBranchTitle": "${user}/${issueType}/${sanitizedLowercaseIssueTitle}",
+  "githubIssues.workingBaseBranch": "prompt",
+  "githubPullRequests.createDefaultBaseBranch": "createdFromBranch",
+  "githubPullRequests.deleteBranchAfterMerge": true,
+  "githubPullRequests.defaultDeletionMethod.selectLocalBranch": true,
+  "githubPullRequests.defaultDeletionMethod.selectRemote": true,
+  "githubPullRequests.postDone": "checkoutPullRequestBaseBranchAndPull",
+  "githubPullRequests.ignoreSubmodules": true,
+  "githubPullRequests.labelCreated": ["status:ready",]
+
 }
