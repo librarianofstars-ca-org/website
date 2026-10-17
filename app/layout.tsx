@@ -1,4 +1,4 @@
-import Head from "@/components/meta";
+import PageHead from "@/components/meta";
 
 export default function RootLayout({
   children,
@@ -7,7 +7,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head />
+      <PageHead />
       <body>{children}</body>
     </html>
   );

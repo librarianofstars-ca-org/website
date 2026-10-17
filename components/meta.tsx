@@ -1,4 +1,4 @@
-export default function Head() {
+export default function PageHead() {
   return (
     <head>
       {/* standard charset for web dev */}
