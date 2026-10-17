@@ -1,4 +1,4 @@
-export default function PageHead() {
+export function PageHead() {
   return (
     <head>
       {/* standard charset for web dev */}
@@ -47,4 +47,8 @@ export default function PageHead() {
     /> --> */}
     </head>
   );
+}
+
+export function PageBody({ children }) {
+  return <body>{children}</body>;
 }
