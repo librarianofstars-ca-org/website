@@ -20,13 +20,6 @@ export function PageHead() {
         content="Librarian Of Stars"
       />
 
-      {/* <!-- Links -->
-      <!-- Styling --> */}
-      {/* <link
-        rel="stylesheet"
-        href="./base.css"
-        type="text/css"
-      /> */}
       {/* <!-- Web icons -->
     <!-- TODO: Create and add custom icons. -->
     <!--

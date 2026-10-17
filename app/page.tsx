@@ -45,7 +45,3 @@ export default function RootPage() {
     </>
   );
 }
-// <!-- TODO: Add divs and construct a simple page layout. -->
-// <!-- - Link/Nav header (or sidebar) -->
-// <!-- - main body of page -->
-// <!-- - header structure, maybe diferent sections (about me, account links, more.) -->
