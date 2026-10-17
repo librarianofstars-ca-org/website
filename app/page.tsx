@@ -1,3 +1,5 @@
+import Gallery, { GalleryItem } from "@/components/content_blocks/gallery";
+import ParagraphBlock from "@/components/content_blocks/paragraph_block";
 import Footer from "@/components/page_structure/footer";
 import Header from "@/components/page_structure/header";
 import Sidebar from "@/components/page_structure/sidebar";
@@ -7,7 +9,9 @@ export default function RootPage() {
   return (
     <>
       <Header />
-      <Sidebar>*table of contents*</Sidebar>
+      <Sidebar>
+        <p>*table of contents*</p>
+      </Sidebar>
       <Main>
         <ParagraphBlock>
           <p>Some content served.</p>
