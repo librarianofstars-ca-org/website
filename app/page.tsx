@@ -19,6 +19,20 @@ export default function RootPage() {
             test: <a href="./index.html">link testing (back to here)</a>
           </p>
         </ParagraphBlock>
+        <Gallery>
+          <GalleryItem>
+            <p>Example One</p>
+          </GalleryItem>
+          <GalleryItem>
+            {
+              <img
+                width="100"
+                height="100"
+                src={"./example_two.jpeg"}
+              />
+            }
+          </GalleryItem>
+        </Gallery>
       </Main>
       <Footer>Created by Librarian of Stars</Footer>
     </>
