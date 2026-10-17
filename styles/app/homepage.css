@@ -1,3 +1,5 @@
+/* Styles specific to the homepage/root dir of the site. */
+
 h1 {
     color: blue;
     font-size: var(--text-large);

@@ -1,3 +1,5 @@
+/* Holds Site-wide settings (as variables), provides a source of truth for styles */
+
 html.style-root {
     /* Some Vars Set */
     --text-small: 16px;

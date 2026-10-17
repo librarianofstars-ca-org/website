@@ -1,3 +1,5 @@
+/* Style properties shared amoung all elements site-wide */
+
 p {
     color: aqua;
     tab-size: var(--text-small);
