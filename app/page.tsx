@@ -9,14 +9,16 @@ export default function RootPage() {
       <Header />
       <Sidebar>*table of contents*</Sidebar>
       <Main>
-        <p>Some content served.</p>
-        <p>
-          This can have links to other parts of the page (or other sites), other
-          projects or ideas, or anything I want ot put here.
-        </p>
-        <p>
-          test: <a href="./index.html">link testing (back to here)</a>
-        </p>
+        <ParagraphBlock>
+          <p>Some content served.</p>
+          <p>
+            This can have links to other parts of the page (or other sites),
+            other projects or ideas, or anything I want ot put here.
+          </p>
+          <p>
+            test: <a href="./index.html">link testing (back to here)</a>
+          </p>
+        </ParagraphBlock>
       </Main>
       <Footer>Created by Librarian of Stars</Footer>
     </>
