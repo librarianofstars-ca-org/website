@@ -1,3 +1,6 @@
+import "@/styles/shared.css";
+import "@/styles/app/homepage.css";
+
 export default function Page() {
   return (
     <>

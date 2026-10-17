@@ -21,14 +21,13 @@ export default function Head() {
       />
 
       {/* <!-- Links -->
-    <!-- Styling -->
-    <!-- TODO: Create styling sheet and use it for the page. -->
-    <!-- <link
-      rel="stylesheet"
-      href="example.css"
-      type="text/css"
-    /> -->
-    <!-- Web icons -->
+      <!-- Styling --> */}
+      {/* <link
+        rel="stylesheet"
+        href="./base.css"
+        type="text/css"
+      /> */}
+      {/* <!-- Web icons -->
     <!-- TODO: Create and add custom icons. -->
     <!--
     <link
