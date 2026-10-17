@@ -1,4 +1,5 @@
 import Head from "@/components/meta";
+import "@/styles/base.css";
 import "@/styles/shared.css";
 
 export default function RootLayout({

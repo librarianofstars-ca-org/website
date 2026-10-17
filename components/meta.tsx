@@ -22,11 +22,11 @@ export default function Head() {
 
       {/* <!-- Links -->
       <!-- Styling --> */}
-      <link
+      {/* <link
         rel="stylesheet"
         href="./base.css"
         type="text/css"
-      />
+      /> */}
       {/* <!-- Web icons -->
     <!-- TODO: Create and add custom icons. -->
     <!--
