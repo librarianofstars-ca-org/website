@@ -17,5 +17,15 @@
   "[json]": {
     "editor.tabSize": 2
   },
-  "editor.insertSpaces": true
+  "editor.insertSpaces": true,
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay",
+  "chat.agent.enabled": false,
+  "chat.agent.sandbox.network.allowNetwork": false,
+  "chat.agent.sandbox.allowUnsandboxedCommands": false,
+  "chat.mcp.access": "none",
+  "inlineChat.fixDiagnostics": false,
+  "chat.disableAIFeatures": true,
+  "html.format.indentInnerHtml": true,
+  "html.format.wrapAttributes": "force-expand-multiline"
 }
