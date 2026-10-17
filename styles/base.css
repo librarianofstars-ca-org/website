@@ -1,0 +1,5 @@
+::root {
+    /* Some Vars Set */
+    --text-small: 16px;
+    --text-large: var(--text-small) * 2;
+}

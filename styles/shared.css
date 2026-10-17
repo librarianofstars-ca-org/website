@@ -1,0 +1,4 @@
+p {
+    color: aqua;
+    tab-size: var(--text-small);
+}
