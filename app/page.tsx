@@ -1,7 +1,9 @@
-export default function Page() {
+import Header from "@/components/page_structure/header";
+
+export default function RootPage() {
   return (
     <>
-      <h1>Librarian Of Stars' website!</h1>
+      <Header />
       <p>Some content served.</p>
       <p>
         This can have links to other parts of the page (or other sites), other
