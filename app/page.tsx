@@ -3,7 +3,7 @@ import ParagraphBlock from "@/components/content_blocks/paragraph_block";
 import Footer from "@/components/page_structure/footer";
 import Header from "@/components/page_structure/header";
 import Sidebar from "@/components/page_structure/sidebar";
-import Main from "@/components/page_structure/sidebar";
+import Main from "@/components/page_structure/main";
 
 import "@/styles/shared.css";
 import "@/styles/app/homepage.css";
