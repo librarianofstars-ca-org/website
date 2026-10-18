@@ -1,5 +1,7 @@
 import "@/styles/components/page_structure/shared.css";
 
+import Seperator from "@/components/page_structure/seperator";
+
 import NavigationBar from "./nav_bar";
 
 export default function Header(props) {
@@ -17,5 +19,10 @@ export function PageTitle({ children }) {
 }
 
 export function HeaderSeperator() {
-  return <hr className="page-seperator horizontal header" />;
+  return (
+    <Seperator
+      isVertical={false}
+      className="header"
+    />
+  );
 }

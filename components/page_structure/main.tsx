@@ -1,5 +1,7 @@
 import "@/styles/components/page_structure/shared.css";
 
+import Seperator from "@/components/page_structure/seperator";
+
 export default function Main({ children }) {
   return (
     <div className="main-body">
@@ -11,5 +13,10 @@ export default function Main({ children }) {
 }
 
 function MainSeperator() {
-  return <hr className="page-seperator vertical main-body" />;
+  return (
+    <Seperator
+      isVertical={false}
+      className="header"
+    />
+  );
 }
