@@ -1,5 +1,5 @@
 /* Style properties shared amoung all elements site-wide */
 * {
-    font: inherit;
+    /* font: inherit; */
     background-color: #909090;
 }
