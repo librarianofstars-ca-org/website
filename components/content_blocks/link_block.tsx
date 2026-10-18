@@ -1,15 +1,17 @@
 import Link from "next/link";
 
+import "@/styles/components/content_blocks/link_block.css"
+
 export default function LinkBLock({ blockTitle, describedLinks }) {
   return (
-    <>
+    <div className="link-block">
       <h3>{blockTitle}</h3>
       <dl>
         {describedLinks.map((link) => (
           <LinkItem key={link.id} describedLink={link} />
         ))}
       </dl>
-    </>
+    </div>
   );
 }
 

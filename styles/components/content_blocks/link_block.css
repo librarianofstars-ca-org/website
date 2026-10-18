@@ -1,0 +1,50 @@
+div.section.content:has(div.link-block) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+div.link-block {
+    border: 1px solid black;
+    margin: var(--size-lg)
+}
+
+div.link-block h3 {
+    margin-inline: auto;
+    padding-inline: var(--size-sm);
+    border-bottom: var(--size-tn) solid green;
+}
+
+div.link-block dl {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+    grid-auto-rows: 1fr;
+    align-items: center;
+}
+
+div.link-block dl dt { 
+    display: contents;
+}
+
+div.link-block dl dt p {
+    grid-column: 1 2;
+    justify-self: end;
+}
+
+div.link-block dl dt p::after {
+    content: ": ";
+}
+
+div.link-block dl dt a {
+    grid-column: 2 3;
+    justify-self: start;
+    padding-inline: var(--size-sm);
+}
+
+div.link-block dl dd { 
+    grid-column: -2 -1;
+    text-align: center;
+    justify-self: center;
+
+    margin-inline: var(--size-lg);
+}
