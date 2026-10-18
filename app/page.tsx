@@ -1,5 +1,7 @@
 import Gallery, { GalleryItem } from "@/components/content_blocks/gallery";
 import ParagraphBlock from "@/components/content_blocks/paragraph_block";
+import Section from "@/components/content_blocks/section";
+
 import Footer from "@/components/page_structure/footer";
 import Header from "@/components/page_structure/header";
 import Sidebar from "@/components/page_structure/sidebar";
@@ -51,6 +53,10 @@ export default function RootPage() {
             }
           </GalleryItem>
         </Gallery>
+        <Section sectionTitle={"Welcome"}>
+          <p>Welcome to my site</p>
+          <p>Some more info</p>
+        </Section>
       </Main>
       <Footer>Created by Librarian of Stars</Footer>
     </>
