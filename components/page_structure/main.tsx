@@ -6,18 +6,18 @@ import Seperator from "@/components/page_structure/seperator";
 export default function Main({ children }) {
   return (
     <div className="main-body">
-      <MainSeperator />
+      <MainSeperator isStart={true} />
       {children}
-      <MainSeperator />
+      <MainSeperator isStart={false} />
     </div>
   );
 }
 
-function MainSeperator() {
+function MainSeperator({ isStart }) {
   return (
     <Seperator
       isVertical={false}
-      className="header"
+      className={"main " + (isStart ? "start" : "end")}
     />
   );
 }
