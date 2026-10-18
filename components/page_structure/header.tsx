@@ -6,7 +6,6 @@ import Seperator from "@/components/page_structure/seperator";
 
 import NavigationBar from "./nav_bar";
 
-type navlinks = Array<{ id: string; linked: string; display: string }>;
 let defaultlinks: navlinks = Array(
   { id: "0", linked: "./", display: "example" },
   { id: "1", linked: "./about", display: "About Me!" },

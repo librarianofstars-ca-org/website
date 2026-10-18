@@ -6,17 +6,10 @@ import Seperator from "@/components/page_structure/seperator";
 
 import Link from "next/link";
 
-export default function NavigationBar({
-  links,
-}: {
-  links: [
-    ...{
-      id: string;
-      linked: string;
-      display: string;
-    }[],
-  ];
-}) {
+export type navlink = { id: string; linked: string; display: string };
+export type navlinks = Array<navlink>;
+
+export default function NavigationBar({ links }: { links: navlinks }) {
   return (
     <nav>
       {/* Icon / Logo */}
