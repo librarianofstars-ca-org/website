@@ -21,6 +21,7 @@ export default function NavigationBar({
     <nav>
       {/* Icon / Logo */}
       <NavSeperator />
+      <NavSpacer />
       <ol className="nav-bar-links">
         {links.map((link) => (
           <li
@@ -37,7 +38,7 @@ export default function NavigationBar({
         ))}
       </ol>
       <NavSeperator />
-      {/* space */}
+      <NavSpacer />
     </nav>
   );
 }
@@ -49,4 +50,8 @@ export function NavSeperator() {
       className="nav-bar-sep"
     />
   );
+}
+
+export function NavSpacer() {
+  return <div className="nav-spacer" />;
 }
