@@ -13,7 +13,15 @@ export default function RootPage() {
     <>
       <Header />
       <Sidebar>
-        <p>*table of contents*</p>
+        <h2>table of contents</h2>
+        <h3>Welcome</h3>
+        <h3>Links</h3>
+        <h4>Internal</h4>
+        <h4>External</h4>
+        <h3>About Me</h3>
+        <h4>Personal</h4>
+        <h5>Pronouns</h5>
+        <h6>Options</h6>
       </Sidebar>
       <Main>
         <ParagraphBlock>
