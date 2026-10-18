@@ -1,7 +1,8 @@
-body {
+#page {
     display: grid;
-    grid-template-areas: "hr hr hr hr" 
-    "sb mn mn mn"
-    "sb mn mn mn"
-    "ft ft ft ft";
+    grid-template: "hr hr" max-content
+    "sb mn" 
+    ".  mn" 
+    "ft ft" max-content
+    / 1fr 3fr;
 }

@@ -42,5 +42,5 @@ export function PageHead() {
 }
 
 export function PageBody({ children }) {
-  return <body>{children}</body>;
+  return <body id="page">{children}</body>;
 }
