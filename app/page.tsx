@@ -10,12 +10,13 @@ import Main from "@/components/page_structure/main";
 import "@/styles/shared.css";
 import "@/styles/app/shared.css";
 import "@/styles/app/homepage.css";
+import Link from "next/link";
 
 export default function RootPage() {
   return (
     <>
       <Header
-        // specificNavLinks={[{ id: "3", linked: "./example", display: "test" }]}
+      // specificNavLinks={[{ id: "3", linked: "./example", display: "test" }]}
       />
       <Sidebar>
         <h2>table of contents</h2>
@@ -29,6 +30,26 @@ export default function RootPage() {
         <h6>Options</h6>
       </Sidebar>
       <Main>
+        <Section sectionTitle={"Welcome"}>
+          <p>Welcome to my site</p>
+          <p>Some more info</p>
+        </Section>
+        <Section sectionTitle={"Links"}>
+          <h3>Internal</h3>
+          <dl>
+            <dl>Name</dl>
+            <dd>
+              <Link href={"./example"}>Link</Link>
+            </dd>
+          </dl>
+          <h3>External</h3>
+          <dl>
+            <dl>Name</dl>
+            <dd>
+              <Link href={"./example"}>Link</Link>
+            </dd>
+          </dl>
+        </Section>
         <ParagraphBlock>
           <p>Some content served.</p>
           <p>
@@ -53,10 +74,6 @@ export default function RootPage() {
             }
           </GalleryItem>
         </Gallery>
-        <Section sectionTitle={"Welcome"}>
-          <p>Welcome to my site</p>
-          <p>Some more info</p>
-        </Section>
       </Main>
       <Footer>Created by Librarian of Stars</Footer>
     </>
