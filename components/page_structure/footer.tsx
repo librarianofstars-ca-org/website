@@ -1,3 +1,4 @@
+import "@/styles/components/shared.css";
 import "@/styles/components/page_structure/shared.css";
 import "@/styles/components/page_structure/footer.css";
 

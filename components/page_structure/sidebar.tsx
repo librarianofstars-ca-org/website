@@ -1,3 +1,4 @@
+import "@/styles/components/shared.css";
 import "@/styles/components/page_structure/shared.css";
 import "@/styles/components/page_structure/sidebar.css";
 
@@ -17,7 +18,7 @@ export function SideBarSeperator() {
   return (
     <Seperator
       isVertical={true}
-      className="sidebar" 
+      className="sidebar"
     />
   );
 }

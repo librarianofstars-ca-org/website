@@ -1,3 +1,5 @@
+import "@/styles/components/shared.css";
+
 export default function Gallery({ children }) {
   return <ul className="gallery">{children}</ul>;
 }

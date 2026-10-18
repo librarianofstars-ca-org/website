@@ -1,3 +1,5 @@
+import "@/styles/components/shared.css";
+
 import { JSX } from "react/jsx-runtime";
 
 export default function ParagraphBlock(
