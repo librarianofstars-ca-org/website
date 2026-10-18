@@ -5,9 +5,9 @@ import Seperator from "@/components/page_structure/seperator";
 
 export default function Sidebar({ children }) {
   return (
-    <div className="sidebar">
+    <div className="sidebar wraper">
       <SideBarSeperator />
-      {children}
+      <div className="sidebar contents">{children}</div>
       <SideBarSeperator />
     </div>
   );
@@ -17,7 +17,7 @@ export function SideBarSeperator() {
   return (
     <Seperator
       isVertical={true}
-      className="sidebar"
+      className="sidebar" 
     />
   );
 }
