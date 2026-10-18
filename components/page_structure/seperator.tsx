@@ -1,9 +1,13 @@
 import "@/styles/components/page_structure/shared.css";
 
-export default function Seperator({ isVertical, ...props }) {
+export default function Seperator({ isVertical, className, ...props }) {
   return (
     <hr
-      className={"page-seperator " + isVertical ? "vertical" : "horizontal"}
+      className={
+        className +
+        " page-seperator " +
+        (isVertical ? "vertical" : "horizontal")
+      }
       {...props}
     />
   );
