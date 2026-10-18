@@ -1,0 +1,33 @@
+nav {
+    display: flex;
+    border: var(--size-tn) solid blue;
+    border-radius: var(--size-xs);
+}
+
+nav hr.nav-bar-sep {
+    margin-block: 0;
+    margin-inline: var(--size-lg);
+    background-color: blue;
+}
+
+nav ol.nav-bar-links {
+    display: contents;
+}
+
+nav li.nav-bar-link-item {
+    margin-block: var(--size-sm);
+    margin-inline: var(--size-lg);
+}
+nav li a.nav-link {
+    border: solid teal var(--size-tn);
+    border-radius: var(--size-xs);
+    padding: var(--size-xs);
+    background-color: #101010;
+}
+nav li a.nav-link:hover { 
+    background-color: #080808;
+}
+nav li.nav-bar-link-item::marker {
+    display: none;
+    content: "";
+}
