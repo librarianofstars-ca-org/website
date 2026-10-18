@@ -1,3 +1,5 @@
+import "@/styles/components/page_structure/shared.css";
+
 import NavigationBar from "./nav_bar";
 
 export default function Header(props) {

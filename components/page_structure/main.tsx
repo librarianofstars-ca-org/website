@@ -1,3 +1,5 @@
+import "@/styles/components/page_structure/shared.css";
+
 export default function Main({ children }) {
   return (
     <div className="main-body">

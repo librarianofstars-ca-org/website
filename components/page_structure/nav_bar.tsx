@@ -1,3 +1,5 @@
+import "@/styles/components/page_structure/shared.css";
+
 import Link from "next/link";
 
 export default function NavigationBar({
