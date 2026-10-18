@@ -22,24 +22,35 @@ export default function NavigationBar({
       {/* Icon / Logo */}
       <NavSeperator />
       <NavSpacer />
-      <ol className="nav-bar-links">
+      <NavLinks>
         {links.map((link) => (
-          <li
+          <NavLink
             key={link.id}
-            className="nav-bar-link-item"
-          >
-            <Link
-              href={link.linked}
-              className="nav-link"
-            >
-              {link.display}
-            </Link>
-          </li>
+            linked={link.linked}
+            display={link.display}
+          />
         ))}
-      </ol>
+      </NavLinks>
       <NavSeperator />
       <NavSpacer />
     </nav>
+  );
+}
+
+export function NavLinks({ children }) {
+  return <ol className="nav-bar-links"> {children} </ol>;
+}
+
+export function NavLink({ linked, display }) {
+  return (
+    <li className="nav-bar-link-item">
+      <Link
+        href={linked}
+        className="nav-link"
+      >
+        {display}
+      </Link>
+    </li>
   );
 }
 
