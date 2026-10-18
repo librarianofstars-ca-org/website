@@ -6,6 +6,7 @@ import Sidebar from "@/components/page_structure/sidebar";
 import Main from "@/components/page_structure/main";
 
 import "@/styles/shared.css";
+import "@/styles/app/shared.css";
 import "@/styles/app/homepage.css";
 
 export default function RootPage() {
