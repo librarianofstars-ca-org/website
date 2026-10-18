@@ -1,0 +1,7 @@
+body {
+    display: grid;
+    grid-template-areas: "hr hr hr hr" 
+    "sb mn mn mn"
+    "sb mn mn mn"
+    "ft ft ft ft";
+}
