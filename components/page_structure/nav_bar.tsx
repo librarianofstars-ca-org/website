@@ -1,5 +1,7 @@
 import "@/styles/components/page_structure/shared.css";
 
+import Seperator from "@/components/page_structure/seperator";
+
 import Link from "next/link";
 
 export default function NavigationBar({
@@ -16,6 +18,7 @@ export default function NavigationBar({
   return (
     <nav>
       {/* Icon / Logo */}
+      <NavSeperator />
       <ol className="nav-bar-links">
         {links.map((link) => (
           <li
@@ -31,6 +34,17 @@ export default function NavigationBar({
           </li>
         ))}
       </ol>
+      <NavSeperator />
+      {/* space */}
     </nav>
+  );
+}
+
+export function NavSeperator() {
+  return (
+    <Seperator
+      isVertical={true}
+      className="nav-bar-sep"
+    />
   );
 }
