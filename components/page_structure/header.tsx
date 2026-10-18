@@ -7,7 +7,12 @@ import NavigationBar from "./nav_bar";
 export default function Header(props) {
   return (
     <div className="header">
-      <NavigationBar links={[{ id: "0", linked: "./", display: "example" }]} />
+      <NavigationBar
+        links={[
+          { id: "0", linked: "./", display: "example" },
+          { id: "1", linked: "./about", display: "About Me!" },
+        ]}
+      />
       <PageTitle>Librarian Of Stars' Homepage!</PageTitle>
       <HeaderSeperator />
     </div>

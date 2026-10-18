@@ -1,4 +1,5 @@
 import "@/styles/components/page_structure/shared.css";
+import "@/styles/components/page_structure/navbar.css";
 
 import Seperator from "@/components/page_structure/seperator";
 
@@ -8,11 +9,11 @@ export default function NavigationBar({
   links,
 }: {
   links: [
-    {
+    ...{
       id: string;
       linked: string;
       display: string;
-    },
+    }[],
   ];
 }) {
   return (
