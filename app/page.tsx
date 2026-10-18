@@ -10,7 +10,7 @@ import Main from "@/components/page_structure/main";
 import "@/styles/shared.css";
 import "@/styles/app/shared.css";
 import "@/styles/app/homepage.css";
-import Link from "next/link";
+import LinkBLock from "@/components/content_blocks/link_block";
 
 export default function RootPage() {
   return (
@@ -35,20 +35,30 @@ export default function RootPage() {
           <p>Some more info</p>
         </Section>
         <Section sectionTitle={"Links"}>
-          <h3>Internal</h3>
-          <dl>
-            <dl>Name</dl>
-            <dd>
-              <Link href={"./example"}>Link</Link>
-            </dd>
-          </dl>
-          <h3>External</h3>
-          <dl>
-            <dl>Name</dl>
-            <dd>
-              <Link href={"./example"}>Link</Link>
-            </dd>
-          </dl>
+          <LinkBLock
+            blockTitle={"Internal"}
+            describedLinks={[
+              {
+                id: "0",
+                name: "example",
+                linked: "./example",
+                display: "Example Link",
+                description: "A Simple Example Link for testing",
+              },
+            ]}
+          />
+          <LinkBLock
+            blockTitle={"External"}
+            describedLinks={[
+              {
+                id: "0",
+                name: "example2",
+                linked: "./example/second",
+                display: "Example Link 2",
+                description: "A Simple Example Link for testing more things",
+              },
+            ]}
+          />
         </Section>
         <ParagraphBlock>
           <p>Some content served.</p>
