@@ -43,6 +43,8 @@ nav li.nav-bar-link-item::marker {
 }
 
 nav div.nav-spacer {
+    height: 0;
+    align-self: center;
     flex: 2 1 var(--size-lg);
 }
 nav div.nav-spacer.small {
