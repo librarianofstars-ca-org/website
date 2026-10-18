@@ -12,7 +12,9 @@ import "@/styles/app/homepage.css";
 export default function RootPage() {
   return (
     <>
-      <Header />
+      <Header
+        // specificNavLinks={[{ id: "3", linked: "./example", display: "test" }]}
+      />
       <Sidebar>
         <h2>table of contents</h2>
         <h3>Welcome</h3>

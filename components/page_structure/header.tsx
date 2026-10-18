@@ -4,17 +4,27 @@ import "@/styles/components/page_structure/header.css";
 
 import Seperator from "@/components/page_structure/seperator";
 
-import NavigationBar from "./nav_bar";
+import NavigationBar, { navlinks } from "@/components/page_structure/nav_bar";
 
 let defaultlinks: navlinks = Array(
   { id: "0", linked: "./", display: "example" },
   { id: "1", linked: "./about", display: "About Me!" },
 );
 
-export default function Header(props) {
+export default function Header({
+  specificNavLinks,
+}: {
+  specificNavLinks?: navlinks;
+}) {
+  let links: navlinks;
+  if (specificNavLinks) {
+    links = defaultlinks.concat(specificNavLinks);
+  } else {
+    links = defaultlinks;
+  }
   return (
     <div className="header">
-      <NavigationBar links={defaultlinks} />
+      <NavigationBar links={links} />
       <PageTitle>Librarian Of Stars' Homepage!</PageTitle>
       <HeaderSeperator />
     </div>
