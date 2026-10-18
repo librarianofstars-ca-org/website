@@ -1,4 +1,5 @@
 import "@/styles/components/page_structure/shared.css";
+import "@/styles/components/page_structure/footer.css";
 
 export default function Footer({ children }) {
   return (
