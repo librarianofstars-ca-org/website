@@ -10,7 +10,7 @@ export default function ParagraphBlock(
   return (
     <div className="paragraph-block">
       {children}
-      <br className="seperator end-paragraph-block" />
+      <hr className="seperator end-paragraph-block" />
     </div>
   );
 }

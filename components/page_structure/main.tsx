@@ -11,5 +11,5 @@ export default function Main({ children }) {
 }
 
 function MainSeperator() {
-  return <br className="page-seperator main-body" />;
+  return <hr className="page-seperator vertical main-body" />;
 }

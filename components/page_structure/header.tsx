@@ -17,5 +17,5 @@ export function PageTitle({ children }) {
 }
 
 export function HeaderSeperator() {
-  return <br className="page-seperator header" />;
+  return <hr className="page-seperator horizontal header" />;
 }
