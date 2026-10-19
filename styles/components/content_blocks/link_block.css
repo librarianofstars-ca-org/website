@@ -18,30 +18,36 @@ div.link-block h3 {
 div.link-block dl {
     display: grid;
     grid-template-columns: 1fr 2fr 3fr;
+    grid-template-rows: 2rem;
     grid-auto-rows: 1fr;
     align-items: center;
 }
 
-div.link-block dl dt { 
+div.link-block dl .head { 
+    grid-row: 1;
+    text-align: center;
+}
+
+div.link-block dl dt.body { 
     display: contents;
 }
 
-div.link-block dl dt p {
+div.link-block dl dt.body p {
     grid-column: 1 2;
     justify-self: end;
 }
 
-div.link-block dl dt p::after {
+div.link-block dl dt.body p::after {
     content: ": ";
 }
 
-div.link-block dl dt a {
+div.link-block dl dt.body a {
     grid-column: 2 3;
     justify-self: start;
     padding-inline: var(--size-sm);
 }
 
-div.link-block dl dd { 
+div.link-block dl dd.body { 
     grid-column: -2 -1;
     text-align: center;
     justify-self: center;

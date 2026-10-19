@@ -1,14 +1,18 @@
 import Link from "next/link";
 
-import "@/styles/components/content_blocks/link_block.css"
+import "@/styles/components/content_blocks/link_block.css";
 
 export default function LinkBLock({ blockTitle, describedLinks }) {
   return (
     <div className="link-block">
       <h3>{blockTitle}</h3>
       <dl>
+        <LinksHeader />
         {describedLinks.map((link) => (
-          <LinkItem key={link.id} describedLink={link} />
+          <LinkItem
+            key={link.id}
+            describedLink={link}
+          />
         ))}
       </dl>
     </div>
@@ -18,19 +22,21 @@ export default function LinkBLock({ blockTitle, describedLinks }) {
 export function LinkItem({ describedLink }) {
   return (
     <>
-      <dt>
+      <dt className="body">
         <p>{describedLink.name}: </p>
         <Link href={describedLink.linked}>{describedLink.display}</Link>
       </dt>
-      <dd>{describedLink.description}</dd>
+      <dd className="body">{describedLink.description}</dd>
+    </>
+  );
+}
+export function LinksHeader() {
+  return (
+    <>
+      <dt className="head type">Type</dt>
+      <dt className="head link">Link</dt>
+      <dd className="head disc">Discription</dd>
     </>
   );
 }
 
-// <h3>External</h3>
-// <dl>
-//   <dl>Name</dl>
-//   <dd>
-//     <Link href={"./example"}>Link</Link>
-//   </dd>
-// </dl>
