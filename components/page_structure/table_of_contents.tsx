@@ -18,6 +18,7 @@ export default function TableOfContents({
 }) {
   return (
     <div className="table-of-contents">
+      <TOCPlace place="start" />
       {contents_headers.map((content_header) => (
         <LinkedHeading
           key={content_header.order.toString() + "-order"}
@@ -27,6 +28,32 @@ export default function TableOfContents({
           className="toc-item"
         />
       ))}
+      <TOCPlace place="end" />
     </div>
   );
+}
+
+export function TOCPlace({ place }: { place: string }) {
+  switch (place) {
+    case "start":
+      return (
+        <LinkedHeading
+          key={"start"}
+          link={"page-start"}
+          contents={"Start Of Page"}
+          level={7}
+          className="toc-place"
+        />
+      );
+    case "end":
+      return (
+        <LinkedHeading
+          key={"end"}
+          link={"page-end"}
+          contents={"End Of Page"}
+          level={7}
+          className="toc-place"
+        />
+      );
+  }
 }

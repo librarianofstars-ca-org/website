@@ -3,3 +3,7 @@
     /* font: inherit; */
     background-color: #909090;
 }
+
+small.nav-id-hidden {
+    display: none;
+}
