@@ -4,6 +4,17 @@ import "@/styles/components/elements/heading.css";
 
 import { JSX } from "react/jsx-runtime";
 import Link from "next/link";
+import React from "react";
+
+let level_map: { [id: number]: string } = {
+  1: "h1",
+  2: "h2",
+  3: "h3",
+  4: "h4",
+  5: "h5",
+  6: "h6",
+  7: "small",
+};
 
 export default function Heading({
   contents,
@@ -16,91 +27,12 @@ export default function Heading({
   className?: string;
   id?: string;
 }) {
-  let display_heading: JSX.Element;
-  switch (level) {
-    case 1:
-      display_heading = (
-        <h1
-          className={className}
-          id={id}
-        >
-          {contents}
-        </h1>
-      );
-      break;
-    case 2:
-      display_heading = (
-        <h2
-          className={className}
-          id={id}
-        >
-          {contents}
-        </h2>
-      );
-      break;
-    case 3:
-      display_heading = (
-        <h3
-          className={className}
-          id={id}
-        >
-          {contents}
-        </h3>
-      );
-      break;
-    case 4:
-      display_heading = (
-        <h4
-          className={className}
-          id={id}
-        >
-          {contents}
-        </h4>
-      );
-      break;
-    case 5:
-      display_heading = (
-        <h5
-          className={className}
-          id={id}
-        >
-          {contents}
-        </h5>
-      );
-      break;
-    case 6:
-      display_heading = (
-        <h6
-          className={className}
-          id={id}
-        >
-          {contents}
-        </h6>
-      );
-      break;
-    case 7:
-      display_heading = (
-        <small
-          className={className}
-          id={id}
-        >
-          {contents}
-        </small>
-      );
-      break;
-    default:
-      display_heading = (
-        <p
-          className={className}
-          id={id}
-        >
-          Error: Not Correct Type in Heading "{level}"
-        </p>
-      );
-      break;
-  }
-
-  return display_heading;
+  // Means: <level_map[level] className={ className } id={ id }> {contents} </level_map[level]>
+  return React.createElement(
+    level_map[level],
+    { className: { className }, id: { id } },
+    contents,
+  );
 }
 
 export function IdentifiedHeading({ headingId, ...props }) {
