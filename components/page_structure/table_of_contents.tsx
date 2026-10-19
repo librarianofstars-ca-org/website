@@ -11,7 +11,7 @@ export default function TableOfContents({
   contents_headers: header[];
 }) {
   return (
-    <>
+    <div className="table-of-contents">
       {/* <h2>Table Of Contents</h2> */}
       {contents_headers.map((content_header) => (
         <TableOfContentsItem
@@ -19,7 +19,7 @@ export default function TableOfContents({
           content_header={content_header}
         />
       ))}
-    </>
+    </div>
   );
 }
 
