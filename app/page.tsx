@@ -16,14 +16,15 @@ import "@/styles/app/shared.css";
 import "@/styles/app/homepage.css";
 
 let outline: header[] = [
-  { order: 1, header: "Welcome", type: 3 },
-  { order: 2, header: "Links", type: 3 },
-  { order: 3, header: "Internal", type: 4 },
-  { order: 4, header: "External", type: 4 },
-  { order: 5, header: "About Me", type: 3 },
-  { order: 6, header: "Personal", type: 4 },
-  { order: 7, header: "Pronouns", type: 5 },
-  { order: 8, header: "Options", type: 6 },
+  { order: 0, header: "Homepage", type: 1 },
+  { order: 1, header: "Welcome", type: 2 },
+  { order: 2, header: "Links", type: 2 },
+  { order: 3, header: "Internal", type: 3 },
+  { order: 4, header: "External", type: 3 },
+  { order: 5, header: "About Me", type: 4 },
+  { order: 6, header: "Personal", type: 5 },
+  { order: 7, header: "Pronouns", type: 6 },
+  { order: 8, header: "Options", type: 7 },
 ];
 
 export default function RootPage() {

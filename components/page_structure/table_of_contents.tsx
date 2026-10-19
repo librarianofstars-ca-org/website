@@ -12,7 +12,7 @@ export default function TableOfContents({
 }) {
   return (
     <>
-      <h2>Table Of Contents</h2>
+      {/* <h2>Table Of Contents</h2> */}
       {contents_headers.map((content_header) => (
         <TableOfContentsItem
           key={content_header.order}
@@ -29,7 +29,7 @@ export function TableOfContentsItem({
   content_header: header;
 }) {
   let display_header: JSX.Element;
-  switch (content_header.type) {
+  switch (content_header.type + 1) {
     case 2:
       display_header = <h2>{content_header.header}</h2>;
       break;
@@ -44,6 +44,9 @@ export function TableOfContentsItem({
       break;
     case 6:
       display_header = <h6>{content_header.header}</h6>;
+      break;
+    case 7:
+      display_header = <small>{content_header.header}</small>;
       break;
   }
   return display_header;
