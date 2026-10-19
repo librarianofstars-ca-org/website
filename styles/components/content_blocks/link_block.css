@@ -32,6 +32,8 @@ div.link-block dl {
 div.link-block dl .head { 
     grid-row: 1;
     text-align: center;
+    margin: 0;
+    background-color: beige;
 }
 
 /* wrapper for left elemnets */
@@ -62,6 +64,29 @@ div.link-block dl dd.body {
     grid-column: -2 / -1;
     text-align: center;
     justify-self: center;
-
     margin-inline: var(--size-lg);
+    border-radius: var(--size-sm);
+}
+
+/* Body elements general */
+div.link-block dl dd.body, 
+div.link-block dl dt.body a, 
+div.link-block dl dt.body p {
+    background-color: azure;
+    padding-block: var(--size-xs);
+}
+
+/* left side of combined border radius */
+div.link-block dl .head.type,
+div.link-block dl dt.body p {
+    border-start-start-radius: var(--size-sm);
+    border-end-start-radius: var(--size-sm);
+    padding-inline-start: var(--size-sm);
+}
+/* right side of combined border radius */
+div.link-block dl .head.disc,
+div.link-block dl dt.body a {
+    border-start-end-radius: var(--size-sm);
+    border-end-end-radius: var(--size-sm);
+    padding-inline-end: var(--size-sm);
 }
