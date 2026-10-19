@@ -1,53 +1,25 @@
 import "@/styles/components/shared.css";
 import "@/styles/components/page_structure/shared.css";
 import "@/styles/components/page_structure/table_of_contents.css";
-import { JSX } from "react/jsx-runtime";
 
-export type header = { order: number; header: string; type: number };
+import Heading from "@/components/elements/heading";
+
+export type outlined_heading = { order: number; header: string; type: number };
 
 export default function TableOfContents({
   contents_headers,
 }: {
-  contents_headers: header[];
+  contents_headers: outlined_heading[];
 }) {
   return (
     <div className="table-of-contents">
-      {/* <h2>Table Of Contents</h2> */}
       {contents_headers.map((content_header) => (
-        <TableOfContentsItem
+        <Heading
           key={content_header.order}
-          content_header={content_header}
+          contents={content_header.header}
+          level={content_header.type + 1}
         />
       ))}
     </div>
   );
-}
-
-export function TableOfContentsItem({
-  content_header,
-}: {
-  content_header: header;
-}) {
-  let display_header: JSX.Element;
-  switch (content_header.type + 1) {
-    case 2:
-      display_header = <h2>{content_header.header}</h2>;
-      break;
-    case 3:
-      display_header = <h3>{content_header.header}</h3>;
-      break;
-    case 4:
-      display_header = <h4>{content_header.header}</h4>;
-      break;
-    case 5:
-      display_header = <h5>{content_header.header}</h5>;
-      break;
-    case 6:
-      display_header = <h6>{content_header.header}</h6>;
-      break;
-    case 7:
-      display_header = <small>{content_header.header}</small>;
-      break;
-  }
-  return display_header;
 }
