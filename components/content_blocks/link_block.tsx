@@ -23,7 +23,7 @@ export function LinkItem({ describedLink }) {
   return (
     <>
       <dt className="body">
-        <p>{describedLink.name}: </p>
+        <p>{describedLink.name}</p>
         <Link href={describedLink.linked}>{describedLink.display}</Link>
       </dt>
       <dd className="body">{describedLink.description}</dd>
