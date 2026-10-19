@@ -29,7 +29,7 @@ export default function Heading({
   // Means: <level_map[level] className={ className } id={ id }> {contents} </level_map[level]>
   return React.createElement(
     level_map[level],
-    { className: { className }, id: { id } },
+    { className: className, id: id },
     contents,
   );
 }
@@ -40,7 +40,7 @@ export function IdentifiedHeading({ headingId, ...props }) {
       id={headingId}
       contents={props.contents}
       level={props.level}
-      {...props}
+      className={props.className}
     />
   );
 }
