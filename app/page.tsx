@@ -1,16 +1,30 @@
 import Gallery, { GalleryItem } from "@/components/content_blocks/gallery";
 import ParagraphBlock from "@/components/content_blocks/paragraph_block";
+import LinkBLock from "@/components/content_blocks/link_block";
 import Section from "@/components/content_blocks/section";
 
 import Footer from "@/components/page_structure/footer";
 import Header from "@/components/page_structure/header";
 import Sidebar from "@/components/page_structure/sidebar";
 import Main from "@/components/page_structure/main";
+import TableOfContents, {
+  header,
+} from "@/components/page_structure/table_of_contents";
 
 import "@/styles/shared.css";
 import "@/styles/app/shared.css";
 import "@/styles/app/homepage.css";
-import LinkBLock from "@/components/content_blocks/link_block";
+
+let outline: header[] = [
+  { order: 1, header: "Welcome", type: 3 },
+  { order: 2, header: "Links", type: 3 },
+  { order: 3, header: "Internal", type: 4 },
+  { order: 4, header: "External", type: 4 },
+  { order: 5, header: "About Me", type: 3 },
+  { order: 6, header: "Personal", type: 4 },
+  { order: 7, header: "Pronouns", type: 5 },
+  { order: 8, header: "Options", type: 6 },
+];
 
 export default function RootPage() {
   return (
@@ -19,15 +33,7 @@ export default function RootPage() {
       // specificNavLinks={[{ id: "3", linked: "./example", display: "test" }]}
       />
       <Sidebar>
-        <h2>table of contents</h2>
-        <h3>Welcome</h3>
-        <h3>Links</h3>
-        <h4>Internal</h4>
-        <h4>External</h4>
-        <h3>About Me</h3>
-        <h4>Personal</h4>
-        <h5>Pronouns</h5>
-        <h6>Options</h6>
+        <TableOfContents contents_headers={outline} />
       </Sidebar>
       <Main>
         <Section sectionTitle={"Welcome"}>
