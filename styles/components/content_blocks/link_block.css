@@ -1,20 +1,24 @@
+/* Wrapper around section */
 div.section.content:has(div.link-block) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
 }
 
+/* total */
 div.link-block {
     border: 1px solid black;
     margin: var(--size-lg)
 }
 
+/* List heading */
 div.link-block h3 {
     margin-inline: auto;
     padding-inline: var(--size-sm);
     border-bottom: var(--size-tn) solid green;
 }
 
+/* List of links */
 div.link-block dl {
     display: grid;
     grid-template-columns: 1fr 2fr 3fr;
@@ -23,30 +27,36 @@ div.link-block dl {
     align-items: center;
 }
 
+/* head elements */
 div.link-block dl .head { 
     grid-row: 1;
     text-align: center;
 }
 
+/* wrapper for left elemnets */
 div.link-block dl dt.body { 
     display: contents;
 }
 
+/* Type */
 div.link-block dl dt.body p {
     grid-column: 1 / 2;
     justify-self: end;
 }
 
+/* type and link sep */
 div.link-block dl dt.body p::after {
     content: ": ";
 }
 
+/* Link */
 div.link-block dl dt.body a {
     grid-column: 2 / 3;
     justify-self: start;
     padding-inline: var(--size-sm);
 }
 
+/* Disc only */
 div.link-block dl dd.body { 
     grid-column: -2 / -1;
     text-align: center;
