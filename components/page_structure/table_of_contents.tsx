@@ -39,7 +39,7 @@ export function TOCPlace({ place }: { place: string }) {
       return (
         <LinkedHeading
           key={"start"}
-          link={"page-start"}
+          link={"#page-start"}
           contents={"Start Of Page"}
           level={7}
           className="toc-place"
@@ -49,7 +49,7 @@ export function TOCPlace({ place }: { place: string }) {
       return (
         <LinkedHeading
           key={"end"}
-          link={"page-end"}
+          link={"#page-end"}
           contents={"End Of Page"}
           level={7}
           className="toc-place"
