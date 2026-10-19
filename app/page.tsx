@@ -8,14 +8,14 @@ import Header from "@/components/page_structure/header";
 import Sidebar from "@/components/page_structure/sidebar";
 import Main from "@/components/page_structure/main";
 import TableOfContents, {
-  header,
+  outlined_heading,
 } from "@/components/page_structure/table_of_contents";
 
 import "@/styles/shared.css";
 import "@/styles/app/shared.css";
 import "@/styles/app/homepage.css";
 
-let outline: header[] = [
+let outline: outlined_heading[] = [
   { order: 0, header: "Homepage", type: 1 },
   { order: 1, header: "Welcome", type: 2 },
   { order: 2, header: "Links", type: 2 },

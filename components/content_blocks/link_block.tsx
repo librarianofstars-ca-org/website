@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { navlink } from "@/components/page_structure/nav_bar";
+import Heading from "@/components/elements/heading";
 
 import "@/styles/components/content_blocks/link_block.css";
 
@@ -15,7 +16,7 @@ export default function LinkBLock({
 }) {
   return (
     <div className="link-block">
-      <h3>{blockTitle}</h3>
+      <Heading contents={blockTitle} level={3} />
       <dl>
         <LinksHeader />
         {describedLinks.map((link) => (
