@@ -1,6 +1,7 @@
 .table-of-contents {
     background-color: darkgray;
     padding-block: var(--size-md);
+    position: relative;
 }
 
 /* .table-of-contents * / all elements */
@@ -26,15 +27,37 @@
 
     text-decoration: solid underline darkblue;
     
+    box-sizing: content-box;
     display: block;
+    align-items: center;
 }
+
+.table-of-contents > *:hover {
+    background-color: azure;
+}
+.table-of-contents > *:hover::before {
+    content: "#";
+    position: absolute;
+    left: var(--size-xs);
+    color: lightblue;
+    text-shadow: 1px;
+    background-color: darkblue;
+    border-radius: 1em;
+    width: calc(var(--size-sm) * 2);
+    height: 1.2em;
+    /* height: 1em; */
+    /* margin-block: calc(var(--size-tn) * 1.5); */
+    text-align: center;
+}
+
 /* All but top */
 .table-of-contents > h3,
 .table-of-contents > h4,
 .table-of-contents > h5,
 .table-of-contents > h6,
 .table-of-contents > small {
-    border-inline-start: var(--size-sm) solid blue;
+    border-inline-start: var(--size-md) solid blue;
+    border-block: var(--size-tn) solid green;
     border-radius: var(--size-md);
 }
 
