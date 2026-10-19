@@ -20,7 +20,7 @@ div.link-block h3 {
 /* List of links */
 div.link-block dl {
     display: grid;
-    grid-template-columns: 1fr 2fr 3fr;
+    grid-template-columns: 2fr 2fr 3fr;
     grid-template-rows: 2rem;
     grid-auto-rows: 1fr;
     align-items: center;
@@ -57,6 +57,10 @@ div.link-block dl dt.body a {
     grid-column: 2 / 3;
     justify-self: start;
 }
+div.link-block dl dt.body a,
+div.link-block dl dt.body p { 
+    width: max-content;
+}
 
 /* Disc only */
 div.link-block dl dd.body { 
@@ -73,7 +77,7 @@ div.link-block dl dt.body a,
 div.link-block dl dt.body p {
     background-color: azure;
     padding: var(--size-xs);
-    margin-block: var(--size-tn)
+    margin-block: var(--size-tn);
 }
 
 /* left side of combined border radius */
