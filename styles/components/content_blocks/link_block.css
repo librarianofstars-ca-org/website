@@ -56,7 +56,6 @@ div.link-block dl dt.body p::after {
 div.link-block dl dt.body a {
     grid-column: 2 / 3;
     justify-self: start;
-    padding-inline: var(--size-sm);
 }
 
 /* Disc only */
@@ -73,7 +72,7 @@ div.link-block dl dd.body,
 div.link-block dl dt.body a, 
 div.link-block dl dt.body p {
     background-color: azure;
-    padding-block: var(--size-xs);
+    padding: var(--size-xs);
 }
 
 /* left side of combined border radius */
@@ -82,11 +81,13 @@ div.link-block dl dt.body p {
     border-start-start-radius: var(--size-sm);
     border-end-start-radius: var(--size-sm);
     padding-inline-start: var(--size-sm);
+    padding-inline-end: 0;
 }
 /* right side of combined border radius */
 div.link-block dl .head.disc,
 div.link-block dl dt.body a {
     border-start-end-radius: var(--size-sm);
     border-end-end-radius: var(--size-sm);
+    padding-inline-start: 0;
     padding-inline-end: var(--size-sm);
 }
