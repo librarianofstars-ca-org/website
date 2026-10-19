@@ -1,8 +1,18 @@
 import Link from "next/link";
 
+import { navlink } from "@/components/page_structure/nav_bar";
+
 import "@/styles/components/content_blocks/link_block.css";
 
-export default function LinkBLock({ blockTitle, describedLinks }) {
+type described_link = navlink & { name: string; description: string };
+
+export default function LinkBLock({
+  blockTitle,
+  describedLinks,
+}: {
+  blockTitle: string;
+  describedLinks: described_link[];
+}) {
   return (
     <div className="link-block">
       <h3>{blockTitle}</h3>
@@ -19,7 +29,7 @@ export default function LinkBLock({ blockTitle, describedLinks }) {
   );
 }
 
-export function LinkItem({ describedLink }) {
+export function LinkItem({ describedLink }: { describedLink: described_link }) {
   return (
     <>
       <dt className="body">
@@ -35,8 +45,7 @@ export function LinksHeader() {
     <>
       <dt className="head type">Type</dt>
       <dt className="head link">Link</dt>
-      <dd className="head disc">Discription</dd>
+      <dd className="head disc">Description</dd>
     </>
   );
 }
-
