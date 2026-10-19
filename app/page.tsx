@@ -24,7 +24,6 @@ let outline: outlined_heading[] = [
   { order: 5, header: "About Me", linked_id: "#about", type: 4 },
   { order: 6, header: "Personal", linked_id: "#personal", type: 5 },
   { order: 7, header: "Pronouns", linked_id: "#personal_pronouns", type: 6 },
-  { order: 8, header: "Options", linked_id: "#options", type: 7 },
 ];
 
 export default function RootPage() {
