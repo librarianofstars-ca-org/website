@@ -2,9 +2,14 @@ import "@/styles/components/shared.css";
 import "@/styles/components/page_structure/shared.css";
 import "@/styles/components/page_structure/table_of_contents.css";
 
-import Heading from "@/components/elements/heading";
+import { LinkedHeading } from "@/components/elements/heading";
 
-export type outlined_heading = { order: number; header: string; type: number };
+export type outlined_heading = {
+  order: number;
+  linked_id: string;
+  header: string;
+  type: number;
+};
 
 export default function TableOfContents({
   contents_headers,
@@ -14,10 +19,12 @@ export default function TableOfContents({
   return (
     <div className="table-of-contents">
       {contents_headers.map((content_header) => (
-        <Heading
-          key={content_header.order}
+        <LinkedHeading
+          key={content_header.order.toString() + "-order"}
+          link={content_header.linked_id}
           contents={content_header.header}
           level={content_header.type + 1}
+          className="toc-item"
         />
       ))}
     </div>

@@ -1,5 +1,15 @@
 /* Holds Site-wide settings (as variables), provides a source of truth for styles */
 
+html {
+    /* Smooth Snap to #id in-page */
+    --scroll-behavior: smooth !important;
+    scroll-behavior: smooth !important;
+    /* Sticky header Option */
+    /* scroll-margin-top: 3rem */
+
+    scrollbar-width: auto;
+}
+
 html.style-root {
     /* Global Variables */
     /* Basic Size Scale */

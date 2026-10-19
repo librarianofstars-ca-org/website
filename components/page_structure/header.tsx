@@ -5,7 +5,7 @@ import "@/styles/components/page_structure/header.css";
 import Seperator from "@/components/page_structure/seperator";
 
 import NavigationBar, { navlinks } from "@/components/page_structure/nav_bar";
-import Heading from "@/components/elements/heading";
+import { IdentifiedHeading } from "@/components/elements/heading";
 
 let defaultlinks: navlinks = Array(
   { id: "0", linked: "./", display: "example" },
@@ -34,7 +34,8 @@ export default function Header({
 
 export function PageTitle({ children }) {
   return (
-    <Heading
+    <IdentifiedHeading
+      headingId="#home"
       className="page-title"
       contents={children}
       level={1}

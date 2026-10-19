@@ -1,6 +1,8 @@
 div.sidebar.wraper{
     grid-area: sidebar;
 
+    /* scrollbar-width: thin; */
+
     display: flex;
     flex-flow: row nowrap;
     align-items: start;

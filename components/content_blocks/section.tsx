@@ -1,12 +1,17 @@
 import "@/styles/components/content_blocks/shared.css";
 import "@/styles/components/content_blocks/section.css";
 
-import Heading from "@/components/elements/heading";
+import { IdentifiedHeading } from "@/components/elements/heading";
 
-export default function Section({ sectionTitle, children }) {
+export default function Section({ sectionTitle, sectionId, children }) {
   return (
     <div className="section wrapper">
-      <Heading className="section title" contents={sectionTitle} level={2}></Heading>
+      <IdentifiedHeading
+        className="section title"
+        headingId={sectionId}
+        contents={sectionTitle}
+        level={2}
+      ></IdentifiedHeading>
       <div className="section content">{children}</div>
     </div>
   );

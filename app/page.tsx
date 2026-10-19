@@ -16,15 +16,15 @@ import "@/styles/app/shared.css";
 import "@/styles/app/homepage.css";
 
 let outline: outlined_heading[] = [
-  { order: 0, header: "Homepage", type: 1 },
-  { order: 1, header: "Welcome", type: 2 },
-  { order: 2, header: "Links", type: 2 },
-  { order: 3, header: "Internal", type: 3 },
-  { order: 4, header: "External", type: 3 },
-  { order: 5, header: "About Me", type: 4 },
-  { order: 6, header: "Personal", type: 5 },
-  { order: 7, header: "Pronouns", type: 6 },
-  { order: 8, header: "Options", type: 7 },
+  { order: 0, header: "Homepage", linked_id: "#home", type: 1 },
+  { order: 1, header: "Welcome", linked_id: "#greating", type: 2 },
+  { order: 2, header: "Links", linked_id: "#links", type: 2 },
+  { order: 3, header: "Internal", linked_id: "#internal_links", type: 3 },
+  { order: 4, header: "External", linked_id: "#external_links", type: 3 },
+  { order: 5, header: "About Me", linked_id: "#about", type: 4 },
+  { order: 6, header: "Personal", linked_id: "#personal", type: 5 },
+  { order: 7, header: "Pronouns", linked_id: "#personal_pronouns", type: 6 },
+  { order: 8, header: "Options", linked_id: "#options", type: 7 },
 ];
 
 export default function RootPage() {
@@ -37,11 +37,17 @@ export default function RootPage() {
         <TableOfContents contents_headers={outline} />
       </Sidebar>
       <Main>
-        <Section sectionTitle={"Welcome"}>
+        <Section
+          sectionTitle={"Welcome"}
+          sectionId="greating"
+        >
           <p>Welcome to my site</p>
           <p>Some more info</p>
         </Section>
-        <Section sectionTitle={"Links"}>
+        <Section
+          sectionTitle={"Links"}
+          sectionId="links"
+        >
           <LinkBLock
             blockTitle={"Internal"}
             describedLinks={[
