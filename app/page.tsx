@@ -57,6 +57,13 @@ export default function RootPage() {
                 display: "Example Link 2",
                 description: "A Simple Example Link for testing more things",
               },
+              {
+                id: "1",
+                name: "another example",
+                linked: "./example/second/#more",
+                display: "Example Link 3",
+                description: "A Simple Example Link",
+              },
             ]}
           />
         </Section>
