@@ -5,12 +5,12 @@
 }
 
 /* .table-of-contents * / all elements */
-.table-of-contents > h2,
-.table-of-contents > h3,
-.table-of-contents > h4,
-.table-of-contents > h5,
-.table-of-contents > h6,
-.table-of-contents > small {
+.table-of-contents h2,
+.table-of-contents h3,
+.table-of-contents h4,
+.table-of-contents h5,
+.table-of-contents h6,
+.table-of-contents small {
     padding-inline: var(--size-sm);
     margin-inline: var(--size-xs);
     margin-block-end: var(--size-xs);
@@ -25,17 +25,21 @@
     font-weight: bold;
     font-style: italic;
 
-    text-decoration: solid underline darkblue;
+    text-decoration: solid underline darkblue var(--size-tn);
     
     box-sizing: content-box;
     display: block;
     align-items: center;
 }
+.table-of-contents a {
+    color: unset;
+    background-color: inherit;
+}
 
-.table-of-contents > *:hover {
+.table-of-contents > a > *:hover {
     background-color: azure;
 }
-.table-of-contents > *:hover::before {
+.table-of-contents > a > *:hover::before {
     content: "#";
     position: absolute;
     left: var(--size-xs);
@@ -49,7 +53,7 @@
     /* margin-block: calc(var(--size-tn) * 1.5); */
     text-align: center;
 }
-.table-of-contents > h2:hover::before {
+.table-of-contents > a > h2:hover::before {
     left: calc(50% - (2 * var(--size-sm)));
     top: var(--size-md);
     font-size: 1rem;
@@ -57,11 +61,11 @@
 }
 
 /* All but top */
-.table-of-contents > h3,
-.table-of-contents > h4,
-.table-of-contents > h5,
-.table-of-contents > h6,
-.table-of-contents > small {
+.table-of-contents h3,
+.table-of-contents h4,
+.table-of-contents h5,
+.table-of-contents h6,
+.table-of-contents small {
     border-inline-start: var(--size-md) solid blue;
     border-block: var(--size-tn) solid green;
     border-radius: var(--size-md);
