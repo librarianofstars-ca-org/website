@@ -21,9 +21,13 @@ let outline: outlined_heading[] = [
   { order: 2, header: "Links", linked_id: "#links", type: 2 },
   { order: 3, header: "Internal", linked_id: "#internal_links", type: 3 },
   { order: 4, header: "External", linked_id: "#external_links", type: 3 },
-  { order: 5, header: "About Me", linked_id: "#about", type: 4 },
-  { order: 6, header: "Personal", linked_id: "#personal", type: 5 },
-  { order: 7, header: "Pronouns", linked_id: "#personal_pronouns", type: 6 },
+  { order: 5, header: "About Me", linked_id: "#about", type: 2 },
+  { order: 6, header: "Personal Details", linked_id: "#personal", type: 3 },
+  { order: 7, header: "Name", linked_id: "#personal_name", type: 4 },
+  { order: 8, header: "Nicknames", linked_id: "#personal_name_nicks", type: 5 },
+  { order: 9, header: "Pronouns", linked_id: "#personal_pronouns", type: 4 },
+  { order: 10, header: "Small Header", linked_id: "#test1", type: 5 },
+  { order: 11, header: "Smaller Header", linked_id: "#test2", type: 6 },
 ];
 
 export default function RootPage() {
