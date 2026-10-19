@@ -73,6 +73,7 @@ div.link-block dl dt.body a,
 div.link-block dl dt.body p {
     background-color: azure;
     padding: var(--size-xs);
+    margin-block: var(--size-tn)
 }
 
 /* left side of combined border radius */
@@ -82,6 +83,7 @@ div.link-block dl dt.body p {
     border-end-start-radius: var(--size-sm);
     padding-inline-start: var(--size-sm);
     padding-inline-end: 0;
+    margin-inline-start: var(--size-xs);
 }
 /* right side of combined border radius */
 div.link-block dl .head.disc,
@@ -90,4 +92,5 @@ div.link-block dl dt.body a {
     border-end-end-radius: var(--size-sm);
     padding-inline-start: 0;
     padding-inline-end: var(--size-sm);
+    margin-inline-end: var(--size-xs);
 }
