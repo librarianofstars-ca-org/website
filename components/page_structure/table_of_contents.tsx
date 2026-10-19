@@ -3,7 +3,7 @@ import "@/styles/components/page_structure/shared.css";
 import "@/styles/components/page_structure/table_of_contents.css";
 import { JSX } from "react/jsx-runtime";
 
-export type header = { header: string; type: number };
+export type header = { order: number; header: string; type: number };
 
 export default function TableOfContents({
   contents_headers,
@@ -12,8 +12,12 @@ export default function TableOfContents({
 }) {
   return (
     <>
+      <h2>Table Of Contents</h2>
       {contents_headers.map((content_header) => (
-        <TableOfContentsItem content_header={content_header} />
+        <TableOfContentsItem
+          key={content_header.order}
+          content_header={content_header}
+        />
       ))}
     </>
   );
@@ -42,10 +46,5 @@ export function TableOfContentsItem({
       display_header = <h6>{content_header.header}</h6>;
       break;
   }
-  return (
-    <>
-      <h2>Table Of Contents</h2>
-      {display_header}
-    </>
-  );
+  return display_header;
 }
