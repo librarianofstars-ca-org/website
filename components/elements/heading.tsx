@@ -2,7 +2,6 @@ import "@/styles/components/shared.css";
 import "@/styles/components/elements/shared.css";
 import "@/styles/components/elements/heading.css";
 
-import { JSX } from "react/jsx-runtime";
 import Link from "next/link";
 import React from "react";
 
