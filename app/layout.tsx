@@ -1,4 +1,5 @@
 import { PageHead, PageBody } from "@/components/meta";
+import { IdentifiedHeading } from "@/components/elements/heading";
 
 import "@/styles/base.css";
 
@@ -13,7 +14,21 @@ export default function RootLayout({
       className="style-root"
     >
       <PageHead />
-      <PageBody>{children}</PageBody>
+      <PageBody>
+        <IdentifiedHeading
+          contents={"test"}
+          level={7}
+          className={"nav-id-hidden"}
+          headingId={"page_start"}
+        />
+        {children}
+        <IdentifiedHeading
+          contents={""}
+          level={7}
+          className={"nav-id-hidden"}
+          headingId={"page_end"}
+        />
+      </PageBody>
     </html>
   );
 }

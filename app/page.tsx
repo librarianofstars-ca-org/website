@@ -14,7 +14,6 @@ import TableOfContents, {
 import "@/styles/shared.css";
 import "@/styles/app/shared.css";
 import "@/styles/app/homepage.css";
-import { IdentifiedHeading } from "@/components/elements/heading";
 
 let outline: outlined_heading[] = [
   { order: 0, header: "Homepage", linked_id: "#home", type: 1 },
@@ -34,12 +33,6 @@ let outline: outlined_heading[] = [
 export default function RootPage() {
   return (
     <>
-      <IdentifiedHeading
-        contents={"test"}
-        level={7}
-        className={"nav-id-hidden"}
-        headingId={"page_start"}
-      />
       <Header
       // specificNavLinks={[{ id: "3", linked: "./example", display: "test" }]}
       />
@@ -116,12 +109,6 @@ export default function RootPage() {
         </Gallery>
       </Main>
       <Footer>Created by Librarian of Stars</Footer>
-      <IdentifiedHeading
-        contents={""}
-        level={7}
-        className={"nav-id-hidden"}
-        headingId={"page_end"}
-      />
     </>
   );
 }
