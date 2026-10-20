@@ -1,7 +1,11 @@
 /* Style properties shared amoung all elements site-wide */
+html {
+    width: 100%;
+}
+
 * {
-    /* font: inherit; */
     background-color: #909090;
+   /* outline: 1px solid red !important; */
 }
 
 small.nav-id-hidden {
