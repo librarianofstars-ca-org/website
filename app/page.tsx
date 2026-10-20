@@ -30,15 +30,11 @@ let outline: outlined_heading[] = [
   { order: 11, header: "Smaller Header", linked_id: "#test2", type: 6 },
 ];
 
-export default function RootPage() {
+export default function HomePage() {
   return (
     <>
-      <Header
-      // specificNavLinks={[{ id: "3", linked: "./example", display: "test" }]}
-      />
-      <Sidebar>
-        <TableOfContents contents_headers={outline} />
-      </Sidebar>
+      <HomePageHeader />
+      <HomePageSidebar />
       <Main>
         <Section
           sectionTitle={"Welcome"}
@@ -108,7 +104,27 @@ export default function RootPage() {
           </GalleryItem>
         </Gallery>
       </Main>
-      <Footer>Created by Librarian of Stars</Footer>
+      <HomePageFooter />
     </>
+  );
+}
+
+function HomePageHeader() {
+  return (
+    <Header
+    // specificNavLinks={[{ id: "3", linked: "./example", display: "test" }]}
+    />
+  );
+}
+
+function HomePageFooter() {
+  return <Footer>Created by Librarian of Stars</Footer>;
+}
+
+function HomePageSidebar() {
+  return (
+    <Sidebar>
+      <TableOfContents contents_headers={outline} />
+    </Sidebar>
   );
 }
