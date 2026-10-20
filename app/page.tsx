@@ -16,6 +16,7 @@ import TableOfContents, {
 import "@/styles/shared.css";
 import "@/styles/app/shared.css";
 import "@/styles/app/homepage.css";
+import { to_key_index_name } from "@/utilities/key_mapping";
 
 let outline: outlined_heading[] = [
   { order: 0, header: "Homepage", linked_id: "#home", type: 1 },
@@ -122,11 +123,7 @@ function HomePageLinksSection() {
     >
       {homepage_links.map((homepage_link_block, index) => (
         <LinkBLock
-          key={
-            index.toString() +
-            "-" +
-            homepage_link_block.blockTitle.toLowerCase()
-          }
+          key={to_key_index_name(index, homepage_link_block.blockTitle)}
           {...homepage_link_block}
         />
       ))}
