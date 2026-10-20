@@ -1,9 +1,12 @@
 #page {
     display: grid;
+    margin: 0;
     grid-template: 
-    "header  header" max-content
-    "sidebar main" 
-    ".       main" 
-    "footer  footer" max-content
-    / 1fr 3fr;
+    ". .       .      ." var(--size-sm)
+    ". header  header ." 
+    ". sidebar main   ." 
+    ". .       main   ."  
+    ". footer  footer ." 
+    ". .       .      ." var(--size-sm)
+    / var(--size-sm) 1fr 3fr var(--size-sm);
 }

@@ -1,7 +1,7 @@
 /* Wrapper around section */
 div.section.content:has(div.link-block) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     grid-template-rows: 1fr;
 }
 
@@ -20,7 +20,7 @@ div.link-block h3 {
 /* List of links */
 div.link-block dl {
     display: grid;
-    grid-template-columns: 2fr 2fr 3fr;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 2fr) minmax(0, 3fr);
     grid-template-rows: 2rem;
     grid-auto-rows: 1fr;
     align-items: center;
