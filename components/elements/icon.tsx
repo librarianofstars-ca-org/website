@@ -8,7 +8,7 @@ export default function Icon({
   source,
   className,
 }: {
-  size: number | [number, number];
+  size: number | [number, number]; // In pixels
   shape: "circle" | "square" | "rect";
   source: string;
   className?: string;

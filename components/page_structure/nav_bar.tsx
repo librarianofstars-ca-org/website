@@ -5,6 +5,7 @@ import "@/styles/components/page_structure/navbar.css";
 import Seperator from "@/components/page_structure/seperator";
 
 import Link from "next/link";
+import Icon from "@/components/elements/icon";
 
 export type navlink = { id: string; linked: string; display: string };
 export type navlinks = Array<navlink>;
@@ -12,7 +13,12 @@ export type navlinks = Array<navlink>;
 export default function NavigationBar({ links }: { links: navlinks }) {
   return (
     <nav>
-      {/* Icon / Logo */}
+      <Icon
+        size={40}
+        shape={"circle"}
+        source={"./test.svg"}
+        className="nav-bar-icon"
+      />
       <NavSeperator />
       <NavSpacer />
       <NavLinks>
