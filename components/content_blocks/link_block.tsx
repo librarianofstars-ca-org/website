@@ -5,15 +5,13 @@ import { IdentifiedHeading } from "@/components/elements/heading";
 
 import "@/styles/components/content_blocks/link_block.css";
 
-type described_link = navlink & { name: string; description: string };
+export type described_link = navlink & { name: string; description: string };
+export type block_of_links = { blockTitle: string; describedLinks: described_link[] };
 
 export default function LinkBLock({
   blockTitle,
   describedLinks,
-}: {
-  blockTitle: string;
-  describedLinks: described_link[];
-}) {
+}: block_of_links) {
   return (
     <div className="link-block">
       <IdentifiedHeading

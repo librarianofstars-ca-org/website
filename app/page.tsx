@@ -1,6 +1,8 @@
 import Gallery, { GalleryItem } from "@/components/content_blocks/gallery";
 import ParagraphBlock from "@/components/content_blocks/paragraph_block";
-import LinkBLock from "@/components/content_blocks/link_block";
+import LinkBLock, {
+  block_of_links,
+} from "@/components/content_blocks/link_block";
 import Section from "@/components/content_blocks/section";
 
 import Footer from "@/components/page_structure/footer";
@@ -28,6 +30,40 @@ let outline: outlined_heading[] = [
   { order: 9, header: "Pronouns", linked_id: "#personal_pronouns", type: 4 },
   { order: 10, header: "Small Header", linked_id: "#test1", type: 5 },
   { order: 11, header: "Smaller Header", linked_id: "#test2", type: 6 },
+];
+
+let homepage_links: block_of_links[] = [
+  {
+    blockTitle: "Internal",
+    describedLinks: [
+      {
+        id: "0",
+        name: "example",
+        linked: "./example",
+        display: "Example Link",
+        description: "A Simple Example Link for testing",
+      },
+    ],
+  },
+  {
+    blockTitle: "External",
+    describedLinks: [
+      {
+        id: "0",
+        name: "example2",
+        linked: "./example/second",
+        display: "Example Link 2",
+        description: "A Simple Example Link for testing more things",
+      },
+      {
+        id: "1",
+        name: "another example",
+        linked: "./example/second/#more",
+        display: "Example Link 3",
+        description: "A Simple Example Link",
+      },
+    ],
+  },
 ];
 
 export default function HomePage() {
@@ -84,37 +120,9 @@ function HomePageLinksSection() {
       sectionTitle={"Links"}
       sectionId="links"
     >
-      <LinkBLock
-        blockTitle={"Internal"}
-        describedLinks={[
-          {
-            id: "0",
-            name: "example",
-            linked: "./example",
-            display: "Example Link",
-            description: "A Simple Example Link for testing",
-          },
-        ]}
-      />
-      <LinkBLock
-        blockTitle={"External"}
-        describedLinks={[
-          {
-            id: "0",
-            name: "example2",
-            linked: "./example/second",
-            display: "Example Link 2",
-            description: "A Simple Example Link for testing more things",
-          },
-          {
-            id: "1",
-            name: "another example",
-            linked: "./example/second/#more",
-            display: "Example Link 3",
-            description: "A Simple Example Link",
-          },
-        ]}
-      />
+      {homepage_links.map((homepage_link_block) => (
+        <LinkBLock {...homepage_link_block} />
+      ))}
     </Section>
   );
 }
