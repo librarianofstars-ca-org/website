@@ -35,75 +35,7 @@ export default function HomePage() {
     <>
       <HomePageHeader />
       <HomePageSidebar />
-      <Main>
-        <Section
-          sectionTitle={"Welcome"}
-          sectionId="greating"
-        >
-          <p>Welcome to my site</p>
-          <p>Some more info</p>
-        </Section>
-        <Section
-          sectionTitle={"Links"}
-          sectionId="links"
-        >
-          <LinkBLock
-            blockTitle={"Internal"}
-            describedLinks={[
-              {
-                id: "0",
-                name: "example",
-                linked: "./example",
-                display: "Example Link",
-                description: "A Simple Example Link for testing",
-              },
-            ]}
-          />
-          <LinkBLock
-            blockTitle={"External"}
-            describedLinks={[
-              {
-                id: "0",
-                name: "example2",
-                linked: "./example/second",
-                display: "Example Link 2",
-                description: "A Simple Example Link for testing more things",
-              },
-              {
-                id: "1",
-                name: "another example",
-                linked: "./example/second/#more",
-                display: "Example Link 3",
-                description: "A Simple Example Link",
-              },
-            ]}
-          />
-        </Section>
-        <ParagraphBlock>
-          <p>Some content served.</p>
-          <p>
-            This can have links to other parts of the page (or other sites),
-            other projects or ideas, or anything I want ot put here.
-          </p>
-          <p>
-            test: <a href="./index.html">link testing (back to here)</a>
-          </p>
-        </ParagraphBlock>
-        <Gallery>
-          <GalleryItem>
-            <p>Example One</p>
-          </GalleryItem>
-          <GalleryItem>
-            {
-              <img
-                width="100"
-                height="100"
-                src={"./example_two.jpeg"}
-              />
-            }
-          </GalleryItem>
-        </Gallery>
-      </Main>
+      <HomePageMain />
       <HomePageFooter />
     </>
   );
@@ -117,14 +49,87 @@ function HomePageHeader() {
   );
 }
 
-function HomePageFooter() {
-  return <Footer>Created by Librarian of Stars</Footer>;
-}
-
 function HomePageSidebar() {
   return (
     <Sidebar>
       <TableOfContents contents_headers={outline} />
     </Sidebar>
   );
+}
+function HomePageMain() {
+  return (
+    <Main>
+      <Section
+        sectionTitle={"Welcome"}
+        sectionId="greating"
+      >
+        <p>Welcome to my site</p>
+        <p>Some more info</p>
+      </Section>
+      <Section
+        sectionTitle={"Links"}
+        sectionId="links"
+      >
+        <LinkBLock
+          blockTitle={"Internal"}
+          describedLinks={[
+            {
+              id: "0",
+              name: "example",
+              linked: "./example",
+              display: "Example Link",
+              description: "A Simple Example Link for testing",
+            },
+          ]}
+        />
+        <LinkBLock
+          blockTitle={"External"}
+          describedLinks={[
+            {
+              id: "0",
+              name: "example2",
+              linked: "./example/second",
+              display: "Example Link 2",
+              description: "A Simple Example Link for testing more things",
+            },
+            {
+              id: "1",
+              name: "another example",
+              linked: "./example/second/#more",
+              display: "Example Link 3",
+              description: "A Simple Example Link",
+            },
+          ]}
+        />
+      </Section>
+      <ParagraphBlock>
+        <p>Some content served.</p>
+        <p>
+          This can have links to other parts of the page (or other sites), other
+          projects or ideas, or anything I want ot put here.
+        </p>
+        <p>
+          test: <a href="./index.html">link testing (back to here)</a>
+        </p>
+      </ParagraphBlock>
+      <Gallery>
+        <GalleryItem>
+          <p>Example One</p>
+        </GalleryItem>
+        <GalleryItem>
+          {
+            <img
+              width="100"
+              height="100"
+              src={"./example_two.jpeg"}
+            />
+          }
+        </GalleryItem>
+      </Gallery>
+    </Main>
+  );
+}
+
+function HomePageFooter() {
+  return <Footer>Created by Librarian of Stars</Footer>;
 }
