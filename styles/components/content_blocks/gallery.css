@@ -1,0 +1,17 @@
+ul.gallery {
+    display: grid;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-rows: minmax(0, 1fr);
+    grid-auto-flow: column;
+    align-items: center;
+    justify-items: center;
+}
+
+li.gallery-item {
+    display: block;
+    margin: var(--size-lg);
+    padding: var(--size-sm);
+    border: var(--size-tn) solid black;
+    border-radius: var(--size-lg);
+    outline: var(--size-xs) solid gray;
+}
