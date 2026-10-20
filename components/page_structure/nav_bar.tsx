@@ -14,13 +14,12 @@ export default function NavigationBar({ links }: { links: navlinks }) {
   return (
     <nav>
       <Icon
-        size={40}
+        size={30}
         shape={"circle"}
         source={"./test.svg"}
         className="nav-bar-icon"
       />
       <NavSeperator />
-      <NavSpacer />
       <NavLinks>
         {links.map((link) => (
           <NavLink
@@ -30,8 +29,9 @@ export default function NavigationBar({ links }: { links: navlinks }) {
           />
         ))}
       </NavLinks>
+      <NavSpacer length="tiny" />
       <NavSeperator />
-      <NavSpacer />
+      <NavSpacer length="large" />
     </nav>
   );
 }
@@ -62,6 +62,10 @@ export function NavSeperator() {
   );
 }
 
-export function NavSpacer() {
-  return <div className="nav-spacer" />;
+export function NavSpacer({
+  length = "normal",
+}: {
+  length?: "tiny" | "small" | "normal" | "large" | "huge" ;
+}) {
+  return <div className={"nav-spacer" + " " + length} />;
 }
