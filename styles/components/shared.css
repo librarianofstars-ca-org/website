@@ -1,8 +1,6 @@
 h1, h2 {
     margin-inline: auto;
-    max-width: 80%;
-    min-width: 60%;
-    width: auto;
+    width: 80%;
     text-align: center;
     border: var(--size-tn) solid green;
     border-top: 0;
