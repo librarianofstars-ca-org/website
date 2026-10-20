@@ -120,8 +120,15 @@ function HomePageLinksSection() {
       sectionTitle={"Links"}
       sectionId="links"
     >
-      {homepage_links.map((homepage_link_block) => (
-        <LinkBLock {...homepage_link_block} />
+      {homepage_links.map((homepage_link_block, index) => (
+        <LinkBLock
+          key={
+            index.toString() +
+            "-" +
+            homepage_link_block.blockTitle.toLowerCase()
+          }
+          {...homepage_link_block}
+        />
       ))}
     </Section>
   );
