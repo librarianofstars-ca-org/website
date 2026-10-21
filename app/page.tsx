@@ -1,6 +1,4 @@
-import Gallery, {
-  gallery_items,
-} from "@/components/content_blocks/gallery";
+import Gallery, { gallery_items } from "@/components/content_blocks/gallery";
 import ParagraphBlock from "@/components/content_blocks/paragraph_block";
 import LinkBLock, {
   block_of_links,
@@ -70,12 +68,17 @@ let homepage_links: block_of_links[] = [
 ];
 
 let homepage_gallery_items: gallery_items = [
-  <p>Example One</p>,
-  <img
-    width="100"
-    height="100"
-    src={"./example_two.jpeg"}
-  />,
+  { show: <p>Example One</p>, label: "test-1" },
+  {
+    show: (
+      <img
+        width="100"
+        height="100"
+        src={"./example_two.jpeg"}
+      />
+    ),
+    label: "test-img",
+  },
 ];
 
 export default function HomePage() {
