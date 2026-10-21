@@ -3,7 +3,7 @@ ul.gallery {
     flex-flow: row wrap ;
     max-width: 95%;
 
-    margin: 0 auto;
+    margin: calc(var(--size-xs)* 2) auto;
     padding: 0;
 
     outline: var(--size-xs) gray solid;
