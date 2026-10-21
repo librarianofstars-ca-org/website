@@ -1,4 +1,6 @@
-import Gallery, { GalleryItem } from "@/components/content_blocks/gallery";
+import Gallery, {
+  gallery_items,
+} from "@/components/content_blocks/gallery";
 import ParagraphBlock from "@/components/content_blocks/paragraph_block";
 import LinkBLock, {
   block_of_links,
@@ -65,6 +67,15 @@ let homepage_links: block_of_links[] = [
       },
     ],
   },
+];
+
+let homepage_gallery_items: gallery_items = [
+  <p>Example One</p>,
+  <img
+    width="100"
+    height="100"
+    src={"./example_two.jpeg"}
+  />,
 ];
 
 export default function HomePage() {
@@ -147,22 +158,7 @@ function HomePageSummeryBlock() {
 }
 
 function HomePageArtGalleryBlock() {
-  return (
-    <Gallery>
-      <GalleryItem>
-        <p>Example One</p>
-      </GalleryItem>
-      <GalleryItem>
-        {
-          <img
-            width="100"
-            height="100"
-            src={"./example_two.jpeg"}
-          />
-        }
-      </GalleryItem>
-    </Gallery>
-  );
+  return <Gallery items={homepage_gallery_items} />;
 }
 
 function HomePageFooter() {
