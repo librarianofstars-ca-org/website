@@ -69,6 +69,8 @@ let homepage_links: block_of_links[] = [
 
 let homepage_gallery_items: gallery_items = [
   { show: <p>Example One</p>, label: "test-1" },
+  { show: <p>Example Two - Longer text</p>, label: "test-2" },
+  { show: <p>Example Three! <br />More here</p>, label: "test-3" },
   {
     show: (
       <img
@@ -77,7 +79,27 @@ let homepage_gallery_items: gallery_items = [
         src={"./example_two.jpeg"}
       />
     ),
-    label: "test-img",
+    label: "test-img-1",
+  },
+  {
+    show: (
+      <img
+        width="50"
+        height="50"
+        src={"./example_two.jpeg"}
+      />
+    ),
+    label: "test-img-2",
+  },
+  {
+    show: (
+      <img
+        width="200"
+        height="100"
+        src={"./example_two.jpeg"}
+      />
+    ),
+    label: "test-img-3",
   },
 ];
 
