@@ -101,6 +101,16 @@ let homepage_gallery_items: gallery_items = [
     ),
     label: "test-img-3",
   },
+  {
+    show: (
+      <img
+        width="200"
+        height="300"
+        src={"./example_two.jpeg"}
+      />
+    ),
+    label: "test-img-4-tail",
+  },
 ];
 
 export default function HomePage() {

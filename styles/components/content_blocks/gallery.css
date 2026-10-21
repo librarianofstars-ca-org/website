@@ -1,15 +1,23 @@
 ul.gallery {
-    display: grid;
-    grid-auto-columns: minmax(0, 1fr);
-    grid-auto-rows: minmax(0, 1fr);
-    grid-auto-flow: column;
-    align-items: center;
+    display: flex;
+    flex-flow: row wrap ;
+    max-width: 95%;
+
+    margin: 0 auto;
+    padding: 0;
+
+    outline: var(--size-xs) gray solid;
+    border-radius: var(--size-xs);
+
+    align-items: start;
     justify-items: center;
 }
 
 div.gallery-item {
     display: flex;
     flex-flow: column nowrap;
+
+    flex: 0 0 auto;
 
     margin: var(--size-lg);
     padding: var(--size-sm);
@@ -20,6 +28,7 @@ div.gallery-item {
 
     text-align: center;
     align-items: center;
+    justify-items: center;
 }
 
 div.gallery-item *.gallery-display { 
