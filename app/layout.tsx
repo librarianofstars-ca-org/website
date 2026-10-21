@@ -16,7 +16,7 @@ export default function RootLayout({
       <PageHead />
       <PageBody>
         <IdentifiedHeading
-          contents={"test"}
+          contents={""}
           level={7}
           className={"nav-id-hidden"}
           headingId={"page_start"}

@@ -8,6 +8,22 @@ html {
    /* outline: 1px solid red !important; */
 }
 
+small.nav-id-hidden:hover {
+    background-color: #a0a0a0;
+}
+
 small.nav-id-hidden {
-    display: none;
+    /* display: none; */
+    width: var(--size-sm);
+    height: var(--size-sm);
+    box-sizing: border-box;
+    border: 1px solid #60606060;
+    border-radius: 100%;
+}
+
+small.nav-id-hidden:first-of-type {
+    grid-area: start ;
+}
+small.nav-id-hidden:last-of-type {
+    grid-area: end ;
 }
