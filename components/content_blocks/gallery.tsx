@@ -21,9 +21,9 @@ export default function Gallery({ items }: { items: gallery_items }) {
 
 export function GalleryItem({ galleryitem }: { galleryitem: gallery_item }) {
   return (
-    <li className="gallery-item">
-      {galleryitem.show}
+    <div className="gallery-item">
+      <li className="gallery-display">{galleryitem.show}</li>
       <span className="gallery-label">{galleryitem.label}</span>
-    </li>
+    </div>
   );
 }
