@@ -70,7 +70,15 @@ let homepage_links: block_of_links[] = [
 let homepage_gallery_items: gallery_items = [
   { show: <p>Example One</p>, label: "test-1" },
   { show: <p>Example Two - Longer text</p>, label: "test-2" },
-  { show: <p>Example Three! <br />More here</p>, label: "test-3" },
+  {
+    show: (
+      <p>
+        Example Three! <br />
+        More here
+      </p>
+    ),
+    label: "test-3",
+  },
   {
     show: (
       <img
@@ -179,16 +187,18 @@ function HomePageLinksSection() {
 
 function HomePageSummeryBlock() {
   return (
-    <ParagraphBlock>
-      <p>Some content served.</p>
-      <p>
-        This can have links to other parts of the page (or other sites), other
-        projects or ideas, or anything I want ot put here.
-      </p>
-      <p>
-        test: <a href="./index.html">link testing (back to here)</a>
-      </p>
-    </ParagraphBlock>
+    <ParagraphBlock
+      contents={[
+        <p key={1}>Some content served.</p>,
+        <p key={2}>
+          This can have links to other parts of the page (or other sites), other
+          projects or ideas, or anything I want ot put here.
+        </p>,
+        <p key={3}>
+          test: <a href="./index.html">link testing (back to here)</a>
+        </p>,
+      ]}
+    />
   );
 }
 
