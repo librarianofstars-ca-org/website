@@ -1,0 +1,30 @@
+div.paragraph-block {
+    /* font-family: ?; */
+}
+
+div.paragraph-block p {
+    margin-inline: var(--size-lg);
+}
+
+div.paragraph-block .paragraph-block.break-line { 
+    display: flex;
+    place-items: center;
+    margin-block: var(--size-xs);
+}
+
+div.paragraph-block p.paragraph-block.break-line::after {
+    display: inline-block;
+    content: "- * * * -";
+
+    background-color: darkgray;
+
+    margin-inline: auto;
+    padding-inline: var(--size-lg);
+
+    border: var(--size-tn) solid pink;
+    border-radius: var(--size-sm);
+    border-inline-width: var(--size-xs);
+
+    text-align: center;
+    max-width: calc(var(--size-hg) * 4);
+}

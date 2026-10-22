@@ -1,9 +1,9 @@
 import "@/styles/components/shared.css";
+import "@/styles/components/content_blocks/paragraph_block.css"
 
-import { JSX } from "react/jsx-runtime";
 import Seperator from "@/components/page_structure/seperator";
 
-export type content_element = { index: number; show: string };
+export type content_element = { index: number; show?: string; isBr?: boolean };
 export type content_elements = content_element[];
 
 export default function ParagraphBlock({
@@ -17,9 +17,16 @@ export default function ParagraphBlock({
         isVertical={false}
         className=" start-paragraph-block"
       />
-      {contents.map((element) => (
-        <p key={element.index}> {element.show} </p>
-      ))}
+      {contents.map((element) =>
+        element.isBr ? (
+          <p
+            key={element.index}
+            className="break-line paragraph-block empty"
+          />
+        ) : (
+          <p key={element.index}> {element.show} </p>
+        ),
+      )}
       <Seperator
         isVertical={false}
         className=" end-paragraph-block"

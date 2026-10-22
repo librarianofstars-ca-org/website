@@ -124,13 +124,28 @@ let homepage_gallery_items: gallery_items = [
 ];
 
 let homepage_paragraph_block_elements: content_elements = [
-  { index: 1, show: "Some content served." },
+  {
+    index: 1,
+    show: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, \
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi \
+    ut aliquip ex ea commodo consequat.",
+  },
   {
     index: 2,
-    show: "This can have links to other parts of the page (or other sites), \
-    other projects or ideas, or anything I want ot put here.",
+    show: '"Spechus mani var tempu sita. Ven tar Sal me vounus tamlimatus."',
   },
-  { index: 3, show: "test: link testing (back to here)" },
+  {
+    index: 3,
+    show: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum \
+    dolore eu fugiat nulla pariatur. ",
+  },
+  { index: 4, isBr: true },
+  {
+    index: 5,
+    show: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia \
+    deserunt mollit anim id est laborum.",
+  },
 ];
 
 export default function HomePage() {
