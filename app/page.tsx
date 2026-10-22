@@ -124,14 +124,13 @@ let homepage_gallery_items: gallery_items = [
 ];
 
 let homepage_paragraph_block_elements: content_elements = [
-  <p key={1}>Some content served.</p>,
-  <p key={2}>
-    This can have links to other parts of the page (or other sites), other
-    projects or ideas, or anything I want ot put here.
-  </p>,
-  <p key={3}>
-    test: <a href="./index.html">link testing (back to here)</a>
-  </p>,
+  { index: 1, show: "Some content served." },
+  {
+    index: 2,
+    show: "This can have links to other parts of the page (or other sites), \
+    other projects or ideas, or anything I want ot put here.",
+  },
+  { index: 3, show: "test: link testing (back to here)" },
 ];
 
 export default function HomePage() {
