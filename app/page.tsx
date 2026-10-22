@@ -1,5 +1,7 @@
 import Gallery, { gallery_items } from "@/components/content_blocks/gallery";
-import ParagraphBlock from "@/components/content_blocks/paragraph_block";
+import ParagraphBlock, {
+  content_elements,
+} from "@/components/content_blocks/paragraph_block";
 import LinkBLock, {
   block_of_links,
 } from "@/components/content_blocks/link_block";
@@ -121,6 +123,17 @@ let homepage_gallery_items: gallery_items = [
   },
 ];
 
+let homepage_paragraph_block_elements: content_elements = [
+  <p key={1}>Some content served.</p>,
+  <p key={2}>
+    This can have links to other parts of the page (or other sites), other
+    projects or ideas, or anything I want ot put here.
+  </p>,
+  <p key={3}>
+    test: <a href="./index.html">link testing (back to here)</a>
+  </p>,
+];
+
 export default function HomePage() {
   return (
     <>
@@ -186,20 +199,7 @@ function HomePageLinksSection() {
 }
 
 function HomePageSummeryBlock() {
-  return (
-    <ParagraphBlock
-      contents={[
-        <p key={1}>Some content served.</p>,
-        <p key={2}>
-          This can have links to other parts of the page (or other sites), other
-          projects or ideas, or anything I want ot put here.
-        </p>,
-        <p key={3}>
-          test: <a href="./index.html">link testing (back to here)</a>
-        </p>,
-      ]}
-    />
-  );
+  return <ParagraphBlock contents={homepage_paragraph_block_elements} />;
 }
 
 function HomePageArtGalleryBlock() {
