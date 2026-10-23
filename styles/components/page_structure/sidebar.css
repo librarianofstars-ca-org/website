@@ -1,0 +1,27 @@
+div.sidebar.wraper{
+    grid-area: sidebar;
+
+    /* scrollbar-width: thin; */
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: start;
+    justify-content: center;
+
+    margin-block: var(--size-sm);
+    margin-inline: var(--size-lg);
+
+    border: var(--size-tn) solid brown;
+    border-radius: var(--size-sm);
+}
+
+div.sidebar hr.sidebar {
+    flex: 0 0 auto;
+    height: 100%;
+    margin-block: 0px;
+}
+
+div.sidebar.contents {
+    flex: 1 1 1;
+    margin: auto;
+}

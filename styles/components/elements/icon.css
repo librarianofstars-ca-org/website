@@ -1,0 +1,10 @@
+img.icon {
+    border: var(--size-tn) solid black;
+    margin: calc(var(--size-tn) * 2);
+}
+
+img.icon.circle {
+    border-radius: 100%;
+}
+img.icon.square {}
+img.icon.rect {}

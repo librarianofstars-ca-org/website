@@ -1,0 +1,128 @@
+/* Wrapper */
+.table-of-contents {
+    background-color: darkgray;
+    padding-block: var(--size-xs);
+    position: relative;
+}
+
+/* Link Overrides */
+.table-of-contents a {
+    color: unset;
+    background-color: inherit;
+}
+
+/* Sizing of each heading */
+.table-of-contents > a > h2.toc-item {
+    margin-inline: auto;
+    font-size: 1.8rem;
+}
+.table-of-contents > a > h3.toc-item {
+    width: calc(100% - (3* var(--size-lg)));
+    font-size: 1.6rem;
+}
+.table-of-contents > a > h4.toc-item {
+    width: calc(100% - (4* var(--size-lg)));
+    font-size: 1.4rem;
+}
+.table-of-contents > a > h5.toc-item {
+    width: calc(100% - (5* var(--size-lg)));
+    font-size: 1.2rem;
+}
+.table-of-contents > a > h6.toc-item {
+    width: calc(100% - (6* var(--size-lg)));
+    font-size: 1.0rem;
+}
+.table-of-contents > a > small.toc-item {
+    width: calc(100% - (7* var(--size-lg)));
+    font-size: 0.8rem;
+}
+
+/* .table-of-contents all children */
+.table-of-contents > a > * {
+    padding-inline: var(--size-sm);
+    margin-block-start: 0;
+    margin-block-end: var(--size-xs);
+
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+
+}
+/* .table-of-contents all items */
+.table-of-contents > a > .toc-item {
+    margin-inline: var(--size-xs);
+    
+    text-wrap: balance;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis " - ";
+
+    text-decoration: solid underline darkblue var(--size-tn);
+    
+    box-sizing: content-box;
+    display: block;
+    align-items: center;
+}
+
+/* All but top level heading */
+.table-of-contents > a > .toc-item:not(h2) {
+    border-inline-start: var(--size-md) solid blue;
+    border-block: var(--size-tn) solid green;
+    border-radius: var(--size-md);
+}
+
+/* Link Icon On Hover */
+.table-of-contents > a > *:hover {
+    background-color: azure;
+}
+.table-of-contents > a > .toc-item:hover::before {
+    content: "#";
+    position: absolute;
+    left: var(--size-xs);
+    color: lightblue;
+    background-color: darkblue;
+    border-radius: 1em;
+    width: calc(var(--size-sm) * 2);
+    height: 1.2em;
+    /* height: 1em; */
+    /* margin-block: calc(var(--size-tn) * 1.5); */
+    text-align: center;
+}
+.table-of-contents > a > h2:hover::before {
+    left: calc(50% - (2 * var(--size-sm)));
+    top: var(--size-md);
+    font-size: 1rem;
+    width: calc(var(--size-sm) * 4);
+}
+
+/* Placement Links */
+.table-of-contents > a > small.toc-place {
+    display: block;
+    margin-inline: auto;
+    padding-block: 0.2rem;
+    width: max-content;
+    font-size: 0.9rem;
+    border-style: solid;
+    border-color: green;
+    border-radius: var(--size-sm);
+    border-inline-width: 3px;
+    text-decoration: overline underline black 1px;
+    /* text-decoration: none !important; */
+}
+.table-of-contents > a:first-of-type > small.toc-place {
+    margin-block-start: 0;
+    margin-block-end: var(--size-xs);
+    border-block-start-width: 1px;
+    border-block-end-width: 0px;
+    
+}
+.table-of-contents > a:last-of-type > small.toc-place {
+    margin-block-start: var(--size-xs);
+    margin-block-end: 0;
+    border-block-start-width: 0px;
+    border-block-end-width: 1px;
+}
+.table-of-contents > a > small.toc-place::before,
+.table-of-contents > a > small.toc-place::after { 
+    content: " - # - ";
+}

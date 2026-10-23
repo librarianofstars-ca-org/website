@@ -1,9 +1,31 @@
-import NavigationBar from "./nav_bar";
+import "@/styles/components/shared.css";
+import "@/styles/components/page_structure/shared.css";
+import "@/styles/components/page_structure/header.css";
 
-export default function Header(props) {
+import Seperator from "@/components/page_structure/seperator";
+
+import NavigationBar, { navlinks } from "@/components/page_structure/nav_bar";
+import { IdentifiedHeading } from "@/components/elements/heading";
+
+let defaultlinks: navlinks = Array(
+  { id: "0", linked: "./", display: "example" },
+  { id: "1", linked: "./about", display: "About Me!" },
+);
+
+export default function Header({
+  specificNavLinks,
+}: {
+  specificNavLinks?: navlinks;
+}) {
+  let links: navlinks;
+  if (specificNavLinks) {
+    links = defaultlinks.concat(specificNavLinks);
+  } else {
+    links = defaultlinks;
+  }
   return (
     <div className="header">
-      <NavigationBar links={[{ id: "0", linked: "./", display: "example" }]} />
+      <NavigationBar links={links} />
       <PageTitle>Librarian Of Stars' Homepage!</PageTitle>
       <HeaderSeperator />
     </div>
@@ -11,9 +33,21 @@ export default function Header(props) {
 }
 
 export function PageTitle({ children }) {
-  return <h1 className="page-title">{children}</h1>;
+  return (
+    <IdentifiedHeading
+      headingId="#home"
+      className="page-title"
+      contents={children}
+      level={1}
+    />
+  );
 }
 
 export function HeaderSeperator() {
-  return <br className="page-seperator header" />;
+  return (
+    <Seperator
+      isVertical={false}
+      className="header"
+    />
+  );
 }

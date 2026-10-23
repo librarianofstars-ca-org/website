@@ -1,0 +1,12 @@
+#page {
+    display: grid;
+    margin: 0;
+    grid-template: 
+    "start .       .      .  " var(--size-sm)
+    ".     header  header .  " 
+    ".     sidebar main   .  " 
+    ".     .       main   .  "  
+    ".     footer  footer .  " 
+    ".     .       .      end" var(--size-sm)
+    / var(--size-sm) 1fr 3fr var(--size-sm);
+}

@@ -1,5 +1,26 @@
+/* Holds Site-wide settings (as variables), provides a source of truth for styles */
+
+html {
+    /* Smooth Snap to #id in-page */
+    --scroll-behavior: smooth !important;
+    scroll-behavior: smooth !important;
+    /* Sticky header Option */
+    /* scroll-margin-top: 3rem */
+
+    scrollbar-width: auto;
+}
+
 html.style-root {
-    /* Some Vars Set */
-    --text-small: 16px;
-    --text-large: calc(var(--text-small) * 2);
+    /* Global Variables */
+    /* Basic Size Scale */
+    --size-tn: calc(var(--size-md) * 0.1);
+    --size-xs: calc(var(--size-md) * 0.5);
+    --size-sm: calc(var(--size-md) * 0.8);
+    --size-md: 1.0rem;
+    --size-lg: calc(var(--size-md) * 1.2);
+    --size-xl: calc(var(--size-md) * 1.5);
+    --size-hg: calc(var(--size-md) * 2.0);
+    
+    /* Color Pallet (TODO Fill in) */
+    
 }

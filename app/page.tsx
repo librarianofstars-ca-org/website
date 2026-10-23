@@ -1,51 +1,225 @@
-import Gallery, { GalleryItem } from "@/components/content_blocks/gallery";
-import ParagraphBlock from "@/components/content_blocks/paragraph_block";
+import Gallery, { gallery_items } from "@/components/content_blocks/gallery";
+import ParagraphBlock, {
+  content_elements,
+} from "@/components/content_blocks/paragraph_block";
+import LinkBLock, {
+  block_of_links,
+} from "@/components/content_blocks/link_block";
+import Section from "@/components/content_blocks/section";
+
 import Footer from "@/components/page_structure/footer";
 import Header from "@/components/page_structure/header";
 import Sidebar from "@/components/page_structure/sidebar";
-import Main from "@/components/page_structure/sidebar";
+import Main from "@/components/page_structure/main";
+import TableOfContents, {
+  outlined_heading,
+} from "@/components/page_structure/table_of_contents";
 
 import "@/styles/shared.css";
+import "@/styles/app/shared.css";
 import "@/styles/app/homepage.css";
+import { to_key_index_name } from "@/utilities/key_mapping";
 
-export default function RootPage() {
+let outline: outlined_heading[] = [
+  { order: 0, header: "Homepage", linked_id: "#home", type: 1 },
+  { order: 1, header: "Welcome", linked_id: "#greating", type: 2 },
+  { order: 2, header: "Links", linked_id: "#links", type: 2 },
+  { order: 3, header: "Internal", linked_id: "#internal_links", type: 3 },
+  { order: 4, header: "External", linked_id: "#external_links", type: 3 },
+  { order: 5, header: "About Me", linked_id: "#about", type: 2 },
+  { order: 6, header: "Personal Details", linked_id: "#personal", type: 3 },
+  { order: 7, header: "Name", linked_id: "#personal_name", type: 4 },
+  { order: 8, header: "Nicknames", linked_id: "#personal_name_nicks", type: 5 },
+  { order: 9, header: "Pronouns", linked_id: "#personal_pronouns", type: 4 },
+  { order: 10, header: "Small Header", linked_id: "#test1", type: 5 },
+  { order: 11, header: "Smaller Header", linked_id: "#test2", type: 6 },
+];
+
+let homepage_links: block_of_links[] = [
+  {
+    blockTitle: "Internal",
+    describedLinks: [
+      {
+        id: "0",
+        name: "example",
+        linked: "./example",
+        display: "Example Link",
+        description: "A Simple Example Link for testing",
+      },
+    ],
+  },
+  {
+    blockTitle: "External",
+    describedLinks: [
+      {
+        id: "0",
+        name: "example2",
+        linked: "./example/second",
+        display: "Example Link 2",
+        description: "A Simple Example Link for testing more things",
+      },
+      {
+        id: "1",
+        name: "another example",
+        linked: "./example/second/#more",
+        display: "Example Link 3",
+        description: "A Simple Example Link",
+      },
+    ],
+  },
+];
+
+let homepage_gallery_items: gallery_items = [
+  { show: <p>Example One</p>, label: "test-1" },
+  { show: <p>Example Two - Longer text</p>, label: "test-2" },
+  {
+    show: (
+      <p>
+        Example Three! <br />
+        More here
+      </p>
+    ),
+    label: "test-3",
+  },
+  {
+    show: (
+      <img
+        width="100"
+        height="100"
+        src={"./example_two.jpeg"}
+      />
+    ),
+    label: "test-img-1",
+  },
+  {
+    show: (
+      <img
+        width="50"
+        height="50"
+        src={"./example_two.jpeg"}
+      />
+    ),
+    label: "test-img-2",
+  },
+  {
+    show: (
+      <img
+        width="200"
+        height="100"
+        src={"./example_two.jpeg"}
+      />
+    ),
+    label: "test-img-3",
+  },
+  {
+    show: (
+      <img
+        width="200"
+        height="300"
+        src={"./example_two.jpeg"}
+      />
+    ),
+    label: "test-img-4-tail",
+  },
+];
+
+let homepage_paragraph_block_elements: content_elements = [
+  {
+    index: 1,
+    show: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, \
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi \
+    ut aliquip ex ea commodo consequat.",
+  },
+  {
+    index: 2,
+    show: '"Spechus mani var tempu sita. Ven tar Sal me vounus tamlimatus."',
+  },
+  {
+    index: 3,
+    show: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum \
+    dolore eu fugiat nulla pariatur. ",
+  },
+  { index: 4, isBr: true },
+  {
+    index: 5,
+    show: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia \
+    deserunt mollit anim id est laborum.",
+  },
+];
+
+export default function HomePage() {
   return (
     <>
-      <Header />
-      <Sidebar>
-        <p>*table of contents*</p>
-      </Sidebar>
-      <Main>
-        <ParagraphBlock>
-          <p>Some content served.</p>
-          <p>
-            This can have links to other parts of the page (or other sites),
-            other projects or ideas, or anything I want ot put here.
-          </p>
-          <p>
-            test: <a href="./index.html">link testing (back to here)</a>
-          </p>
-        </ParagraphBlock>
-        <Gallery>
-          <GalleryItem>
-            <p>Example One</p>
-          </GalleryItem>
-          <GalleryItem>
-            {
-              <img
-                width="100"
-                height="100"
-                src={"./example_two.jpeg"}
-              />
-            }
-          </GalleryItem>
-        </Gallery>
-      </Main>
-      <Footer>Created by Librarian of Stars</Footer>
+      <HomePageHeader />
+      <HomePageSidebar />
+      <HomePageMain />
+      <HomePageFooter />
     </>
   );
 }
-// <!-- TODO: Add divs and construct a simple page layout. -->
-// <!-- - Link/Nav header (or sidebar) -->
-// <!-- - main body of page -->
-// <!-- - header structure, maybe diferent sections (about me, account links, more.) -->
+
+function HomePageHeader() {
+  return (
+    <Header
+    // specificNavLinks={[{ id: "3", linked: "./example", display: "test" }]}
+    />
+  );
+}
+
+function HomePageSidebar() {
+  return (
+    <Sidebar>
+      <TableOfContents contents_headers={outline} />
+    </Sidebar>
+  );
+}
+function HomePageMain() {
+  return (
+    <Main>
+      <HomePageWelcomeSplashSection />
+      <HomePageLinksSection />
+      <HomePageSummeryBlock />
+      <HomePageArtGalleryBlock />
+    </Main>
+  );
+}
+
+function HomePageWelcomeSplashSection() {
+  return (
+    <Section
+      sectionTitle={"Welcome"}
+      sectionId="greating"
+    >
+      <p>Welcome to my site</p>
+      <p>Some more info</p>
+    </Section>
+  );
+}
+function HomePageLinksSection() {
+  return (
+    <Section
+      sectionTitle={"Links"}
+      sectionId="links"
+    >
+      {homepage_links.map((homepage_link_block, index) => (
+        <LinkBLock
+          key={to_key_index_name(index, homepage_link_block.blockTitle)}
+          {...homepage_link_block}
+        />
+      ))}
+    </Section>
+  );
+}
+
+function HomePageSummeryBlock() {
+  return <ParagraphBlock contents={homepage_paragraph_block_elements} />;
+}
+
+function HomePageArtGalleryBlock() {
+  return <Gallery items={homepage_gallery_items} />;
+}
+
+function HomePageFooter() {
+  return <Footer>Created by Librarian of Stars</Footer>;
+}

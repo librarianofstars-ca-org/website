@@ -1,0 +1,14 @@
+hr.page-seperator {
+    background-color: brown;
+    margin: var(--size-sm);
+}
+hr.page-seperator.horizontal {
+    margin-inline: auto;
+    height: var(--size-tn);
+    width: 90%;
+}
+hr.page-seperator.vertical {
+    margin-block: 0;
+    height: auto;
+    width: var(--size-tn);
+}
