@@ -2,19 +2,19 @@ import { IdentifiedHeading } from "@/components/elements/heading";
 
 import "@/styles/base.css";
 
-export default function Layout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+type head_props = {};
+type body_props = {};
+type layout_props = { head: head_props; body: body_props };
+
+export default function Layout({ properties }: { properties: layout_props }) {
   return (
     <html
       lang="en"
       className="style-root"
     >
-      <PageHead />
-      <PageBody>
-        <IdentifiedHeading
+      <PageHead properties={properties.head} />
+      <PageBody properties={properties.body}>
+        {/* <IdentifiedHeading
           contents={""}
           level={7}
           className={"nav-id-hidden"}
@@ -26,14 +26,13 @@ export default function Layout({
           level={7}
           className={"nav-id-hidden"}
           headingId={"page_end"}
-        />
+        /> */}
       </PageBody>
     </html>
   );
 }
 
-
-export function PageHead() {
+export function PageHead({ properties }: { properties: head_props }) {
   return (
     <head>
       {/* standard charset for web dev */}
@@ -76,6 +75,8 @@ export function PageHead() {
   );
 }
 
-export function PageBody({ children }) {
-  return <body id="page">{children}</body>;
+export function PageBody({ properties }: { properties: body_props }) {
+  return <body id="page">
+    {/* {children} */}
+    </body>;
 }
