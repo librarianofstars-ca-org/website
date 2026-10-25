@@ -1,6 +1,7 @@
 import { IdentifiedHeading } from "@/components/elements/heading";
 
 import "@/styles/base.css";
+import React from "react";
 
 export interface page_details {
   Title: string;
@@ -13,7 +14,7 @@ export interface head_props {
   aboutPage: page_details;
 }
 export interface body_props {
-  contents: any; // React.ReactNode?
+  contents: React.ReactNode;
 }
 export interface layout_props {
   head: head_props;
@@ -47,7 +48,7 @@ export default function Layout({
   children,
 }: {
   properties: layout_props;
-  children;
+  children: React.ReactNode;
 }) {
   properties.body.contents = children;
   return (
