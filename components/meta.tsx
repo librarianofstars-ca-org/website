@@ -2,13 +2,15 @@ import { IdentifiedHeading } from "@/components/elements/heading";
 
 import "@/styles/base.css";
 
+type pageDetails = {
+  Title: string;
+  Discription: string;
+  Author: string;
+};
+
 type head_props = {
   charSet: string;
-  aboutPage: {
-    pageTitle: string;
-    pageDiscription: string;
-    pageAuthor: string;
-  };
+  aboutPage: pageDetails;
 };
 type body_props = {};
 type layout_props = {
@@ -21,9 +23,9 @@ type layout_props = {
 interface default_head_props extends head_props {
   charSet: "utf-8";
   aboutPage: {
-    pageTitle: "Default Page"; // LibrarianOfStars's Homepage
-    pageDiscription: "A simple index page, for my project of a website.";
-    pageAuthor: "Librarian Of Stars";
+    Title: "Default Page"; // LibrarianOfStars's Homepage
+    Discription: "A simple index page, for my project of a website.";
+    Author: "Librarian Of Stars";
   };
 }
 interface default_body_props extends body_props {}
@@ -63,25 +65,8 @@ export default function Layout({ properties }: { properties: layout_props }) {
 export function PageHead({ properties }: { properties: head_props }) {
   return (
     <head>
-      {/* standard charset for web dev */}
-      <meta charSet={properties.charSet} />
-      {/* Mobile view help */}
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1"
-      />
-      {/* Title of Page */}
-      <title>{properties.aboutPage.pageTitle}</title>
-      {/* About me */}
-      <meta
-        name="description"
-        content={properties.aboutPage.pageDiscription}
-      />
-      <meta
-        name="author"
-        content={properties.aboutPage.pageAuthor}
-      />
-
+      <PageEncoding characterSet={properties.charSet} />
+      <PageDetails details={properties.aboutPage} />
       {/* <!-- Web icons -->
     <!-- TODO: Create and add custom icons. -->
     <!--
@@ -100,6 +85,39 @@ export function PageHead({ properties }: { properties: head_props }) {
       href="/apple-touch-icon.png"
     /> --> */}
     </head>
+  );
+}
+
+function PageEncoding({ characterSet }: { characterSet: string }) {
+  return (
+    <>
+      {/* standard charsets */}
+      <meta charSet={characterSet} />
+      {/* Mobile view helper for crawers, always included */}
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+      />
+    </>
+  );
+}
+
+function PageDetails({ details }: { details: pageDetails }) {
+  return (
+    <>
+      {/* Title of Page */}
+      <title>{details.Title}</title>
+      {/* About the Page */}
+      <meta
+        name="description"
+        content={details.Discription}
+      />
+      {/* Creator of Page */}
+      <meta
+        name="author"
+        content={details.Author}
+      />
+    </>
   );
 }
 
