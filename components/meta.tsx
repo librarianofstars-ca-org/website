@@ -12,7 +12,9 @@ export interface head_props {
   charSet: string;
   aboutPage: page_details;
 }
-export interface body_props {}
+export interface body_props {
+  contents: any; // React.ReactNode?
+}
 export interface layout_props {
   head: head_props;
   body: body_props;
@@ -30,7 +32,9 @@ export const default_head_props: head_props = {
   charSet: "utf-8",
   aboutPage: default_page_details,
 };
-export const default_body_props: body_props = {};
+export const default_body_props: body_props = {
+  contents: <></>,
+};
 export const default_layout_props: layout_props = {
   head: default_head_props,
   body: default_body_props,
@@ -38,7 +42,14 @@ export const default_layout_props: layout_props = {
   className: "style-root",
 };
 
-export default function Layout({ properties }: { properties: layout_props }) {
+export default function Layout({
+  properties,
+  children,
+}: {
+  properties: layout_props;
+  children;
+}) {
+  properties.body.contents = children;
   return (
     <html
       lang={properties.language}
@@ -131,5 +142,5 @@ function PageIcons() {
 }
 
 export function PageBody({ properties }: { properties: body_props }) {
-  return <body id="page">{/* {children} */}</body>;
+  return <body id="page">{properties.contents}</body>;
 }
