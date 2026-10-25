@@ -2,39 +2,39 @@ import { IdentifiedHeading } from "@/components/elements/heading";
 
 import "@/styles/base.css";
 
-type pageDetails = {
+export interface pageDetails {
   Title: string;
   Discription: string;
   Author: string;
-};
+}
 
-type head_props = {
+export interface head_props {
   charSet: string;
   aboutPage: pageDetails;
-};
-type body_props = {};
-type layout_props = {
+}
+export interface body_props {}
+export interface layout_props {
   head: head_props;
   body: body_props;
   language: string;
   className: string;
-};
+}
 
-interface default_head_props extends head_props {
-  charSet: "utf-8";
+export const default_head_props: head_props = {
+  charSet: "utf-8",
   aboutPage: {
-    Title: "Default Page"; // LibrarianOfStars's Homepage
-    Discription: "A simple index page, for my project of a website.";
-    Author: "Librarian Of Stars";
-  };
-}
-interface default_body_props extends body_props {}
-interface default_layout_props extends layout_props {
-  head: default_head_props;
-  body: default_body_props;
-  language: "en";
-  className: "style-root";
-}
+    Title: "Default Page", // LibrarianOfStars's Homepage
+    Discription: "A simple index page, for my project of a website.",
+    Author: "Librarian Of Stars",
+  },
+};
+export const default_body_props: body_props = {};
+export const default_layout_props: layout_props = {
+  head: default_head_props,
+  body: default_body_props,
+  language: "en",
+  className: "style-root",
+};
 
 export default function Layout({ properties }: { properties: layout_props }) {
   return (
