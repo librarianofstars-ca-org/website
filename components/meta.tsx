@@ -67,23 +67,7 @@ export function PageHead({ properties }: { properties: head_props }) {
     <head>
       <PageEncoding characterSet={properties.charSet} />
       <PageDetails details={properties.aboutPage} />
-      {/* <!-- Web icons -->
-    <!-- TODO: Create and add custom icons. -->
-    <!--
-    <link
-      rel="icon"
-      href="/favicon.ico"
-      sizes="32x32"
-    />
-    <link
-      rel="icon"
-      href="/icon.svg"
-      type="image/svg+xml"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="/apple-touch-icon.png"
-    /> --> */}
+      <PageIcons />
     </head>
   );
 }
@@ -119,6 +103,29 @@ function PageDetails({ details }: { details: pageDetails }) {
       />
     </>
   );
+}
+
+function PageIcons() {
+  {
+    /* <!-- Web icons -->
+    <!-- TODO: Create and add custom icons. -->
+    <!--
+    <link
+      rel="icon"
+      href="/favicon.ico"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="/icon.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="/apple-touch-icon.png"
+    /> --> */
+  }
+  return <></>;
 }
 
 export function PageBody({ properties }: { properties: body_props }) {
