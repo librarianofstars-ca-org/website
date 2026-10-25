@@ -4,13 +4,27 @@ import "@/styles/base.css";
 
 type head_props = {};
 type body_props = {};
-type layout_props = { head: head_props; body: body_props };
+type layout_props = {
+  head: head_props;
+  body: body_props;
+  language: string;
+  className: string;
+};
+
+interface default_head_props extends head_props {}
+interface default_body_props extends body_props {}
+interface default_layout_props extends layout_props {
+  head: default_head_props;
+  body: default_body_props;
+  language: "en";
+  className: "style-root";
+}
 
 export default function Layout({ properties }: { properties: layout_props }) {
   return (
     <html
-      lang="en"
-      className="style-root"
+      lang={properties.language}
+      className={properties.className}
     >
       <PageHead properties={properties.head} />
       <PageBody properties={properties.body}>
@@ -76,7 +90,5 @@ export function PageHead({ properties }: { properties: head_props }) {
 }
 
 export function PageBody({ properties }: { properties: body_props }) {
-  return <body id="page">
-    {/* {children} */}
-    </body>;
+  return <body id="page">{/* {children} */}</body>;
 }
