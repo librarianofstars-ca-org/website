@@ -2,7 +2,14 @@ import { IdentifiedHeading } from "@/components/elements/heading";
 
 import "@/styles/base.css";
 
-type head_props = {};
+type head_props = {
+  charSet: string;
+  aboutPage: {
+    pageTitle: string;
+    pageDiscription: string;
+    pageAuthor: string;
+  };
+};
 type body_props = {};
 type layout_props = {
   head: head_props;
@@ -11,7 +18,14 @@ type layout_props = {
   className: string;
 };
 
-interface default_head_props extends head_props {}
+interface default_head_props extends head_props {
+  charSet: "utf-8";
+  aboutPage: {
+    pageTitle: "Default Page"; // LibrarianOfStars's Homepage
+    pageDiscription: "A simple index page, for my project of a website.";
+    pageAuthor: "Librarian Of Stars";
+  };
+}
 interface default_body_props extends body_props {}
 interface default_layout_props extends layout_props {
   head: default_head_props;
@@ -50,22 +64,22 @@ export function PageHead({ properties }: { properties: head_props }) {
   return (
     <head>
       {/* standard charset for web dev */}
-      <meta charSet="utf-8" />
+      <meta charSet={properties.charSet} />
       {/* Mobile view help */}
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1"
       />
       {/* Title of Page */}
-      <title>LibrarianOfStars's Homepage</title>
+      <title>{properties.aboutPage.pageTitle}</title>
       {/* About me */}
       <meta
         name="description"
-        content="A simple index page, for my project of a website."
+        content={properties.aboutPage.pageDiscription}
       />
       <meta
         name="author"
-        content="Librarian Of Stars"
+        content={properties.aboutPage.pageAuthor}
       />
 
       {/* <!-- Web icons -->
