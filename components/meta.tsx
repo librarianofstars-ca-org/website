@@ -2,7 +2,7 @@ import { IdentifiedHeading } from "@/components/elements/heading";
 
 import "@/styles/base.css";
 
-export interface pageDetails {
+export interface page_details {
   Title: string;
   Discription: string;
   Author: string;
@@ -10,7 +10,7 @@ export interface pageDetails {
 
 export interface head_props {
   charSet: string;
-  aboutPage: pageDetails;
+  aboutPage: page_details;
 }
 export interface body_props {}
 export interface layout_props {
@@ -20,13 +20,15 @@ export interface layout_props {
   className: string;
 }
 
+export const default_page_details: page_details = {
+  Title: "Default Page", // LibrarianOfStars's Homepage
+  Discription: "A simple index page, for my project of a website.",
+  Author: "Librarian Of Stars",
+};
+
 export const default_head_props: head_props = {
   charSet: "utf-8",
-  aboutPage: {
-    Title: "Default Page", // LibrarianOfStars's Homepage
-    Discription: "A simple index page, for my project of a website.",
-    Author: "Librarian Of Stars",
-  },
+  aboutPage: default_page_details,
 };
 export const default_body_props: body_props = {};
 export const default_layout_props: layout_props = {
@@ -86,7 +88,7 @@ function PageEncoding({ characterSet }: { characterSet: string }) {
   );
 }
 
-function PageDetails({ details }: { details: pageDetails }) {
+function PageDetails({ details }: { details: page_details }) {
   return (
     <>
       {/* Title of Page */}
