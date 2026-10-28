@@ -22,4 +22,4 @@
 
 (did fixing this find other issues? does this need attention, to recover lost data or otherwise?)
 
-*By Librarian Of Stars*
+By *Librarian Of Stars*

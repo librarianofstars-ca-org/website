@@ -14,4 +14,4 @@
 
 (Other thoughts for further plans?)
 
-*By Librarian Of Stars*
+By *Librarian Of Stars*

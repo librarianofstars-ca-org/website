@@ -14,4 +14,4 @@
 
 (does this need more talking over? could this be clarifed elsewhere?)
 
-*By Librarian Of Stars*
+By *Librarian Of Stars*

@@ -14,4 +14,4 @@
 
 (does this need more work? does this match what is implimented?)
 
-*By Librarian Of Stars*
+By *Librarian Of Stars*

@@ -14,4 +14,4 @@
 
 (does this need more work later? could this be done better (ie. with a workflow or Action)?)
 
-*By Librarian Of Stars*
+By *Librarian Of Stars*

@@ -14,4 +14,4 @@
 
 (does this need more talking over? does this match what we have done or plan to do?)
 
-*By Librarian Of Stars*
+By *Librarian Of Stars*

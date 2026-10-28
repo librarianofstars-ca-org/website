@@ -17,4 +17,4 @@
 (how did you make this feature? any challenges, new learnings?)
 (Other thoughts on this change?)
 
-*By Librarian Of Stars*
+By *Librarian Of Stars*

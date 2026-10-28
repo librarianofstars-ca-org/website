@@ -19,4 +19,4 @@
 
 (Other thoughts for further plans for developing this or related features?)
 
-*By Librarian Of Stars*
+By *Librarian Of Stars*

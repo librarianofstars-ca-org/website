@@ -14,4 +14,4 @@
 
 (does this need more thought? does this match the goals at the moment?)
 
-*By Librarian Of Stars*
+By *Librarian Of Stars*

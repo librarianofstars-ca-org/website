@@ -15,4 +15,4 @@
 (how did you code these tests? any challenges, new learnings?)
 (Other thoughts on this change? related to other issues?)
 
-*By Librarian Of Stars*
+By *Librarian Of Stars*
