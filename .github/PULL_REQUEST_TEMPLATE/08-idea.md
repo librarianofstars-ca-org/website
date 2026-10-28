@@ -1,4 +1,4 @@
-# Pull Request
+# Idea Pull Request
 
 (Overview of purpose - what is this idea for?)
 
