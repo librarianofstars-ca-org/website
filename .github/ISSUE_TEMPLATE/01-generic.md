@@ -1,13 +1,13 @@
 ---
-name: Default
-about: Misc Issue / custom style
+name: Generic
+about: Generic Issue Template
 title: ''
 labels: 
 assignees: Librarian-of-Stars
 ---
 
 **Overview**
-(what are you issueing this for?)
+(what are you issuing this for?)
 
 **Details**
 (what would we need to do to complete this?)

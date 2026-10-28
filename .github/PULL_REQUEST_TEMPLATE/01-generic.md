@@ -1,4 +1,4 @@
-# Default Pull Request
+# Generic Pull Request
 
 (Overview of purpose)
 
