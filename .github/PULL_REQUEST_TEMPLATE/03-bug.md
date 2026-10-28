@@ -14,7 +14,7 @@
 
 (Description of the fix(es) made, high to mid level abstraction)
 
-## Fix Implemetation
+## Fix Implementation
 
 (how did you fix this bug? any challenges, new learnings?)
 

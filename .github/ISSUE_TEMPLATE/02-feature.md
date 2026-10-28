@@ -10,7 +10,7 @@ assignees: Librarian-of-Stars
 **Feature Overview**
 (what does the feature do?)
 
-**Implemetation Details**
+**Implementation Details**
 (how should we implement that?)
 
 **Options/Choices**

@@ -10,7 +10,7 @@
 
 (Description of the notes made or work done, mid level abstraction)
 
-## Implemetation
+## Implementation
 
 (how did you go about this? any challenges, new learnings?)
 (did you follow the recomended way, or pick one of the other options provided?)

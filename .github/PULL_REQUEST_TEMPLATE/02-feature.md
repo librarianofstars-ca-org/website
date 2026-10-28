@@ -10,7 +10,7 @@
 
 (Description of the changes and/or additions made, high to mid level abstraction)
 
-## Implemetation
+## Implementation
 
 (how did you make this feature? any challenges, new learnings?)
 (did you follow the recomended way, or pick one of the other options provided?)
