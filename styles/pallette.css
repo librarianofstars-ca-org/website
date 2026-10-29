@@ -72,17 +72,17 @@
     --color-green-90: oklch(0.12 0.045 140);
     --color-green-95: oklch(0.05 0.019 140);
     /* Light Blue */
-    --color-blue-light-3-05: oklch(0.95 0.042 210);
-    --color-blue-light-3-10: oklch(0.88 0.102 210);
-    --color-blue-light-3-20: oklch(0.81 0.162 210);
-    --color-blue-light-3-30: oklch(0.74 0.148 210);
-    --color-blue-light-3-40: oklch(0.67 0.134 210);
-    --color-blue-light-3-50: oklch(0.6 0.12 210);
-    --color-blue-light-3-60: oklch(0.52 0.104 210);
-    --color-blue-light-3-70: oklch(0.44 0.088 210);
-    --color-blue-light-3-80: oklch(0.36 0.072 210);
-    --color-blue-light-3-90: oklch(0.28 0.056 210);
-    --color-blue-light-3-95: oklch(0.2 0.04 210);
+    --color-blue-light-05: oklch(0.95 0.042 210);
+    --color-blue-light-10: oklch(0.88 0.102 210);
+    --color-blue-light-20: oklch(0.81 0.162 210);
+    --color-blue-light-30: oklch(0.74 0.148 210);
+    --color-blue-light-40: oklch(0.67 0.134 210);
+    --color-blue-light-50: oklch(0.6 0.12 210);
+    --color-blue-light-60: oklch(0.52 0.104 210);
+    --color-blue-light-70: oklch(0.44 0.088 210);
+    --color-blue-light-80: oklch(0.36 0.072 210);
+    --color-blue-light-90: oklch(0.28 0.056 210);
+    --color-blue-light-95: oklch(0.2 0.04 210);
     /* Dark Blue */
     --color-blue-dark-05: oklch(0.95 0.022 280);
     --color-blue-dark-10: oklch(0.88 0.055 280);
