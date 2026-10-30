@@ -9,16 +9,16 @@ assignees: Librarian-of-Stars
 
 ## Task Overview
 
-(what does this task acomplish or do?)
+*what does this task acomplish or do?*
 
 ## Details
 
-(how are we going to approch this task?)
+*how are we going to approch this task?*
 
 ## Options/Choices
 
-(what other ways could we do this instead?)
+*what other ways could we do this instead?*
 
 ## Context/Links
 
-(what is this related/relevent too?)
+*what is this related/relevent too?*

@@ -9,8 +9,8 @@ assignees: Librarian-of-Stars
 
 ## Chore Overview
 
-(what was this for?)
+*what was this for?*
 
 ## Context
 
-(what is this related/relevent too?)
+*what is this related/relevent too?*

@@ -9,16 +9,16 @@ assignees: Librarian-of-Stars
 
 ## Discusion Overview
 
-(what topic do you want to raise? what questions should be central?)
+*what topic do you want to raise? what questions should be central?*
 
 ## Details
 
-(share relevent details, including links, )
+*share relevent details, including links,*
 
 ## Expectations
 
-(what goals are related to this talk? are there actions that you want taken?)
+*what goals are related to this talk? are there actions that you want taken?*
 
 ## Context
 
-(what is this relevent too? what brought this on?)
+*what is this relevent too? what brought this on?*

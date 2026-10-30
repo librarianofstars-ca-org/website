@@ -9,16 +9,16 @@ assignees: Librarian-of-Stars
 
 ## Refactor Overview
 
-(what would this refactor do?)
+*what would this refactor do?*
 
 ## Purpose
 
-(why would this way be better then before?)
+*why would this way be better then before?*
 
 ## Options/Choices
 
-(what else would work instead?)
+*what else would work instead?*
 
 ## Context
 
-(what is this related/relevent too?)
+*what is this related/relevent too?*

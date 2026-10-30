@@ -9,12 +9,12 @@ assignees: Librarian-of-Stars
 
 ## Documentation Overview
 
-(what would the docs be for?)
+*what would the docs be for?*
 
 ## Purpose
 
-(what did you expect to find that was not there?)
+*what did you expect to find that was not there?*
 
 ## Context
 
-(what is this related/relevent too?)
+*what is this related/relevent too?*

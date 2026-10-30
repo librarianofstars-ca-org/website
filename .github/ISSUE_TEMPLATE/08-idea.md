@@ -9,17 +9,17 @@ assignees: Librarian-of-Stars
 
 ## Idea Overview
 
-(what does this idea intail?)
+*what does this idea intail?*
 
 ## Details
 
-(what are the anticipated benefits and drawbacks?)
-(feasiblity and purpose?)
+*what are the anticipated benefits and drawbacks?*
+*feasiblity and purpose?*
 
 ## Reasoning
 
-(what makes you propose this idea? is there something missing otherwise? )
+*what makes you propose this idea? is there something missing otherwise?*
 
 ## Context
 
-(what is this relevent too?)
+*what is this relevent too?*

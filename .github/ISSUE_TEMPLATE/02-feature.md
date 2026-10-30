@@ -8,15 +8,15 @@ assignees: Librarian-of-Stars
 ---
 
 **Feature Overview**
-(what does the feature do?)
+*what does the feature do?*
 
 **Implementation Details**
-(how should we implement that?)
+*how should we implement that?*
 
 ## Options/Choices
 
-(what else would work instead?)
+*what else would work instead?*
 
 ## Context/Links
 
-(what is this related/relevent too?)
+*what is this related/relevent too?*
