@@ -1,10 +1,10 @@
-# Inquirey Pull Request
+# Inquiry Pull Request
 
-*Overview of purpose - what is this inquirey PR for?*
+*Overview of purpose - what is this inquiry PR for?*
 
 ## Issue
 
-*What is the inquirey issue this pull request closes/is for?*
+*What is the inquiry issue this pull request closes/is for?*
 
 ## Changelog
 

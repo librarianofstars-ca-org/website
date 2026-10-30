@@ -1,5 +1,5 @@
 ---
-name: Inquirey
+name: Inquiry
 about: A Question, Ask, Or Inquiry
 title: 'question/'
 labels: type:inquiry
