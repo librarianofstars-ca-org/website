@@ -1,0 +1,8 @@
+body {
+    background-color: var(--color-site-back);
+    color: var(--color-site-text);
+}
+body > div {
+    background-color: var(--color-site-main);
+    outline-color: var(--color-site-accent);
+}

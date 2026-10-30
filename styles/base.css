@@ -22,9 +22,15 @@ html.style-root {
     --size-hg: calc(var(--size-md) * 2.0);
     
     /* Color Pallette (Dark) */
-    /* --color-<path>-(back, main, text, accent, highlight ) */
+    /* --color-<path>-(back, main, accent, highlight, text ) */
+    /* Generaly want to have lightness value decrease as properties go on */
     /* Reused - path 'meta' */
     /* Site - path 'site' */
+    --color-site-back: var(--color-purple-95);
+    --color-site-main: var(--color-purple-80);
+    --color-site-accent: var(--color-purple-70);
+    --color-site-highlight: var(--color-purple-40);
+    --color-site-text: var(--color-purple-10);
     /* Raised Elements - path 'section' */
     /* - Header - path 'head' */
     /* - Sidebar - path 'side' */
@@ -36,9 +42,15 @@ html.style-root {
 @media (prefers-color-scheme:light) {
     html.style-root {
         /* Color Pallette (Light) */
-        /* --color-<path>-(back, main, text, accent, highlight ) */
+        /* --color-<path>-(back, main, accent, highlight, text ) */
+        /* Generaly want to have lightness value increase as properties go on */
         /* Reused - path 'meta' */
         /* Site - path 'site' */
+        --color-site-back: var(--color-purple-05);
+        --color-site-main: var(--color-purple-20);
+        --color-site-accent: var(--color-purple-30);
+        --color-site-highlight: var(--color-purple-60);
+        --color-site-text: var(--color-purple-90);
         /* Raised Elements - path 'section' */
         /* - Header - path 'head' */
         /* - Sidebar - path 'side' */
