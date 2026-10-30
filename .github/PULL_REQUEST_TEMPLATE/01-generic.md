@@ -1,17 +1,19 @@
 # Generic Pull Request
 
-(Overview of purpose)
+(Overview of purpose - what is the generic PR for?)
 
 ## Issue
 
-(The issue this pull request closes/is for)
+(What is the generic issue this pull request closes/is for?)
 
 ## Changelog
 
-(Description of the changes and/or additions made, high to mid level abstraction)
+(A description of the changes and/or additions made,
+with a high to middle level abstraction)
 
 ## Future
 
-(Other thoughts for further plans?)
+(Other thoughts for further planed issues?)
+(Any new issues noticed while working on this?)
 
 By *Librarian Of Stars*

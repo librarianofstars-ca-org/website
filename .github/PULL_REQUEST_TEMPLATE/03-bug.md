@@ -1,25 +1,28 @@
 # Bug Pull Request
 
-(Overview of purpose - what bug is this fixing)
+(Overview of purpose - what is this bug PR for?)
 
 ## Issue
 
-(The bug issue this pull request is for)
+(What is the bug issue this pull request closes/is for?)
 
 ## Path Taken
 
-(How did you test and find what was wrong? was this easy or hard?)
+(How did you test and find what was wrong?)
 
 ## Changelog
 
-(Description of the fix(es) made, high to mid level abstraction)
+(A description of the fix(es), changes and/or additions made,
+with a high to middle abstraction level)
 
 ## Fix Implementation
 
-(how did you fix this bug? any challenges, new learnings?)
+(How did you go about fixing this bug?)
+(Did you encounter any challenges, or new learned principles?)
 
 ## Future
 
-(did fixing this find other issues? does this need attention, to recover lost data or otherwise?)
+(Any new issues noticed while working on this?)
+(Does this need more attention, to recover lost data, future-proofing, or otherwise?)
 
 By *Librarian Of Stars*

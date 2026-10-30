@@ -1,17 +1,19 @@
 # Inquirey Pull Request
 
-(Overview of purpose - what is this question pr for?)
+(Overview of purpose - what is this inquirey PR for?)
 
 ## Issue
 
-(The question issue this pull request is for)
+(What is the inquirey issue this pull request closes/is for?)
 
 ## Changelog
 
-(Description of the notes or comments made, the answer given)
+(A simple description of the notes taken, comments made, posible work done
+and final answer given, with a high to middle abstraction level)
 
 ## Further Thoughts
 
-(does this need more talking over? could this be clarifed elsewhere?)
+(Does this need more talking over?)
+(Could this be clarifed elsewhere so that people don't have to ask again?)
 
 By *Librarian Of Stars*

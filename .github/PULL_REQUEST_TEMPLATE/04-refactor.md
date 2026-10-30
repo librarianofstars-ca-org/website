@@ -1,20 +1,21 @@
 # Refactor Pull Request
 
-(Overview of purpose - what refactor is this for)
+(Overview of purpose - what is this refactor PR for?)
 
 ## Issue
 
-(The refactor issue this pull request is for)
+(What is the refactor issue this pull request closes/is for?)
 
 ## Changelog
 
-(Description of the changes and/or additions made, high to mid level abstraction)
-
-(did you follow the recomended way, or pick one of the other options provided?)
+(A description of the refactor changes and/or additions made,
+with a high to middle abstraction level)
 
 ## Thoughts
 
-(how did you make this feature? any challenges, new learnings?)
-(Other thoughts on this change?)
+(How did you make this refactor happen?)
+(Did you follow the planned/recomended path,
+or pick one of the other options provided? If so, why?)
+(Any other thoughts on this change?)
 
 By *Librarian Of Stars*

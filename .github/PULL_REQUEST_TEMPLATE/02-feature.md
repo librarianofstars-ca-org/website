@@ -1,22 +1,26 @@
 # Feature Pull Request
 
-(Overview of purpose - what feature is this for)
+(Overview of purpose - what is this feature PR for?)
 
 ## Issue
 
-(The feature issue this pull request is for)
+(What is the feature issue this pull request closes/is for?)
 
 ## Changelog
 
-(Description of the changes and/or additions made, high to mid level abstraction)
+(A description of the feature changes and/or additions made,
+with a high to middle abstraction level)
 
 ## Implementation
 
-(how did you make this feature? any challenges, new learnings?)
-(did you follow the recomended way, or pick one of the other options provided?)
+(How did you make this feature happen?)
+(Were there any challenges, or new things you learned?)
+(Did you follow the planned/recomended path,
+or pick one of the other options provided? If so, why?)
 
 ## Future
 
-(Other thoughts for further plans for developing this or related features?)
+(Any other thoughts for further plans for developing this or related features?)
+(Any new issues noticed while working on this?)
 
 By *Librarian Of Stars*

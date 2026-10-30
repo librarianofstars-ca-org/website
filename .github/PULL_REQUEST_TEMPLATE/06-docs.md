@@ -1,17 +1,19 @@
 # Docs Pull Request
 
-(Overview of purpose - what is this documenting?)
+(Overview of purpose - what is this documention PR for?)
 
 ## Issue
 
-(The docs issue this pull request is for)
+(What is the documentation issue this pull request closes/is for?)
 
 ## Changelog
 
-(Simple description of the documentation added or changed, high level abstraction)
+(A simple description of the documentation changes and/or additions made,
+with a high to middle abstraction level)
 
 ## Further Work
 
-(does this need more work? does this match what is implimented?)
+(Do the docs match current behavour? If not, what's the new thing to add or change?)
+(Anything to add as future plans or ideas?)
 
 By *Librarian Of Stars*
