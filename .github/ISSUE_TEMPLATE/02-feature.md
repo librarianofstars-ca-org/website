@@ -7,10 +7,12 @@ assignees: Librarian-of-Stars
 
 ---
 
-**Feature Overview**
+## Overview
+
 *what does the feature do?*
 
-**Implementation Details**
+## Implementation Details
+
 *how should we implement that?*
 
 ## Options/Choices

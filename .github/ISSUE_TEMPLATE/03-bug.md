@@ -7,10 +7,12 @@ assignees: Librarian-of-Stars
 
 ---
 
-**Bug Overview**
+## Bug Overview
+
 *what does this bug intail?*
 
-**Recreation Details**
+## Recreation Details
+
 *how should we find and test this?*
 *include relevent logs, pictures, spec details*
 
