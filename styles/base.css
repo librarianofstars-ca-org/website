@@ -25,6 +25,10 @@ html.style-root {
     /* --color-<path>-(back, main, accent, highlight, text ) */
     /* Generaly want to have lightness value decrease as properties go on */
     /* Reused - path 'meta' */
+    --color-meta-links-unvisited: var(--color-blue-dark-30);
+    --color-meta-links-invert-unvisited: var(--color-blue-dark-70);
+    --color-meta-links-visited: var(--color-blue-dark-40);
+    --color-meta-links-invert-visited: var(--color-blue-dark-60);
     /* Site - path 'site' */
     --color-site-back: var(--color-purple-95);
     --color-site-main: var(--color-purple-80);
@@ -39,6 +43,11 @@ html.style-root {
     --color-section-head-highlight: var(--color-pink-50);
     --color-section-head-text: var(--color-pink-05);
     /* - Sidebar - path 'side' */
+    --color-section-side-back: var(--color-site-main);
+    --color-section-side-main: var(--color-site-accent);
+    --color-section-side-accent: var(--color-magenta-60);
+    --color-section-side-highlight: var(--color-magenta-50);
+    --color-section-side-text: var(--color-magenta-05);
     /* - Main - path 'body' */
     /* - Footer - path 'foot' */
     /* Elements - path 'element' */
@@ -48,6 +57,12 @@ html.style-root {
     --color-element-nav-accent: var(--color-pink-50);
     --color-element-nav-highlight: var(--color-pink-20);
     --color-element-nav-text: var(--color-blue-light-10);
+    /* Table of Contents - path 'toc' */
+    --color-element-toc-back: var(--color-section-side-main);
+    --color-element-toc-main: var(--color-section-side-accent);
+    --color-element-toc-accent: var(--color-magenta-50);
+    --color-element-toc-highlight: var(--color-magenta-20);
+    --color-element-toc-text: var(--color-blue-dark-10);
     
 }
 
@@ -57,6 +72,10 @@ html.style-root {
         /* --color-<path>-(back, main, accent, highlight, text ) */
         /* Generaly want to have lightness value increase as properties go on */
         /* Reused - path 'meta' */
+        --color-meta-links-unvisited: var(--color-blue-dark-70);
+        --color-meta-links-invert-unvisited: var(--color-blue-dark-30);
+        --color-meta-links-visited: var(--color-blue-dark-60);
+        --color-meta-links-invert-visited: var(--color-blue-dark-40);
         /* Site - path 'site' */
         --color-site-back: var(--color-purple-05);
         --color-site-main: var(--color-purple-20);
@@ -71,6 +90,11 @@ html.style-root {
         --color-section-head-highlight: var(--color-pink-50);
         --color-section-head-text: var(--color-pink-95);
         /* - Sidebar - path 'side' */
+        --color-section-side-back: var(--color-site-main);
+        --color-section-side-main: var(--color-site-accent);
+        --color-section-side-accent: var(--color-magenta-40);
+        --color-section-side-highlight: var(--color-magenta-50);
+        --color-section-side-text: var(--color-magenta-95);
         /* - Main - path 'body' */
         /* - Footer - path 'foot' */
         /* Elements - path 'element' */
@@ -80,5 +104,11 @@ html.style-root {
         --color-element-nav-accent: var(--color-pink-50);
         --color-element-nav-highlight: var(--color-pink-80);
         --color-element-nav-text: var(--color-blue-light-90);
+        /* Table of Contents - path 'toc' */
+        --color-element-toc-back: var(--color-section-side-main);
+        --color-element-toc-main: var(--color-section-side-accent);
+        --color-element-toc-accent: var(--color-magenta-50);
+        --color-element-toc-highlight: var(--color-magenta-80);
+        --color-element-toc-text: var(--color-blue-dark-90);
     }
 }

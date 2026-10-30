@@ -1,6 +1,6 @@
 /* Wrapper */
 .table-of-contents {
-    background-color: darkgray;
+    background-color: var(--color-element-toc-back);
     padding-block: var(--size-xs);
     position: relative;
 }
@@ -8,7 +8,7 @@
 /* Link Overrides */
 .table-of-contents a {
     color: unset;
-    background-color: inherit;
+    background-color: var(--color-element-toc-main);
 }
 
 /* Sizing of each heading */
@@ -47,6 +47,8 @@
     font-weight: bold;
     font-style: italic;
 
+    color: var(--color-element-toc-text);
+    background-color: var(--color-element-toc-main);
 }
 /* .table-of-contents all items */
 .table-of-contents > a > .toc-item {
@@ -57,7 +59,12 @@
     overflow: hidden;
     text-overflow: ellipsis " - ";
 
-    text-decoration: solid underline darkblue var(--size-tn);
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-width: var(--size-tn);
+    text-decoration-color: var(--color-meta-links-unvisited) ;
+
+    border-color: var(--color-element-toc-accent);
     
     box-sizing: content-box;
     display: block;
@@ -66,21 +73,27 @@
 
 /* All but top level heading */
 .table-of-contents > a > .toc-item:not(h2) {
-    border-inline-start: var(--size-md) solid blue;
-    border-block: var(--size-tn) solid green;
+    border-style: solid;
+    border-inline-start-width: var(--size-md);
+    border-inline-end-width: 0;
+    border-inline-start-color: var(--color-meta-links);
+    border-block-width: var(--size-tn);
+    /* border-block-color: var(--color-element-toc-accent); */
     border-radius: var(--size-md);
 }
 
 /* Link Icon On Hover */
 .table-of-contents > a > *:hover {
-    background-color: azure;
+    background-color: var(--color-element-toc-text);
+    color: var(--color-element-toc-accent);
+    text-decoration-color: var(--color-meta-links-invert-unvisited) ;
 }
 .table-of-contents > a > .toc-item:hover::before {
     content: "#";
     position: absolute;
     left: var(--size-xs);
-    color: lightblue;
-    background-color: darkblue;
+    color: var(--color-meta-links-unvisited);
+    background-color: var(--color-meta-links-invert-unvisited);
     border-radius: 1em;
     width: calc(var(--size-sm) * 2);
     height: 1.2em;
@@ -103,11 +116,16 @@
     width: max-content;
     font-size: 0.9rem;
     border-style: solid;
-    border-color: green;
+    border-color: var(--color-element-toc-highlight);
     border-radius: var(--size-sm);
     border-inline-width: 3px;
-    text-decoration: overline underline black 1px;
+    text-decoration-line: overline underline;
+    text-decoration-color: var(--color-meta-links-unvisited);
+    text-decoration-width: 1px;
     /* text-decoration: none !important; */
+}
+.table-of-contents > a > small.toc-place:hover {
+    text-decoration-color: var(--color-meta-links-invert-unvisited);
 }
 .table-of-contents > a:first-of-type > small.toc-place {
     margin-block-start: 0;

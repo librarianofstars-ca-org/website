@@ -10,17 +10,21 @@ div.sidebar.wraper{
 
     margin: var(--size-sm);
 
-    border: var(--size-tn) solid brown;
+    border-block-width: var(--size-xs);
+    border-style: solid;
+    border-color: var(--color-section-side-accent);
     border-radius: var(--size-sm);
 }
 
 div.sidebar hr.sidebar {
     flex: 0 0 auto;
+    color: var(--color-section-side-accent);
+    background-color: var(--color-section-side-accent);
     height: 100%;
-    margin-block: 0px;
 }
 
 div.sidebar.contents {
     flex: 1 1 1;
     margin: auto;
+    background-color: var(--color-section-side-main);
 }
