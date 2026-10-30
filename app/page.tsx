@@ -1,4 +1,4 @@
-import Gallery, { gallery_items } from "@/components/content_blocks/gallery";
+import GalleryBlock, { gallery_items } from "@/components/content_blocks/gallery_block";
 import ParagraphBlock, {
   content_elements,
 } from "@/components/content_blocks/paragraph_block";
@@ -13,7 +13,7 @@ import Sidebar from "@/components/page_structure/sidebar";
 import Main from "@/components/page_structure/main";
 import TableOfContents, {
   outlined_heading,
-} from "@/components/page_structure/table_of_contents";
+} from "@/components/elements/table_of_contents";
 
 import "@/styles/shared.css";
 import "@/styles/app/shared.css";
@@ -217,7 +217,7 @@ function HomePageSummeryBlock() {
 }
 
 function HomePageArtGalleryBlock() {
-  return <Gallery items={homepage_gallery_items} />;
+  return <GalleryBlock items={homepage_gallery_items} />;
 }
 
 function HomePageFooter() {

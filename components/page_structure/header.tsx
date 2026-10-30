@@ -2,9 +2,9 @@ import "@/styles/components/shared.css";
 import "@/styles/components/page_structure/shared.css";
 import "@/styles/components/page_structure/header.css";
 
-import Seperator from "@/components/page_structure/seperator";
+import Seperator from "@/components/elements/seperator";
 
-import NavigationBar, { navlinks } from "@/components/page_structure/nav_bar";
+import NavigationBar, { navlinks } from "@/components/elements/navbar";
 import { IdentifiedHeading } from "@/components/elements/heading";
 
 let defaultlinks: navlinks = Array(

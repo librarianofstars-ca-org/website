@@ -1,8 +1,8 @@
 import "@/styles/components/shared.css";
-import "@/styles/components/page_structure/shared.css";
-import "@/styles/components/page_structure/navbar.css";
+import "@/styles/components/elements/shared.css";
+import "@/styles/components/elements/navbar.css";
 
-import Seperator from "@/components/page_structure/seperator";
+import Seperator from "@/components/elements/seperator";
 
 import Link from "next/link";
 import Icon from "@/components/elements/icon";
@@ -65,7 +65,7 @@ export function NavSeperator() {
 export function NavSpacer({
   length = "normal",
 }: {
-  length?: "tiny" | "small" | "normal" | "large" | "huge" ;
+  length?: "tiny" | "small" | "normal" | "large" | "huge";
 }) {
   return <div className={"nav-spacer" + " " + length} />;
 }

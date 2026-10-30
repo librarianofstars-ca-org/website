@@ -1,6 +1,6 @@
 import "@/styles/components/shared.css";
-import "@/styles/components/page_structure/shared.css";
-import "@/styles/components/page_structure/table_of_contents.css";
+import "@/styles/components/elements/shared.css";
+import "@/styles/components/elements/table_of_contents.css";
 
 import { LinkedHeading } from "@/components/elements/heading";
 

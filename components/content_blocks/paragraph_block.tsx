@@ -1,7 +1,7 @@
 import "@/styles/components/shared.css";
-import "@/styles/components/content_blocks/paragraph_block.css"
+import "@/styles/components/content_blocks/paragraph_block.css";
 
-import Seperator from "@/components/page_structure/seperator";
+import Seperator from "@/components/elements/seperator";
 
 export type content_element = { index: number; show?: string; isBr?: boolean };
 export type content_elements = content_element[];
