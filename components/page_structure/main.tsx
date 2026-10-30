@@ -2,7 +2,7 @@ import "@/styles/components/shared.css";
 import "@/styles/components/page_structure/shared.css";
 import "@/styles/components/page_structure/main.css";
 
-import Seperator from "@/components/page_structure/seperator";
+import Seperator from "@/components/elements/seperator";
 
 export default function Main({ children }) {
   return (
