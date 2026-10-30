@@ -18,6 +18,8 @@ nav hr.nav-bar-sep {
 
     background-color: var(--color-element-nav-accent);
     color: var(--color-element-nav-accent);
+
+    outline: 0px;
     
     flex: 0 0 var(--size-tn);
 }

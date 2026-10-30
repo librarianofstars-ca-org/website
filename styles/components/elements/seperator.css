@@ -1,14 +1,25 @@
 hr.page-seperator {
-    background-color: brown;
+    background-color: var(--color-element-sep-main);
+    color: var(--color-element-sep-accent);
     margin: var(--size-sm);
+
+    outline: 1px solid var(--color-element-sep-back);
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
 }
 hr.page-seperator.horizontal {
     margin-inline: auto;
     height: var(--size-tn);
     width: 90%;
+    /* border-inline-width: var(--size-md);
+    border-inline-color: var(--color-element-sep-highlight); */
 }
 hr.page-seperator.vertical {
     margin-block: 0;
     height: auto;
     width: var(--size-tn);
+    /* border-block-width: var(--size-md);
+    border-block-color: var(--color-element-sep-highlight); */
 }
