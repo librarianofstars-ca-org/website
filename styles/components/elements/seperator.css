@@ -1,6 +1,6 @@
 hr.page-seperator {
-    background-color: var(--color-element-sep-main);
-    color: var(--color-element-sep-accent);
+    background-color: var(--color-element-sep-accent);
+    color: var(--color-element-sep-main);
     margin: var(--size-sm);
 
     outline: 1px solid var(--color-element-sep-back);

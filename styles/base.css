@@ -25,10 +25,12 @@ html.style-root {
     /* --color-<path>-(back, main, accent, highlight, text ) */
     /* Generaly want to have lightness value decrease as properties go on */
     /* Reused - path 'meta' */
+    /* Links - path 'links' */
     --color-meta-links-unvisited: var(--color-blue-dark-30);
     --color-meta-links-invert-unvisited: var(--color-blue-dark-70);
     --color-meta-links-visited: var(--color-blue-dark-40);
     --color-meta-links-invert-visited: var(--color-blue-dark-60);
+
     /* Site - path 'site' */
     --color-site-back: var(--color-purple-95);
     --color-site-main: var(--color-purple-80);
@@ -55,8 +57,6 @@ html.style-root {
     --color-element-sep-back: var(--color-gray-80);
     --color-element-sep-main: var(--color-gray-60);
     --color-element-sep-accent: var(--color-gray-50);
-    --color-element-sep-highlight: var(--color-gray-30);
-    /* --color-element-sep-text: var(--color-gray-50); */
     /* - Navigation Bar - path 'nav' */
     --color-element-nav-back: var(--color-section-head-main);
     --color-element-nav-main: var(--color-section-head-accent);
@@ -112,6 +112,10 @@ html.style-root {
         /* - Main - path 'body' */
         /* - Footer - path 'foot' */
         /* Elements - path 'element' */
+        /* Seperator - path 'sep' */
+        --color-element-sep-back: var(--color-gray-20);
+        --color-element-sep-main: var(--color-gray-40);
+        --color-element-sep-accent: var(--color-gray-50);
         /* - Navigation Bar - path 'nav' */
         --color-element-nav-back: var(--color-section-head-main);
         --color-element-nav-main: var(--color-section-head-accent);
