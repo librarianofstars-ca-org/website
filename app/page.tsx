@@ -13,7 +13,7 @@ import Sidebar from "@/components/page_structure/sidebar";
 import Main from "@/components/page_structure/main";
 import TableOfContents, {
   outlined_heading,
-} from "@/components/page_structure/table_of_contents";
+} from "@/components/elements/table_of_contents";
 
 import "@/styles/shared.css";
 import "@/styles/app/shared.css";
