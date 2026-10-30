@@ -21,6 +21,13 @@ html.style-root {
     --size-xl: calc(var(--size-md) * 1.5);
     --size-hg: calc(var(--size-md) * 2.0);
     
-    /* Color Pallet (TODO Fill in) */
+    /* Color Pallette (Dark) */
     
+}
+
+@media (prefers-color-scheme:light) {
+    html.style-root {
+        /* Color Pallette (Light) */
+
+    }
 }
