@@ -33,9 +33,21 @@ html.style-root {
     --color-site-text: var(--color-purple-10);
     /* Raised Elements - path 'section' */
     /* - Header - path 'head' */
+    --color-section-head-back: var(--color-site-main);
+    --color-section-head-main: var(--color-site-accent);
+    --color-section-head-accent: var(--color-pink-60);
+    --color-section-head-highlight: var(--color-pink-50);
+    --color-section-head-text: var(--color-pink-05);
     /* - Sidebar - path 'side' */
     /* - Main - path 'body' */
     /* - Footer - path 'foot' */
+    /* Elements - path 'element' */
+    /* - Navigation Bar - path 'nav' */
+    --color-element-nav-back: var(--color-section-head-main);
+    --color-element-nav-main: var(--color-section-head-accent);
+    --color-element-nav-accent: var(--color-pink-50);
+    --color-element-nav-highlight: var(--color-pink-20);
+    --color-element-nav-text: var(--color-blue-light-10);
     
 }
 
@@ -53,8 +65,20 @@ html.style-root {
         --color-site-text: var(--color-purple-90);
         /* Raised Elements - path 'section' */
         /* - Header - path 'head' */
+        --color-section-head-back: var(--color-site-main);
+        --color-section-head-main: var(--color-site-accent);
+        --color-section-head-accent: var(--color-pink-40);
+        --color-section-head-highlight: var(--color-pink-50);
+        --color-section-head-text: var(--color-pink-95);
         /* - Sidebar - path 'side' */
         /* - Main - path 'body' */
         /* - Footer - path 'foot' */
+        /* Elements - path 'element' */
+        /* - Navigation Bar - path 'nav' */
+        --color-element-nav-back: var(--color-section-head-main);
+        --color-element-nav-main: var(--color-section-head-accent);
+        --color-element-nav-accent: var(--color-pink-50);
+        --color-element-nav-highlight: var(--color-pink-80);
+        --color-element-nav-text: var(--color-blue-light-90);
     }
 }
