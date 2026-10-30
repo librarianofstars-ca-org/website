@@ -13,8 +13,10 @@ assignees: Librarian-of-Stars
 **Implementation Details**
 (how should we implement that?)
 
-**Options/Choices**
+## Options/Choices
+
 (what else would work instead?)
 
-**Context/Links**
+## Context/Links
+
 (what is this related/relevent too?)

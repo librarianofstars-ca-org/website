@@ -6,14 +6,18 @@ labels:
 assignees: Librarian-of-Stars
 ---
 
-**Overview**
+## Overview
+
 (what are you issuing this for?)
 
-**Details**
+## Details
+
 (what would we need to do to complete this?)
 
-**Options/Choices**
+## Options/Choices
+
 (what other ways would work?)
 
-**Context/Links**
+## Context/Links
+
 (what is this related too?)

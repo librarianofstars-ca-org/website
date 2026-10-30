@@ -7,13 +7,16 @@ assignees: Librarian-of-Stars
 
 ---
 
-**Question Overview**
+## Question Overview
+
 (what are you asking about?)
 
-**Details**
+## Details
+
 (what is your question?)
 (who are you?)
 (is there anything you want me to do about this? or just answer?)
 
-**Context**
+## Context
+
 (what is this related or connected too?)

@@ -7,14 +7,18 @@ assignees: Librarian-of-Stars
 
 ---
 
-**Task Overview**
+## Task Overview
+
 (what does this task acomplish or do?)
 
-**Details**
+## Details
+
 (how are we going to approch this task?)
 
-**Options/Choices**
+## Options/Choices
+
 (what other ways could we do this instead?)
 
-**Context/Links**
+## Context/Links
+
 (what is this related/relevent too?)

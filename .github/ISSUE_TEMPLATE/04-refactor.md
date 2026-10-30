@@ -7,14 +7,18 @@ assignees: Librarian-of-Stars
 
 ---
 
-**Refactor Overview**
+## Refactor Overview
+
 (what would this refactor do?)
 
-**Purpose**
+## Purpose
+
 (why would this way be better then before?)
 
-**Options/Choices**
+## Options/Choices
+
 (what else would work instead?)
 
-**Context**
+## Context
+
 (what is this related/relevent too?)

@@ -7,15 +7,19 @@ assignees: Librarian-of-Stars
 
 ---
 
-**Idea Overview**
+## Idea Overview
+
 (what does this idea intail?)
 
-**Details**
+## Details
+
 (what are the anticipated benefits and drawbacks?)
 (feasiblity and purpose?)
 
-**Reasoning**
+## Reasoning
+
 (what makes you propose this idea? is there something missing otherwise? )
 
-**Context**
+## Context
+
 (what is this relevent too?)

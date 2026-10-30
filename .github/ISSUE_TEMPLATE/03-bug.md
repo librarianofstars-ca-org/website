@@ -14,8 +14,10 @@ assignees: Librarian-of-Stars
 (how should we find and test this?)
 (include relevent logs, pictures, spec details)
 
-**Expectation**
+## Expectation
+
 (what were you thinking should have happened?)
 
-**Context**
+## Context
+
 (what is this related/relevent too?)

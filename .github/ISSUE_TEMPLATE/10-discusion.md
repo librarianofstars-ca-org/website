@@ -7,14 +7,18 @@ assignees: Librarian-of-Stars
 
 ---
 
-**Discusion Overview**
+## Discusion Overview
+
 (what topic do you want to raise? what questions should be central?)
 
-**Details**
+## Details
+
 (share relevent details, including links, )
 
-**Expectations**
+## Expectations
+
 (what goals are related to this talk? are there actions that you want taken?)
 
-**Context**
+## Context
+
 (what is this relevent too? what brought this on?)
