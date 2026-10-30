@@ -57,12 +57,20 @@ html.style-root {
     --color-element-nav-accent: var(--color-pink-50);
     --color-element-nav-highlight: var(--color-pink-20);
     --color-element-nav-text: var(--color-blue-light-10);
+    --color-element-nav-invert-main: var(--color-element-nav-text);
+    --color-element-nav-invert-accent: var(--color-element-nav-highligh);
+    --color-element-nav-invert-highlight: var(--color-element-nav-accent);
+    --color-element-nav-invert-text: var(--color-element-nav-main);
     /* Table of Contents - path 'toc' */
     --color-element-toc-back: var(--color-section-side-main);
     --color-element-toc-main: var(--color-section-side-accent);
     --color-element-toc-accent: var(--color-magenta-50);
     --color-element-toc-highlight: var(--color-magenta-20);
     --color-element-toc-text: var(--color-blue-dark-10);
+    --color-element-toc-invert-main: var(--color-element-toc-text);
+    --color-element-toc-invert-accent: var(--color-element-toc-highlight);
+    --color-element-toc-invert-highlight: var(--color-element-toc-accent);
+    --color-element-toc-invert-text: var(--color-element-toc-main) ;
     
 }
 
@@ -104,11 +112,19 @@ html.style-root {
         --color-element-nav-accent: var(--color-pink-50);
         --color-element-nav-highlight: var(--color-pink-80);
         --color-element-nav-text: var(--color-blue-light-90);
+        --color-element-nav-invert-main: var(--color-element-nav-text);
+        --color-element-nav-invert-accent: var(--color-element-nav-highligh);
+        --color-element-nav-invert-highlight: var(--color-element-nav-accent);
+        --color-element-nav-invert-text: var(--color-element-nav-main);
         /* Table of Contents - path 'toc' */
         --color-element-toc-back: var(--color-section-side-main);
         --color-element-toc-main: var(--color-section-side-accent);
         --color-element-toc-accent: var(--color-magenta-50);
         --color-element-toc-highlight: var(--color-magenta-80);
         --color-element-toc-text: var(--color-blue-dark-90);
+        --color-element-toc-invert-main: var(--color-element-toc-text);
+        --color-element-toc-invert-accent: var(--color-element-toc-highlight);
+        --color-element-toc-invert-highlight: var(--color-element-toc-accent);
+        --color-element-toc-invert-text: var(--color-element-toc-main) ;
     }
 }

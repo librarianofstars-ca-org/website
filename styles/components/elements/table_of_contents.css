@@ -84,9 +84,10 @@
 
 /* Link Icon On Hover */
 .table-of-contents > a > *:hover {
-    background-color: var(--color-element-toc-text);
-    color: var(--color-element-toc-accent);
+    background-color: var(--color-element-toc-invert-main);
+    color: var(--color-element-toc-invert-text);
     text-decoration-color: var(--color-meta-links-invert-unvisited) ;
+    border-color: var(--color-element-invert-accent);
 }
 .table-of-contents > a > .toc-item:hover::before {
     content: "#";
@@ -126,6 +127,7 @@
 }
 .table-of-contents > a > small.toc-place:hover {
     text-decoration-color: var(--color-meta-links-invert-unvisited);
+    border-color: var(--color-element-toc-invert-highlight);
 }
 .table-of-contents > a:first-of-type > small.toc-place {
     margin-block-start: 0;

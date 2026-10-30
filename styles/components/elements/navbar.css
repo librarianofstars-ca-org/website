@@ -49,10 +49,16 @@ nav li a.nav-link {
     padding: var(--size-xs);
     background-color: var(--color-element-nav-main);
     color: var(--color-element-nav-text);
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--color-meta-links-unvisited);
 }
 nav li a.nav-link:hover { 
-    background-color:  var(--color-element-nav-text);
-    color:  var(--color-element-nav-main);
+    background-color:  var(--color-element-nav-invert-main);
+    color: var(--color-element-nav-invert-highlight);
+    border-color: var(--color-element-nav-invert-text);
+    text-decoration-color: var(--color-meta-links-invert-unvisited);
 }
 nav li.nav-bar-link-item::marker {
     display: none;
