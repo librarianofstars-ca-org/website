@@ -1,4 +1,4 @@
-import Gallery, { gallery_items } from "@/components/content_blocks/gallery";
+import GalleryBlock, { gallery_items } from "@/components/content_blocks/gallery_block";
 import ParagraphBlock, {
   content_elements,
 } from "@/components/content_blocks/paragraph_block";
@@ -217,7 +217,7 @@ function HomePageSummeryBlock() {
 }
 
 function HomePageArtGalleryBlock() {
-  return <Gallery items={homepage_gallery_items} />;
+  return <GalleryBlock items={homepage_gallery_items} />;
 }
 
 function HomePageFooter() {
