@@ -1,17 +1,20 @@
 ---
 name: Documentation
-about: Info about the project
+about: Infomation About These Projects
 title: 'docs/'
 labels: type:docs
 assignees: Librarian-of-Stars
 
 ---
 
-**Documentation Overview**
-(what would the docs be for?)
+## Documentation Overview
 
-**Purpose**
-(what did you expect to find that was not there?)
+*What would this documentation be for?*
 
-**Context**
-(what is this related/relevent too?)
+## Purpose
+
+*What docs or discription did you expect to find that was not there?*
+
+## Context
+
+*What is this related or relevant too?*

@@ -1,21 +1,25 @@
 ---
 name: Idea
-about: An proposal of future work
+about: A Proposal, Plan Or Inspiration
 title: 'idea/'
 labels: type:idea
 assignees: Librarian-of-Stars
 
 ---
 
-**Idea Overview**
-(what does this idea intail?)
+## Idea Overview
 
-**Details**
-(what are the anticipated benefits and drawbacks?)
-(feasiblity and purpose?)
+*What would this idea intail?*
 
-**Reasoning**
-(what makes you propose this idea? is there something missing otherwise? )
+## Details
 
-**Context**
-(what is this relevent too?)
+*What are some of the anticipated benefits and drawbacks to this?*
+*What would you say is the feasiblity, and primary purpose of it?*
+
+## Reasoning
+
+*What made you propose this idea/inspired you for this?*
+
+## Context
+
+*What is this related or relevant too?*

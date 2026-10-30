@@ -1,22 +1,23 @@
-# Pull Request
+# Task Pull Request
 
-(Overview of purpose - what task is this for)
+*Overview of purpose - what is this task PR for?*
 
 ## Issue
 
-(The task issue this pull request is for)
+*What is the task issue this pull request closes/is for?*
 
 ## Changelog
 
-(Description of the notes made or work done, mid level abstraction)
+*A simple description of the notes taken, changes and/or additions made,*
+*or tasks completed, with a high to middle abstraction level*
 
-## Implemetation
+## Implementation
 
-(how did you go about this? any challenges, new learnings?)
-(did you follow the recomended way, or pick one of the other options provided?)
+*How did you make this task happen? What steps did you take?*
+*Were there any challenges, or new things you learned?*
 
 ## Future
 
-(Other thoughts for further plans for working on this or related tasks?)
+*Any other thoughts for further plans, for more work on this, or related tasks?*
 
-*By Librarian Of Stars*
+By *Librarian Of Stars*

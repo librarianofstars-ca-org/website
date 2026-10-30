@@ -1,14 +1,16 @@
 ---
 name: Chore
-about: Routine changes, such as versioning
+about: Routine Changes Or Additions
 title: 'chore/'
 labels: type:chore
 assignees: Librarian-of-Stars
 
 ---
 
-**Chore Overview**
-(what was this for?)
+## Chore Overview
 
-**Context**
-(what is this related/relevent too?)
+*What would this be for?*
+
+## Context
+
+*What is this related or relevant too?*

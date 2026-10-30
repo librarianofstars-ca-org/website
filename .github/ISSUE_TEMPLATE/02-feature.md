@@ -1,20 +1,24 @@
 ---
 name: Feature
-about: Feature planned with details
+about: Planned Feature, Enhancment, Or Capability
 title: 'feat/'
 labels: type:feature
 assignees: Librarian-of-Stars
 
 ---
 
-**Feature Overview**
-(what does the feature do?)
+## Overview
 
-**Implemetation Details**
-(how should we implement that?)
+*For what feature are you issuing this for?*
 
-**Options/Choices**
-(what else would work instead?)
+## Implementation Details
 
-**Context/Links**
-(what is this related/relevent too?)
+*What would need to be done to complete this?*
+
+## Options/Choices
+
+*What other ways might work instead?*
+
+## Context/Links
+
+*What is this related or relevant too?*

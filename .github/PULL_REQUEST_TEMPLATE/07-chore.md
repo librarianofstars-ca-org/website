@@ -1,17 +1,19 @@
-# Pull Request
+# Chore Pull Request
 
-(Overview of purpose - what is this chore doing?)
+*Overview of purpose - what is this chore PR for?*
 
 ## Issue
 
-(The chore issue this pull request is for)
+*What is the chore issue this pull request closes/is for?*
 
 ## Changelog
 
-(Simple description of any changes or additions)
+*A simple description of the chore changes and/or additions made,*
+*with a high to middle abstraction level*
 
 ## Further Work
 
-(does this need more work later? could this be done better (ie. with a workflow or Action)?)
+*Does this need more work done at a future date?*
+*Could this be changed to a automated workflow *ie. via GitHub Actions*?*
 
-*By Librarian Of Stars*
+By *Librarian Of Stars*

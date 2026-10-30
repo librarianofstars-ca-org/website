@@ -1,4 +1,4 @@
 # Accessiblity
 
-*Important to me, but not quite a concern this early*
-*come back to later when it comes up*
+*This is important to me, but not a relevant concern quite this early in development.*
+*I'll come back to it later when it comes up in more detail.*

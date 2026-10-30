@@ -1,5 +1,8 @@
 # Contacts
 
-Contact me at [`contact@librarianofstars.ca`](mailto:contact@librarianofstars.ca) if you encounter a problem while on the site, or otherwise create a new issue about your bug/problem/request/idea.
+Contact me at [`contact@librarianofstars.ca`](mailto:contact@librarianofstars.ca)
+if you encounter a problem while on the site, or otherwise create a new issue
+about your bug/problem/request/idea.
 
-(Note: further infomation to come)
+*Note: further infomation to come*
+*More work is still being done with regards to these documents!*

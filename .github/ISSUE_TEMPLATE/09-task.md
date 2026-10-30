@@ -1,20 +1,24 @@
 ---
 name: Task
-about: Work Plan
+about: An External Plan For Work Done
 title: 'task/'
 labels: type:task
 assignees: Librarian-of-Stars
 
 ---
 
-**Task Overview**
-(what does this task acomplish or do?)
+## Task Overview
 
-**Details**
-(how are we going to approch this task?)
+*What would this task acomplish or achieve?*
 
-**Options/Choices**
-(what other ways could we do this instead?)
+## Details
 
-**Context/Links**
-(what is this related/relevent too?)
+*How should we approch this task?*
+
+## Options/Choices
+
+*What other ways could we do this instead?*
+
+## Context/Links
+
+*What is this related or relevant too?*

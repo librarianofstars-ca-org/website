@@ -1,20 +1,27 @@
 ---
 name: Discusion
-about: An topic to converse about
+about: A Topic, Conversation, Or Talk
 title: 'discuse/'
 labels: type:discusion
 assignees: Librarian-of-Stars
 
 ---
 
-**Discusion Overview**
-(what topic do you want to raise? what questions should be central?)
+## Discusion Overview
 
-**Details**
-(share relevent details, including links, )
+*What topic do you want to raise?*
+*What questions/topics should be central to the discusion?*
 
-**Expectations**
-(what goals are related to this talk? are there actions that you want taken?)
+## Details
 
-**Context**
-(what is this relevent too? what brought this on?)
+*Please share some relevant details, including links, other issues, or simply opinions.*
+*What sparked this/brought this on?*
+
+## Expectations
+
+*What goals or ideals are related to this talk?*
+*Are there actions that you want taken as a result of this?*
+
+## Context
+
+*What is this related or relevant too?*

@@ -1,18 +1,21 @@
 ---
 name: Tests
-about: Testing of a feature or bug
+about: Testing Of Expected Behavour
 title: 'tests/'
 labels: type:test
 assignees: Librarian-of-Stars
 
 ---
 
-**Test Overview**
-(what would this test be for?)
+## Test Overview
 
-**Purpose**
-(the expected behavour you coded in?)
-(the current behavour that this should fix/make easy to debug?)
+*What aspect of the code would this test be for?*
 
-**Context**
-(what is this related/relevent too?)
+## Purpose
+
+*The expected behavour that should be confirmed?*
+*The current behavour that this should fix/make easy to debug?*
+
+## Context
+
+*What is this related or relevant too?*

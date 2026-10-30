@@ -1,21 +1,27 @@
 ---
 name: Bug
-about: An error or malfunction
+about: An Error, Issue, Or Malfunction
 title: 'bug/'
 labels: type:bug
 assignees: Librarian-of-Stars
 
 ---
 
-**Bug Overview**
-(what does this bug intail?)
+## Bug Overview
 
-**Recreation Details**
-(how should we find and test this?)
-(include relevent logs, pictures, spec details)
+*What does this bug intail?*
 
-**Expectation**
-(what were you thinking should have happened?)
+## Recreation Details
 
-**Context**
-(what is this related/relevent too?)
+*How should we go about finding and testing this?*
+*Please include any relevent logs, pictures, spec details*
+*or other posible relevant information*
+
+## Expectation
+
+*What were you thinking should have happened that did not?*
+*How should it behave when its fixed?*
+
+## Context
+
+*What is this related or relevant too?*
