@@ -9,16 +9,19 @@ assignees: Librarian-of-Stars
 
 ## Discusion Overview
 
-*what topic do you want to raise? what questions should be central?*
+*What topic do you want to raise?*
+*What questions/topics should be central to the discusion?*
 
 ## Details
 
-*share relevent details, including links,*
+*Please share some relevant details, including links, other issues, or simply opinions.*
+*What sparked this/brought this on?*
 
 ## Expectations
 
-*what goals are related to this talk? are there actions that you want taken?*
+*What goals or ideals are related to this talk?*
+*Are there actions that you want taken as a result of this?*
 
 ## Context
 
-*what is this relevent too? what brought this on?*
+*What is this related or relevant too?*

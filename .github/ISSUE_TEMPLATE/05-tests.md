@@ -9,13 +9,13 @@ assignees: Librarian-of-Stars
 
 ## Test Overview
 
-*what would this test be for?*
+*What aspect of the code would this test be for?*
 
 ## Purpose
 
-*the expected behavour you coded in?*
-*the current behavour that this should fix/make easy to debug?*
+*The expected behavour that should be confirmed?*
+*The current behavour that this should fix/make easy to debug?*
 
 ## Context
 
-*what is this related/relevent too?*
+*What is this related or relevant too?*

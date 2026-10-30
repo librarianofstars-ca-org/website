@@ -9,17 +9,19 @@ assignees: Librarian-of-Stars
 
 ## Bug Overview
 
-*what does this bug intail?*
+*What does this bug intail?*
 
 ## Recreation Details
 
-*how should we find and test this?*
-*include relevent logs, pictures, spec details*
+*How should we go about finding and testing this?*
+*Please include any relevent logs, pictures, spec details*
+*or other posible relevant information*
 
 ## Expectation
 
-*what were you thinking should have happened?*
+*What were you thinking should have happened that did not?*
+*How should it behave when its fixed?*
 
 ## Context
 
-*what is this related/relevent too?*
+*What is this related or relevant too?*

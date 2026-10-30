@@ -9,16 +9,16 @@ assignees: Librarian-of-Stars
 
 ## Overview
 
-*what does the feature do?*
+*For what feature are you issuing this for?*
 
 ## Implementation Details
 
-*how should we implement that?*
+*What would need to be done to complete this?*
 
 ## Options/Choices
 
-*what else would work instead?*
+*What other ways might work instead?*
 
 ## Context/Links
 
-*what is this related/relevent too?*
+*What is this related or relevant too?*

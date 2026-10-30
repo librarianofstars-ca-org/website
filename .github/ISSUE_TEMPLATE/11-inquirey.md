@@ -9,14 +9,14 @@ assignees: Librarian-of-Stars
 
 ## Question Overview
 
-*what are you asking about?*
+*What are you asking about?*
 
 ## Details
 
-*what is your question?*
-*who are you?*
-*is there anything you want me to do about this? or just answer?*
+*What is your question?*
+*Who are you?*
+*Is there any action you want me to do about this? Or is this just an answer request?*
 
 ## Context
 
-*what is this related or connected too?*
+*What is this related or relevant too?*

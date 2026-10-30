@@ -8,16 +8,16 @@ assignees: Librarian-of-Stars
 
 ## Overview
 
-*what are you issuing this for?*
+*For what purpose are you issuing this for?*
 
 ## Details
 
-*what would we need to do to complete this?*
+*What would need to be done to complete this?*
 
 ## Options/Choices
 
-*what other ways would work?*
+*What other ways might work instead?*
 
 ## Context/Links
 
-*what is this related too?*
+*What is this related or relevant too?*
