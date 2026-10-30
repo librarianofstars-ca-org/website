@@ -22,12 +22,27 @@ html.style-root {
     --size-hg: calc(var(--size-md) * 2.0);
     
     /* Color Pallette (Dark) */
+    /* --color-<path>-(back, main, text, accent, highlight ) */
+    /* Reused - path 'meta' */
+    /* Site - path 'site' */
+    /* Raised Elements - path 'section' */
+    /* - Header - path 'head' */
+    /* - Sidebar - path 'side' */
+    /* - Main - path 'body' */
+    /* - Footer - path 'foot' */
     
 }
 
 @media (prefers-color-scheme:light) {
     html.style-root {
         /* Color Pallette (Light) */
-
+        /* --color-<path>-(back, main, text, accent, highlight ) */
+        /* Reused - path 'meta' */
+        /* Site - path 'site' */
+        /* Raised Elements - path 'section' */
+        /* - Header - path 'head' */
+        /* - Sidebar - path 'side' */
+        /* - Main - path 'body' */
+        /* - Footer - path 'foot' */
     }
 }
