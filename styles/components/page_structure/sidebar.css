@@ -8,8 +8,7 @@ div.sidebar.wraper{
     align-items: start;
     justify-content: center;
 
-    margin-block: var(--size-sm);
-    margin-inline: var(--size-lg);
+    margin: var(--size-sm);
 
     border: var(--size-tn) solid brown;
     border-radius: var(--size-sm);

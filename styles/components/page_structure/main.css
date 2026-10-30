@@ -1,3 +1,4 @@
 div.main-body {
     grid-area: main;
+    margin: var(--size-sm);
 }

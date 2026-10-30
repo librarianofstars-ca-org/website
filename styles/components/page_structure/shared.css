@@ -4,5 +4,6 @@ body {
 }
 body > div {
     background-color: var(--color-site-main);
-    outline-color: var(--color-site-accent);
+    outline: var(--size-xs) solid var(--color-site-accent);
+    border-radius: var(--size-sm);
 }
