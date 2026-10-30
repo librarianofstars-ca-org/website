@@ -1,6 +1,6 @@
 ---
 name: Task
-about: Work Plan
+about: An External Plan For Work Done
 title: 'task/'
 labels: type:task
 assignees: Librarian-of-Stars

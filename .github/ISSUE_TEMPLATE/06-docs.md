@@ -1,6 +1,6 @@
 ---
 name: Documentation
-about: Info about the project
+about: Infomation About These Projects
 title: 'docs/'
 labels: type:docs
 assignees: Librarian-of-Stars

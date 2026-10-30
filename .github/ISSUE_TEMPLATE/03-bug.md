@@ -1,6 +1,6 @@
 ---
 name: Bug
-about: An error or malfunction
+about: An Error, Issue, Or Malfunction
 title: 'bug/'
 labels: type:bug
 assignees: Librarian-of-Stars

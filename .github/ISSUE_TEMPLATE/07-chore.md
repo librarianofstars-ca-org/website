@@ -1,6 +1,6 @@
 ---
 name: Chore
-about: Routine changes, such as versioning
+about: Routine Changes Or Additions
 title: 'chore/'
 labels: type:chore
 assignees: Librarian-of-Stars

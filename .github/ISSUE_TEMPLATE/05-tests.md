@@ -1,6 +1,6 @@
 ---
 name: Tests
-about: Testing of a feature or bug
+about: Testing Of Expected Behavour
 title: 'tests/'
 labels: type:test
 assignees: Librarian-of-Stars

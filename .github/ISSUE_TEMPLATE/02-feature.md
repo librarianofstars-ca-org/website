@@ -1,6 +1,6 @@
 ---
 name: Feature
-about: Feature planned with details
+about: Planned Feature, Enhancment, Or Capability
 title: 'feat/'
 labels: type:feature
 assignees: Librarian-of-Stars

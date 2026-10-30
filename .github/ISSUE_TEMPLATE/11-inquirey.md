@@ -1,6 +1,6 @@
 ---
 name: Inquirey
-about: Questions or asks
+about: A Question, Ask, Or Inquiry
 title: 'question/'
 labels: type:inquiry
 assignees: Librarian-of-Stars

@@ -1,6 +1,6 @@
 ---
 name: Idea
-about: An proposal of future work
+about: A Proposal, Plan Or Inspiration
 title: 'idea/'
 labels: type:idea
 assignees: Librarian-of-Stars

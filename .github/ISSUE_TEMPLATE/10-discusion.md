@@ -1,6 +1,6 @@
 ---
 name: Discusion
-about: An topic to converse about
+about: A Topic, Conversation, Or Talk
 title: 'discuse/'
 labels: type:discusion
 assignees: Librarian-of-Stars

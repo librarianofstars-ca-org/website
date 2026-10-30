@@ -1,6 +1,6 @@
 ---
 name: Generic
-about: Generic Issue Template
+about: A Generic Issue Template
 title: ''
 labels: 
 assignees: Librarian-of-Stars

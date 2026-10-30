@@ -1,6 +1,6 @@
 ---
 name: Refactor
-about: A change in structure or layout
+about: A Change Within Structure Or Layout
 title: 'refactor/'
 labels: type:refactor
 assignees: Librarian-of-Stars
