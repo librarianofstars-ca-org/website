@@ -3,8 +3,8 @@ nav {
     flex-flow: row nowrap;
     place-items: stretch;
 
-    width: 90vw;
-    margin-inline: auto;
+    /* width: 90vw; */
+    margin-inline: var(--size-lg);
 
     background-color: var(--color-element-nav-back);
     border: var(--size-tn) solid var(--color-element-nav-accent);
@@ -14,17 +14,18 @@ nav {
 }
 
 nav hr.nav-bar-sep {
-    margin-block: 0;
     margin-inline: var(--size-lg);
+
     background-color: var(--color-element-nav-accent);
     color: var(--color-element-nav-accent);
-    /* align-self: start; */
-    height: 100%;
+    
     flex: 0 0 var(--size-tn);
 }
 
-nav .nav-bar-icon {
+nav img.nav-bar-icon {
     flex: 0 0 auto;
+
+    border-color: var(--color-element-nav-highlight);
 }
 
 nav ol.nav-bar-links {

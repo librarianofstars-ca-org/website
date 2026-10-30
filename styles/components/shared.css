@@ -3,7 +3,8 @@ h1, h2 {
     width: 80%;
     text-align: center;
     border: var(--size-tn) solid green;
-    border-top: 0;
+    border-top-width: 0;
+    border-bottom-width: var(--size-xs);
     border-radius: 0 0 var(--size-hg) var(--size-hg) ;
     padding: var(--size-sm);
 }
