@@ -4,6 +4,7 @@ import "@/styles/components/page_structure/footer.css";
 
 import { to_key_index_name } from "@/utilities/key_mapping";
 import { ReactNode } from "react";
+import Seperator from "../elements/seperator";
 
 export type footer_section_content = { type: string; content: ReactNode[] };
 export type footer_section_contents = footer_section_content[];
@@ -56,6 +57,7 @@ function FooterBlock({
             key={to_key_index_name(index, "section")}
             className="footer-contents-wrapper"
           >
+            <Seperator isVertical={false} className={"footer-contents"} />
             <dt key={index}>{type}</dt>
             {content.map((content: ReactNode, index: number) => (
               <dd key={index}>{content}</dd>
