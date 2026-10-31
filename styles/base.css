@@ -52,6 +52,11 @@ html.style-root {
     --color-section-side-text: var(--color-magenta-05);
     /* - Main - path 'body' */
     /* - Footer - path 'foot' */
+    --color-section-foot-back: var(--color-site-main);
+    --color-section-foot-main: var(--color-site-accent);
+    --color-section-foot-accent: var(--color-gray-60);
+    --color-section-foot-highlight: var(--color-gray-50);
+    --color-section-foot-text: var(--color-gray-05);
     /* Elements - path 'element' */
     /* Seperator - path 'sep' */
     --color-element-sep-back: var(--color-gray-80);
@@ -111,6 +116,11 @@ html.style-root {
         --color-section-side-text: var(--color-magenta-95);
         /* - Main - path 'body' */
         /* - Footer - path 'foot' */
+        --color-section-foot-back: var(--color-site-main);
+        --color-section-foot-main: var(--color-site-accent);
+        --color-section-foot-accent: var(--color-gray-40);
+        --color-section-foot-highlight: var(--color-gray-50);
+        --color-section-foot-text: var(--color-gray-95);
         /* Elements - path 'element' */
         /* Seperator - path 'sep' */
         --color-element-sep-back: var(--color-gray-20);
