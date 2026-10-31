@@ -5,16 +5,24 @@
 div.footer {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-around;
+    align-content: center;
 }
 
 div.footer div.footer-section {
     display: grid;
     grid-template-rows: 2rem;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 2fr 3fr;
     grid-auto-rows: 1fr;
+
+    min-width: calc(var(--size-hg) * 10); /* not ideal guessing min size*/
+
+    margin-inline: var(--size-md);
+    margin-block: var(--size-xs);
 
     align-items: center;
 }
+
 div.footer div.footer-section h4 { 
     grid-row: 1 / span 1;
     grid-column: 1 / -1;
@@ -23,24 +31,29 @@ div.footer div.footer-section h4 {
     margin-block: 0;
     padding-inline: var(--size-xs);
 }
+
+div.footer div.footer-section-wrapper,
 div.footer div.footer-section dl,
-div.footer div.footer-section dl .footer-contents-wrapper {
+div.footer div.footer-section dl div.footer-contents-wrapper {
     display: contents;
 }
+
 div.footer div.footer-section dl dd,
 div.footer div.footer-section dl dt { 
     margin-inline: var(--size-xs);
 }
+
 div.footer div.footer-section dl dt {
     grid-column: 1 / span 1;
     justify-self: start;
 }
+
 div.footer div.footer-section dl dd {
     grid-column: 2 / span 1;
     justify-self: end;
 
 }
-
-hr.footer {
-    margin-block-end: var(--size-lg);
+div.footer hr.footer {
+    height: 100%;
 }
+

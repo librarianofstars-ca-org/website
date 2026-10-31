@@ -18,14 +18,22 @@ export type footer_sections = footer_section[];
 export default function Footer({ sections }: { sections: footer_sections }) {
   return (
     <>
-      <hr className="page-seperator horizontal footer" />
       <div className="footer">
-        {sections.map((section: footer_section) => (
-          <FooterBlock
+        {sections.map((section: footer_section, index: number) => (
+          <div
+            className="footer-section-wrapper"
             key={to_key_index_name(section.order, section.title)}
-            title={section.title}
-            contents={section.contents}
-          />
+          >
+            {index != 0 ? (
+              <hr className="page-seperator vertical footer" />
+            ) : (
+              <></>
+            )}
+            <FooterBlock
+              title={section.title}
+              contents={section.contents}
+            />
+          </div>
         ))}
       </div>
     </>
