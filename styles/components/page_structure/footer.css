@@ -70,20 +70,25 @@ div.footer div.footer-section dl dd {
     justify-self: start;
     margin-inline: var(--size-sm) 0;
 }
+
 div.footer div.footer-section dl dd::marker {
     content: "- ";
     color: var(--color-section-foot-highlight);
 }
+
 div.footer div.footer-section hr.footer-contents {
     grid-column: 1 / -1;
     margin: 0;
     width: unset;
     background-color: var(--color-section-foot-accent);
-    color: none;
+    color: var(--color-section-foot-accent);
     outline: none;
 }
 
 div.footer hr.footer {
+    background-color: var(--color-section-foot-back);
+    color: var(--color-section-foot-back);
+    outline: none;
     height: 100%;
 }
 
