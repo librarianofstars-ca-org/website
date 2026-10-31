@@ -23,7 +23,8 @@ div.footer div.footer-section h4 {
     margin-block: 0;
     padding-inline: var(--size-xs);
 }
-div.footer div.footer-section dl {
+div.footer div.footer-section dl,
+div.footer div.footer-section dl .footer-contents-wrapper {
     display: contents;
 }
 div.footer div.footer-section dl dd,
