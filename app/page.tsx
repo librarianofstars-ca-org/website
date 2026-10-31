@@ -155,10 +155,10 @@ let homepage_footer_sections: footer_sections = [
     order: 1,
     title: "Credits",
     contents: [
-      { type: "Site Design", credits: ["Librarian Of Stars"] },
+      { type: "Site Design", content: ["Librarian Of Stars"] },
       {
         type: "Contributors",
-        credits: ["Librarian Of Stars", "ChrisNolan.ca"],
+        content: ["Librarian Of Stars", "ChrisNolan.ca"],
       },
     ],
   },
@@ -166,14 +166,21 @@ let homepage_footer_sections: footer_sections = [
     order: 2,
     title: "Contact",
     contents: [
-      { type: "Email", credits: ["contact@libarianofstars.ca"] },
+      {
+        type: "Email",
+        content: [
+          <a href="mailto:contact@libarianofstars.ca">
+            contact@libarianofstars.ca
+          </a>,
+        ],
+      },
       {
         type: "Placeholder",
-        credits: ["account 1", "account 2", "account 3"],
+        content: ["account 1", "account 2", "account 3"],
       },
       {
         type: "Github",
-        credits: ["Librarian Of Stars"],
+        content: ["Librarian Of Stars"],
       },
     ],
   },

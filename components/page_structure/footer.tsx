@@ -3,8 +3,9 @@ import "@/styles/components/page_structure/shared.css";
 import "@/styles/components/page_structure/footer.css";
 
 import { to_key_index_name } from "@/utilities/key_mapping";
+import { ReactNode } from "react";
 
-export type footer_section_content = { type: string; credits: string[] };
+export type footer_section_content = { type: string; content: ReactNode[] };
 export type footer_section_contents = footer_section_content[];
 
 export type footer_section = {
@@ -42,13 +43,16 @@ function FooterBlock({
     <div className="footer-section">
       <h4 key={"title"}>{title}</h4>
       <dl>
-        {contents.map(({ type, credits }, index) => (
-          <div key={to_key_index_name(index, "section")} className="footer-contents-wrapper">
+        {contents.map(({ type, content }, index) => (
+          <div
+            key={to_key_index_name(index, "section")}
+            className="footer-contents-wrapper"
+          >
             <dt key={index}>{type}</dt>
-            {credits.map((credit, index) => (
-              <dd key={index}>{credit}</dd>
+            {content.map((content: ReactNode, index: number) => (
+              <dd key={index}>{content}</dd>
             ))}
-            </div>
+          </div>
         ))}
       </dl>
     </div>
