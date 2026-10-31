@@ -4,9 +4,21 @@ import "@/styles/components/page_structure/footer.css";
 
 export default function Footer({ children }) {
   return (
-    <div className="footer">
+    <>
       <hr className="page-seperator horizontal footer" />
-      {children}
+      <div className="footer">{children} <FooterBlock /></div>
+    </>
+  );
+}
+
+function FooterBlock() {
+  return (
+    <div className="footer-section">
+      <h4>title</h4>
+      <dl>
+        <dt>credits</dt>
+        <dd>site design</dd>
+      </dl>
     </div>
   );
 }

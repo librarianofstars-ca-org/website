@@ -1,3 +1,27 @@
 .footer {
     grid-area: footer;
 }
+
+div.footer {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+div.footer div.footer-section {
+    display: grid;
+    grid-template-rows: 2rem;
+    grid-auto-rows: 1fr;
+}
+div.footer div.footer-section dl {
+    display: contents;
+}
+div.footer div.footer-section dl dt {
+    
+}
+div.footer div.footer-section dl dd {
+
+}
+
+hr.footer {
+    margin-block-end: var(--size-lg);
+}
