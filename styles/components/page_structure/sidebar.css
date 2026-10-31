@@ -8,8 +8,6 @@ div.sidebar.wraper{
     align-items: start;
     justify-content: center;
 
-    margin: var(--size-sm);
-
     border-block-width: var(--size-xs);
     border-style: solid;
     border-color: var(--color-section-side-accent);

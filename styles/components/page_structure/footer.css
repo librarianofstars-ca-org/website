@@ -1,4 +1,3 @@
-div.footer {
+.footer {
     grid-area: footer;
-    margin-block: var(--size-xs);
 }

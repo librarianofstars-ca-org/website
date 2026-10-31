@@ -1,6 +1,5 @@
 div.header {
     grid-area: header;
-    margin-block: var(--size-xs);
 }
 
 div.header > nav {
