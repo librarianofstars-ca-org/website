@@ -10,15 +10,33 @@ div.footer {
 div.footer div.footer-section {
     display: grid;
     grid-template-rows: 2rem;
+    grid-template-columns: 1fr 3fr;
     grid-auto-rows: 1fr;
+
+    align-items: center;
+}
+div.footer div.footer-section h4 { 
+    grid-row: 1 / span 1;
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-inline: auto;
+    margin-block: 0;
+    padding-inline: var(--size-xs);
 }
 div.footer div.footer-section dl {
     display: contents;
 }
+div.footer div.footer-section dl dd,
+div.footer div.footer-section dl dt { 
+    margin-inline: var(--size-xs);
+}
 div.footer div.footer-section dl dt {
-    
+    grid-column: 1 / span 1;
+    justify-self: start;
 }
 div.footer div.footer-section dl dd {
+    grid-column: 2 / span 1;
+    justify-self: end;
 
 }
 
