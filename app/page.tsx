@@ -1,4 +1,6 @@
-import GalleryBlock, { gallery_items } from "@/components/content_blocks/gallery_block";
+import GalleryBlock, {
+  gallery_items,
+} from "@/components/content_blocks/gallery_block";
 import ParagraphBlock, {
   content_elements,
 } from "@/components/content_blocks/paragraph_block";
@@ -7,7 +9,7 @@ import LinkBLock, {
 } from "@/components/content_blocks/link_block";
 import Section from "@/components/content_blocks/section";
 
-import Footer from "@/components/page_structure/footer";
+import Footer, { footer_sections } from "@/components/page_structure/footer";
 import Header from "@/components/page_structure/header";
 import Sidebar from "@/components/page_structure/sidebar";
 import Main from "@/components/page_structure/main";
@@ -148,6 +150,42 @@ let homepage_paragraph_block_elements: content_elements = [
   },
 ];
 
+let homepage_footer_sections: footer_sections = [
+  {
+    order: 1,
+    title: "Credits",
+    contents: [
+      { type: "Site Design", content: ["Librarian Of Stars"] },
+      {
+        type: "Contributors",
+        content: ["Librarian Of Stars", "ChrisNolan.ca"],
+      },
+    ],
+  },
+  {
+    order: 2,
+    title: "Contact",
+    contents: [
+      {
+        type: "Email",
+        content: [
+          <a href="mailto:contact@libarianofstars.ca">
+            contact@libarianofstars.ca
+          </a>,
+        ],
+      },
+      {
+        type: "Placeholder",
+        content: ["account 1", "account 2", "account 3"],
+      },
+      {
+        type: "Github",
+        content: ["Librarian Of Stars"],
+      },
+    ],
+  },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -221,5 +259,5 @@ function HomePageArtGalleryBlock() {
 }
 
 function HomePageFooter() {
-  return <Footer>Created by Librarian of Stars</Footer>;
+  return <Footer sections={homepage_footer_sections} />;
 }

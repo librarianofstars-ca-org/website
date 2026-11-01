@@ -12,6 +12,15 @@ body > div {
     border-radius: var(--size-sm);
 }
 
+div.header, div.footer {
+    margin-block: var(--size-xs);
+    margin-inline: 0;
+}
+
+div.main-body, div.sidebar {
+    margin: var(--size-sm);
+}
+
 small.nav-id-hidden {
     /* display: none; */
     width: var(--size-sm);
