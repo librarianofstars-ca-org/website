@@ -226,27 +226,24 @@ function HomePageMain() {
 function HomePageWelcomeSplashSection() {
   return (
     <Section
-      sectionTitle={"Welcome"}
-      sectionId="greating"
-    >
-      <p>Welcome to my site</p>
-      <p>Some more info</p>
-    </Section>
+      heading={"Welcome"}
+      heading_id="greating"
+      contents={[<p>Welcome to my site</p>, <p>Some more info</p>]}
+    />
   );
 }
 function HomePageLinksSection() {
   return (
     <Section
-      sectionTitle={"Links"}
-      sectionId="links"
-    >
-      {homepage_links.map((homepage_link_block, index) => (
+      heading={"Links"}
+      heading_id="links"
+      contents={homepage_links.map((homepage_link_block, index) => (
         <LinkBLock
           key={to_key_index_name(index, homepage_link_block.blockTitle)}
           {...homepage_link_block}
         />
       ))}
-    </Section>
+    />
   );
 }
 
