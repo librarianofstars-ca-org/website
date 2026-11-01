@@ -248,11 +248,25 @@ function HomePageLinksSection() {
 }
 
 function HomePageSummeryBlock() {
-  return <ParagraphBlock contents={homepage_paragraph_block_elements} />;
+  return (
+    <Section
+      heading="Summery"
+      heading_id="summery"
+      contents={[
+        <ParagraphBlock contents={homepage_paragraph_block_elements} />,
+      ]}
+    />
+  );
 }
 
 function HomePageArtGalleryBlock() {
-  return <GalleryBlock items={homepage_gallery_items} />;
+  return (
+    <Section
+      heading="Art"
+      heading_id="gallery"
+      contents={[<GalleryBlock items={homepage_gallery_items} />]}
+    />
+  );
 }
 
 function HomePageFooter() {
