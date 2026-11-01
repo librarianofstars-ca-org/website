@@ -51,6 +51,11 @@ html.style-root {
     --color-section-side-highlight: var(--color-magenta-50);
     --color-section-side-text: var(--color-magenta-05);
     /* - Main - path 'body' */
+    --color-section-main-back: var(--color-site-main);
+    --color-section-main-main: var(--color-site-accent);
+    --color-section-main-accent: var(--color-site-highlight);
+    --color-section-main-highlight: var(--color-magenta-50);
+    --color-section-main-text: var(--color-magenta-05);
     /* - Footer - path 'foot' */
     --color-section-foot-back: var(--color-blue-light-90);
     --color-section-foot-main: var(--color-blue-light-80);
@@ -115,6 +120,11 @@ html.style-root {
         --color-section-side-highlight: var(--color-magenta-50);
         --color-section-side-text: var(--color-magenta-95);
         /* - Main - path 'body' */
+        --color-section-main-back: var(--color-site-main);
+        --color-section-main-main: var(--color-site-accent);
+        --color-section-main-accent: var(--color-site-highlight);
+        --color-section-main-highlight: var(--color-magenta-50);
+        --color-section-main-text: var(--color-magenta-95);
         /* - Footer - path 'foot' */
         --color-section-foot-back: var(--color-blue-light-10);
         --color-section-foot-main: var(--color-blue-light-20);
