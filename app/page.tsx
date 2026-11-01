@@ -7,7 +7,7 @@ import ParagraphBlock, {
 import LinkBLock, {
   block_of_links,
 } from "@/components/content_blocks/link_block";
-import Section from "@/components/content_blocks/section";
+import Section from "@/components/elements/section";
 
 import Footer, { footer_sections } from "@/components/page_structure/footer";
 import Header from "@/components/page_structure/header";
