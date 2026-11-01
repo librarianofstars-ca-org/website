@@ -15,7 +15,9 @@
 		"github.vscode-pull-request-github",
 		"stylelint.vscode-stylelint",
         "dotjoshjohnson.xml",
-        "github.vscode-github-actions"
+        "github.vscode-github-actions",
+        "christian-kohler.npm-intellisense",
+        "idered.npm"
 		
 	],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.

@@ -82,6 +82,10 @@
   "githubPullRequests.defaultDeletionMethod.selectRemote": true,
   "githubPullRequests.postDone": "checkoutPullRequestBaseBranchAndPull",
   "githubPullRequests.ignoreSubmodules": true,
-  "githubPullRequests.labelCreated": ["status:ready",]
-
+  "githubPullRequests.labelCreated": ["status:ready",],
+  "iridium.npm.packageManager": "npm",
+  "iridium.npm.runAudit":true,
+  "iridium.npm.maxNumberOfResults":6,
+  "iridium.npm.excludeVersions": ["beta", "experimental",],
+  "npm-intellisense.importQuotes": "\"",
 }
