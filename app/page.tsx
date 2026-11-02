@@ -227,7 +227,10 @@ function HomePageWelcomeSplashSection() {
   return (
     <Section
       heading={{ level: 2, contents: "Welcome", id: "greatings" }}
-      contents={[<p>Welcome to my site</p>, <p>Some more info</p>]}
+      contents={[
+        <p key={"1"}>Welcome to my site</p>,
+        <p key={"2"}>Some more info</p>,
+      ]}
     />
   );
 }
@@ -250,7 +253,10 @@ function HomePageSummeryBlock() {
     <Section
       heading={{ level: 3, contents: "Summery", id: "summery" }}
       contents={[
-        <ParagraphBlock contents={homepage_paragraph_block_elements} />,
+        <ParagraphBlock
+          key="summery-1"
+          contents={homepage_paragraph_block_elements}
+        />,
       ]}
     />
   );
@@ -260,7 +266,12 @@ function HomePageArtGalleryBlock() {
   return (
     <Section
       heading={{ level: 3, contents: "Art", id: "gallery" }}
-      contents={[<GalleryBlock items={homepage_gallery_items} />]}
+      contents={[
+        <GalleryBlock
+          key="gallery-1"
+          items={homepage_gallery_items}
+        />,
+      ]}
     />
   );
 }
