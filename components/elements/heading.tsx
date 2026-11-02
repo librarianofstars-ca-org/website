@@ -35,21 +35,18 @@ function isIdentified(object: any): object is ident_heading_props {
 }
 
 export default function Heading(props: ident_heading_props | heading_props) {
+  let element_props: { className: string; id?: string };
   if (isIdentified(props)) {
-    // Could this be cleaner somehow?
-    // Means: <level_map[level] className={ className } id={ id }> {contents} </level_map[level]>
-    return React.createElement(
-      getlevelstring(props.level),
-      { className: props.className, id: props.id },
-      props.contents,
-    );
+    element_props = { className: props.className, id: props.id };
   } else {
-    return React.createElement(
-      getlevelstring(props.level),
-      { className: props.className },
-      props.contents,
-    );
+    element_props = { className: props.className };
   }
+  // Means: <level_map[level] className={ className } id?={ id }> {contents} </level_map[level]>
+  return React.createElement(
+    getlevelstring(props.level),
+    element_props,
+    props.contents,
+  );
 }
 
 export function IdentifiedHeading({ headingId, ...props }) {
