@@ -216,9 +216,8 @@ function HomePageMain() {
   return (
     <Main>
       <HomePageWelcomeSplashSection />
-      <HomePageLinksSection />
-      <HomePageSummeryBlock />
-      <HomePageArtGalleryBlock />
+      <HomePageAboutMeSection />
+      <HomePageShowcaseSection />
     </Main>
   );
 }
@@ -234,6 +233,15 @@ function HomePageWelcomeSplashSection() {
     />
   );
 }
+function HomePageAboutMeSection() {
+  return (
+    <Section
+      heading={{ level: 2, contents: "About Me", id: "about" }}
+      contents={[<HomePageSummeryBlock />, <HomePageLinksSection />]}
+    />
+  );
+}
+
 function HomePageLinksSection() {
   return (
     <Section
@@ -258,6 +266,15 @@ function HomePageSummeryBlock() {
           contents={homepage_paragraph_block_elements}
         />,
       ]}
+    />
+  );
+}
+
+function HomePageShowcaseSection() {
+  return (
+    <Section
+      heading={{ level: 2, contents: "Showcase", id: "display" }}
+      contents={[<HomePageArtGalleryBlock />]}
     />
   );
 }
