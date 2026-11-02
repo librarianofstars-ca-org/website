@@ -245,20 +245,6 @@ function HomePageAboutMeSection() {
   );
 }
 
-function HomePageLinksSection() {
-  return (
-    <Section
-      heading={{ level: 3, contents: "Links", id: "links" }}
-      contents={homepage_links.map((homepage_link_block, index) => (
-        <LinkBLock
-          key={to_key_index_name(index, homepage_link_block.blockTitle)}
-          {...homepage_link_block}
-        />
-      ))}
-    />
-  );
-}
-
 function HomePageSummeryBlock() {
   return (
     <Section
@@ -269,6 +255,20 @@ function HomePageSummeryBlock() {
           contents={homepage_paragraph_block_elements}
         />,
       ]}
+    />
+  );
+}
+
+function HomePageLinksSection() {
+  return (
+    <Section
+      heading={{ level: 3, contents: "Links", id: "links" }}
+      contents={homepage_links.map((homepage_link_block, index) => (
+        <LinkBLock
+          key={to_key_index_name(index, homepage_link_block.blockTitle)}
+          {...homepage_link_block}
+        />
+      ))}
     />
   );
 }
