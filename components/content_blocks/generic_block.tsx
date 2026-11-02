@@ -1,5 +1,7 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { ReactNode } from "react";
+
+export type block = ReactElement<typeof Block>;
 
 export default function Block({
   type,
