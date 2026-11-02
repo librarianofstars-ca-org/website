@@ -12,16 +12,18 @@ export type section_data = {
   contents: ReactElement[];
 };
 
+export type sections = ReactElement<typeof Section>[]
+
 export default function Section({ heading, contents }: section_data) {
   return (
-    <div className="section wrapper">
+    <div className="section">
       <IdentifiedHeading
-        className="section title"
+        className="section-title"
         headingId={heading.id}
         contents={heading.contents}
         level={heading.level}
-      ></IdentifiedHeading>
-      <div className="section content">{contents}</div>
+      />
+      <div className="section-contents">{contents}</div>
     </div>
   );
 }
