@@ -212,6 +212,7 @@ function HomePageSidebar() {
     </Sidebar>
   );
 }
+
 function HomePageMain() {
   return (
     <Main>
@@ -233,19 +234,20 @@ function HomePageWelcomeSplashSection() {
     />
   );
 }
+
 function HomePageAboutMeSection() {
   return (
     <Section
       heading={{ level: 2, contents: "About Me", id: "about" }}
       contents={[
-        <HomePageSummeryBlock key={"about-1"} />,
+        <HomePageSummerySection key={"about-1"} />,
         <HomePageLinksSection key={"about-2"} />,
       ]}
     />
   );
 }
 
-function HomePageSummeryBlock() {
+function HomePageSummerySection() {
   return (
     <Section
       heading={{ level: 3, contents: "Summery", id: "summery" }}
@@ -278,14 +280,14 @@ function HomePageShowcaseSection() {
     <Section
       heading={{ level: 2, contents: "Showcase", id: "display" }}
       contents={[
-        <HomePageArtGalleryBlock key={"display-1"} />,
+        <HomePageArtGallerySection key={"display-1"} />,
         <HopePageProjectsLinkedSection key={"display-2"} />,
       ]}
     />
   );
 }
 
-function HomePageArtGalleryBlock() {
+function HomePageArtGallerySection() {
   return (
     <Section
       heading={{ level: 3, contents: "Art", id: "gallery" }}
