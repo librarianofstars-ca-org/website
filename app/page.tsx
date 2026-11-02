@@ -226,8 +226,7 @@ function HomePageMain() {
 function HomePageWelcomeSplashSection() {
   return (
     <Section
-      heading={"Welcome"}
-      heading_id="greating"
+      heading={{ level: 2, contents: "Welcome", id: "greatings" }}
       contents={[<p>Welcome to my site</p>, <p>Some more info</p>]}
     />
   );
@@ -235,8 +234,7 @@ function HomePageWelcomeSplashSection() {
 function HomePageLinksSection() {
   return (
     <Section
-      heading={"Links"}
-      heading_id="links"
+      heading={{ level: 3, contents: "Links", id: "links" }}
       contents={homepage_links.map((homepage_link_block, index) => (
         <LinkBLock
           key={to_key_index_name(index, homepage_link_block.blockTitle)}
@@ -250,8 +248,7 @@ function HomePageLinksSection() {
 function HomePageSummeryBlock() {
   return (
     <Section
-      heading="Summery"
-      heading_id="summery"
+      heading={{ level: 3, contents: "Summery", id: "summery" }}
       contents={[
         <ParagraphBlock contents={homepage_paragraph_block_elements} />,
       ]}
@@ -262,8 +259,7 @@ function HomePageSummeryBlock() {
 function HomePageArtGalleryBlock() {
   return (
     <Section
-      heading="Art"
-      heading_id="gallery"
+      heading={{ level: 3, contents: "Art", id: "gallery" }}
       contents={[<GalleryBlock items={homepage_gallery_items} />]}
     />
   );
