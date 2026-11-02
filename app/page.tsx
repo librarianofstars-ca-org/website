@@ -237,7 +237,10 @@ function HomePageAboutMeSection() {
   return (
     <Section
       heading={{ level: 2, contents: "About Me", id: "about" }}
-      contents={[<HomePageSummeryBlock />, <HomePageLinksSection />]}
+      contents={[
+        <HomePageSummeryBlock key={"about-1"} />,
+        <HomePageLinksSection key={"about-2"} />,
+      ]}
     />
   );
 }
@@ -274,7 +277,7 @@ function HomePageShowcaseSection() {
   return (
     <Section
       heading={{ level: 2, contents: "Showcase", id: "display" }}
-      contents={[<HomePageArtGalleryBlock />]}
+      contents={[<HomePageArtGalleryBlock key={"display-1"} />]}
     />
   );
 }
