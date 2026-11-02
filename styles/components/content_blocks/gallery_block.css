@@ -1,4 +1,4 @@
-ul.gallery {
+ul.gallery-block {
     display: flex;
     flex-flow: row wrap ;
     max-width: 95%;
