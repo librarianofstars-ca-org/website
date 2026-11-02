@@ -1,9 +1,10 @@
-import "@/styles/components/shared.css";
+import "@/styles/components/content_blocks/shared.css";
 import "@/styles/components/content_blocks/gallery_block.css";
 
 import { JSX } from "react/jsx-runtime";
 
 import Block from "@/components/content_blocks/generic_block";
+
 
 export type gallery_item = { show: JSX.Element; label: string };
 export type gallery_items = gallery_item[];

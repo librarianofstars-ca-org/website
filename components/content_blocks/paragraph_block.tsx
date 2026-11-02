@@ -1,4 +1,4 @@
-import "@/styles/components/shared.css";
+import "@/styles/components/content_blocks/shared.css";
 import "@/styles/components/content_blocks/paragraph_block.css";
 
 import Seperator from "@/components/elements/seperator";
