@@ -277,7 +277,10 @@ function HomePageShowcaseSection() {
   return (
     <Section
       heading={{ level: 2, contents: "Showcase", id: "display" }}
-      contents={[<HomePageArtGalleryBlock key={"display-1"} />]}
+      contents={[
+        <HomePageArtGalleryBlock key={"display-1"} />,
+        <HopePageProjectsLinkedSection key={"display-2"} />,
+      ]}
     />
   );
 }
@@ -290,6 +293,30 @@ function HomePageArtGalleryBlock() {
         <GalleryBlock
           key="gallery-1"
           items={homepage_gallery_items}
+        />,
+      ]}
+    />
+  );
+}
+
+function HopePageProjectsLinkedSection() {
+  return (
+    <Section
+      heading={{ level: 3, contents: "Projects", id: "linked_projects" }}
+      contents={[
+        <LinkBLock
+          key={"gallery-2"}
+          blockTitle="Projects"
+          describedLinks={[
+            {
+              id: "projects",
+              name: "example",
+              linked: "example.projects.librarianofstars.ca",
+              display: "Ex Project",
+              description:
+                "A example of a project to fit into the flow, filled in later with real stuff i've worked on",
+            },
+          ]}
         />,
       ]}
     />
