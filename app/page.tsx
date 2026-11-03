@@ -228,8 +228,13 @@ function HomePageWelcomeSplashSection() {
     <Section
       heading={{ level: 2, contents: "Welcome", id: "greatings" }}
       contents={[
-        <p key={"1"}>Welcome to my site</p>,
-        <p key={"2"}>Some more info</p>,
+        <ParagraphBlock
+          key={"welcome-1"}
+          contents={[
+            {index:1, show:"Welcome to my site", isBr: false},
+            {index:2, show:"Some more info", isBr: false}
+          ]}
+        />,
       ]}
     />
   );
