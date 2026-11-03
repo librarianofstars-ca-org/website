@@ -3,7 +3,7 @@ import "@/styles/components/content_blocks/paragraph_block.css";
 
 // import Seperator from "@/components/elements/seperator";
 
-import Block from "@/components/content_blocks/generic_block";
+import Block from "@/components/blocks/generic_block";
 
 export type content_element = { index: number; show?: string; isBr?: boolean };
 export type content_elements = content_element[];

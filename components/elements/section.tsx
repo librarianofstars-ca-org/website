@@ -7,7 +7,7 @@ import {
 } from "@/components/elements/heading";
 import { ReactElement } from "react";
 
-import { block } from "@/components/content_blocks/generic_block";
+import { block } from "@/components/blocks/generic_block";
 import Seperator from "@/components/elements/seperator";
 
 export type section_content = ReactElement<typeof Section> | block;

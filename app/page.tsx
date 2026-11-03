@@ -1,12 +1,8 @@
-import GalleryBlock, {
-  gallery_items,
-} from "@/components/content_blocks/gallery_block";
+import GalleryBlock, { gallery_items } from "@/components/blocks/gallery_block";
 import ParagraphBlock, {
   content_elements,
-} from "@/components/content_blocks/paragraph_block";
-import LinkBLock, {
-  block_of_links,
-} from "@/components/content_blocks/link_block";
+} from "@/components/blocks/paragraph_block";
+import LinkBLock, { block_of_links } from "@/components/blocks/link_block";
 import Section from "@/components/elements/section";
 
 import Footer, { footer_sections } from "@/components/page_structure/footer";
@@ -231,8 +227,8 @@ function HomePageWelcomeSplashSection() {
         <ParagraphBlock
           key={"welcome-1"}
           contents={[
-            {index:1, show:"Welcome to my site", isBr: false},
-            {index:2, show:"Some more info", isBr: false}
+            { index: 1, show: "Welcome to my site", isBr: false },
+            { index: 2, show: "Some more info", isBr: false },
           ]}
         />,
       ]}

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { navlink } from "@/components/elements/navbar";
 import { IdentifiedHeading } from "@/components/elements/heading";
 
-import Block from "@/components/content_blocks/generic_block";
+import Block from "@/components/blocks/generic_block";
 
 import "@/styles/components/content_blocks/shared.css";
 import "@/styles/components/content_blocks/link_block.css";
