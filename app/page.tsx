@@ -7,7 +7,7 @@ import ParagraphBlock, {
 import LinkBLock, {
   block_of_links,
 } from "@/components/content_blocks/link_block";
-import Section from "@/components/content_blocks/section";
+import Section from "@/components/elements/section";
 
 import Footer, { footer_sections } from "@/components/page_structure/footer";
 import Header from "@/components/page_structure/header";
@@ -212,13 +212,13 @@ function HomePageSidebar() {
     </Sidebar>
   );
 }
+
 function HomePageMain() {
   return (
     <Main>
       <HomePageWelcomeSplashSection />
-      <HomePageLinksSection />
-      <HomePageSummeryBlock />
-      <HomePageArtGalleryBlock />
+      <HomePageAboutMeSection />
+      <HomePageShowcaseSection />
     </Main>
   );
 }
@@ -226,36 +226,103 @@ function HomePageMain() {
 function HomePageWelcomeSplashSection() {
   return (
     <Section
-      sectionTitle={"Welcome"}
-      sectionId="greating"
-    >
-      <p>Welcome to my site</p>
-      <p>Some more info</p>
-    </Section>
+      heading={{ level: 2, contents: "Welcome", id: "greatings" }}
+      contents={[
+        <p key={"1"}>Welcome to my site</p>,
+        <p key={"2"}>Some more info</p>,
+      ]}
+    />
   );
 }
+
+function HomePageAboutMeSection() {
+  return (
+    <Section
+      heading={{ level: 2, contents: "About Me", id: "about" }}
+      contents={[
+        <HomePageSummerySection key={"about-1"} />,
+        <HomePageLinksSection key={"about-2"} />,
+      ]}
+    />
+  );
+}
+
+function HomePageSummerySection() {
+  return (
+    <Section
+      heading={{ level: 3, contents: "Summery", id: "summery" }}
+      contents={[
+        <ParagraphBlock
+          key="summery-1"
+          contents={homepage_paragraph_block_elements}
+        />,
+      ]}
+    />
+  );
+}
+
 function HomePageLinksSection() {
   return (
     <Section
-      sectionTitle={"Links"}
-      sectionId="links"
-    >
-      {homepage_links.map((homepage_link_block, index) => (
+      heading={{ level: 3, contents: "Links", id: "links" }}
+      contents={homepage_links.map((homepage_link_block, index) => (
         <LinkBLock
           key={to_key_index_name(index, homepage_link_block.blockTitle)}
           {...homepage_link_block}
         />
       ))}
-    </Section>
+    />
   );
 }
 
-function HomePageSummeryBlock() {
-  return <ParagraphBlock contents={homepage_paragraph_block_elements} />;
+function HomePageShowcaseSection() {
+  return (
+    <Section
+      heading={{ level: 2, contents: "Showcase", id: "display" }}
+      contents={[
+        <HomePageArtGallerySection key={"display-1"} />,
+        <HopePageProjectsLinkedSection key={"display-2"} />,
+      ]}
+    />
+  );
 }
 
-function HomePageArtGalleryBlock() {
-  return <GalleryBlock items={homepage_gallery_items} />;
+function HomePageArtGallerySection() {
+  return (
+    <Section
+      heading={{ level: 3, contents: "Art", id: "gallery" }}
+      contents={[
+        <GalleryBlock
+          key="gallery-1"
+          items={homepage_gallery_items}
+        />,
+      ]}
+    />
+  );
+}
+
+function HopePageProjectsLinkedSection() {
+  return (
+    <Section
+      heading={{ level: 3, contents: "Projects", id: "linked_projects" }}
+      contents={[
+        <LinkBLock
+          key={"gallery-2"}
+          blockTitle="Projects"
+          describedLinks={[
+            {
+              id: "projects",
+              name: "example",
+              linked: "example.projects.librarianofstars.ca",
+              display: "Ex Project",
+              description:
+                "A example of a project to fit into the flow, filled in later with real stuff i've worked on",
+            },
+          ]}
+        />,
+      ]}
+    />
+  );
 }
 
 function HomePageFooter() {

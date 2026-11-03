@@ -1,7 +1,9 @@
-import "@/styles/components/shared.css";
+import "@/styles/components/content_blocks/shared.css";
 import "@/styles/components/content_blocks/paragraph_block.css";
 
 import Seperator from "@/components/elements/seperator";
+
+import Block from "@/components/content_blocks/generic_block";
 
 export type content_element = { index: number; show?: string; isBr?: boolean };
 export type content_elements = content_element[];
@@ -12,7 +14,7 @@ export default function ParagraphBlock({
   contents: content_elements;
 }) {
   return (
-    <div className="paragraph-block">
+    <Block type={"paragraph"}>
       <Seperator
         isVertical={false}
         className=" start-paragraph-block"
@@ -31,6 +33,6 @@ export default function ParagraphBlock({
         isVertical={false}
         className=" end-paragraph-block"
       />
-    </div>
+    </Block>
   );
 }
