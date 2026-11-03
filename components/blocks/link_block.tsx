@@ -5,8 +5,8 @@ import { IdentifiedHeading } from "@/components/elements/heading";
 
 import Block from "@/components/blocks/generic_block";
 
-import "@/styles/components/content_blocks/shared.css";
-import "@/styles/components/content_blocks/link_block.css";
+import "@/styles/components/blocks/shared.css";
+import "@/styles/components/blocks/link_block.css";
 
 export type described_link = navlink & { name: string; description: string };
 export type block_of_links = {

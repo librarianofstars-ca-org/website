@@ -1,5 +1,5 @@
-import "@/styles/components/content_blocks/shared.css";
-import "@/styles/components/content_blocks/gallery_block.css";
+import "@/styles/components/blocks/shared.css";
+import "@/styles/components/blocks/gallery_block.css";
 
 import { JSX } from "react/jsx-runtime";
 

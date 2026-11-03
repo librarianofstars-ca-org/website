@@ -1,5 +1,5 @@
-import "@/styles/components/content_blocks/shared.css";
-import "@/styles/components/content_blocks/paragraph_block.css";
+import "@/styles/components/blocks/shared.css";
+import "@/styles/components/blocks/paragraph_block.css";
 
 // import Seperator from "@/components/elements/seperator";
 
