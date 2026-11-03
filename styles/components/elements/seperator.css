@@ -13,13 +13,9 @@ hr.page-seperator.horizontal {
     margin-inline: auto;
     height: var(--size-tn);
     width: 90%;
-    /* border-inline-width: var(--size-md);
-    border-inline-color: var(--color-element-sep-highlight); */
 }
 hr.page-seperator.vertical {
     margin-block: 0;
     height: auto;
     width: var(--size-tn);
-    /* border-block-width: var(--size-md);
-    border-block-color: var(--color-element-sep-highlight); */
 }

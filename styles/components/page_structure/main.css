@@ -7,6 +7,5 @@ div.main-body {
     /* width: 100%; */
     color: var(--color-section-main-main);
     background-color: var(--color-section-main-main);
-    outline: none;
-    /* outline-color: var(--color-section-main-main) ; */
+    outline-color: var(--color-section-main-main) ;
 }

@@ -28,15 +28,3 @@ h3.section-title {
     width: 75%;
     border-color: var(--color-element-section-highlight);
 }
-    /* 
-div.section.content {
-    border-width: 0 calc(var(--size-tn) * 3);
-    border-color: brown;
-    border-style: solid;
-    border-radius: var(--size-md);
-    padding-inline: var(--size-md);
-    margin-block: var(--size-sm);
-}
-div.section.content, h2.section.title, div.section.content * {
-    background-color: #a0a0a0
-} */
