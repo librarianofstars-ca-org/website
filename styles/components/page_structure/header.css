@@ -12,7 +12,7 @@ div.header > h1 {
     border-color: var(--color-section-head-accent);
     color: var(--color-section-head-text);
 
-    margin-block: var(--size-sm);
+    margin-block-end: var(--size-xs);
 }
 div.header > hr {
     background-color: var(--color-section-head-highlight);

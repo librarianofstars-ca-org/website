@@ -8,6 +8,7 @@ import {
 import { ReactElement } from "react";
 
 import { block } from "@/components/content_blocks/generic_block";
+import Seperator from "@/components/elements/seperator";
 
 export type section_content = ReactElement<typeof Section> | block;
 
@@ -21,6 +22,12 @@ export type sections = ReactElement<typeof Section>[];
 export default function Section({ heading, contents }: section_data) {
   return (
     <div className="section">
+      {heading.level <= 3 && (
+        <Seperator
+          className={"section-start"}
+          isVertical={false}
+        />
+      )}
       <IdentifiedHeading
         className="section-title"
         headingId={heading.id}

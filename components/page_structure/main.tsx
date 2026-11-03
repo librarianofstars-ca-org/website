@@ -8,18 +8,18 @@ import { sections } from "@/components/elements/section";
 export default function Main({ children }: { children: sections }) {
   return (
     <div className="main-body">
-      <MainSeperator isStart={true} />
+      {/* <MainSeperator isStart={true} /> */}
       {children}
-      <MainSeperator isStart={false} />
+      {/* <MainSeperator isStart={false} /> */}
     </div>
   );
 }
 
-function MainSeperator({ isStart }) {
-  return (
-    <Seperator
-      isVertical={false}
-      className={"main " + (isStart ? "start" : "end")}
-    />
-  );
-}
+// function MainSeperator({ isStart }) {
+//   return (
+//     <Seperator
+//       isVertical={false}
+//       className={"main " + (isStart ? "start" : "end")}
+//     />
+//   );
+// }

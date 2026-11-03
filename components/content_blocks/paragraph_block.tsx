@@ -1,7 +1,7 @@
 import "@/styles/components/content_blocks/shared.css";
 import "@/styles/components/content_blocks/paragraph_block.css";
 
-import Seperator from "@/components/elements/seperator";
+// import Seperator from "@/components/elements/seperator";
 
 import Block from "@/components/content_blocks/generic_block";
 
@@ -15,10 +15,10 @@ export default function ParagraphBlock({
 }) {
   return (
     <Block type={"paragraph"}>
-      <Seperator
+      {/* <Seperator
         isVertical={false}
         className=" start-paragraph-block"
-      />
+      /> */}
       {contents.map((element) =>
         element.isBr ? (
           <p
@@ -29,10 +29,10 @@ export default function ParagraphBlock({
           <p key={element.index}> {element.show} </p>
         ),
       )}
-      <Seperator
+      {/* <Seperator
         isVertical={false}
         className=" end-paragraph-block"
-      />
+      /> */}
     </Block>
   );
 }
