@@ -101,6 +101,11 @@ html.style-root {
     --color-block-text-highlight: var(--color-element-section-highlight);
     --color-block-text-text: var(--color-element-section-text);
     /* Link Block - path 'link' */
+    --color-block-link-back: var(--color-element-section-back);
+    --color-block-link-main: var(--color-element-section-main);
+    --color-block-link-accent: var(--color-element-section-accent);
+    --color-block-link-highlight: var(--color-element-section-highlight);
+    --color-block-link-text: var(--color-element-section-text);
     /* Gallery Block - path 'img' */
 
 }
@@ -180,6 +185,11 @@ html.style-root {
         /* Blocks - path 'block' */
         /* Paragraph Block - path 'text' */
         /* Link Block - path 'link' */
+        --color-block-link-back: var(--color-element-section-back);
+        --color-block-link-main: var(--color-element-section-main);
+        --color-block-link-accent: var(--color-element-section-accent);
+        --color-block-link-highlight: var(--color-element-section-highlight);
+        --color-block-link-text: var(--color-element-section-text);
         /* Gallery Block - path 'img' */
     }
 }
