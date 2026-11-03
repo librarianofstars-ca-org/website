@@ -67,6 +67,12 @@ html.style-root {
     --color-element-sep-back: var(--color-gray-80);
     --color-element-sep-main: var(--color-gray-60);
     --color-element-sep-accent: var(--color-gray-50);
+    /* - Main Sections - path 'section' */
+    --color-element-section-back: var(--color-section-main-main);
+    --color-element-section-main: var(--color-section-main-accent);
+    --color-element-section-accent: var(--color-magenta-40);
+    --color-element-section-highlight: var(--color-magenta-10);
+    --color-element-section-text: var(--color-section-main-text);
     /* - Navigation Bar - path 'nav' */
     --color-element-nav-back: var(--color-section-head-main);
     --color-element-nav-main: var(--color-section-head-accent);
@@ -136,6 +142,12 @@ html.style-root {
         --color-element-sep-back: var(--color-gray-20);
         --color-element-sep-main: var(--color-gray-40);
         --color-element-sep-accent: var(--color-gray-50);
+        /* - Main Sections - path 'section' */
+        --color-element-section-back: var(--color-section-main-main);
+        --color-element-section-main: var(--color-section-main-accent);
+        --color-element-section-accent: var(--color-magenta-60);
+        --color-element-section-highlight: var(--color-magenta-90);
+        --color-element-section-text: var(--color-section-main-text);
         /* - Navigation Bar - path 'nav' */
         --color-element-nav-back: var(--color-section-head-main);
         --color-element-nav-main: var(--color-section-head-accent);
