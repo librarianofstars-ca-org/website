@@ -14,7 +14,7 @@ div.link-block {
 div.link-block h3 {
     margin-inline: auto;
     padding-inline: var(--size-sm);
-    border-bottom: var(--size-tn) solid green;
+    /* border-color: var(--color-block-links-accent); */
 }
 
 /* List of links */

@@ -5,6 +5,7 @@ import "@/styles/components/page_structure/footer.css";
 import { to_key_index_name } from "@/utilities/key_mapping";
 import { ReactNode } from "react";
 import Seperator from "../elements/seperator";
+import Heading from "../elements/heading";
 
 export type footer_section_content = { type: string; content: ReactNode[] };
 export type footer_section_contents = footer_section_content[];
@@ -25,11 +26,7 @@ export default function Footer({ sections }: { sections: footer_sections }) {
             className="footer-section-wrapper"
             key={to_key_index_name(section.order, section.title)}
           >
-            {index != 0 ? (
-              <hr className="page-seperator vertical footer" />
-            ) : (
-              <></>
-            )}
+            {index != 0 && <hr className="page-seperator vertical footer" />}
             <FooterBlock
               title={section.title}
               contents={section.contents}
@@ -50,14 +47,21 @@ function FooterBlock({
 }) {
   return (
     <div className="footer-section">
-      <h4 key={"title"}>{title}</h4>
+      <Heading
+        level={4}
+        key={"title"}
+        contents={title}
+      />
       <dl>
         {contents.map(({ type, content }, index) => (
           <div
             key={to_key_index_name(index, "section")}
             className="footer-contents-wrapper"
           >
-            <Seperator isVertical={false} className={"footer-contents"} />
+            <Seperator
+              isVertical={false}
+              className={"footer-contents"}
+            />
             <dt key={index}>{type}</dt>
             {content.map((content: ReactNode, index: number) => (
               <dd key={index}>{content}</dd>

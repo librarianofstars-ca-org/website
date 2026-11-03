@@ -22,7 +22,7 @@ export default function LinkBLock({
     <Block type={"link"}>
       <IdentifiedHeading
         contents={blockTitle}
-        level={3}
+        level={4}
         headingId={blockTitle.toLowerCase() + "_links"}
       />
       <dl>
