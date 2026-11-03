@@ -13,38 +13,29 @@
 
 /* Sizing of each heading */
 .table-of-contents > a > h2.toc-item {
-    margin-inline: auto;
-    font-size: 1.8rem;
+    
 }
 .table-of-contents > a > h3.toc-item {
     width: calc(100% - (3* var(--size-lg)));
-    font-size: 1.6rem;
 }
 .table-of-contents > a > h4.toc-item {
     width: calc(100% - (4* var(--size-lg)));
-    font-size: 1.4rem;
 }
 .table-of-contents > a > h5.toc-item {
     width: calc(100% - (5* var(--size-lg)));
-    font-size: 1.2rem;
 }
 .table-of-contents > a > h6.toc-item {
     width: calc(100% - (6* var(--size-lg)));
-    font-size: 1.0rem;
 }
 .table-of-contents > a > small.toc-item {
     width: calc(100% - (7* var(--size-lg)));
-    font-size: 0.8rem;
 }
 
 /* .table-of-contents all children */
 .table-of-contents > a > * {
-    padding-inline: var(--size-sm);
     margin-block-start: 0;
     margin-block-end: var(--size-xs);
 
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
     font-style: italic;
 
     color: var(--color-element-toc-text);
@@ -73,7 +64,7 @@
 
 /* All but top level heading */
 .table-of-contents > a > .toc-item:not(h2) {
-    border-style: solid;
+    padding-block: 0;
     border-inline-start-width: var(--size-md);
     border-inline-end-width: 0;
     border-inline-start-color: var(--color-meta-links);

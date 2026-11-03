@@ -37,9 +37,9 @@ function isIdentified(object: any): object is ident_heading_props {
 export default function Heading(props: ident_heading_props | heading_props) {
   let element_props: { className: string; id?: string };
   if (isIdentified(props)) {
-    element_props = { className: props.className, id: props.id };
+    element_props = { className: props.className + " heading", id: props.id };
   } else {
-    element_props = { className: props.className };
+    element_props = { className: props.className + " heading" };
   }
   // Means: <level_map[level] className={ className } id?={ id }> {contents} </level_map[level]>
   return React.createElement(

@@ -1,27 +1,52 @@
-h1, h2 {
-    margin-inline: auto;
-    width: 80%;
-    text-align: center;
-    border: var(--size-tn) solid green;
-    border-top-width: 0;
-    border-bottom-width: var(--size-xs);
-    border-radius: 0 0 var(--size-hg) var(--size-hg) ;
+.heading {
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: normal;
+
     padding: var(--size-sm);
+
+    margin-block: 0 var(--size-xs);
+
+    border-style: solid;
+    border-width: 0;
+
+    width: auto;
 }
 
-h3, h4, h5, h6 {
+h1.heading, h2.heading {
+    width: 80%;
+    margin-inline: auto;
+    text-align: center;
+    border-inline-width: var(--size-tn);
+    border-bottom-width: var(--size-xs);
+    border-radius: 0 0 var(--size-hg) var(--size-hg);
+}
+h3.heading, h4.heading {
+    border-bottom-width: var(--size-tn);
     padding-inline-start: var(--size-md);
-    width: max-content;
-    margin-block-start: 0;
-    margin-inline-start: 0;
-    margin-inline-end: var(--size-md);
+    border-radius: 0 0 var(--size-xs) var(--size-xs);
 }
-h3 {
-    margin-block-end: var(--size-sm);
+h5.heading, h6.heading {
+    padding-inline-start: var(--size-lg);
 }
-h4 {
-    margin-block-end: var(--size-xs);
+
+h1.heading {
+    font-size: 2.0rem;
 }
-h5, h6 {
-    margin-block-end: 0;
+h2.heading {
+    font-size: 1.8rem;
+}
+h3.heading {
+    font-size: 1.6rem;
+    border-inline-width: var(--size-tn);
+}
+h4.heading {
+    font-size: 1.4rem;
+}
+h5.heading {
+    font-size: 1.2rem;
+}
+h6.heading {
+    font-size: 1.0rem;
 }

@@ -36,12 +36,11 @@ div.footer div.footer-section h4 {
     grid-row: 1 / span 1;
     grid-column: 1 / -1;
     justify-self: center;
-    width: auto;
-    margin-inline: var(--size-sm);
     margin-block: 0;
+    padding-block: 0;
     padding-inline: var(--size-hg);
 
-    border-block-end: var(--size-tn) solid var(--color-section-foot-highlight);
+    border-block-end-color: var(--color-section-foot-highlight);
 }
 
 div.footer div.footer-section-wrapper,

@@ -1,9 +1,20 @@
-/* .section {}
+.section {
+    border-inline-width: var(--size-tn);
+    border-block-width: 0;
+    border-style: solid;
+    border-color: var(--color-element-section-back);
+    border-radius: var(--size-tn);
 
-h2.section.title {
-    margin-block-start: 0;
-    background-color: #a0a0a0
+    margin-inline: var(--size-xs);
+    margin-block: var(--size-sm);
 }
+
+.section-title {
+    margin-block-start: 0;
+    margin-block-end: var(--size-sm);
+    border-color: var(--color-element-section-main)
+}
+    /* 
 div.section.content {
     border-width: 0 calc(var(--size-tn) * 3);
     border-color: brown;
