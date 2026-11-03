@@ -10,8 +10,3 @@ div.main-body {
     outline: none;
     /* outline-color: var(--color-section-main-main) ; */
 }
-
-.main-body h2 {
-    background-color: var(--color-section-main-main);
-    border-color: var(--color-section-main-accent);
-}

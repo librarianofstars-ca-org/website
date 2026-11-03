@@ -68,8 +68,8 @@ html.style-root {
     --color-element-sep-main: var(--color-gray-60);
     --color-element-sep-accent: var(--color-gray-50);
     /* - Main Sections - path 'section' */
-    --color-element-section-back: var(--color-section-main-main);
-    --color-element-section-main: var(--color-section-main-accent);
+    --color-element-section-back: var(--color-section-main-back);
+    --color-element-section-main: var(--color-section-main-main);
     --color-element-section-accent: var(--color-magenta-40);
     --color-element-section-highlight: var(--color-magenta-10);
     --color-element-section-text: var(--color-section-main-text);
@@ -143,8 +143,8 @@ html.style-root {
         --color-element-sep-main: var(--color-gray-40);
         --color-element-sep-accent: var(--color-gray-50);
         /* - Main Sections - path 'section' */
-        --color-element-section-back: var(--color-section-main-main);
-        --color-element-section-main: var(--color-section-main-accent);
+        --color-element-section-back: var(--color-section-main-back);
+        --color-element-section-main: var(--color-section-main-main);
         --color-element-section-accent: var(--color-magenta-60);
         --color-element-section-highlight: var(--color-magenta-90);
         --color-element-section-text: var(--color-section-main-text);
