@@ -1,0 +1,62 @@
+.heading {
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: normal;
+
+    padding: var(--size-sm);
+
+    margin-block: 0 var(--size-xs);
+
+    border-style: solid;
+    border-width: 0;
+
+    width: auto;
+}
+
+h1.heading, h2.heading,
+h3.heading, h4.heading { 
+    margin-inline: auto;
+}
+h1.heading, h2.heading {
+    text-align: center;
+    border-inline-width: var(--size-tn);
+    border-block-end-width: var(--size-xs);
+    border-radius: 0 0 var(--size-hg) var(--size-hg);
+    padding-block: var(--size-xs);
+}
+h3.heading, h4.heading {
+    border-block-end-width: var(--size-tn);
+    padding-inline-start: var(--size-md);
+    border-radius: 0 0 var(--size-sm) var(--size-sm);
+    padding-block: var(--size-tn);
+}
+h5.heading, h6.heading {
+    padding-inline-start: var(--size-lg);
+}
+
+h1.heading {
+    font-size: 2.0rem;
+}
+h2.heading {
+    font-size: 1.8rem;
+}
+h3.heading {
+    font-size: 1.6rem;
+    border-inline-width: var(--size-tn);
+}
+h4.heading {
+    font-size: 1.4rem;
+}
+h5.heading {
+    font-size: 1.2rem;
+}
+h6.heading {
+    font-size: 1.0rem;
+}
+
+/* Move closer to heading block after it */
+hr:has(+ h1.heading, + h2.heading, + h3.heading) {
+    margin-block-start: var(--size-lg);
+    margin-block-end: 0;
+}

@@ -26,8 +26,8 @@ export default function Header({
   return (
     <div className="header">
       <NavigationBar links={links} />
-      <PageTitle>Librarian Of Stars' Homepage!</PageTitle>
       <HeaderSeperator />
+      <PageTitle>Librarian Of Stars' Homepage!</PageTitle>
     </div>
   );
 }

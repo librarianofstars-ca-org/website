@@ -1,6 +1,7 @@
 import { PageHead, PageBody } from "@/components/meta";
 import { IdentifiedHeading } from "@/components/elements/heading";
 
+import "@/styles/pallette.css";
 import "@/styles/base.css";
 
 export default function RootLayout({

@@ -3,7 +3,10 @@ import Link from "next/link";
 import { navlink } from "@/components/elements/navbar";
 import { IdentifiedHeading } from "@/components/elements/heading";
 
-import "@/styles/components/content_blocks/link_block.css";
+import Block from "@/components/blocks/generic_block";
+
+import "@/styles/components/blocks/shared.css";
+import "@/styles/components/blocks/link_block.css";
 
 export type described_link = navlink & { name: string; description: string };
 export type block_of_links = {
@@ -16,10 +19,10 @@ export default function LinkBLock({
   describedLinks,
 }: block_of_links) {
   return (
-    <div className="link-block">
+    <Block type={"link"}>
       <IdentifiedHeading
         contents={blockTitle}
-        level={3}
+        level={4}
         headingId={blockTitle.toLowerCase() + "_links"}
       />
       <dl>
@@ -31,7 +34,7 @@ export default function LinkBLock({
           />
         ))}
       </dl>
-    </div>
+    </Block>
   );
 }
 

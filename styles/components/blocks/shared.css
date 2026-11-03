@@ -1,0 +1,4 @@
+/* Any Block element */
+[class$="-block"] {
+    padding-inline: var(--size-xs);
+}

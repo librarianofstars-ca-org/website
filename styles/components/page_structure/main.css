@@ -1,3 +1,11 @@
 div.main-body {
     grid-area: main;
+    color: var(--color-section-main-text);
+}
+
+.main-body hr {
+    /* width: 100%; */
+    color: var(--color-section-main-main);
+    background-color: var(--color-section-main-main);
+    outline-color: var(--color-section-main-main) ;
 }
