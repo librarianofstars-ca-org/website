@@ -1,21 +1,26 @@
-import "@/styles/components/shared.css";
-import "@/styles/components/content_blocks/gallery_block.css";
+import "@/styles/components/blocks/shared.css";
+import "@/styles/components/blocks/gallery_block.css";
 
 import { JSX } from "react/jsx-runtime";
+
+import Block from "@/components/blocks/generic_block";
 
 export type gallery_item = { show: JSX.Element; label: string };
 export type gallery_items = gallery_item[];
 
 export default function GalleryBlock({ items }: { items: gallery_items }) {
   return (
-    <ul className="gallery">
+    <Block
+      type="gallery"
+      wrapper="ul"
+    >
       {items.map((item) => (
         <GalleryItem
           key={item.label}
           galleryitem={item}
         />
       ))}
-    </ul>
+    </Block>
   );
 }
 

@@ -1,13 +1,11 @@
-import GalleryBlock, { gallery_items } from "@/components/content_blocks/gallery_block";
+import GalleryBlock, { gallery_items } from "@/components/blocks/gallery_block";
 import ParagraphBlock, {
   content_elements,
-} from "@/components/content_blocks/paragraph_block";
-import LinkBLock, {
-  block_of_links,
-} from "@/components/content_blocks/link_block";
-import Section from "@/components/content_blocks/section";
+} from "@/components/blocks/paragraph_block";
+import LinkBLock, { block_of_links } from "@/components/blocks/link_block";
+import Section from "@/components/elements/section";
 
-import Footer from "@/components/page_structure/footer";
+import Footer, { footer_sections } from "@/components/page_structure/footer";
 import Header from "@/components/page_structure/header";
 import Sidebar from "@/components/page_structure/sidebar";
 import Main from "@/components/page_structure/main";
@@ -148,6 +146,42 @@ let homepage_paragraph_block_elements: content_elements = [
   },
 ];
 
+let homepage_footer_sections: footer_sections = [
+  {
+    order: 1,
+    title: "Credits",
+    contents: [
+      { type: "Site Design", content: ["Librarian Of Stars"] },
+      {
+        type: "Contributors",
+        content: ["Librarian Of Stars", "ChrisNolan.ca"],
+      },
+    ],
+  },
+  {
+    order: 2,
+    title: "Contact",
+    contents: [
+      {
+        type: "Email",
+        content: [
+          <a href="mailto:contact@libarianofstars.ca">
+            contact@libarianofstars.ca
+          </a>,
+        ],
+      },
+      {
+        type: "Placeholder",
+        content: ["account 1", "account 2", "account 3"],
+      },
+      {
+        type: "Github",
+        content: ["Librarian Of Stars"],
+      },
+    ],
+  },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -174,13 +208,13 @@ function HomePageSidebar() {
     </Sidebar>
   );
 }
+
 function HomePageMain() {
   return (
     <Main>
       <HomePageWelcomeSplashSection />
-      <HomePageLinksSection />
-      <HomePageSummeryBlock />
-      <HomePageArtGalleryBlock />
+      <HomePageAboutMeSection />
+      <HomePageShowcaseSection />
     </Main>
   );
 }
@@ -188,38 +222,110 @@ function HomePageMain() {
 function HomePageWelcomeSplashSection() {
   return (
     <Section
-      sectionTitle={"Welcome"}
-      sectionId="greating"
-    >
-      <p>Welcome to my site</p>
-      <p>Some more info</p>
-    </Section>
+      heading={{ level: 2, contents: "Welcome", id: "greatings" }}
+      contents={[
+        <ParagraphBlock
+          key={"welcome-1"}
+          contents={[
+            { index: 1, show: "Welcome to my site", isBr: false },
+            { index: 2, show: "Some more info", isBr: false },
+          ]}
+        />,
+      ]}
+    />
   );
 }
+
+function HomePageAboutMeSection() {
+  return (
+    <Section
+      heading={{ level: 2, contents: "About Me", id: "about" }}
+      contents={[
+        <HomePageSummerySection key={"about-1"} />,
+        <HomePageLinksSection key={"about-2"} />,
+      ]}
+    />
+  );
+}
+
+function HomePageSummerySection() {
+  return (
+    <Section
+      heading={{ level: 3, contents: "Summery", id: "summery" }}
+      contents={[
+        <ParagraphBlock
+          key="summery-1"
+          contents={homepage_paragraph_block_elements}
+        />,
+      ]}
+    />
+  );
+}
+
 function HomePageLinksSection() {
   return (
     <Section
-      sectionTitle={"Links"}
-      sectionId="links"
-    >
-      {homepage_links.map((homepage_link_block, index) => (
+      heading={{ level: 3, contents: "Links", id: "links" }}
+      contents={homepage_links.map((homepage_link_block, index) => (
         <LinkBLock
           key={to_key_index_name(index, homepage_link_block.blockTitle)}
           {...homepage_link_block}
         />
       ))}
-    </Section>
+    />
   );
 }
 
-function HomePageSummeryBlock() {
-  return <ParagraphBlock contents={homepage_paragraph_block_elements} />;
+function HomePageShowcaseSection() {
+  return (
+    <Section
+      heading={{ level: 2, contents: "Showcase", id: "display" }}
+      contents={[
+        <HomePageArtGallerySection key={"display-1"} />,
+        <HopePageProjectsLinkedSection key={"display-2"} />,
+      ]}
+    />
+  );
 }
 
-function HomePageArtGalleryBlock() {
-  return <GalleryBlock items={homepage_gallery_items} />;
+function HomePageArtGallerySection() {
+  return (
+    <Section
+      heading={{ level: 3, contents: "Art", id: "gallery" }}
+      contents={[
+        <GalleryBlock
+          key="gallery-1"
+          items={homepage_gallery_items}
+        />,
+      ]}
+    />
+  );
+}
+
+function HopePageProjectsLinkedSection() {
+  return (
+    <Section
+      heading={{ level: 3, contents: "Projects", id: "linked_projects" }}
+      contents={[
+        <LinkBLock
+          key={"gallery-2"}
+          blockTitle="Projects"
+          describedLinks={[
+            {
+              id: "projects",
+              name: "example",
+              linked: "example.projects.librarianofstars.ca",
+              display: "Ex Project",
+              description:
+                "A example of a project to fit into the flow, filled in later with real stuff i've worked on",
+            },
+          ]}
+        />,
+      ]}
+    />
+  );
 }
 
 function HomePageFooter() {
-  return <Footer>Created by Librarian of Stars</Footer>;
+  return <Footer sections={homepage_footer_sections} />;
 }

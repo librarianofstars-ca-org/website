@@ -8,20 +8,22 @@ div.sidebar.wraper{
     align-items: start;
     justify-content: center;
 
-    margin-block: var(--size-sm);
-    margin-inline: var(--size-lg);
-
-    border: var(--size-tn) solid brown;
+    border-block-width: var(--size-xs);
+    border-style: solid;
+    border-color: var(--color-section-side-accent);
     border-radius: var(--size-sm);
 }
 
 div.sidebar hr.sidebar {
     flex: 0 0 auto;
+    color: var(--color-section-side-accent);
+    background-color: var(--color-section-side-accent);
+    outline: 0px;
     height: 100%;
-    margin-block: 0px;
 }
 
 div.sidebar.contents {
-    flex: 1 1 1;
-    margin: auto;
+    flex: 1 1 auto;
+    margin-inline: auto;
+    background-color: var(--color-section-side-main);
 }

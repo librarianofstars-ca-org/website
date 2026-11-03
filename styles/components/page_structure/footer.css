@@ -1,3 +1,90 @@
 div.footer {
     grid-area: footer;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-content: center;
+
+    outline-color: var(--color-section-foot-back);
+    background-color: var(--color-section-foot-main);
+    color: var(--color-section-foot-text);
 }
+
+div.footer div.footer-section {
+    display: grid;
+    grid-template-rows: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(1rem, 1fr);
+
+    min-width: calc(var(--size-hg) * 10); /* not ideal guessing min size*/
+
+    margin-inline: var(--size-md);
+    margin-block: var(--size-xs);
+
+    padding-block: var(--size-xs);
+
+    border-inline: var(--size-xs) solid var(--color-section-foot-accent);
+    border-block: var(--size-tn) solid var(--color-section-foot-highlight);
+    border-radius: var(--size-xs);
+
+    background-color: var(--color-section-foot-main);
+
+    align-items: center;
+}
+
+div.footer div.footer-section h4 { 
+    grid-row: 1 / span 1;
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-block: 0;
+    padding-block: 0;
+    padding-inline: var(--size-hg);
+
+    border-block-end-color: var(--color-section-foot-highlight);
+}
+
+div.footer div.footer-section-wrapper,
+div.footer div.footer-section dl,
+div.footer div.footer-section dl div.footer-contents-wrapper {
+    display: contents;
+}
+
+div.footer div.footer-section dl dd,
+div.footer div.footer-section dl dt { 
+    padding-inline-end: var(--size-sm);
+}
+
+div.footer div.footer-section dl dt {
+    grid-column: 1 / span 1;
+    justify-self: end;
+    /* border-inline-end: var(--size-tn) solid var(--color-section-foot-highlight) ; */
+}
+
+div.footer div.footer-section dl dd {
+    display: list-item;
+    grid-column: 2 / span 1;
+    justify-self: start;
+    margin-inline: var(--size-sm) 0;
+}
+
+div.footer div.footer-section dl dd::marker {
+    content: "- ";
+    color: var(--color-section-foot-highlight);
+}
+
+div.footer div.footer-section hr.footer-contents {
+    grid-column: 1 / -1;
+    margin: 0;
+    width: unset;
+    background-color: var(--color-section-foot-accent);
+    color: var(--color-section-foot-accent);
+    outline: none;
+}
+
+div.footer hr.footer {
+    background-color: var(--color-section-foot-back);
+    color: var(--color-section-foot-back);
+    outline: none;
+    height: 100%;
+}
+
