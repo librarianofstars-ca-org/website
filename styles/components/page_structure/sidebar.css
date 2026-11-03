@@ -23,7 +23,7 @@ div.sidebar hr.sidebar {
 }
 
 div.sidebar.contents {
-    flex: 1 1 1;
-    margin: auto;
+    flex: 1 1 auto;
+    margin-inline: auto;
     background-color: var(--color-section-side-main);
 }
