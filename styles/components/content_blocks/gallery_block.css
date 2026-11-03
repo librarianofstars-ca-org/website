@@ -6,11 +6,14 @@ ul.gallery-block {
     margin: calc(var(--size-xs)* 2) auto;
     padding: 0;
 
-    outline: var(--size-xs) gray solid;
+    outline: var(--size-xs) var(--color-block-show-main) solid;
     border-radius: var(--size-xs);
 
     align-items: start;
     justify-items: center;
+
+    background-color: var(--color-block-show-back);
+    color: var(--color-block-show-text);
 }
 
 div.gallery-item {
@@ -22,9 +25,9 @@ div.gallery-item {
     margin: var(--size-lg);
     padding: var(--size-sm);
 
-    border: var(--size-tn) solid black;
+    border: var(--size-tn) solid var(--color-block-show-accent);
     border-radius: var(--size-lg);
-    outline: var(--size-xs) solid gray;
+    outline: var(--size-xs) solid var(--color-block-show-main);
 
     text-align: center;
     align-items: center;
@@ -37,7 +40,10 @@ div.gallery-item *.gallery-display {
 div.gallery-item *.gallery-display * { 
     margin: 0;
 }
-
+div.gallery-item *.gallery-display img { 
+    border: var(--size-tn) solid var(--color-block-show-highlight);
+    border-radius: var(--size-tn);
+}
 .gallery-item span.gallery-label {
     display: inline-block;
     font-style: italic;

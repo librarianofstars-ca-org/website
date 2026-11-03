@@ -106,7 +106,12 @@ html.style-root {
     --color-block-link-accent: var(--color-element-section-accent);
     --color-block-link-highlight: var(--color-element-section-highlight);
     --color-block-link-text: var(--color-element-section-text);
-    /* Gallery Block - path 'img' */
+    /* Gallery Block - path 'show' */
+    --color-block-show-back: var(--color-element-section-back);
+    --color-block-show-main: var(--color-element-section-main);
+    --color-block-show-accent: var(--color-element-section-accent);
+    --color-block-show-highlight: var(--color-element-section-highlight);
+    --color-block-show-text: var(--color-element-section-text);
 
 }
 
@@ -195,6 +200,11 @@ html.style-root {
         --color-block-link-accent: var(--color-element-section-accent);
         --color-block-link-highlight: var(--color-element-section-highlight);
         --color-block-link-text: var(--color-element-section-text);
-        /* Gallery Block - path 'img' */
+        /* Gallery Block - path 'show' */
+        --color-block-show-back: var(--color-element-section-back);
+        --color-block-show-main: var(--color-element-section-main);
+        --color-block-show-accent: var(--color-element-section-accent);
+        --color-block-show-highlight: var(--color-element-section-highlight);
+        --color-block-show-text: var(--color-element-section-text);
     }
 }
