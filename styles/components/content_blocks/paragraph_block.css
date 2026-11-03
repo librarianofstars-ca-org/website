@@ -1,5 +1,6 @@
 div.paragraph-block {
-    color: var(--color-element-section-text);
+    color: var(--color-block-text-text);
+    background-color: var(--color-block-text-back);
 }
 
 div.paragraph-block p {
@@ -17,12 +18,12 @@ div.paragraph-block p.paragraph-block.break-line::after {
     display: inline-block;
     content: "* * *";
 
-    background-color: var(--color-element-section-accent);
+    background-color: var(--color-block-text-accent);
 
     margin-inline: auto;
     padding-inline: var(--size-lg);
 
-    border: var(--size-tn) solid var(--color-element-section-highlight);
+    border: var(--size-tn) solid var(--color-block-text-highlight);
     border-radius: var(--size-sm);
 
     text-align: center;

@@ -93,7 +93,16 @@ html.style-root {
     --color-element-toc-invert-accent: var(--color-element-toc-highlight);
     --color-element-toc-invert-highlight: var(--color-element-toc-accent);
     --color-element-toc-invert-text: var(--color-element-toc-main) ;
-    
+    /* Blocks - path 'block' */
+    /* Paragraph Block - path 'text' */
+    --color-block-text-back: var(--color-element-section-back);
+    --color-block-text-main: var(--color-element-section-main);
+    --color-block-text-accent: var(--color-element-section-accent);
+    --color-block-text-highlight: var(--color-element-section-highlight);
+    --color-block-text-text: var(--color-element-section-text);
+    /* Link Block - path 'link' */
+    /* Gallery Block - path 'img' */
+
 }
 
 @media (prefers-color-scheme:light) {
@@ -138,7 +147,7 @@ html.style-root {
         --color-section-foot-highlight: var(--color-blue-light-80);
         --color-section-foot-text: var(--color-blue-light-95);
         /* Elements - path 'element' */
-        /* Seperator - path 'sep' */
+        /* - Seperator - path 'sep' */
         --color-element-sep-back: var(--color-gray-20);
         --color-element-sep-main: var(--color-gray-40);
         --color-element-sep-accent: var(--color-gray-50);
@@ -168,5 +177,9 @@ html.style-root {
         --color-element-toc-invert-accent: var(--color-element-toc-highlight);
         --color-element-toc-invert-highlight: var(--color-element-toc-accent);
         --color-element-toc-invert-text: var(--color-element-toc-main) ;
+        /* Blocks - path 'block' */
+        /* Paragraph Block - path 'text' */
+        /* Link Block - path 'link' */
+        /* Gallery Block - path 'img' */
     }
 }
