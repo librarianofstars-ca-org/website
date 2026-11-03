@@ -184,6 +184,11 @@ html.style-root {
         --color-element-toc-invert-text: var(--color-element-toc-main) ;
         /* Blocks - path 'block' */
         /* Paragraph Block - path 'text' */
+        --color-block-text-back: var(--color-element-section-back);
+        --color-block-text-main: var(--color-element-section-main);
+        --color-block-text-accent: var(--color-element-section-accent);
+        --color-block-text-highlight: var(--color-element-section-highlight);
+        --color-block-text-text: var(--color-element-section-text);
         /* Link Block - path 'link' */
         --color-block-link-back: var(--color-element-section-back);
         --color-block-link-main: var(--color-element-section-main);
