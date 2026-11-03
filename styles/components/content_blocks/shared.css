@@ -1,4 +1,4 @@
 /* Any Block element */
 [class$="-block"] {
-    /* border: 1px solid red; Testing */
+    padding-inline: var(--size-xs);
 }
