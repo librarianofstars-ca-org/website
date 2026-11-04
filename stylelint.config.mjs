@@ -13,6 +13,8 @@ export default {
     "no-unknown-custom-properties": true,
     "no-unknown-custom-media": true,
     "declaration-no-important":true,
+    "declaration-block-no-shorthand-property-overrides": true,
+    "declaration-block-no-redundant-longhand-properties": true,
     "color-named": "never",
     "color-no-hex": true,
     "hue-degree-notation": "number",
@@ -23,16 +25,16 @@ export default {
       "font-size": ["em", "rem"],
     },
     "declaration-property-value-allowed-list": {
-        // Use Variables as any colors
-        "/\\s*color\\s*/": ["/--color-/", "unset"],
-        "/border([\s-]*-width)/": ["/--size-(tn|xs|sm|md|lg|xl|hg)/", "0",],
-        "/margin(-inline|-block)?/": ["/--size-(tn|xs|sm|md|lg|xl|hg)/", "0", "auto"],
-        "/padding(-inline|-block)?/": ["/--size-(tn|xs|sm|md|lg|xl|hg)/", "0", "auto"],
-      },
-      "declaration-property-value-disallowed-list": {
-        // Don't use pallette colors directly
-        "/\\s*color\\s*/": ["/--color-(\s*)-(0-9)+/"],
-      }
+      // Use Variables as any colors
+      "/\\s*color\\s*/": ["/--color-/", "unset"],
+      "/(border|outline)([\s-]*-width)/": ["/--size-(tn|xs|sm|md|lg|xl|hg)/", "0",],
+      "/(margin|padding)(-inline|-block)?/": ["/--size-(tn|xs|sm|md|lg|xl|hg)/", "0", "auto"],
+    },
+    "declaration-property-value-disallowed-list": {
+      // Don't use pallette colors directly
+      "/(\s*-)?color/": ["/--(color)-(.+)-([0-9](0|5))/"],
+    },
+    "custom-property-pattern": "(size|color)-.+"
   },
   "overrides":[{
     "files": ["styles/pallette.css",],
@@ -40,8 +42,18 @@ export default {
       "declaration-property-value-allowed-list": {
         // Can use pallette colors when setting varaible only
         "/--color/": ["/oklch/"]
-      }
+      },
+      "custom-property-pattern": "(color)-(.+)-([0-9](0|5))"
     }
+  }, 
+  {
+    "files": ["styles/base.css",],
+    "rules": {
+      "declaration-property-value-allowed-list": {
+        // Can use pallette colors when setting varaible only
+        "/--color-(.+)/": ["/--color-(.+)/"]
+      },
+      "declaration-property-value-disallowed-list": {},
     }
-  ]
+  },]
 };
