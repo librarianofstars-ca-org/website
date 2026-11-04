@@ -31,7 +31,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "stylelint \"styles/**/*.css\"",
+    "lint:fix": "stylelint \"styles/**/*.css\" --fix"
   },
   "devDependencies": {
     "@types/node": "26.6.5",
