@@ -1,11 +1,11 @@
 .section {
-    border-inline-width: var(--size-tn);
-    border-block-width: 0;
-    border-style: solid;
-    border-color: var(--color-element-section-main);
-    border-radius: var(--size-tn);
-    margin-inline: var(--size-xs);
     margin-block: var(--size-sm);
+    margin-inline: var(--size-xs);
+    border-color: var(--color-element-section-main);
+    border-style: solid;
+    border-block-width: 0;
+    border-inline-width: var(--size-tn);
+    border-radius: var(--size-tn);
 }
 
 .section-title {

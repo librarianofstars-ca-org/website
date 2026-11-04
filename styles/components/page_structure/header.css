@@ -7,14 +7,16 @@ div.header > nav {
 }
 
 div.header > h1 {
-    background-color: var(--color-section-head-main);
-    border-color: var(--color-section-head-accent);
-    color: var(--color-section-head-text);
-    margin-block-end: var(--size-sm);
     width: 85%;
+    margin-block-end: var(--size-sm);
+    border-color: var(--color-section-head-accent);
+
+    color: var(--color-section-head-text);
+
+    background-color: var(--color-section-head-main);
 }
 
 div.header > hr {
-    background-color: var(--color-section-head-highlight);
     color: var(--color-section-head-accent);
+    background-color: var(--color-section-head-highlight);
 }

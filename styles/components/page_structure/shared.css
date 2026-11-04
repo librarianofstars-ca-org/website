@@ -1,14 +1,14 @@
 body {
     display: grid;
     margin: 0;
-    background-color: var(--color-site-back);
     color: var(--color-site-text);
+    background-color: var(--color-site-back);
 }
 
 body > div {
+    border-radius: var(--size-sm);
     background-color: var(--color-site-main);
     outline: var(--size-xs) solid var(--color-site-accent);
-    border-radius: var(--size-sm);
 }
 
 div.header, div.footer {
@@ -21,13 +21,14 @@ div.main-body, div.sidebar {
 }
 
 small.nav-id-hidden {
+    box-sizing: border-box;
     width: var(--size-sm);
     height: var(--size-sm);
-    padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    padding: 0;
     border: 1px solid var(--color-site-accent);
     border-radius: 100%;
+
     background-color: var(--color-site-main);
 }
 

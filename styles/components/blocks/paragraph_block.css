@@ -4,8 +4,8 @@ div.paragraph-block {
 }
 
 div.paragraph-block p {
-    margin-inline: var(--size-lg);
     margin-block: var(--size-md);
+    margin-inline: var(--size-lg);
 }
 
 div.paragraph-block .paragraph-block.break-line { 
@@ -15,13 +15,17 @@ div.paragraph-block .paragraph-block.break-line {
 }
 
 div.paragraph-block p.paragraph-block.break-line::after {
-    display: inline-block;
     content: "* * *";
-    background-color: var(--color-block-text-accent);
+
+    display: inline-block;
+
+    min-width: calc(var(--size-hg) * 3);
     margin-inline: auto;
     padding-inline: var(--size-lg);
     border: var(--size-tn) solid var(--color-block-text-highlight);
     border-radius: var(--size-sm);
+
     text-align: center;
-    min-width: calc(var(--size-hg) * 3);
+
+    background-color: var(--color-block-text-accent);
 }

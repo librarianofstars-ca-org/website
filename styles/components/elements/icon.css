@@ -1,6 +1,6 @@
 img.icon {
-    border: var(--size-tn) solid black;
     margin: calc(var(--size-tn) * 2);
+    border: var(--size-tn) solid black;
 }
 
 img.icon.circle {

@@ -1,21 +1,23 @@
 hr.page-seperator {
-    background-color: var(--color-element-sep-accent);
-    color: var(--color-element-sep-main);
     margin: var(--size-sm);
-    outline: 1px solid var(--color-element-sep-back);
     border-style: solid;
     border-width: 1px;
     border-radius: 3px;
+
+    color: var(--color-element-sep-main);
+
+    background-color: var(--color-element-sep-accent);
+    outline: 1px solid var(--color-element-sep-back);
 }
 
 hr.page-seperator.horizontal {
-    margin-inline: auto;
-    height: var(--size-tn);
     width: 90%;
+    height: var(--size-tn);
+    margin-inline: auto;
 }
 
 hr.page-seperator.vertical {
-    margin-block: 0;
-    height: auto;
     width: var(--size-tn);
+    height: auto;
+    margin-block: 0;
 }

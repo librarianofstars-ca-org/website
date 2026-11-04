@@ -5,18 +5,22 @@ nav {
 
     /* width: 90vw; */
     margin-inline: var(--size-lg);
-    background-color: var(--color-element-nav-back);
+    padding-inline: var(--size-lg);
     border: var(--size-tn) solid var(--color-element-nav-accent);
     border-radius: var(--size-xs);
-    padding-inline: var(--size-lg);
+
+    background-color: var(--color-element-nav-back);
 }
 
 nav hr.nav-bar-sep {
-    margin-inline: var(--size-lg);
-    background-color: var(--color-element-nav-accent);
-    color: var(--color-element-nav-accent);
-    outline: 0;
     flex: 0 0 var(--size-tn);
+
+    margin-inline: var(--size-lg);
+
+    color: var(--color-element-nav-accent);
+
+    background-color: var(--color-element-nav-accent);
+    outline: 0;
 }
 
 nav img.nav-bar-icon {
@@ -29,9 +33,9 @@ nav ol.nav-bar-links {
 }
 
 nav li.nav-bar-link-item {
+    flex: 0 0 auto;
     margin-block: var(--size-sm);
     margin-inline-start: var(--size-md);
-    flex: 0 0 auto;
     text-align: center;
 }
 
@@ -40,24 +44,26 @@ nav li.nav-bar-link-item:first-child {
 }
 
 nav li a.nav-link {
+    padding: var(--size-xs);
     border: solid var(--size-tn) var(--color-element-nav-highlight);
     border-radius: var(--size-xs);
-    padding: var(--size-xs);
-    background-color: var(--color-element-nav-main);
+
     color: var(--color-element-nav-text);
     text-decoration: underline solid var(--color-meta-links-unvisited) 1px;
+
+    background-color: var(--color-element-nav-main);
 }
 
-nav li a.nav-link:hover { 
-    background-color:  var(--color-element-nav-invert-main);
-    color: var(--color-element-nav-invert-highlight);
+nav li a.nav-link:hover {
     border-color: var(--color-element-nav-invert-text);
-    text-decoration-color: var(--color-meta-links-invert-unvisited);
+    color: var(--color-element-nav-invert-highlight);
+    text-decoration-color: var(--color-meta-links-invert-unvisited); 
+    background-color:  var(--color-element-nav-invert-main);
 }
 
 nav li.nav-bar-link-item::marker {
-    display: none;
     content: "";
+    display: none;
 }
 
 nav div.nav-spacer.tiny {
@@ -81,8 +87,8 @@ nav div.nav-spacer.huge {
 }
 
 nav div.nav-spacer {
-    height: 0;
-    align-self: center;
-    flex-shrink: 1;
     flex-basis: var(--size-xs);
+    flex-shrink: 1;
+    align-self: center;
+    height: 0;
 }

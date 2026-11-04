@@ -1,8 +1,8 @@
 /* Wrapper */
 .table-of-contents {
-    background-color: var(--color-element-toc-back);
-    padding-block: var(--size-xs);
     position: relative;
+    padding-block: var(--size-xs);
+    background-color: var(--color-element-toc-back);
 }
 
 /* Link Overrides */
@@ -46,25 +46,27 @@
 
 /* .table-of-contents all items */
 .table-of-contents > a > .toc-item {
-    margin-inline: var(--size-xs);
-    text-wrap: balance;
-    text-wrap: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis " - ";
-    text-decoration: underline solid var(--color-meta-links-unvisited) var(--size-tn);
-    border-color: var(--color-element-toc-accent);
-    box-sizing: content-box;
     display: block;
     align-items: center;
+
+    box-sizing: content-box;
+    margin-inline: var(--size-xs);
+    border-color: var(--color-element-toc-accent);
+
+    text-decoration: underline solid var(--color-meta-links-unvisited) var(--size-tn);
+    text-overflow: ellipsis " - ";
+    text-wrap: balance;
+    text-wrap: nowrap;
 }
 
 /* All but top level heading */
 .table-of-contents > a > .toc-item:not(h2) {
     padding-block: 0;
+    border-block-width: var(--size-tn);
+    border-inline-start-color: var(--color-meta-links);
     border-inline-start-width: var(--size-md);
     border-inline-end-width: 0;
-    border-inline-start-color: var(--color-meta-links);
-    border-block-width: var(--size-tn);
 
     /* border-block-color: var(--color-element-toc-accent); */
     border-radius: var(--size-md);
@@ -72,56 +74,62 @@
 
 /* Link Icon On Hover */
 .table-of-contents > a > *:hover {
-    background-color: var(--color-element-toc-invert-main);
+    border-color: var(--color-element-invert-accent);
     color: var(--color-element-toc-invert-text);
     text-decoration-color: var(--color-meta-links-invert-unvisited) ;
-    border-color: var(--color-element-invert-accent);
+    background-color: var(--color-element-toc-invert-main);
 }
 
 .table-of-contents > a > .toc-item:hover::before {
     content: "#";
+
     position: absolute;
     left: var(--size-xs);
-    color: var(--color-meta-links-unvisited);
-    background-color: var(--color-meta-links-invert-unvisited);
-    border-radius: 1em;
+
     width: calc(var(--size-sm) * 2);
     height: 1.2em;
+    border-radius: 1em;
+
+    color: var(--color-meta-links-unvisited);
 
     /* height: 1em; */
 
     /* margin-block: calc(var(--size-tn) * 1.5); */
     text-align: center;
+
+    background-color: var(--color-meta-links-invert-unvisited);
 }
 
 .table-of-contents > a > h2:hover::before {
-    left: calc(50% - (2 * var(--size-sm)));
     top: var(--size-md);
-    font-size: 1rem;
+    left: calc(50% - (2 * var(--size-sm)));
     width: calc(var(--size-sm) * 4);
+    font-size: 1rem;
 }
 
 /* Placement Links */
 .table-of-contents > a > small.toc-place {
     display: block;
+
+    width: max-content;
     margin-inline: auto;
     padding-block: 0.2rem;
-    width: max-content;
-    font-size: 0.9rem;
-    border-style: solid;
     border-color: var(--color-element-toc-highlight);
-    border-radius: var(--size-sm);
+    border-style: solid;
     border-inline-width: 3px;
-    text-decoration-line: overline underline;
+    border-radius: var(--size-sm);
+
+    font-size: 0.9rem;
     text-decoration-color: var(--color-meta-links-unvisited);
+    text-decoration-line: overline underline;
     text-decoration-thickness: 1px;
 
     /* text-decoration: none !important; */
 }
 
 .table-of-contents > a > small.toc-place:hover {
-    text-decoration-color: var(--color-meta-links-invert-unvisited);
     border-color: var(--color-element-toc-invert-highlight);
+    text-decoration-color: var(--color-meta-links-invert-unvisited);
 }
 
 .table-of-contents > a:first-of-type > small.toc-place {
