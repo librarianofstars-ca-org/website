@@ -115,7 +115,7 @@
 
     width: max-content;
     margin-inline: auto;
-    padding-block: 0.2rem;
+    padding-block: calc(var(--size-tn) * 2);
     border-color: var(--color-element-toc-highlight);
     border-style: solid;
     border-inline-width: calc(var(--size-tn) * 3);

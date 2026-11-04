@@ -19,6 +19,23 @@ export default {
     "function-disallowed-list": ["rgb", "hsl", "hwb", "lch"],
     "property-disallowed-list": [],
     "unit-allowed-list": ["rem", "%", "fr", ],
-
-  }
+    "declaration-property-value-allowed-list": {
+        // Use Variables as any colors
+        "/\\s*color\\s*/": ["/--color-/", "unset"],
+      },
+      "declaration-property-value-disallowed-list": {
+        // Don't use pallette colors directly
+        "/\\s*color\\s*/": ["/--color-(\s*)-(0-9)+/"],
+      }
+  },
+  "overrides":[{
+    "files": ["styles/pallette.css",],
+    "rules": {
+      "declaration-property-value-allowed-list": {
+        // Can use pallette colors when setting varaible only
+        "/--color/": ["/oklch/"]
+      }
+    }
+    }
+  ]
 };
