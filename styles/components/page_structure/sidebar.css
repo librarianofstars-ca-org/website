@@ -7,7 +7,6 @@ div.sidebar.wraper{
     flex-flow: row nowrap;
     align-items: start;
     justify-content: center;
-
     border-block-width: var(--size-xs);
     border-style: solid;
     border-color: var(--color-section-side-accent);
@@ -18,7 +17,7 @@ div.sidebar hr.sidebar {
     flex: 0 0 auto;
     color: var(--color-section-side-accent);
     background-color: var(--color-section-side-accent);
-    outline: 0px;
+    outline: 0;
     height: 100%;
 }
 

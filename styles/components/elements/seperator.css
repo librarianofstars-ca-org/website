@@ -2,18 +2,18 @@ hr.page-seperator {
     background-color: var(--color-element-sep-accent);
     color: var(--color-element-sep-main);
     margin: var(--size-sm);
-
     outline: 1px solid var(--color-element-sep-back);
-
     border-style: solid;
     border-width: 1px;
     border-radius: 3px;
 }
+
 hr.page-seperator.horizontal {
     margin-inline: auto;
     height: var(--size-tn);
     width: 90%;
 }
+
 hr.page-seperator.vertical {
     margin-block: 0;
     height: auto;

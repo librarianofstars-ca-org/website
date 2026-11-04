@@ -2,16 +2,11 @@ ul.gallery-block {
     display: flex;
     flex-flow: row wrap ;
     max-width: 95%;
-
     margin: calc(var(--size-xs)* 2) auto;
     padding: 0;
-
     outline: var(--size-xs) var(--color-block-show-main) solid;
     border-radius: var(--size-xs);
-
-    align-items: start;
-    justify-items: center;
-
+    place-items: start center;
     background-color: var(--color-block-show-back);
     color: var(--color-block-show-text);
 }
@@ -19,31 +14,29 @@ ul.gallery-block {
 div.gallery-item {
     display: flex;
     flex-flow: column nowrap;
-
     flex: 0 0 auto;
-
     margin: var(--size-lg);
     padding: var(--size-sm);
-
     border: var(--size-tn) solid var(--color-block-show-accent);
     border-radius: var(--size-lg);
     outline: var(--size-xs) solid var(--color-block-show-main);
-
     text-align: center;
-    align-items: center;
-    justify-items: center;
+    place-items: center center;
 }
 
 div.gallery-item *.gallery-display { 
     display: contents;
 }
+
 div.gallery-item *.gallery-display * { 
     margin: 0;
 }
+
 div.gallery-item *.gallery-display img { 
     border: var(--size-tn) solid var(--color-block-show-highlight);
     border-radius: var(--size-tn);
 }
+
 .gallery-item span.gallery-label {
     display: inline-block;
     font-style: italic;

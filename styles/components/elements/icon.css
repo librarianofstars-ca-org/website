@@ -6,5 +6,11 @@ img.icon {
 img.icon.circle {
     border-radius: 100%;
 }
-img.icon.square {}
-img.icon.rect {}
+
+img.icon.square {
+    /* Icon Square Styles TODO */
+}
+
+img.icon.rect {
+    /* Icon Rectangle Styles TODO */
+}

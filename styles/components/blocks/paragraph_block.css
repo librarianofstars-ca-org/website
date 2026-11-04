@@ -17,15 +17,11 @@ div.paragraph-block .paragraph-block.break-line {
 div.paragraph-block p.paragraph-block.break-line::after {
     display: inline-block;
     content: "* * *";
-
     background-color: var(--color-block-text-accent);
-
     margin-inline: auto;
     padding-inline: var(--size-lg);
-
     border: var(--size-tn) solid var(--color-block-text-highlight);
     border-radius: var(--size-sm);
-
     text-align: center;
     min-width: calc(var(--size-hg) * 3);
 }

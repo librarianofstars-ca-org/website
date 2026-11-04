@@ -9,5 +9,6 @@
     ".     footer  footer .  " auto
     ".     .       .      end" var(--size-sm)
     / var(--size-sm) 1fr 4fr var(--size-sm);
+
     /* / var(--size-sm) calc(25vw - 2 * var(--size-sm)) auto var(--size-sm); */
 }

@@ -1,7 +1,6 @@
 body {
     display: grid;
     margin: 0;
-
     background-color: var(--color-site-back);
     color: var(--color-site-text);
 }
@@ -40,6 +39,7 @@ small.nav-id-hidden:hover {
 small.nav-id-hidden:first-of-type {
     grid-area: start ;
 }
+
 small.nav-id-hidden:last-of-type {
     grid-area: end ;
 }
