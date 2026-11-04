@@ -18,6 +18,7 @@ export default {
     "color-named": "never",
     "color-no-hex": true,
     "hue-degree-notation": "number",
+    "lightness-notation": "number",
     "function-disallowed-list": ["rgb", "hsl", "hwb", "lch"],
     "property-disallowed-list": [],
     "unit-allowed-list": ["rem", "%", "fr", ],
