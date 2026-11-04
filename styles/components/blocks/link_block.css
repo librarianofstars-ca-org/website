@@ -63,10 +63,10 @@ div.link-block dl dt.body a {
     justify-self: start;
 }
 
-div.link-block dl dt.body a,
+/* div.link-block dl dt.body a,
 div.link-block dl dt.body p { 
-    width: max-content;
-}
+    width: auto;
+} */
 
 /* Disc only */
 div.link-block dl dd.body { 

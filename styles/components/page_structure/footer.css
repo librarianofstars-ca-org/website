@@ -72,7 +72,7 @@ div.footer div.footer-section dl dd::marker {
 div.footer div.footer-section hr.footer-contents {
     grid-column: 1 / -1;
 
-    width: unset;
+    width: auto;
     margin: 0;
 
     color: var(--color-section-foot-accent);

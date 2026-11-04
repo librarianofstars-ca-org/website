@@ -21,15 +21,22 @@ export default {
     "lightness-notation": "number",
     "function-disallowed-list": ["rgb", "hsl", "hwb", "lch"],
     "property-disallowed-list": [],
-    "unit-allowed-list": ["rem", "%", "fr", ],
     "declaration-property-unit-allowed-list": {
       "font-size": ["em", "rem"],
+      "/grid/": ["fr", "rem"],
+      "^(min-|max-)?(width|height)": ["%", "em"]
     },
+    "unit-disallowed-list": [
+      "px",
+      // "em",
+    ],
+    "length-zero-no-unit": true,
     "declaration-property-value-allowed-list": {
       // Use Variables as any colors
       "/\\s*color\\s*/": ["/--color-/", "unset"],
       "/(border|outline)([\s-]*-width)/": ["/--size-(tn|xs|sm|md|lg|xl|hg)/", "0",],
       "/(margin|padding)(-inline|-block)?/": ["/--size-(tn|xs|sm|md|lg|xl|hg)/", "0", "auto"],
+      "/(min-|max-)?(width|height)/": ["/[\d.]*(%|vw|em)/", "0", "/--size-/", "auto",]
     },
     "declaration-property-value-disallowed-list": {
       // Don't use pallette colors directly
