@@ -1,13 +1,13 @@
 hr.page-seperator {
     margin: var(--size-sm);
     border-style: solid;
-    border-width: 1px;
-    border-radius: 3px;
+    border-width: var(--size-tn);
+    border-radius: calc(var(--size-tn)*3);
 
     color: var(--color-element-sep-main);
 
     background-color: var(--color-element-sep-accent);
-    outline: 1px solid var(--color-element-sep-back);
+    outline: calc(var(--size-tn)/2) solid var(--color-element-sep-back);
 }
 
 hr.page-seperator.horizontal {

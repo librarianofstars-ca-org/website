@@ -49,7 +49,7 @@ nav li a.nav-link {
     border-radius: var(--size-xs);
 
     color: var(--color-element-nav-text);
-    text-decoration: underline solid var(--color-meta-links-unvisited) 1px;
+    text-decoration: underline solid var(--color-meta-links-unvisited) var(--size-tn);
 
     background-color: var(--color-element-nav-main);
 }

@@ -2,8 +2,7 @@
 
 html {
     /* Smooth Snap to #id in-page */
-    --scroll-behavior: smooth !important;
-
+    /* stylelint-disable-next-line declaration-no-important */
     scroll-behavior: smooth !important;
 
     /* Sticky header Option */
@@ -97,7 +96,7 @@ html.style-root {
     --color-element-nav-highlight: var(--color-pink-20);
     --color-element-nav-text: var(--color-blue-light-10);
     --color-element-nav-invert-main: var(--color-element-nav-text);
-    --color-element-nav-invert-accent: var(--color-element-nav-highligh);
+    --color-element-nav-invert-accent: var(--color-element-nav-highlight);
     --color-element-nav-invert-highlight: var(--color-element-nav-accent);
     --color-element-nav-invert-text: var(--color-element-nav-main);
 
@@ -111,6 +110,9 @@ html.style-root {
     --color-element-toc-invert-accent: var(--color-element-toc-highlight);
     --color-element-toc-invert-highlight: var(--color-element-toc-accent);
     --color-element-toc-invert-text: var(--color-element-toc-main) ;
+
+    /* Icons - path 'icon' */
+    --color-element-icon-main: var(--color-section-head-accent);
 
     /* Blocks - path 'block' */
 
@@ -209,7 +211,7 @@ html.style-root {
         --color-element-nav-highlight: var(--color-pink-80);
         --color-element-nav-text: var(--color-blue-light-90);
         --color-element-nav-invert-main: var(--color-element-nav-text);
-        --color-element-nav-invert-accent: var(--color-element-nav-highligh);
+        --color-element-nav-invert-accent: var(--color-element-nav-highlight);
         --color-element-nav-invert-highlight: var(--color-element-nav-accent);
         --color-element-nav-invert-text: var(--color-element-nav-main);
 

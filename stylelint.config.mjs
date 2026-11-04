@@ -5,7 +5,8 @@ export default {
     "stylelint-config-clean-order",
   ],
   "referenceFiles": [
-    "styles/base.css"
+    "styles/base.css",
+    "styles/pallette.css",
   ],
   "rules": {
     "no-unknown-animations": true,
@@ -17,6 +18,7 @@ export default {
     "hue-degree-notation": "number",
     "function-disallowed-list": ["rgb", "hsl", "hwb", "lch"],
     "property-disallowed-list": [],
-    "unit-allowed-list": [],
+    "unit-allowed-list": ["rem", "%", "fr", ],
+
   }
 };

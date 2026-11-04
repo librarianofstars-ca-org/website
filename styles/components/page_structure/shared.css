@@ -26,7 +26,7 @@ small.nav-id-hidden {
     height: var(--size-sm);
     margin: 0;
     padding: 0;
-    border: 1px solid var(--color-site-accent);
+    border: var(--size-tn) solid var(--color-site-accent);
     border-radius: 100%;
 
     background-color: var(--color-site-main);
