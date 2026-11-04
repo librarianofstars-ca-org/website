@@ -88,4 +88,16 @@
   "iridium.npm.maxNumberOfResults":6,
   "iridium.npm.excludeVersions": ["beta", "experimental",],
   "npm-intellisense.importQuotes": "\"",
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "stylelint.validate": ["css", "postcss", "javascriptreact", "typescriptreact"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "explicit"
+  },
+  "[html]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": "never"
+    }
+  }
 }
