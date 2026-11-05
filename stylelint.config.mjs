@@ -8,6 +8,12 @@ export default {
     "styles/base.css",
     "styles/pallette.css",
   ],
+  "languageOptions": {
+    "directionality": {
+      "block": "top-to-bottom",
+      "inline": "left-to-right",
+    },
+  },
   "rules": {
     "no-unknown-animations": true,
     "no-unknown-custom-properties": true,
@@ -23,6 +29,7 @@ export default {
     "property-disallowed-list": [
       "/top|bottom|left|right/",
     ],
+    "value-keyword-layout-mappings": "flow-relative",
     "declaration-property-unit-allowed-list": {
       "font-size": ["em", "rem"],
       "/grid/": ["fr", "rem"],
