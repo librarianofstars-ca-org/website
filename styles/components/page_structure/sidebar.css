@@ -1,25 +1,27 @@
 div.sidebar.wraper{
-    grid-area: sidebar;
-
     /* scrollbar-width: thin; */
 
     display: flex;
+    grid-area: sidebar;
     flex-flow: row nowrap;
     align-items: start;
     justify-content: center;
 
-    border-block-width: var(--size-xs);
-    border-style: solid;
     border-color: var(--color-section-side-accent);
+    border-style: solid;
+    border-block-width: var(--size-xs);
     border-radius: var(--size-sm);
 }
 
 div.sidebar hr.sidebar {
     flex: 0 0 auto;
-    color: var(--color-section-side-accent);
-    background-color: var(--color-section-side-accent);
-    outline: 0px;
+
     height: 100%;
+
+    color: var(--color-section-side-accent);
+
+    background-color: var(--color-section-side-accent);
+    outline: 0;
 }
 
 div.sidebar.contents {

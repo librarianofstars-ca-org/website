@@ -1,45 +1,41 @@
 div.footer {
-    grid-area: footer;
     display: flex;
+    grid-area: footer;
     flex-flow: row nowrap;
-    justify-content: space-around;
-    align-content: center;
+    place-content: center space-around;
 
-    outline-color: var(--color-section-foot-back);
-    background-color: var(--color-section-foot-main);
     color: var(--color-section-foot-text);
+
+    background-color: var(--color-section-foot-main);
+    outline-color: var(--color-section-foot-back);
 }
 
 div.footer div.footer-section {
     display: grid;
-    grid-template-rows: 2rem;
-    grid-template-columns: 1fr 1fr;
     grid-auto-rows: minmax(1rem, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2rem;
+    align-items: center;
 
-    min-width: calc(var(--size-hg) * 10); /* not ideal guessing min size*/
-
-    margin-inline: var(--size-md);
+    min-width: calc(var(--size-hg) * 10); /* not ideal guessing min size */
     margin-block: var(--size-xs);
-
+    margin-inline: var(--size-md);
     padding-block: var(--size-xs);
-
-    border-inline: var(--size-xs) solid var(--color-section-foot-accent);
     border-block: var(--size-tn) solid var(--color-section-foot-highlight);
+    border-inline: var(--size-xs) solid var(--color-section-foot-accent);
     border-radius: var(--size-xs);
 
     background-color: var(--color-section-foot-main);
-
-    align-items: center;
 }
 
-div.footer div.footer-section h4 { 
+div.footer div.footer-section h4 {
+    grid-column: 1 / -1; 
     grid-row: 1 / span 1;
-    grid-column: 1 / -1;
     justify-self: center;
+
     margin-block: 0;
     padding-block: 0;
     padding-inline: var(--size-hg);
-
     border-block-end-color: var(--color-section-foot-highlight);
 }
 
@@ -57,6 +53,7 @@ div.footer div.footer-section dl dt {
 div.footer div.footer-section dl dt {
     grid-column: 1 / span 1;
     justify-self: end;
+
     /* border-inline-end: var(--size-tn) solid var(--color-section-foot-highlight) ; */
 }
 
@@ -74,17 +71,20 @@ div.footer div.footer-section dl dd::marker {
 
 div.footer div.footer-section hr.footer-contents {
     grid-column: 1 / -1;
+
+    width: auto;
     margin: 0;
-    width: unset;
-    background-color: var(--color-section-foot-accent);
+
     color: var(--color-section-foot-accent);
+
+    background-color: var(--color-section-foot-accent);
     outline: none;
 }
 
 div.footer hr.footer {
-    background-color: var(--color-section-foot-back);
-    color: var(--color-section-foot-back);
-    outline: none;
     height: 100%;
+    color: var(--color-section-foot-back);
+    background-color: var(--color-section-foot-back);
+    outline: none;
 }
 

@@ -2,9 +2,11 @@
 
 html {
     /* Smooth Snap to #id in-page */
-    --scroll-behavior: smooth !important;
+    /* stylelint-disable-next-line declaration-no-important */
     scroll-behavior: smooth !important;
+
     /* Sticky header Option */
+
     /* scroll-margin-top: 3rem */
 
     scrollbar-width: auto;
@@ -12,6 +14,7 @@ html {
 
 html.style-root {
     /* Global Variables */
+
     /* Basic Size Scale */
     --size-tn: calc(var(--size-md) * 0.1);
     --size-xs: calc(var(--size-md) * 0.5);
@@ -22,9 +25,13 @@ html.style-root {
     --size-hg: calc(var(--size-md) * 2.0);
     
     /* Color Pallette (Dark) */
+
     /* --color-<path>-(back, main, accent, highlight, text ) */
+
     /* Generaly want to have lightness value decrease as properties go on */
+
     /* Reused - path 'meta' */
+
     /* Links - path 'links' */
     --color-meta-links-unvisited: var(--color-blue-dark-30);
     --color-meta-links-invert-unvisited: var(--color-blue-dark-70);
@@ -37,42 +44,51 @@ html.style-root {
     --color-site-accent: var(--color-purple-70);
     --color-site-highlight: var(--color-purple-40);
     --color-site-text: var(--color-purple-10);
+
     /* Raised Elements - path 'section' */
+
     /* - Header - path 'head' */
     --color-section-head-back: var(--color-site-main);
     --color-section-head-main: var(--color-site-accent);
     --color-section-head-accent: var(--color-pink-60);
     --color-section-head-highlight: var(--color-pink-50);
     --color-section-head-text: var(--color-pink-05);
+
     /* - Sidebar - path 'side' */
     --color-section-side-back: var(--color-site-main);
     --color-section-side-main: var(--color-site-accent);
     --color-section-side-accent: var(--color-magenta-60);
     --color-section-side-highlight: var(--color-magenta-50);
     --color-section-side-text: var(--color-magenta-05);
+
     /* - Main - path 'body' */
     --color-section-main-back: var(--color-site-main);
     --color-section-main-main: var(--color-site-accent);
     --color-section-main-accent: var(--color-site-highlight);
     --color-section-main-highlight: var(--color-magenta-50);
     --color-section-main-text: var(--color-magenta-05);
+
     /* - Footer - path 'foot' */
     --color-section-foot-back: var(--color-blue-light-90);
     --color-section-foot-main: var(--color-blue-light-80);
     --color-section-foot-accent: var(--color-blue-light-40);
     --color-section-foot-highlight: var(--color-blue-light-20);
     --color-section-foot-text: var(--color-blue-light-05);
+
     /* Elements - path 'element' */
+
     /* Seperator - path 'sep' */
     --color-element-sep-back: var(--color-gray-80);
     --color-element-sep-main: var(--color-gray-60);
     --color-element-sep-accent: var(--color-gray-50);
+
     /* - Main Sections - path 'section' */
     --color-element-section-back: var(--color-section-main-back);
     --color-element-section-main: var(--color-section-main-main);
     --color-element-section-accent: var(--color-magenta-40);
     --color-element-section-highlight: var(--color-magenta-10);
     --color-element-section-text: var(--color-section-main-text);
+
     /* - Navigation Bar - path 'nav' */
     --color-element-nav-back: var(--color-section-head-main);
     --color-element-nav-main: var(--color-section-head-accent);
@@ -80,9 +96,10 @@ html.style-root {
     --color-element-nav-highlight: var(--color-pink-20);
     --color-element-nav-text: var(--color-blue-light-10);
     --color-element-nav-invert-main: var(--color-element-nav-text);
-    --color-element-nav-invert-accent: var(--color-element-nav-highligh);
+    --color-element-nav-invert-accent: var(--color-element-nav-highlight);
     --color-element-nav-invert-highlight: var(--color-element-nav-accent);
     --color-element-nav-invert-text: var(--color-element-nav-main);
+
     /* Table of Contents - path 'toc' */
     --color-element-toc-back: var(--color-section-side-main);
     --color-element-toc-main: var(--color-section-side-accent);
@@ -93,19 +110,26 @@ html.style-root {
     --color-element-toc-invert-accent: var(--color-element-toc-highlight);
     --color-element-toc-invert-highlight: var(--color-element-toc-accent);
     --color-element-toc-invert-text: var(--color-element-toc-main) ;
+
+    /* Icons - path 'icon' */
+    --color-element-icon-main: var(--color-section-head-accent);
+
     /* Blocks - path 'block' */
+
     /* Paragraph Block - path 'text' */
     --color-block-text-back: var(--color-element-section-back);
     --color-block-text-main: var(--color-element-section-main);
     --color-block-text-accent: var(--color-element-section-accent);
     --color-block-text-highlight: var(--color-element-section-highlight);
     --color-block-text-text: var(--color-element-section-text);
+
     /* Link Block - path 'link' */
     --color-block-link-back: var(--color-element-section-back);
     --color-block-link-main: var(--color-element-section-main);
     --color-block-link-accent: var(--color-element-section-accent);
     --color-block-link-highlight: var(--color-element-section-highlight);
     --color-block-link-text: var(--color-element-section-text);
+
     /* Gallery Block - path 'show' */
     --color-block-show-back: var(--color-element-section-back);
     --color-block-show-main: var(--color-element-section-main);
@@ -118,55 +142,68 @@ html.style-root {
 @media (prefers-color-scheme:light) {
     html.style-root {
         /* Color Pallette (Light) */
+
         /* --color-<path>-(back, main, accent, highlight, text ) */
+
         /* Generaly want to have lightness value increase as properties go on */
+
         /* Reused - path 'meta' */
         --color-meta-links-unvisited: var(--color-blue-dark-70);
         --color-meta-links-invert-unvisited: var(--color-blue-dark-30);
         --color-meta-links-visited: var(--color-blue-dark-60);
         --color-meta-links-invert-visited: var(--color-blue-dark-40);
+
         /* Site - path 'site' */
         --color-site-back: var(--color-purple-05);
         --color-site-main: var(--color-purple-20);
         --color-site-accent: var(--color-purple-30);
         --color-site-highlight: var(--color-purple-60);
         --color-site-text: var(--color-purple-90);
+
         /* Raised Elements - path 'section' */
+
         /* - Header - path 'head' */
         --color-section-head-back: var(--color-site-main);
         --color-section-head-main: var(--color-site-accent);
         --color-section-head-accent: var(--color-pink-40);
         --color-section-head-highlight: var(--color-pink-50);
         --color-section-head-text: var(--color-pink-95);
+
         /* - Sidebar - path 'side' */
         --color-section-side-back: var(--color-site-main);
         --color-section-side-main: var(--color-site-accent);
         --color-section-side-accent: var(--color-magenta-40);
         --color-section-side-highlight: var(--color-magenta-50);
         --color-section-side-text: var(--color-magenta-95);
+
         /* - Main - path 'body' */
         --color-section-main-back: var(--color-site-main);
         --color-section-main-main: var(--color-site-accent);
         --color-section-main-accent: var(--color-site-highlight);
         --color-section-main-highlight: var(--color-magenta-50);
         --color-section-main-text: var(--color-magenta-95);
+
         /* - Footer - path 'foot' */
         --color-section-foot-back: var(--color-blue-light-10);
         --color-section-foot-main: var(--color-blue-light-20);
         --color-section-foot-accent: var(--color-blue-light-60);
         --color-section-foot-highlight: var(--color-blue-light-80);
         --color-section-foot-text: var(--color-blue-light-95);
+
         /* Elements - path 'element' */
+
         /* - Seperator - path 'sep' */
         --color-element-sep-back: var(--color-gray-20);
         --color-element-sep-main: var(--color-gray-40);
         --color-element-sep-accent: var(--color-gray-50);
+
         /* - Main Sections - path 'section' */
         --color-element-section-back: var(--color-section-main-back);
         --color-element-section-main: var(--color-section-main-main);
         --color-element-section-accent: var(--color-magenta-60);
         --color-element-section-highlight: var(--color-magenta-90);
         --color-element-section-text: var(--color-section-main-text);
+
         /* - Navigation Bar - path 'nav' */
         --color-element-nav-back: var(--color-section-head-main);
         --color-element-nav-main: var(--color-section-head-accent);
@@ -174,9 +211,10 @@ html.style-root {
         --color-element-nav-highlight: var(--color-pink-80);
         --color-element-nav-text: var(--color-blue-light-90);
         --color-element-nav-invert-main: var(--color-element-nav-text);
-        --color-element-nav-invert-accent: var(--color-element-nav-highligh);
+        --color-element-nav-invert-accent: var(--color-element-nav-highlight);
         --color-element-nav-invert-highlight: var(--color-element-nav-accent);
         --color-element-nav-invert-text: var(--color-element-nav-main);
+
         /* Table of Contents - path 'toc' */
         --color-element-toc-back: var(--color-section-side-main);
         --color-element-toc-main: var(--color-section-side-accent);
@@ -187,19 +225,23 @@ html.style-root {
         --color-element-toc-invert-accent: var(--color-element-toc-highlight);
         --color-element-toc-invert-highlight: var(--color-element-toc-accent);
         --color-element-toc-invert-text: var(--color-element-toc-main) ;
+
         /* Blocks - path 'block' */
+
         /* Paragraph Block - path 'text' */
         --color-block-text-back: var(--color-element-section-back);
         --color-block-text-main: var(--color-element-section-main);
         --color-block-text-accent: var(--color-element-section-accent);
         --color-block-text-highlight: var(--color-element-section-highlight);
         --color-block-text-text: var(--color-element-section-text);
+
         /* Link Block - path 'link' */
         --color-block-link-back: var(--color-element-section-back);
         --color-block-link-main: var(--color-element-section-main);
         --color-block-link-accent: var(--color-element-section-accent);
         --color-block-link-highlight: var(--color-element-section-highlight);
         --color-block-link-text: var(--color-element-section-text);
+
         /* Gallery Block - path 'show' */
         --color-block-show-back: var(--color-element-section-back);
         --color-block-show-main: var(--color-element-section-main);
