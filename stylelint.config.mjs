@@ -20,7 +20,9 @@ export default {
     "hue-degree-notation": "number",
     "lightness-notation": "number",
     "function-disallowed-list": ["rgb", "hsl", "hwb", "lch"],
-    "property-disallowed-list": [],
+    "property-disallowed-list": [
+      "/top|bottom|left|right/",
+    ],
     "declaration-property-unit-allowed-list": {
       "font-size": ["em", "rem"],
       "/grid/": ["fr", "rem"],

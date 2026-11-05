@@ -84,7 +84,7 @@
     content: "#";
 
     position: absolute;
-    left: var(--size-xs);
+    inset-inline-start: var(--size-xs);
 
     width: calc(var(--size-sm) * 2);
     /* stylelint-disable-next-line unit-allowed-list */
@@ -102,9 +102,9 @@
     background-color: var(--color-meta-links-invert-unvisited);
 }
 
-.table-of-contents > a > h2:hover::before {
-    top: var(--size-md);
-    left: calc(50% - (2 * var(--size-sm)));
+.table-of-contents > a > h2.toc-item:hover::before {
+    inset-block-start: calc(var(--size-xs) * 5);
+    inset-inline-start: calc(50% - (2 * var(--size-sm) ));
     width: calc(var(--size-sm) * 4);
     font-size: 1rem;
 }
