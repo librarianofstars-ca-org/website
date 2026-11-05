@@ -18,6 +18,7 @@ export default {
     "no-unknown-animations": true,
     "no-unknown-custom-properties": true,
     "no-unknown-custom-media": true,
+    "unit-no-unknown": true,
     "declaration-no-important":true,
     "declaration-block-no-shorthand-property-overrides": true,
     "declaration-block-no-redundant-longhand-properties": true,
@@ -40,6 +41,7 @@ export default {
       // "em",
     ],
     "length-zero-no-unit": true,
+    // "value-type-custom-property-required-list": ["color", "length"]
     "declaration-property-value-allowed-list": {
       // Use Variables as any colors
       "/\\s*color\\s*/": ["/--color-/", "unset"],
@@ -51,7 +53,13 @@ export default {
       // Don't use pallette colors directly
       "/(\s*-)?color/": ["/--(color)-(.+)-([0-9](0|5))/"],
     },
-    "custom-property-pattern": "(size|color)-.+"
+    "custom-property-pattern": "(size|color)-.+",
+    "rule-selector-property-disallowed-list": {
+      // Using negative lookaheads in liu of an allowed-list ( TODO make issue for stylelint )
+      "html": ["/^((?!(scroll|width)).)*$/"], 
+      "body": ["/^((?!(display|margin|color)).)*$/"],
+
+    },
   },
   "overrides":[{
     "files": ["styles/pallette.css",],
