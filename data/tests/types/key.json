@@ -1,0 +1,5 @@
+{
+  "$schema": "https://librarianofstars.ca/schemas/types/key#",
+  "test": "value",
+  "index": "test"
+}
