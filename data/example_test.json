@@ -1,3 +1,4 @@
 {
-  "$schema": "https://github.com/librarianofstars-ca-org/website/blob/Librarian-of-Stars/idea-data-driven-pages/schema/example.json"
+  "$schema": "https://raw.githubusercontent.com/librarianofstars-ca-org/website/refs/heads/Librarian-of-Stars/idea-data-driven-pages/schema/example.json",
+  "test": 1
 }

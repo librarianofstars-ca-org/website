@@ -99,5 +99,13 @@
     "editor.codeActionsOnSave": {
       "source.fixAll.stylelint": "never"
     }
-  }
+  },
+  "json.validate.enable": true,
+  "json.schemaDownload.trustedDomains": {
+    "https://librarianofstars.ca": true,
+    "https://github.com": true,
+    "https://raw.githubusercontent.com": true,
+  },
+  
+],
 }
