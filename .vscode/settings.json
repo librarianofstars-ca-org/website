@@ -104,27 +104,29 @@
   "json.schemaDownload.trustedDomains": {
     "https://librarianofstars.ca": true,
     "https://github.com": true,
-    "https://raw.githubusercontent.com": true,
+    "https://raw.githubusercontent.com": true
   },
   "json.schemas": [
-        {
-            "fileMatch": [
-                "${workspaceFolder}/schema/**/*.json",
-                "${workspaceFolder}/schema/**/*.schema.json",
-            ],
-            "url": "https://json-schema.org/draft-07/schema#",
-        },
-        {
-            "fileMatch": [
-                "${workspaceFolder}/data/tests/types/key.json"
-            ],
-            "url": "./schema/types/key.json"
-        },
-        {
-            "fileMatch": [
-                "${workspaceFolder}/data/example_test.json"
-            ],
-            "url": "./schema/example.json"
-        },
-    ]
+    {
+      "fileMatch": [
+        "${workspaceFolder}/schema/**/*.json",
+        "${workspaceFolder}/schema/**/*.schema.json"
+      ],
+      "url": "https://json-schema.org/draft-07/schema#"
+    },
+    {
+      "fileMatch": ["${workspaceFolder}/data/tests/types/key.json"],
+      "url": "./schema/types/key.json"
+    },
+    {
+      "fileMatch": ["${workspaceFolder}/data/example_test.json"],
+      "url": "./schema/example.json"
+    },
+    {
+      "fileMatch": [
+        "${workspaceFolder}/data/tests/components/blocks/paragraph.json"
+      ],
+      "url": "./schema/components/blocks/paragraph.json"
+    }
+  ]
 }

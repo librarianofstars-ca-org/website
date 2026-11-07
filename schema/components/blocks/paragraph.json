@@ -1,0 +1,11 @@
+{
+  "$id": "https://librarianofstars.ca/schema/components/blocks/paragraph.json",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": { "$ref": "https://librarianofstars.ca/schemas/types/key" },
+      "contents": { "type": "string" }
+    }
+  }
+}
