@@ -25,7 +25,9 @@
     "paths": {
       "@/styles/*": ["./styles/*"],
       "@/components/*": ["./components/*"],
-      "@/utilities/*": ["./utilities/*"]
+      "@/utilities/*": ["./utilities/*"],
+      "@/schema/*": ["./schema/*"],
+      "@/data/*": ["./data/*"],
     }
   },
   "include": [
