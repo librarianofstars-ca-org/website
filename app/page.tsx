@@ -19,6 +19,7 @@ import "@/styles/app/homepage.css";
 import { to_key_index_name } from "@/utilities/key_mapping";
 
 import Example from "@/schema/testing";
+import test_data from "@/data/example_test.json";
 
 let outline: outlined_heading[] = [
   { order: 0, header: "Homepage", linked_id: "#home", type: 1 },
@@ -214,9 +215,7 @@ function HomePageSidebar() {
 function HomePageMain() {
   return (
     <Main>
-      <Example 
-      // data={test_data}
-      />
+      <Example data={test_data} />
       <HomePageWelcomeSplashSection />
       <HomePageAboutMeSection />
       <HomePageShowcaseSection />

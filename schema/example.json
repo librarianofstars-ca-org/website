@@ -5,6 +5,10 @@
   "properties": {
     "test": {
       "type": "string"
+    },
+    "other": {
+      "type": "number"
     }
-  }
+  },
+  "required": ["test", "other"]
 }
