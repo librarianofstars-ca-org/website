@@ -1,4 +1,5 @@
 {
+  "$id": "https://librarianofstars.ca/schema/example",
   "title": "Example",
   "description": "Testing example of schemas - using (JSON Schema)[https://json-schema.org/]",
   "type": "object",
