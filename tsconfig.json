@@ -12,9 +12,9 @@
     "noEmit": true,
     "incremental": true,
     "module": "esnext",
-    "esModuleInterop": true,
+    "esModuleInterop": true, // Needed for schema and data imports
     "moduleResolution": "bundler",
-    "resolveJsonModule": true,
+    "resolveJsonModule": true, // Needed for schema and data imports
     "isolatedModules": true,
     "jsx": "react-jsx",
     "plugins": [
