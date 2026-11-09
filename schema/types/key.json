@@ -1,7 +1,8 @@
 {
-  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema",
   "$id": "https://librarianofstars.ca/schema/types/key",
   "description": "A object storing a key for a array of element data",
+  "type": "object",
   "properties": {
     "index": {
       "type": "number"

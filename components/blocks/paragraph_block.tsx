@@ -8,11 +8,18 @@ import Block from "@/components/blocks/generic_block";
 export type content_element = { index: number; show?: string; isBr?: boolean };
 export type content_elements = content_element[];
 
+// import schema from "@/schema/components/blocks/paragraph.json";
+import { validate_against_schema } from "@/schema/validation";
+
 export default function ParagraphBlock({
   contents,
 }: {
   contents: content_elements;
 }) {
+  validate_against_schema(
+    "https://librarianofstars.ca/schema/components/blocks/paragraph.json",
+    contents,
+  );
   return (
     <Block type={"paragraph"}>
       {/* <Seperator
