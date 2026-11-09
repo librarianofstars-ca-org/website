@@ -4,7 +4,7 @@
   "items": {
     "type": "object",
     "properties": {
-      "id": { "$ref": "https://librarianofstars.ca/schemas/types/key" },
+      "id": { "$ref": "https://librarianofstars.ca/schema/types/key" },
       "contents": { "type": "string" }
     }
   }
