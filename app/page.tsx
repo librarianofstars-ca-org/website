@@ -18,6 +18,8 @@ import "@/styles/app/shared.css";
 import "@/styles/app/homepage.css";
 import { to_key_index_name } from "@/utilities/key_mapping";
 
+import Example from "@/schema/testing";
+
 let outline: outlined_heading[] = [
   { order: 0, header: "Homepage", linked_id: "#home", type: 1 },
   { order: 1, header: "Welcome", linked_id: "#greating", type: 2 },
@@ -212,6 +214,9 @@ function HomePageSidebar() {
 function HomePageMain() {
   return (
     <Main>
+      <Example 
+      // data={test_data}
+      />
       <HomePageWelcomeSplashSection />
       <HomePageAboutMeSection />
       <HomePageShowcaseSection />
