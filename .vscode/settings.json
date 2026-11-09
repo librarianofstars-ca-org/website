@@ -11,6 +11,7 @@
     "**/styles/**/shared.css": "${dirname(1)}/${dirname} - shared.css",
     "**/data/**/*.json": "${dirname(1)}/${dirname} - ${filename}.json (data)",
     "**/schema/**/*.json": "${dirname(1)}/${dirname} - ${filename}.json (schema)",
+    "**/**/.gitplaceholder": "${dirname(-2)}/*/${dirname}/.gitplaceholder"
   },
   "editor.detectIndentation": false,
   "editor.tabSize": 4,
