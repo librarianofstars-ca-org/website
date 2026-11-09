@@ -8,7 +8,9 @@
     "**/app/**/template.tsx": "${dirname(1)}/${dirname} - template.tsx",
     "**/app/**/default.tsx": "${dirname(1)}/${dirname} - default.tsx",
     "**/app/**/route.ts": "${dirname(1)}/${dirname} - route.ts",
-    "**/styles/**/shared.css": "${dirname(1)}/${dirname} - shared.css"
+    "**/styles/**/shared.css": "${dirname(1)}/${dirname} - shared.css",
+    "**/data/**/*.json": "${dirname(-3)}/../${dirname} - ${filename}.json (data)",
+    "**/schema/**/*.json": "${dirname(-3)}/../${dirname} - ${filename}.json (schema)",
   },
   "editor.detectIndentation": false,
   "editor.tabSize": 4,
