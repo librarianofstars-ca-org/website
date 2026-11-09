@@ -1,6 +1,9 @@
-[
-  {
-    "id": { "index": 1, "name": "Testing" },
-    "contents": "Test Paragraph for a block"
-  }
-]
+{
+  "id": { "index": 0, "name": "test" },
+  "contents": [
+    {
+      "id": { "index": 1, "name": "Testing" },
+      "contents": "Test Paragraph for a block"
+    }
+  ]
+}

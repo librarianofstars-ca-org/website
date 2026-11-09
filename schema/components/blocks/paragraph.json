@@ -1,11 +1,21 @@
 {
   "$id": "https://librarianofstars.ca/schema/components/blocks/paragraph.json",
-  "type": "array",
-  "items": {
-    "type": "object",
-    "properties": {
-      "id": { "$ref": "https://librarianofstars.ca/schema/types/key" },
-      "contents": { "type": "string" }
+  "type": "object",
+  "description": "A block of text",
+  "properties": {
+    "id": { "$ref": "https://librarianofstars.ca/schema/types/key" },
+    "contents": {
+      "type": "array",
+      "description": "A array of paragraph objects",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "$ref": "https://librarianofstars.ca/schema/types/key" },
+          "contents": { "type": "string", "description": "Text in paragraph" }
+        }
+      }
     }
-  }
+  },
+  "required": ["id", "contents"],
+  "additionalProperties": false
 }
