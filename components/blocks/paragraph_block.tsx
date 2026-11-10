@@ -16,7 +16,7 @@ export interface paragraph_block {
 }
 
 // import schema from "@/schema/components/blocks/paragraph.json";
-import { validate_against_schema } from "@/schema/validation";
+import { ErrorData, validate_against_schema } from "@/schema/validation";
 import { to_key } from "@/utilities/key_mapping";
 
 export default function ParagraphBlock({ data }: { data: paragraph_block }) {
@@ -26,11 +26,7 @@ export default function ParagraphBlock({ data }: { data: paragraph_block }) {
       data,
     )
   ) {
-    return (
-      <span className="error">
-        Invalid paragraph data: {JSON.stringify(data)}
-      </span>
-    );
+    return <ErrorData data={data} />;
   }
   return (
     <Block
