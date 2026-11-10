@@ -71,59 +71,7 @@ let homepage_links: block_of_links[] = [
   },
 ];
 
-let homepage_gallery_items: gallery_items = [
-  { show: <p>Example One</p>, label: "test-1" },
-  { show: <p>Example Two - Longer text</p>, label: "test-2" },
-  {
-    show: (
-      <p>
-        Example Three! <br />
-        More here
-      </p>
-    ),
-    label: "test-3",
-  },
-  {
-    show: (
-      <img
-        width="100"
-        height="100"
-        src={"./example_two.jpeg"}
-      />
-    ),
-    label: "test-img-1",
-  },
-  {
-    show: (
-      <img
-        width="50"
-        height="50"
-        src={"./example_two.jpeg"}
-      />
-    ),
-    label: "test-img-2",
-  },
-  {
-    show: (
-      <img
-        width="200"
-        height="100"
-        src={"./example_two.jpeg"}
-      />
-    ),
-    label: "test-img-3",
-  },
-  {
-    show: (
-      <img
-        width="200"
-        height="300"
-        src={"./example_two.jpeg"}
-      />
-    ),
-    label: "test-img-4-tail",
-  },
-];
+import homepage_gallery_items from "@/data/app/homepage/blocks/art_show.json";
 
 let homepage_footer_sections: footer_sections = [
   {
@@ -272,7 +220,7 @@ function HomePageArtGallerySection() {
       contents={[
         <GalleryBlock
           key="gallery-1"
-          items={homepage_gallery_items}
+          data={homepage_gallery_items}
         />,
       ]}
     />

@@ -8,13 +8,24 @@ import Block from "@/components/blocks/generic_block";
 export type gallery_item = { show: JSX.Element; label: string };
 export type gallery_items = gallery_item[];
 
-export default function GalleryBlock({ items }: { items: gallery_items }) {
+import { ErrorData, validate_against_schema } from "@/schema/validation";
+import { to_key } from "@/utilities/key_mapping";
+
+export default function GalleryBlock({ data }: { data: gallery_items }) {
+  if (
+    !validate_against_schema(
+      "https://librarianofstars.ca/schema/components/blocks/paragraph.json",
+      data,
+    )
+  ) {
+    return <ErrorData data={data} />;
+  }
   return (
     <Block
       type="gallery"
       wrapper="ul"
     >
-      {items.map((item) => (
+      {data.map((item) => (
         <GalleryItem
           key={item.label}
           galleryitem={item}

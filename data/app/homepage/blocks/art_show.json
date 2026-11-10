@@ -3,7 +3,30 @@
   "contents": [
     {
       "id": { "index": 1, "name": "art-show" },
-      "contents": { "link": "", "size": { "width": 200 } }
+      "contents": { "link": "", "size": { "width": 200 } },
+      "label": ""
+    },
+    { "contents": "<p>Example One</p>", "label": "test-1" },
+    { "contents": "<p>Example Two - Longer text</p>", "label": "test-2" },
+    {
+      "contents": "Example Three! <br />      More here      </p>      ),",
+      "label": "test-3"
+    },
+    {
+      "contents": "      <img      width=\"100\"      height=\"100\"      src={\"./example_two.jpeg\"}      />      ),",
+      "label": "test-img-1"
+    },
+    {
+      "contents": "(      <img      width=\"50\"      height=\"50\"      src={\"./example_two.jpeg\"}      />      ),",
+      "label": "test-img-2"
+    },
+    {
+      "contents": "(      <img      width=\"200\"      height=\"100\"      src={\"./example_two.jpeg\"}      />      ),",
+      "label": "test-img-3"
+    },
+    {
+      "contents": "(      <img      width=\"200\"      height=\"300\"      src={\"./example_two.jpeg\"}      />      ),",
+      "label": "test-img-4-tail"
     }
   ]
 }
