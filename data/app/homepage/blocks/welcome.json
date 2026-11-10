@@ -1,0 +1,7 @@
+{
+  "key": { "index": 1, "name": "welcome" },
+  "contents": [
+    { "index": 1, "show": "Welcome to my site", "isBr": false },
+    { "index": 2, "show": "Some more info", "isBr": false }
+  ]
+}

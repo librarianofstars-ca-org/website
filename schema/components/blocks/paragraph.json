@@ -11,8 +11,10 @@
         "type": "object",
         "properties": {
           "id": { "$ref": "https://librarianofstars.ca/schema/types/key" },
-          "contents": { "type": "string", "description": "Text in paragraph" }
-        }
+          "contents": { "type": "string", "description": "Text in paragraph" },
+          "breakline": { "type": "boolean" }
+        },
+        "required": ["id", "contents"]
       }
     }
   },

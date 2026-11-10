@@ -5,8 +5,11 @@ import "@/styles/components/blocks/paragraph_block.css";
 
 import Block from "@/components/blocks/generic_block";
 
-export type content_element = { index: number; show?: string; isBr?: boolean };
-export type content_elements = content_element[];
+export interface paragraph_data {
+  index: number;
+  show?: string;
+  isBr?: boolean;
+}
 
 // import schema from "@/schema/components/blocks/paragraph.json";
 import { validate_against_schema } from "@/schema/validation";
@@ -14,7 +17,7 @@ import { validate_against_schema } from "@/schema/validation";
 export default function ParagraphBlock({
   contents,
 }: {
-  contents: content_elements;
+  contents: paragraph_data[];
 }) {
   validate_against_schema(
     "https://librarianofstars.ca/schema/components/blocks/paragraph.json",

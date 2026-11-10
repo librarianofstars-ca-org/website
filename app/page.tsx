@@ -1,7 +1,5 @@
 import GalleryBlock, { gallery_items } from "@/components/blocks/gallery_block";
-import ParagraphBlock, {
-  content_elements,
-} from "@/components/blocks/paragraph_block";
+import ParagraphBlock from "@/components/blocks/paragraph_block";
 import LinkBLock, { block_of_links } from "@/components/blocks/link_block";
 import Section from "@/components/elements/section";
 
@@ -20,6 +18,7 @@ import { to_key_index_name } from "@/utilities/key_mapping";
 
 import Example from "@/schema/testing";
 import test_data from "@/data/example_test.json";
+import welcome_paragraph_data from "@/data/app/homepage/blocks/welcome.json";
 
 let outline: outlined_heading[] = [
   { order: 0, header: "Homepage", linked_id: "#home", type: 1 },
@@ -124,7 +123,7 @@ let homepage_gallery_items: gallery_items = [
   },
 ];
 
-let homepage_paragraph_block_elements: content_elements = [
+let homepage_paragraph_block_elements = [
   {
     index: 1,
     show: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, \
@@ -229,11 +228,8 @@ function HomePageWelcomeSplashSection() {
       heading={{ level: 2, contents: "Welcome", id: "greatings" }}
       contents={[
         <ParagraphBlock
-          key={"welcome-1"}
-          contents={[
-            { index: 1, show: "Welcome to my site", isBr: false },
-            { index: 2, show: "Some more info", isBr: false },
-          ]}
+          key={welcome_paragraph_data.key}
+          contents={welcome_paragraph_data.contents}
         />,
       ]}
     />
