@@ -14,7 +14,7 @@ import TableOfContents, {
 import "@/styles/shared.css";
 import "@/styles/app/shared.css";
 import "@/styles/app/homepage.css";
-import { to_key_index_name } from "@/utilities/key_mapping";
+import { to_key, to_key_index_name } from "@/utilities/key_mapping";
 
 import Example from "@/schema/testing";
 import test_data from "@/data/example_test.json";
@@ -123,30 +123,37 @@ let homepage_gallery_items: gallery_items = [
   },
 ];
 
-let homepage_paragraph_block_elements = [
-  {
-    index: 1,
-    show: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, \
+let homepage_paragraph_block_elements = {
+  id: { index: 1, name: "summery" },
+  contents: [
+    {
+      id: { index: 1, name: "summery" },
+      contents:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, \
     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi \
     ut aliquip ex ea commodo consequat.",
-  },
-  {
-    index: 2,
-    show: '"Spechus mani var tempu sita. Ven tar Sal me vounus tamlimatus."',
-  },
-  {
-    index: 3,
-    show: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum \
+    },
+    {
+      id: { index: 2, name: "summery" },
+      contents:
+        '"Spechus mani var tempu sita. Ven tar Sal me vounus tamlimatus."',
+    },
+    {
+      id: { index: 3, name: "summery" },
+      contents:
+        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum \
     dolore eu fugiat nulla pariatur. ",
-  },
-  { index: 4, isBr: true },
-  {
-    index: 5,
-    show: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia \
+    },
+    { id: { index: 4, name: "summery" }, breakline: true },
+    {
+      id: { index: 5, name: "summery" },
+      contents:
+        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia \
     deserunt mollit anim id est laborum.",
-  },
-];
+    },
+  ],
+};
 
 let homepage_footer_sections: footer_sections = [
   {
@@ -228,8 +235,8 @@ function HomePageWelcomeSplashSection() {
       heading={{ level: 2, contents: "Welcome", id: "greatings" }}
       contents={[
         <ParagraphBlock
-          key={welcome_paragraph_data.id}
-          contents={welcome_paragraph_data.contents}
+          key={to_key(welcome_paragraph_data.id)}
+          {...welcome_paragraph_data}
         />,
       ]}
     />
@@ -255,7 +262,7 @@ function HomePageSummerySection() {
       contents={[
         <ParagraphBlock
           key="summery-1"
-          contents={homepage_paragraph_block_elements}
+          {...homepage_paragraph_block_elements}
         />,
       ]}
     />

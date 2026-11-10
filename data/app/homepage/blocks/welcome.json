@@ -1,5 +1,4 @@
 {
-  "$schema": "https://librarianofstars.ca/schema/compoennts/blocks/paragraph.json",
   "id": { "index": 1, "name": "welcome" },
   "contents": [
     {

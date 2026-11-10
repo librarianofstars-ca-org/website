@@ -5,44 +5,45 @@ import "@/styles/components/blocks/paragraph_block.css";
 
 import Block from "@/components/blocks/generic_block";
 
-// export interface paragraph_data {
-//   index: number;
-//   show?: string;
-//   breakline?: boolean;
-// }
+export interface paragraph_data {
+  id: { index: number; name: string };
+  contents?: string;
+  breakline?: boolean;
+}
+
+export interface paragraph_block {
+  id: { index: number; name: string };
+  contents: paragraph_data[];
+}
 
 // import schema from "@/schema/components/blocks/paragraph.json";
 import { validate_against_schema } from "@/schema/validation";
+import { to_key } from "@/utilities/key_mapping";
 
-export default function ParagraphBlock({
-  contents,
-}: {
-  contents; //: paragraph_data[];
-}) {
-  validate_against_schema(
-    "https://librarianofstars.ca/schema/components/blocks/paragraph.json",
-    contents,
-  );
+export default function ParagraphBlock({ id, contents }: paragraph_block) {
+  // if (
+  //   !validate_against_schema(
+  //     "https://librarianofstars.ca/schema/components/blocks/paragraph.json",
+  //     data,
+  //   )
+  // ) {
+  //   return <span className="error">Invalid paragraph data</span>;
+  // }
   return (
-    <Block type={"paragraph"}>
-      {/* <Seperator
-        isVertical={false}
-        className=" start-paragraph-block"
-      /> */}
+    <Block
+      type={"paragraph"}
+      key={to_key(id)}
+    >
       {contents.map((paragraph) =>
         paragraph.breakline ? (
           <p
-            key={paragraph.index}
+            key={to_key(paragraph.id)}
             className="break-line paragraph-block empty"
           />
         ) : (
-          <p key={paragraph.index}> {paragraph.contents} </p>
+          <p key={to_key(paragraph.id)}>{paragraph.contents}</p>
         ),
       )}
-      {/* <Seperator
-        isVertical={false}
-        className=" end-paragraph-block"
-      /> */}
     </Block>
   );
 }
