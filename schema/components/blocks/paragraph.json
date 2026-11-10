@@ -9,12 +9,17 @@
       "description": "A array of paragraph objects",
       "items": {
         "type": "object",
+        "description": "Paragraphs objects",
         "properties": {
           "id": { "$ref": "https://librarianofstars.ca/schema/types/key" },
           "contents": { "type": "string", "description": "Text in paragraph" },
-          "breakline": { "type": "boolean" }
+          "breakline": {
+            "type": "boolean",
+            "description": "Is this a breakline?"
+          }
         },
-        "required": ["id", "contents"]
+        "required": ["id", "contents"],
+        "additionalProperties": false
       }
     }
   },

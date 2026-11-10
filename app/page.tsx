@@ -228,7 +228,7 @@ function HomePageWelcomeSplashSection() {
       heading={{ level: 2, contents: "Welcome", id: "greatings" }}
       contents={[
         <ParagraphBlock
-          key={welcome_paragraph_data.key}
+          key={welcome_paragraph_data.id}
           contents={welcome_paragraph_data.contents}
         />,
       ]}

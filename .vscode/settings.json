@@ -12,7 +12,7 @@
     "**/data/**/*.json": "${dirname(1)}/${dirname} - ${filename}.json (data)",
     "**/schema/**/*.json": "${dirname(1)}/${dirname} - ${filename}.json (schema)",
     "site/*/.gitplaceholder": "site/${dirname}/.gitplaceholder",
-    "site/**/.gitplaceholder": "${dirname(1)}/**/${dirname}/.gitplaceholder",
+    "site/**/.gitplaceholder": "${dirname(1)}/**/${dirname}/.gitplaceholder"
   },
   "editor.detectIndentation": false,
   "editor.tabSize": 4,
@@ -119,7 +119,7 @@
         "${workspaceFolder}/schema/**/*.json",
         "${workspaceFolder}/schema/**/*.schema.json"
       ],
-      "url": "https://json-schema.org/draft-07/schema#"
+      "url": "https://json-schema.org/draft-07/schema"
     },
     {
       "fileMatch": ["${workspaceFolder}/data/tests/types/key.json"],
@@ -133,6 +133,10 @@
       "fileMatch": [
         "${workspaceFolder}/data/tests/components/blocks/paragraph.json"
       ],
+      "url": "./schema/components/blocks/paragraph.json"
+    },
+    {
+      "fileMatch": ["${workspaceFolder}/data/app/homepage/blocks/welcome.json"],
       "url": "./schema/components/blocks/paragraph.json"
     }
   ]

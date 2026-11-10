@@ -5,11 +5,11 @@ import "@/styles/components/blocks/paragraph_block.css";
 
 import Block from "@/components/blocks/generic_block";
 
-export interface paragraph_data {
-  index: number;
-  show?: string;
-  isBr?: boolean;
-}
+// export interface paragraph_data {
+//   index: number;
+//   show?: string;
+//   breakline?: boolean;
+// }
 
 // import schema from "@/schema/components/blocks/paragraph.json";
 import { validate_against_schema } from "@/schema/validation";
@@ -17,7 +17,7 @@ import { validate_against_schema } from "@/schema/validation";
 export default function ParagraphBlock({
   contents,
 }: {
-  contents: paragraph_data[];
+  contents; //: paragraph_data[];
 }) {
   validate_against_schema(
     "https://librarianofstars.ca/schema/components/blocks/paragraph.json",
@@ -29,14 +29,14 @@ export default function ParagraphBlock({
         isVertical={false}
         className=" start-paragraph-block"
       /> */}
-      {contents.map((element) =>
-        element.isBr ? (
+      {contents.map((paragraph) =>
+        paragraph.breakline ? (
           <p
-            key={element.index}
+            key={paragraph.index}
             className="break-line paragraph-block empty"
           />
         ) : (
-          <p key={element.index}> {element.show} </p>
+          <p key={paragraph.index}> {paragraph.contents} </p>
         ),
       )}
       {/* <Seperator

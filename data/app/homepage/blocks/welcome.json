@@ -1,7 +1,21 @@
 {
-  "key": { "index": 1, "name": "welcome" },
+  "$schema": "https://librarianofstars.ca/schema/compoennts/blocks/paragraph.json",
+  "id": { "index": 1, "name": "welcome" },
   "contents": [
-    { "index": 1, "show": "Welcome to my site", "isBr": false },
-    { "index": 2, "show": "Some more info", "isBr": false }
+    {
+      "id": {
+        "index": 1,
+        "name": "welcome_text"
+      },
+      "contents": "Welcome to my site",
+      "breakline": false
+    },
+    {
+      "id": {
+        "index": 2,
+        "name": "welcome_text"
+      },
+      "contents": "Some more info"
+    }
   ]
 }
