@@ -1,12 +1,9 @@
-import Ajv, { JSONSchemaType } from "ajv";
-
 import example_schema from "@/schema/example.json";
 import example_data from "@/data/example_test.json";
 
-const ajv = new Ajv({ strict: true }); // options can be passed, e.g. {allErrors: true}
-// type schema_data = JSONSchemaType<typeof example_data>;
+import { ajv_instance } from "@/schema/validation";
 
-const validate_example = ajv.compile(example_schema);
+const validate_example = ajv_instance.compile(example_schema);
 
 export default function Example({ data }) {
   const valid = validate_example(data);

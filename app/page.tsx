@@ -14,10 +14,11 @@ import TableOfContents, {
 import "@/styles/shared.css";
 import "@/styles/app/shared.css";
 import "@/styles/app/homepage.css";
+
 import { to_key, to_key_index_name } from "@/utilities/key_mapping";
 
-import Example from "@/schema/testing";
-import test_data from "@/data/example_test.json";
+// import test_data from "@/data/example_test.json";
+
 import welcome_paragraph_data from "@/data/app/homepage/blocks/welcome.json";
 import summery_paragraph_data from "@/data/app/homepage/blocks/summery.json";
 
@@ -190,7 +191,7 @@ function HomePageSidebar() {
 function HomePageMain() {
   return (
     <Main>
-      <Example data={test_data} />
+      {/* <Example data={test_data} /> */}
       <HomePageWelcomeSplashSection />
       <HomePageAboutMeSection />
       <HomePageShowcaseSection />
