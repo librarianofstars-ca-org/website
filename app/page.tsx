@@ -19,6 +19,7 @@ import { to_key, to_key_index_name } from "@/utilities/key_mapping";
 import Example from "@/schema/testing";
 import test_data from "@/data/example_test.json";
 import welcome_paragraph_data from "@/data/app/homepage/blocks/welcome.json";
+import summery_paragraph_data from "@/data/app/homepage/blocks/summery.json";
 
 let outline: outlined_heading[] = [
   { order: 0, header: "Homepage", linked_id: "#home", type: 1 },
@@ -123,38 +124,6 @@ let homepage_gallery_items: gallery_items = [
   },
 ];
 
-let homepage_paragraph_block_elements = {
-  id: { index: 1, name: "summery" },
-  contents: [
-    {
-      id: { index: 1, name: "summery" },
-      contents:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, \
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi \
-    ut aliquip ex ea commodo consequat.",
-    },
-    {
-      id: { index: 2, name: "summery" },
-      contents:
-        '"Spechus mani var tempu sita. Ven tar Sal me vounus tamlimatus."',
-    },
-    {
-      id: { index: 3, name: "summery" },
-      contents:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum \
-    dolore eu fugiat nulla pariatur. ",
-    },
-    { id: { index: 4, name: "summery" }, breakline: true },
-    {
-      id: { index: 5, name: "summery" },
-      contents:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia \
-    deserunt mollit anim id est laborum.",
-    },
-  ],
-};
-
 let homepage_footer_sections: footer_sections = [
   {
     order: 1,
@@ -236,7 +205,7 @@ function HomePageWelcomeSplashSection() {
       contents={[
         <ParagraphBlock
           key={to_key(welcome_paragraph_data.id)}
-          {...welcome_paragraph_data}
+          data={welcome_paragraph_data}
         />,
       ]}
     />
@@ -262,7 +231,7 @@ function HomePageSummerySection() {
       contents={[
         <ParagraphBlock
           key="summery-1"
-          {...homepage_paragraph_block_elements}
+          {...summery_paragraph_data}
         />,
       ]}
     />

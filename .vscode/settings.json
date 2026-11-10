@@ -136,7 +136,10 @@
       "url": "./schema/components/blocks/paragraph.json"
     },
     {
-      "fileMatch": ["${workspaceFolder}/data/app/homepage/blocks/welcome.json"],
+      "fileMatch": [
+        "${workspaceFolder}/data/app/homepage/blocks/welcome.json",
+        "${workspaceFolder}/data/app/homepage/blocks/welcome.json"
+      ],
       "url": "./schema/components/blocks/paragraph.json"
     }
   ]
