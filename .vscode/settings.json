@@ -141,6 +141,12 @@
         "${workspaceFolder}/data/app/homepage/blocks/summery.json"
       ],
       "url": "./schema/components/blocks/paragraph.json"
+    },
+    {
+      "fileMatch": [
+        "${workspaceFolder}/data/app/homepage/blocks/art_show.json"
+      ],
+      "url": "./schema/components/blocks/gallery.json"
     }
   ]
 }
