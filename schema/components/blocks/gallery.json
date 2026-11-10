@@ -16,11 +16,13 @@
             "anyOf": [
               {
                 "$ref": "https://librarianofstars.ca/schema/components/elements/image.json"
-              }
+              },
+              {"type": "string"}
             ]
-          }
+          },
+          "label": { "type": "string" }
         },
-        "required": ["id", "contents"],
+        "required": ["id", "contents", "label"],
         "additionalProperties": false
       }
     }

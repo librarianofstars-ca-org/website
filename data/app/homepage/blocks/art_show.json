@@ -6,25 +6,38 @@
       "contents": { "link": "", "size": { "width": 200 } },
       "label": ""
     },
-    { "contents": "<p>Example One</p>", "label": "test-1" },
-    { "contents": "<p>Example Two - Longer text</p>", "label": "test-2" },
     {
+      "id": { "index": 2, "name": "art-show" },
+      "contents": "<p>Example One</p>",
+      "label": "test-1"
+    },
+    {
+      "id": { "index": 3, "name": "art-show" },
+      "contents": "<p>Example Two - Longer text</p>",
+      "label": "test-2"
+    },
+    {
+      "id": { "index": 4, "name": "art-show" },
       "contents": "Example Three! <br />      More here      </p>      ),",
       "label": "test-3"
     },
     {
+      "id": { "index": 5, "name": "art-show" },
       "contents": "      <img      width=\"100\"      height=\"100\"      src={\"./example_two.jpeg\"}      />      ),",
       "label": "test-img-1"
     },
     {
+      "id": { "index": 6, "name": "art-show" },
       "contents": "(      <img      width=\"50\"      height=\"50\"      src={\"./example_two.jpeg\"}      />      ),",
       "label": "test-img-2"
     },
     {
+      "id": { "index": 7, "name": "art-show" },
       "contents": "(      <img      width=\"200\"      height=\"100\"      src={\"./example_two.jpeg\"}      />      ),",
       "label": "test-img-3"
     },
     {
+      "id": { "index": 8, "name": "art-show" },
       "contents": "(      <img      width=\"200\"      height=\"300\"      src={\"./example_two.jpeg\"}      />      ),",
       "label": "test-img-4-tail"
     }

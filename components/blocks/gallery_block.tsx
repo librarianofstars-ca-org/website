@@ -5,29 +5,37 @@ import { JSX } from "react/jsx-runtime";
 
 import Block from "@/components/blocks/generic_block";
 
-export type gallery_item = { show: JSX.Element; label: string };
-export type gallery_items = gallery_item[];
+export type gallery_item = {
+  id: { index: number; name: string };
+  contents: string | {};
+  // JSX.Element;
+  label: string;
+};
+export interface gallery_items {
+  id: { index: number; name: string };
+  contents: gallery_item[];
+}
 
 import { ErrorData, validate_against_schema } from "@/schema/validation";
 import { to_key } from "@/utilities/key_mapping";
 
 export default function GalleryBlock({ data }: { data: gallery_items }) {
-  if (
-    !validate_against_schema(
-      "https://librarianofstars.ca/schema/components/blocks/paragraph.json",
-      data,
-    )
-  ) {
-    return <ErrorData data={data} />;
-  }
+  // if (
+  //   !validate_against_schema(
+  //     "https://librarianofstars.ca/schema/components/blocks/paragraph.json",
+  //     data,
+  //   )
+  // ) {
+  //   return <ErrorData data={data} />;
+  // }
   return (
     <Block
       type="gallery"
       wrapper="ul"
     >
-      {data.map((item) => (
+      {data.contents.map((item) => (
         <GalleryItem
-          key={item.label}
+          key={to_key(item.id)}
           galleryitem={item}
         />
       ))}
@@ -36,10 +44,15 @@ export default function GalleryBlock({ data }: { data: gallery_items }) {
 }
 
 export function GalleryItem({ galleryitem }: { galleryitem: gallery_item }) {
-  return (
-    <div className="gallery-item">
-      <li className="gallery-display">{galleryitem.show}</li>
-      <span className="gallery-label">{galleryitem.label}</span>
-    </div>
-  );
+  if (typeof galleryitem.contents === "string") {
+    return (
+      <div
+        className="gallery-item"
+        key={to_key(galleryitem.id)}
+      >
+        <li className="gallery-display">{galleryitem.contents}</li>
+        <span className="gallery-label">{galleryitem.label}</span>
+      </div>
+    );
+  }
 }
