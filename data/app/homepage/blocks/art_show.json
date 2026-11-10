@@ -3,8 +3,11 @@
   "contents": [
     {
       "id": { "index": 1, "name": "art-show" },
-      "contents": { "link": "", "size": { "width": 200 } },
-      "label": ""
+      "contents": {
+        "link": "https://librarianofstars.ca/example/images/1",
+        "size": { "width": 200 }
+      },
+      "label": "First Image"
     },
     {
       "id": { "index": 2, "name": "art-show" },

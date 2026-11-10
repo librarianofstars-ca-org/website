@@ -30,7 +30,7 @@ import { to_key } from "@/utilities/key_mapping";
 export default function GalleryBlock({ data }: { data: gallery_items }) {
   // if (
   //   !validate_against_schema(
-  //     "https://librarianofstars.ca/schema/components/blocks/paragraph.json",
+  //     "https://librarianofstars.ca/schema/components/blocks/gallery.json",
   //     data,
   //   )
   // ) {
@@ -52,36 +52,35 @@ export default function GalleryBlock({ data }: { data: gallery_items }) {
 }
 
 export function GalleryItem({ galleryitem }: { galleryitem: gallery_item }) {
+  let display;
   if (typeof galleryitem.contents === "string") {
-    return (
-      <div
-        className="gallery-item"
-        key={to_key(galleryitem.id)}
-      >
-        <li className="gallery-display">{galleryitem.contents}</li>
-        <span className="gallery-label">{galleryitem.label}</span>
-      </div>
-    );
+    display = galleryitem.contents;
   } else if (typeof galleryitem.contents === "object") {
-    return (
-      <div
-        className="gallery-item"
-        key={to_key(galleryitem.id)}
-      >
-        <li className="gallery-display">
-          <img
-            width={galleryitem.contents.size.width}
-            height={
-              galleryitem.contents.size.height ||
-              galleryitem.contents.size.width
-            }
-            src={galleryitem.contents.link}
-          >
-            {}
-          </img>
-        </li>
-        <span className="gallery-label">{galleryitem.label}</span>
-      </div>
+    if (
+      !validate_against_schema(
+        "https://librarianofstars.ca/schema/components/elements/image.json",
+        galleryitem.contents,
+      )
+    ) {
+      return <ErrorData data={galleryitem.contents} />;
+    }
+    display = (
+      <img
+        width={galleryitem.contents.size.width}
+        height={
+          galleryitem.contents.size.height || galleryitem.contents.size.width
+        }
+        src={galleryitem.contents.link}
+      />
     );
   }
+  return (
+    <div
+      className="gallery-item"
+      key={to_key(galleryitem.id)}
+    >
+      <li className="gallery-display">{display}</li>
+      <span className="gallery-label">{galleryitem.label}</span>
+    </div>
+  );
 }

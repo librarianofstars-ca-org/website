@@ -3,15 +3,14 @@
   "type": "object",
   "description": "An embeded image",
   "properties": {
-    "link": { "type": "string", "format": "link" },
+    "link": { "type": "string" },
     "size": {
       "type": "object",
       "properties": {
         "width": { "type": "number" },
         "height": { "type": "number" }
       },
-      "required": ["width"],
-      "additionalProperties": { "height": { "type": "number" } }
+      "required": ["width"]
     }
   },
   "required": ["link", "size"],
