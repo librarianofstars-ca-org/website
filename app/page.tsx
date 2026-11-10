@@ -231,7 +231,7 @@ function HomePageSummerySection() {
       contents={[
         <ParagraphBlock
           key="summery-1"
-          {...summery_paragraph_data}
+          data={summery_paragraph_data}
         />,
       ]}
     />
