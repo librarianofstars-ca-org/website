@@ -7,7 +7,15 @@ import Block from "@/components/blocks/generic_block";
 
 export type gallery_item = {
   id: { index: number; name: string };
-  contents: string | {};
+  contents:
+    | string
+    | {
+        link: string;
+        size: {
+          width: number;
+          height?: number;
+        };
+      };
   // JSX.Element;
   label: string;
 };
@@ -51,6 +59,27 @@ export function GalleryItem({ galleryitem }: { galleryitem: gallery_item }) {
         key={to_key(galleryitem.id)}
       >
         <li className="gallery-display">{galleryitem.contents}</li>
+        <span className="gallery-label">{galleryitem.label}</span>
+      </div>
+    );
+  } else if (typeof galleryitem.contents === "object") {
+    return (
+      <div
+        className="gallery-item"
+        key={to_key(galleryitem.id)}
+      >
+        <li className="gallery-display">
+          <img
+            width={galleryitem.contents.size.width}
+            height={
+              galleryitem.contents.size.height ||
+              galleryitem.contents.size.width
+            }
+            src={galleryitem.contents.link}
+          >
+            {}
+          </img>
+        </li>
         <span className="gallery-label">{galleryitem.label}</span>
       </div>
     );

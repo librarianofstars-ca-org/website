@@ -1,13 +1,17 @@
 import AJV from "ajv";
 
 import schema_paragraph from "@/schema/components/blocks/paragraph.json";
+import schema_gallery from "@/schema/components/blocks/gallery.json";
+
+import schema_image from "@/schema/components/elements/image.json";
+
 import schema_key from "@/schema/types/key.json";
 
 export const ajv_instance = new AJV({
   strict: true,
   allErrors: true,
   verbose: true,
-  schemas: [schema_key, schema_paragraph],
+  schemas: [schema_key, schema_image, schema_paragraph, schema_gallery],
 });
 
 export function validate_against_schema(id: string, data: any): boolean {
