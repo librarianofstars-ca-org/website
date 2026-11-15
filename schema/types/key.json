@@ -1,6 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "https://librarianofstars.ca/schema/types/key",
+  "$id": "https://librarianofstars.ca/schema/types/key.json",
   "title": "Array Key",
   "description": "A object storing key data for a array element",
   "type": "object",

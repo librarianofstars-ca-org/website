@@ -1,9 +1,9 @@
 {
-  "$id": "https://librarianofstars.ca/schema/components/blocks/gallery.json",
+  "$id": "https://librarianofstars.ca/schema/components/blocks/paragraph.json",
   "type": "object",
   "description": "A block of art pieces",
   "properties": {
-    "id": { "$ref": "https://librarianofstars.ca/schema/types/key" },
+    "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
     "contents": {
       "type": "array",
       "description": "A array of embeded objects",
@@ -11,7 +11,7 @@
         "type": "object",
         "description": "A keyed embed object",
         "properties": {
-          "id": { "$ref": "https://librarianofstars.ca/schema/types/key" },
+          "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
           "contents": {
             "anyOf": [
               {
