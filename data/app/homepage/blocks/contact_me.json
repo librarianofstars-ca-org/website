@@ -5,9 +5,9 @@
       "id": { "name": "contacts", "index": 1 },
       "contents": {
         "name": "TestLink",
-        "link_points": "https://librarianofstars.ca/example/link_test",
+        "link_points_to": "https://librarianofstars.ca/example/link_test",
         "display": "Testing",
-        "link_discription": "test link discription"
+        "link_description": "test link discription"
       }
     }
   ]

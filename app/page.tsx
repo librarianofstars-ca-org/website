@@ -1,6 +1,6 @@
 import GalleryBlock, { gallery_items } from "@/components/blocks/gallery_block";
 import ParagraphBlock from "@/components/blocks/paragraph_block";
-import LinkBLock, { block_of_links } from "@/components/blocks/link_block";
+import LinkBLock from "@/components/blocks/link_block";
 import Section from "@/components/elements/section";
 
 import Footer, { footer_sections } from "@/components/page_structure/footer";
@@ -21,6 +21,7 @@ import { to_key, to_key_index_name } from "@/utilities/key_mapping";
 
 import welcome_paragraph_data from "@/data/app/homepage/blocks/welcome.json";
 import summery_paragraph_data from "@/data/app/homepage/blocks/summery.json";
+import contact_me_links_data from "@/data/app/homepage/blocks/contact_me.json";
 
 let outline: outlined_heading[] = [
   { order: 0, header: "Homepage", linked_id: "#home", type: 1 },
@@ -37,39 +38,39 @@ let outline: outlined_heading[] = [
   { order: 11, header: "Smaller Header", linked_id: "#test2", type: 6 },
 ];
 
-let homepage_links: block_of_links[] = [
-  {
-    blockTitle: "Internal",
-    describedLinks: [
-      {
-        id: "0",
-        name: "example",
-        linked: "./example",
-        display: "Example Link",
-        description: "A Simple Example Link for testing",
-      },
-    ],
-  },
-  {
-    blockTitle: "External",
-    describedLinks: [
-      {
-        id: "0",
-        name: "example2",
-        linked: "./example/second",
-        display: "Example Link 2",
-        description: "A Simple Example Link for testing more things",
-      },
-      {
-        id: "1",
-        name: "another example",
-        linked: "./example/second/#more",
-        display: "Example Link 3",
-        description: "A Simple Example Link",
-      },
-    ],
-  },
-];
+// let homepage_links: block_of_links[] = [
+//   {
+//     blockTitle: "Internal",
+//     describedLinks: [
+//       {
+//         id: "0",
+//         name: "example",
+//         linked: "./example",
+//         display: "Example Link",
+//         description: "A Simple Example Link for testing",
+//       },
+//     ],
+//   },
+//   {
+//     blockTitle: "External",
+//     describedLinks: [
+//       {
+//         id: "0",
+//         name: "example2",
+//         linked: "./example/second",
+//         display: "Example Link 2",
+//         description: "A Simple Example Link for testing more things",
+//       },
+//       {
+//         id: "1",
+//         name: "another example",
+//         linked: "./example/second/#more",
+//         display: "Example Link 3",
+//         description: "A Simple Example Link",
+//       },
+//     ],
+//   },
+// ];
 
 import homepage_gallery_items from "@/data/app/homepage/blocks/art_show.json";
 
@@ -191,12 +192,18 @@ function HomePageLinksSection() {
   return (
     <Section
       heading={{ level: 3, contents: "Links", id: "links" }}
-      contents={homepage_links.map((homepage_link_block, index) => (
+      // contents={homepage_links.map((homepage_link_block, index) => (
+      //   <LinkBLock
+      //     key={to_key_index_name(index, homepage_link_block.blockTitle)}
+      //     {...homepage_link_block}
+      //   />
+      // ))}
+      contents={[
         <LinkBLock
-          key={to_key_index_name(index, homepage_link_block.blockTitle)}
-          {...homepage_link_block}
-        />
-      ))}
+          key={"contact_me_1"}
+          data={contact_me_links_data}
+        />,
+      ]}
     />
   );
 }
@@ -231,22 +238,24 @@ function HopePageProjectsLinkedSection() {
   return (
     <Section
       heading={{ level: 3, contents: "Projects", id: "linked_projects" }}
-      contents={[
-        <LinkBLock
-          key={"gallery-2"}
-          blockTitle="Projects"
-          describedLinks={[
-            {
-              id: "projects",
-              name: "example",
-              linked: "example.projects.librarianofstars.ca",
-              display: "Ex Project",
-              description:
-                "A example of a project to fit into the flow, filled in later with real stuff i've worked on",
-            },
-          ]}
-        />,
-      ]}
+      contents={
+        [
+          // <LinkBLock
+          //   key={"gallery-2"}
+          //   blockTitle="Projects"
+          //   describedLinks={[
+          //     {
+          //       id: "projects",
+          //       name: "example",
+          //       linked: "example.projects.librarianofstars.ca",
+          //       display: "Ex Project",
+          //       description:
+          //         "A example of a project to fit into the flow, filled in later with real stuff i've worked on",
+          //     },
+          //   ]}
+          // />,
+        ]
+      }
     />
   );
 }
