@@ -1,0 +1,23 @@
+{
+  "$id": "https://librarianofstars.ca/schema/components/blocks/links.json",
+  "type": "object",
+  "properties": {
+    "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
+    "contents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
+          "contents": {
+            "$ref": "https://librarianofstars.ca/schema/types/link.json"
+          }
+        },
+        "required": ["id", "contents"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["id", "contents"],
+  "additionalProperties": false
+}
