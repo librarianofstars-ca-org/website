@@ -11,7 +11,10 @@ interface Key {
 
 export function to_key(key: Key) {
   if (
-    validate_against_schema("https://librarianofstars.ca/schema/types/key", key)
+    validate_against_schema(
+      "https://librarianofstars.ca/schema/types/key.json",
+      key,
+    )
   ) {
     return key.name + "-" + key.index;
   } else {

@@ -1,5 +1,5 @@
 {
-  "$id": "https://librarianofstars.ca/schema/components/blocks/paragraph.json",
+  "$id": "https://librarianofstars.ca/schema/components/blocks/gallery.json",
   "type": "object",
   "description": "A block of art pieces",
   "properties": {
