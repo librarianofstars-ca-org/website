@@ -147,6 +147,12 @@
         "${workspaceFolder}/data/app/homepage/blocks/art_show.json"
       ],
       "url": "./schema/components/blocks/gallery.json"
+    },
+    {
+      "fileMatch": [
+        "${workspaceFolder}/data/app/homepage/blocks/contact_me.json"
+      ],
+      "url": "./schema/components/blocks/links.json"
     }
   ]
 }
