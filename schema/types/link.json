@@ -4,8 +4,7 @@
   "properties": {
     "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
     "link_points": {
-      "type": "string",
-      "format": "link"
+      "type": "string"
     },
     "display": {
       "type": "string"

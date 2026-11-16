@@ -7,6 +7,7 @@ import schema_links from "@/schema/components/blocks/links.json";
 import schema_image from "@/schema/components/elements/image.json";
 
 import schema_key from "@/schema/types/key.json";
+import schema_link from "@/schema/types/link.json";
 
 export const ajv_instance = new AJV({
   strict: true,
@@ -14,6 +15,7 @@ export const ajv_instance = new AJV({
   verbose: true,
   schemas: [
     schema_key,
+    schema_link,
     schema_image,
     schema_paragraph,
     schema_gallery,

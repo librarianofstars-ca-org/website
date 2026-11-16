@@ -3,6 +3,7 @@
   "type": "object",
   "$defs": {
     "link_with_discription": {
+      "type": "object",
       "$ref": "https://librarianofstars.ca/schema/types/link.json",
       "properties": {
         "link_description": { "type": "string" }
