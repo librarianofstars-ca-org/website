@@ -38,39 +38,6 @@ let outline: outlined_heading[] = [
   { order: 11, header: "Smaller Header", linked_id: "#test2", type: 6 },
 ];
 
-// let homepage_links: block_of_links[] = [
-//   {
-//     blockTitle: "Internal",
-//     describedLinks: [
-//       {
-//         id: "0",
-//         name: "example",
-//         linked: "./example",
-//         display: "Example Link",
-//         description: "A Simple Example Link for testing",
-//       },
-//     ],
-//   },
-//   {
-//     blockTitle: "External",
-//     describedLinks: [
-//       {
-//         id: "0",
-//         name: "example2",
-//         linked: "./example/second",
-//         display: "Example Link 2",
-//         description: "A Simple Example Link for testing more things",
-//       },
-//       {
-//         id: "1",
-//         name: "another example",
-//         linked: "./example/second/#more",
-//         display: "Example Link 3",
-//         description: "A Simple Example Link",
-//       },
-//     ],
-//   },
-// ];
 
 import homepage_gallery_items from "@/data/app/homepage/blocks/art_show.json";
 
