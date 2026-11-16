@@ -150,7 +150,8 @@
     },
     {
       "fileMatch": [
-        "${workspaceFolder}/data/app/homepage/blocks/contact_me.json"
+        "${workspaceFolder}/data/app/homepage/blocks/contact_me.json",
+        "${workspaceFolder}/data/app/homepage/blocks/projects.json"
       ],
       "url": "./schema/components/blocks/links.json"
     }

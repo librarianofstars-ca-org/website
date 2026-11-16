@@ -5,7 +5,7 @@
     "link_with_discription": {
       "$ref": "https://librarianofstars.ca/schema/types/link.json",
       "properties": {
-        "link_discription": { "type": "string" }
+        "link_description": { "type": "string" }
       }
     }
   },

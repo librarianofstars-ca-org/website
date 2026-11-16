@@ -15,13 +15,14 @@ import "@/styles/shared.css";
 import "@/styles/app/shared.css";
 import "@/styles/app/homepage.css";
 
-import { to_key, to_key_index_name } from "@/utilities/key_mapping";
+import { to_key } from "@/utilities/key_mapping";
 
-// import test_data from "@/data/example_test.json";
 
 import welcome_paragraph_data from "@/data/app/homepage/blocks/welcome.json";
 import summery_paragraph_data from "@/data/app/homepage/blocks/summery.json";
 import contact_me_links_data from "@/data/app/homepage/blocks/contact_me.json";
+import showcase_art_data from "@/data/app/homepage/blocks/art_show.json";
+import showcase_links_data from "@/data/app/homepage/blocks/projects.json";
 
 let outline: outlined_heading[] = [
   { order: 0, header: "Homepage", linked_id: "#home", type: 1 },
@@ -39,7 +40,6 @@ let outline: outlined_heading[] = [
 ];
 
 
-import homepage_gallery_items from "@/data/app/homepage/blocks/art_show.json";
 
 let homepage_footer_sections: footer_sections = [
   {
@@ -159,12 +159,6 @@ function HomePageLinksSection() {
   return (
     <Section
       heading={{ level: 3, contents: "Links", id: "links" }}
-      // contents={homepage_links.map((homepage_link_block, index) => (
-      //   <LinkBLock
-      //     key={to_key_index_name(index, homepage_link_block.blockTitle)}
-      //     {...homepage_link_block}
-      //   />
-      // ))}
       contents={[
         <LinkBLock
           key={"contact_me_1"}
@@ -194,7 +188,7 @@ function HomePageArtGallerySection() {
       contents={[
         <GalleryBlock
           key="gallery-1"
-          data={homepage_gallery_items}
+          data={showcase_art_data}
         />,
       ]}
     />
@@ -207,20 +201,10 @@ function HopePageProjectsLinkedSection() {
       heading={{ level: 3, contents: "Projects", id: "linked_projects" }}
       contents={
         [
-          // <LinkBLock
-          //   key={"gallery-2"}
-          //   blockTitle="Projects"
-          //   describedLinks={[
-          //     {
-          //       id: "projects",
-          //       name: "example",
-          //       linked: "example.projects.librarianofstars.ca",
-          //       display: "Ex Project",
-          //       description:
-          //         "A example of a project to fit into the flow, filled in later with real stuff i've worked on",
-          //     },
-          //   ]}
-          // />,
+          <LinkBLock
+            key={"gallery-2"}
+            data={showcase_links_data}
+          />,
         ]
       }
     />
