@@ -1,7 +1,7 @@
 {
   "$id": "https://librarianofstars.ca/schema/components/blocks/links.json",
   "type": "object",
-  "definitions": {
+  "$defs": {
     "link_with_discription": {
       "$ref": "https://librarianofstars.ca/schema/types/link.json",
       "properties": {
@@ -18,7 +18,7 @@
         "properties": {
           "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
           "contents": {
-            "$ref": "#link_with_discription"
+            "$ref": "#/$defs/link_with_discription"
           }
         },
         "required": ["id", "contents"],

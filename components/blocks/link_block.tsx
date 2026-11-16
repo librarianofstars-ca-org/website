@@ -8,6 +8,7 @@ import Block from "@/components/blocks/generic_block";
 import "@/styles/components/blocks/shared.css";
 import "@/styles/components/blocks/link_block.css";
 import { to_key } from "@/utilities/key_mapping";
+import { ErrorData, validate_against_schema } from "@/schema/validation";
 
 // export type described_link = navlink & { name: string; description: string };
 // export type block_of_links = {
@@ -31,6 +32,14 @@ export interface link_block_data {
 }
 
 export default function LinkBLock({ data }: { data: link_block_data }) {
+  if (
+    !validate_against_schema(
+      "https://librarianofstars.ca/schema/components/blocks/links.json",
+      data,
+    )
+  ) {
+    return <ErrorData data={data} />;
+  }
   return (
     <Block
       type={"link"}

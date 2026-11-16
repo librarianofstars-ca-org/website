@@ -28,14 +28,14 @@ import { ErrorData, validate_against_schema } from "@/schema/validation";
 import { to_key } from "@/utilities/key_mapping";
 
 export default function GalleryBlock({ data }: { data: gallery_items }) {
-  // if (
-  //   !validate_against_schema(
-  //     "https://librarianofstars.ca/schema/components/blocks/gallery.json",
-  //     data,
-  //   )
-  // ) {
-  //   return <ErrorData data={data} />;
-  // }
+  if (
+    !validate_against_schema(
+      "https://librarianofstars.ca/schema/components/blocks/gallery.json",
+      data,
+    )
+  ) {
+    return <ErrorData data={data} />;
+  }
   return (
     <Block
       type="gallery"
