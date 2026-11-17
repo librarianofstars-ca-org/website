@@ -3,16 +3,27 @@
   "type": "object",
   "description": "A block of text",
   "properties": {
-    "id": { "$ref": "https://librarianofstars.ca/schema/types/key" },
+    "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
     "contents": {
       "type": "array",
       "description": "A array of paragraph objects",
       "items": {
         "type": "object",
+        "description": "A paragraph object",
         "properties": {
-          "id": { "$ref": "https://librarianofstars.ca/schema/types/key" },
-          "contents": { "type": "string", "description": "Text in paragraph" }
-        }
+          "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
+          "contents": {
+            "anyOf": [
+              { "type": "string", "description": "Text in paragraph" },
+              {
+                "type": "boolean",
+                "description": "Is this a breakline? false if so."
+              }
+            ]
+          }
+        },
+        "required": ["id", "contents"],
+        "additionalProperties": false
       }
     }
   },

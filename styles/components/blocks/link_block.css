@@ -1,36 +1,25 @@
 /* Wrapper around section */
-div.section.content:has(div.link-block) {
+div.section.content:has(dl.link-block) {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     grid-template-rows: 1fr;
 }
 
 /* total */
-div.link-block {
-    margin: var(--size-lg)
-}
-
-/* List heading */
-div.link-block h4 {
-    margin-inline: auto;
-    padding-inline: var(--size-sm);
-    border-color: var(--color-block-link-accent);
-}
-
-/* List of links */
-div.link-block dl {
+dl.link-block {
     display: grid;
     grid-auto-rows: 1fr;
     grid-template-columns: minmax(0, 2fr) minmax(0, 2fr) minmax(0, 3fr);
     grid-template-rows: 2rem;
     align-items: center;
 
+    margin: var(--size-lg);
     border: var(--size-tn) solid var(--color-block-link-main);
     border-radius: var(--size-sm);
 }
 
 /* head elements */
-div.link-block dl .head { 
+dl.link-block .head { 
     grid-row: 1;
 
     margin: 0;
@@ -42,34 +31,34 @@ div.link-block dl .head {
 }
 
 /* wrapper for left elemnets */
-div.link-block dl dt.body { 
+dl.link-block dt.body { 
     display: contents;
 }
 
 /* Type */
-div.link-block dl dt.body p {
+dl.link-block dt.body p {
     grid-column: 1 / 2;
     justify-self: end;
 }
 
 /* type and link sep */
-div.link-block dl dt.body p::after {
+dl.link-block dt.body p::after {
     content: ": ";
 }
 
 /* Link */
-div.link-block dl dt.body a {
+dl.link-block dt.body a {
     grid-column: 2 / 3;
     justify-self: start;
 }
 
-/* div.link-block dl dt.body a,
-div.link-block dl dt.body p { 
+/* dl.link-block dt.body a,
+dl.link-block dl dt.body p { 
     width: auto;
 } */
 
 /* Disc only */
-div.link-block dl dd.body { 
+dl.link-block dd.body { 
     grid-column: -2 / -1;
     justify-self: center;
 
@@ -80,9 +69,9 @@ div.link-block dl dd.body {
 }
 
 /* Body elements general */
-div.link-block dl dd.body, 
-div.link-block dl dt.body a, 
-div.link-block dl dt.body p {
+dl.link-block dd.body, 
+dl.link-block dt.body a, 
+dl.link-block dt.body p {
     margin-block: var(--size-tn);
     padding: var(--size-xs);
     border: var(--size-tn) solid var(--color-block-link-accent);
@@ -93,8 +82,8 @@ div.link-block dl dt.body p {
 }
 
 /* left side of combined border radius */
-div.link-block dl .head.type,
-div.link-block dl dt.body p {
+dl.link-block .head.type,
+dl.link-block dt.body p {
     margin-inline-start: var(--size-xs);
     padding-inline: var(--size-sm) 0;
     border-inline-end-width: 0;
@@ -103,8 +92,8 @@ div.link-block dl dt.body p {
 }
 
 /* right side of combined border radius */
-div.link-block dl .head.disc,
-div.link-block dl dt.body a {
+dl.link-block .head.disc,
+dl.link-block dt.body a {
     margin-inline-end: var(--size-xs);
     padding-inline: 0 var(--size-sm);
     border-inline-start-width: 0;

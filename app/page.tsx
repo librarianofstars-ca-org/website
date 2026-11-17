@@ -1,8 +1,6 @@
 import GalleryBlock, { gallery_items } from "@/components/blocks/gallery_block";
-import ParagraphBlock, {
-  content_elements,
-} from "@/components/blocks/paragraph_block";
-import LinkBLock, { block_of_links } from "@/components/blocks/link_block";
+import ParagraphBlock from "@/components/blocks/paragraph_block";
+import LinkBLock from "@/components/blocks/link_block";
 import Section from "@/components/elements/section";
 
 import Footer, { footer_sections } from "@/components/page_structure/footer";
@@ -16,10 +14,15 @@ import TableOfContents, {
 import "@/styles/shared.css";
 import "@/styles/app/shared.css";
 import "@/styles/app/homepage.css";
-import { to_key_index_name } from "@/utilities/key_mapping";
 
-import Example from "@/schema/testing";
-import test_data from "@/data/example_test.json";
+import { to_key } from "@/utilities/key_mapping";
+
+
+import welcome_paragraph_data from "@/data/app/homepage/blocks/welcome.json";
+import summery_paragraph_data from "@/data/app/homepage/blocks/summery.json";
+import contact_me_links_data from "@/data/app/homepage/blocks/contact_me.json";
+import showcase_art_data from "@/data/app/homepage/blocks/art_show.json";
+import showcase_links_data from "@/data/app/homepage/blocks/projects.json";
 
 let outline: outlined_heading[] = [
   { order: 0, header: "Homepage", linked_id: "#home", type: 1 },
@@ -36,118 +39,7 @@ let outline: outlined_heading[] = [
   { order: 11, header: "Smaller Header", linked_id: "#test2", type: 6 },
 ];
 
-let homepage_links: block_of_links[] = [
-  {
-    blockTitle: "Internal",
-    describedLinks: [
-      {
-        id: "0",
-        name: "example",
-        linked: "./example",
-        display: "Example Link",
-        description: "A Simple Example Link for testing",
-      },
-    ],
-  },
-  {
-    blockTitle: "External",
-    describedLinks: [
-      {
-        id: "0",
-        name: "example2",
-        linked: "./example/second",
-        display: "Example Link 2",
-        description: "A Simple Example Link for testing more things",
-      },
-      {
-        id: "1",
-        name: "another example",
-        linked: "./example/second/#more",
-        display: "Example Link 3",
-        description: "A Simple Example Link",
-      },
-    ],
-  },
-];
 
-let homepage_gallery_items: gallery_items = [
-  { show: <p>Example One</p>, label: "test-1" },
-  { show: <p>Example Two - Longer text</p>, label: "test-2" },
-  {
-    show: (
-      <p>
-        Example Three! <br />
-        More here
-      </p>
-    ),
-    label: "test-3",
-  },
-  {
-    show: (
-      <img
-        width="100"
-        height="100"
-        src={"./example_two.jpeg"}
-      />
-    ),
-    label: "test-img-1",
-  },
-  {
-    show: (
-      <img
-        width="50"
-        height="50"
-        src={"./example_two.jpeg"}
-      />
-    ),
-    label: "test-img-2",
-  },
-  {
-    show: (
-      <img
-        width="200"
-        height="100"
-        src={"./example_two.jpeg"}
-      />
-    ),
-    label: "test-img-3",
-  },
-  {
-    show: (
-      <img
-        width="200"
-        height="300"
-        src={"./example_two.jpeg"}
-      />
-    ),
-    label: "test-img-4-tail",
-  },
-];
-
-let homepage_paragraph_block_elements: content_elements = [
-  {
-    index: 1,
-    show: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, \
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi \
-    ut aliquip ex ea commodo consequat.",
-  },
-  {
-    index: 2,
-    show: '"Spechus mani var tempu sita. Ven tar Sal me vounus tamlimatus."',
-  },
-  {
-    index: 3,
-    show: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum \
-    dolore eu fugiat nulla pariatur. ",
-  },
-  { index: 4, isBr: true },
-  {
-    index: 5,
-    show: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia \
-    deserunt mollit anim id est laborum.",
-  },
-];
 
 let homepage_footer_sections: footer_sections = [
   {
@@ -215,7 +107,7 @@ function HomePageSidebar() {
 function HomePageMain() {
   return (
     <Main>
-      <Example data={test_data} />
+      {/* <Example data={test_data} /> */}
       <HomePageWelcomeSplashSection />
       <HomePageAboutMeSection />
       <HomePageShowcaseSection />
@@ -229,11 +121,8 @@ function HomePageWelcomeSplashSection() {
       heading={{ level: 2, contents: "Welcome", id: "greatings" }}
       contents={[
         <ParagraphBlock
-          key={"welcome-1"}
-          contents={[
-            { index: 1, show: "Welcome to my site", isBr: false },
-            { index: 2, show: "Some more info", isBr: false },
-          ]}
+          key={to_key(welcome_paragraph_data.id)}
+          data={welcome_paragraph_data}
         />,
       ]}
     />
@@ -259,7 +148,7 @@ function HomePageSummerySection() {
       contents={[
         <ParagraphBlock
           key="summery-1"
-          contents={homepage_paragraph_block_elements}
+          data={summery_paragraph_data}
         />,
       ]}
     />
@@ -270,12 +159,12 @@ function HomePageLinksSection() {
   return (
     <Section
       heading={{ level: 3, contents: "Links", id: "links" }}
-      contents={homepage_links.map((homepage_link_block, index) => (
+      contents={[
         <LinkBLock
-          key={to_key_index_name(index, homepage_link_block.blockTitle)}
-          {...homepage_link_block}
-        />
-      ))}
+          key={"contact_me_1"}
+          data={contact_me_links_data}
+        />,
+      ]}
     />
   );
 }
@@ -299,7 +188,7 @@ function HomePageArtGallerySection() {
       contents={[
         <GalleryBlock
           key="gallery-1"
-          items={homepage_gallery_items}
+          data={showcase_art_data}
         />,
       ]}
     />
@@ -310,22 +199,14 @@ function HopePageProjectsLinkedSection() {
   return (
     <Section
       heading={{ level: 3, contents: "Projects", id: "linked_projects" }}
-      contents={[
-        <LinkBLock
-          key={"gallery-2"}
-          blockTitle="Projects"
-          describedLinks={[
-            {
-              id: "projects",
-              name: "example",
-              linked: "example.projects.librarianofstars.ca",
-              display: "Ex Project",
-              description:
-                "A example of a project to fit into the flow, filled in later with real stuff i've worked on",
-            },
-          ]}
-        />,
-      ]}
+      contents={
+        [
+          <LinkBLock
+            key={"gallery-2"}
+            data={showcase_links_data}
+          />,
+        ]
+      }
     />
   );
 }

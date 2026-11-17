@@ -1,51 +1,87 @@
 import Link from "next/link";
 
-import { navlink } from "@/components/elements/navbar";
-import { IdentifiedHeading } from "@/components/elements/heading";
+// import { navlink } from "@/components/elements/navbar";
+// import { IdentifiedHeading } from "@/components/elements/heading";
 
 import Block from "@/components/blocks/generic_block";
 
 import "@/styles/components/blocks/shared.css";
 import "@/styles/components/blocks/link_block.css";
+import { to_key } from "@/utilities/key_mapping";
+import { ErrorData, validate_against_schema } from "@/schema/validation";
 
-export type described_link = navlink & { name: string; description: string };
-export type block_of_links = {
-  blockTitle: string;
-  describedLinks: described_link[];
-};
+// export type described_link = navlink & { name: string; description: string };
+// export type block_of_links = {
+//   blockTitle: string;
+//   describedLinks: described_link[];
+// };
+// import link_block_data from "@/schema/components/blocks/links.json";
+export interface link_data {
+  id: { index: number; name: string };
+  contents: {
+    name: string;
+    link_points_to: string;
+    display: string;
+    link_description: string;
+  };
+}
 
-export default function LinkBLock({
-  blockTitle,
-  describedLinks,
-}: block_of_links) {
+export interface link_block_data {
+  id: { index: number; name: string };
+  contents: link_data[];
+}
+
+export default function LinkBLock({ data }: { data: link_block_data }) {
+  if (
+    !validate_against_schema(
+      "https://librarianofstars.ca/schema/components/blocks/links.json",
+      data,
+    )
+  ) {
+    return <ErrorData data={data} />;
+  }
   return (
-    <Block type={"link"}>
-      <IdentifiedHeading
+    <Block
+      type={"link"}
+      wrapper="dl"
+      key={to_key(data.id)}
+    >
+      {/* <IdentifiedHeading
         contents={blockTitle}
         level={4}
         headingId={blockTitle.toLowerCase() + "_links"}
-      />
-      <dl>
-        <LinksHeader />
-        {describedLinks.map((link) => (
-          <LinkItem
-            key={link.id}
-            describedLink={link}
-          />
-        ))}
-      </dl>
+      /> */}
+      {/* <dl> */}
+      <LinksHeader />
+      {data.contents.map((link: link_data) => (
+        <LinkItem
+          key={to_key(link.id)}
+          {...link.contents}
+        />
+      ))}
+      {/* </dl> */}
     </Block>
   );
 }
 
-export function LinkItem({ describedLink }: { describedLink: described_link }) {
+export function LinkItem({
+  name,
+  link_points_to,
+  display,
+  link_description,
+}: {
+  name: string;
+  link_points_to: string;
+  display: string;
+  link_description: string;
+}) {
   return (
     <>
       <dt className="body">
-        <p>{describedLink.name}</p>
-        <Link href={describedLink.linked}>{describedLink.display}</Link>
+        <p>{name}</p>
+        <Link href={link_points_to}>{display}</Link>
       </dt>
-      <dd className="body">{describedLink.description}</dd>
+      <dd className="body">{link_description}</dd>
     </>
   );
 }

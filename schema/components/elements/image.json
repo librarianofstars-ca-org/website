@@ -1,0 +1,18 @@
+{
+  "$id": "https://librarianofstars.ca/schema/components/elements/image.json",
+  "type": "object",
+  "description": "An embeded image",
+  "properties": {
+    "link": { "type": "string" },
+    "size": {
+      "type": "object",
+      "properties": {
+        "width": { "type": "number" },
+        "height": { "type": "number" }
+      },
+      "required": ["width"]
+    }
+  },
+  "required": ["link", "size"],
+  "additionalProperties": false
+}
