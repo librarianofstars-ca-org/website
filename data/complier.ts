@@ -4,10 +4,22 @@ import path from "path"
 const current_path_for_directory = path.dirname(import.meta.filename)
 
 let filepath_complile_maps: [string, string][] = [
-  ["./tests/compiler/one.json",  "./tests/compiler/compiled/one.json"],
-  ["./tests/compiler/two.json",  "./tests/compiler/compiled/two.json"],
-  ["./tests/compiler/three.json",  "./tests/compiler/compiled/three.json"],
-  ["./tests/compiler/four.json",  "./tests/compiler/compiled/four.json"],
+  [
+    "./tests/compiler/one.json",
+    "./tests/compiler/compiled/one.json",
+  ],
+  [
+    "./tests/compiler/two.json",
+    "./tests/compiler/compiled/two.json",
+  ],
+  [
+    "./tests/compiler/three.json",
+    "./tests/compiler/compiled/three.json",
+  ],
+  [
+    "./tests/compiler/four.json",
+    "./tests/compiler/compiled/four.json",
+  ],
 ]
 
 function complile_json_data(input_filepath: string, output_filepath: string) {
@@ -19,17 +31,26 @@ function complile_json_data(input_filepath: string, output_filepath: string) {
   console.log("Changed", write_file_path, "to:", replaced_json_data, "from:", read_file_path)
 }
 
-function get_json_from_file(filepath) {
-  return JSON.parse(fs.readFileSync(path.resolve(current_path_for_directory, filepath), 'utf8'))
+function get_json_from_file(filepath: string) {
+  return JSON.parse(
+    fs.readFileSync(
+      path.resolve(current_path_for_directory, filepath),
+      'utf8'
+    )
+  )
 }
 
-function replace_data_links(key, value){
-  if (key == "test"){
-    return "one"
-  } else if (value.datalink != undefined ) {
+function replace_data_links(
+  key: string,
+  value: { datalink: string | undefined }
+): any{
+  if (value.datalink != undefined ) {
     return get_json_from_file(value.datalink)
-  } else return value
+  } else return value // no change
 }
 
-console.log(JSON.stringify({"test":1, "other": "string_test"}, replace_data_links, 0))
-filepath_complile_maps.forEach((filepath_map)=> {complile_json_data(filepath_map[0], filepath_map[1])})
+filepath_complile_maps.forEach(
+  (filepath_map) => {
+    complile_json_data(filepath_map[0], filepath_map[1])
+  }
+)
