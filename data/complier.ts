@@ -26,8 +26,8 @@ function get_json_from_file(filepath) {
 function replace_data_links(key, value){
   if (key == "test"){
     return "one"
-  } else if (key == "datalink") {
-    return get_json_from_file(value)
+  } else if (value.datalink != undefined ) {
+    return get_json_from_file(value.datalink)
   } else return value
 }
 
