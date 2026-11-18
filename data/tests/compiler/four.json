@@ -1,5 +1,5 @@
 {
-  "purpose": "Test nested loops",
+  "purpose": "Test nested replacements",
   "data": {
     "datalink": "./tests/compiler/three.json"
   },

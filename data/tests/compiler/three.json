@@ -1,4 +1,5 @@
 {
+  "purpose": "Test if it works with arrays as well",
   "id": "some_id",
   "contents": [
     { "datalink": "./tests/compiler/sub_files/three.one.json" },
