@@ -1,0 +1,9 @@
+{
+  "purpose": "Test nested loops",
+  "data": {
+    "datalink": "./tests/compiler/three.json"
+  },
+  "more": {
+    "datalink": "./tests/compiler/two.json"
+  }
+}

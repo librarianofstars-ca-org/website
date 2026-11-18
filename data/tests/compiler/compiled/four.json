@@ -1,0 +1,1 @@
+{"purpose":"Test nested loops","data":{"id":"some_id","contents":[{"item":"first in array"},{"item":"second in array"}]},"more":{"property":"value","other_property":{"linked_properties":"here"}}}

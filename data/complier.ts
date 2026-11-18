@@ -7,6 +7,7 @@ let filepath_strings_to_complile: string[] = [
   "./tests/compiler/one.json", 
   "./tests/compiler/two.json",
   "./tests/compiler/three.json",
+  "./tests/compiler/four.json",
 ]
 
 function move_to_compiled_folder(filepath: string) {
