@@ -1,0 +1,7 @@
+{
+  "id": "some_id",
+  "contents": [
+    { "datalink": "./tests/compiler/sub_files/three.one.json" },
+    { "datalink": "./tests/compiler/sub_files/three.two.json" }
+  ]
+}

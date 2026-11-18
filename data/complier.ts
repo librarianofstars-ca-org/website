@@ -3,7 +3,11 @@ import path from "path"
 
 const current_path_for_directory = path.dirname(import.meta.filename)
 
-let filepath_strings_to_complile: string[] = ["./tests/compiler/one.json", "./tests/compiler/two.json"]
+let filepath_strings_to_complile: string[] = [
+  "./tests/compiler/one.json", 
+  "./tests/compiler/two.json",
+  "./tests/compiler/three.json",
+]
 
 function move_to_compiled_folder(filepath: string) {
   // Edit later to be more general (seperate folder entirely?)
