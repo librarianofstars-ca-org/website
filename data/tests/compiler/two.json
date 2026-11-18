@@ -1,0 +1,4 @@
+{
+  "property": "value",
+  "datalink": "./tests/compiler/sub_files/two.json"
+}

@@ -3,7 +3,7 @@ import path from "path"
 
 const current_path_for_directory = path.dirname(import.meta.filename)
 
-let filepath_strings_to_complile: string[] = ["./tests/complier/one.json"]
+let filepath_strings_to_complile: string[] = ["./tests/compiler/one.json", "./tests/compiler/two.json"]
 
 function move_to_compiled_folder(filepath: string) {
   // Edit later to be more general (seperate folder entirely?)
@@ -13,22 +13,21 @@ function move_to_compiled_folder(filepath: string) {
 function complile_json_data(filepath: string) {
   let read_file_path = path.join(current_path_for_directory, filepath)
   let write_file_path = move_to_compiled_folder(read_file_path)
-  let initial_content_string: string = fs.readFileSync(read_file_path, 'utf8') 
-  //   (error, data) => {
-  //   if (error) throw error
-  //   return data
-  // }
-  // )
-  let inital_json_data = JSON.parse(initial_content_string)
+  let inital_json_data = get_json_from_file(read_file_path)
   let replaced_json_data = JSON.stringify(inital_json_data, replace_data_links, 0)
   fs.writeFileSync(write_file_path, replaced_json_data)
   console.log("Changed", write_file_path, "to:", replaced_json_data, "from:", read_file_path)
 }
 
+function get_json_from_file(filepath) {
+  return JSON.parse(fs.readFileSync(path.resolve(current_path_for_directory, filepath), 'utf8'))
+}
 
 function replace_data_links(key, value){
   if (key == "test"){
     return "one"
+  } else if (key == "datalink") {
+    return get_json_from_file(value)
   } else return value
 }
 
