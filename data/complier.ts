@@ -4,11 +4,15 @@ import path from "path"
 const current_path_for_directory = path.dirname(import.meta.filename)
 
 let filepath_strings_to_complile: string[] = ["./tests/complier/one.json"]
-// let filepaths_to_complile = filepath_strings_to_complile.map((filepath)=> {return path.resolve(current_path, filepath)})
+
+function move_to_compiled_folder(filepath: string) {
+  // Edit later to be more general (seperate folder entirely?)
+  return path.join(filepath, "/../compiled/", path.basename(filepath))
+}
 
 function complile_json_data(filepath: string) {
   let read_file_path = path.join(current_path_for_directory, filepath)
-  let write_file_path = path.join(read_file_path, "/../compiled/", path.basename(read_file_path))
+  let write_file_path = move_to_compiled_folder(read_file_path)
   let initial_content_string: string = fs.readFileSync(read_file_path, 'utf8') 
   //   (error, data) => {
   //   if (error) throw error
