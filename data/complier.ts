@@ -1,7 +1,7 @@
 import fs from "fs"
 import path from "path"
 
-const current_path_for_directory = path.dirname(import.meta.filename)
+const DIRECTORY_ROOT_DATA = path.dirname(import.meta.filename)
 
 let filepath_complile_maps: [string, string][] = [
   [
@@ -22,19 +22,29 @@ let filepath_complile_maps: [string, string][] = [
   ],
 ]
 
-function complile_json_data(input_filepath: string, output_filepath: string) {
-  let read_file_path = path.resolve(current_path_for_directory, input_filepath)
-  let write_file_path = path.resolve(current_path_for_directory, output_filepath)
-  let inital_json_data = get_json_from_file(read_file_path)
-  let replaced_json_data = JSON.stringify(inital_json_data, replace_data_links, 0)
-  fs.writeFileSync(write_file_path, replaced_json_data)
-  console.log("Changed", write_file_path, "to:", replaced_json_data, "from:", read_file_path)
+function complile_json_data(input_filepath: string, output_filepath: string): void {
+  fs.writeFileSync(
+    path.resolve(
+      DIRECTORY_ROOT_DATA,
+      output_filepath,
+    ),
+    JSON.stringify(
+      get_json_from_file(
+        path.resolve(
+          DIRECTORY_ROOT_DATA,
+          input_filepath,
+        ),
+      ),
+      replace_data_links,
+      0,
+    ),
+  )
 }
 
-function get_json_from_file(filepath: string) {
+function get_json_from_file(filepath: string): object | object[] {
   return JSON.parse(
     fs.readFileSync(
-      path.resolve(current_path_for_directory, filepath),
+      path.resolve(DIRECTORY_ROOT_DATA, filepath),
       'utf8'
     )
   )
@@ -49,6 +59,7 @@ function replace_data_links(
   } else return value // no change
 }
 
+// Run for all maps of filepaths
 filepath_complile_maps.forEach(
   (filepath_map) => {
     complile_json_data(filepath_map[0], filepath_map[1])
