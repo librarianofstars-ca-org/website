@@ -22,36 +22,40 @@ let filepath_complile_maps: [string, string][] = [
   ],
 ]
 
-function complile_json_data(input_filepath: string, output_filepath: string): void {
-  fs.writeFileSync(
-    path.resolve(
-      DIRECTORY_ROOT_DATA,
-      output_filepath,
-    ),
-    JSON.stringify(
-      get_json_from_file(
-        path.resolve(
-          DIRECTORY_ROOT_DATA,
-          input_filepath,
-        ),
-      ),
-      replace_data_links,
-      0,
-    ),
+function resolve_path_to_root_dir(filepath: string){
+  return path.resolve(
+    DIRECTORY_ROOT_DATA,
+    filepath,
   )
 }
 
 function get_json_from_file(filepath: string): object | object[] {
   return JSON.parse(
     fs.readFileSync(
-      path.resolve(DIRECTORY_ROOT_DATA, filepath),
-      'utf8'
+      /* path: */ resolve_path_to_root_dir(filepath),
+      /* options: */'utf8'
     )
   )
 }
 
+export function complile_json_data(input_filepath: string, output_filepath: string): void {
+  fs.writeFileSync(
+    /* file: */ resolve_path_to_root_dir(
+      output_filepath,
+    ),
+    /* data: */ JSON.stringify(
+      /* value: */ get_json_from_file(
+        input_filepath,
+      ),
+      /* replacer: */ replace_data_links,
+      /* space: */ 0,
+    ),
+  )
+}
+
+
 function replace_data_links(
-  key: string,
+  key: string, // not used but needed for function signature
   value: { datalink: string | undefined }
 ): any{
   if (value.datalink != undefined ) {
@@ -62,6 +66,6 @@ function replace_data_links(
 // Run for all maps of filepaths
 filepath_complile_maps.forEach(
   (filepath_map) => {
-    complile_json_data(filepath_map[0], filepath_map[1])
+    complile_json_data(...filepath_map)
   }
 )
