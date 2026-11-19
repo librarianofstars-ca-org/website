@@ -35,6 +35,7 @@ export function complile_json_data(input_filepath: string, output_filepath: stri
       /* space: */ 0,
     ),
   )
+  console.log("Compiled:", input_filepath, "to:", output_filepath)
 }
 
 

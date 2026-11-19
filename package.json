@@ -33,7 +33,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "stylelint \"styles/**/*.css\"",
-    "lint:fix": "stylelint \"styles/**/*.css\" --fix"
+    "lint:fix": "stylelint \"styles/**/*.css\" --fix",
+    "data:compile": "node data/complier.ts"
   },
   "devDependencies": {
     "@types/node": "26.6.5",
