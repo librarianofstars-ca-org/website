@@ -1,0 +1,18 @@
+[
+  {
+    "in": "./tests/compiler/one.json",
+    "out": "./tests/compiler/compiled/one.json"
+  },
+  {
+    "in": "./tests/compiler/two.json",
+    "out": "./tests/compiler/compiled/two.json"
+  },
+  {
+    "in": "./tests/compiler/three.json",
+    "out": "./tests/compiler/compiled/three.json"
+  },
+  {
+    "in": "./tests/compiler/four.json",
+    "out": "./tests/compiler/compiled/four.json"
+  }
+]

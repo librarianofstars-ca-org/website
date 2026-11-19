@@ -3,24 +3,8 @@ import path from "path"
 
 const DIRECTORY_ROOT_DATA = path.dirname(import.meta.filename)
 
-let filepath_complile_maps: [string, string][] = [
-  [
-    "./tests/compiler/one.json",
-    "./tests/compiler/compiled/one.json",
-  ],
-  [
-    "./tests/compiler/two.json",
-    "./tests/compiler/compiled/two.json",
-  ],
-  [
-    "./tests/compiler/three.json",
-    "./tests/compiler/compiled/three.json",
-  ],
-  [
-    "./tests/compiler/four.json",
-    "./tests/compiler/compiled/four.json",
-  ],
-]
+// import filepath_complile_maps from "@/data/compile_maps.json"
+import filepath_complile_maps from "./compile_maps.json" with { type: "json" }
 
 function resolve_path_to_root_dir(filepath: string){
   return path.resolve(
@@ -66,6 +50,6 @@ function replace_data_links(
 // Run for all maps of filepaths
 filepath_complile_maps.forEach(
   (filepath_map) => {
-    complile_json_data(...filepath_map)
+    complile_json_data(filepath_map.in, filepath_map.out)
   }
 )
