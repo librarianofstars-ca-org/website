@@ -27,20 +27,12 @@ import homepage_header_data from "@/data/app/homepage/compiled/header.json";
 export default function HomePage() {
   return (
     <>
-      <HomePageHeader />
-      <HomePageSidebar />
+      <Header data={homepage_header_data} />
+      <Sidebar data={homepage_sidebar_data} />
       <HomePageMain />
-      <HomePageFooter />
+      <Footer data={homepage_footer_data} />
     </>
   );
-}
-
-function HomePageHeader() {
-  return <Header data={homepage_header_data} />;
-}
-
-function HomePageSidebar() {
-  return <Sidebar data={homepage_sidebar_data} />;
 }
 
 function HomePageMain() {
@@ -145,8 +137,4 @@ function HopePageProjectsLinkedSection() {
       ]}
     />
   );
-}
-
-function HomePageFooter() {
-  return <Footer data={homepage_footer_data} />;
 }
