@@ -6,6 +6,7 @@ import Seperator from "@/components/elements/seperator";
 
 import Link from "next/link";
 import Icon from "@/components/elements/icon";
+import { validate_against_schema, ErrorData } from "@/schema/validation";
 
 export type navlink = { id: string; linked: string; display: string };
 
@@ -14,6 +15,14 @@ export interface navbar {
 }
 
 export default function NavigationBar({ data }: { data: navbar }) {
+  if (
+    !validate_against_schema(
+      "https://librarianofstars.ca/schema/components/elements/structure/navbar.json",
+      data,
+    )
+  ) {
+    return <ErrorData data={data} />;
+  }
   return (
     <nav>
       <Icon

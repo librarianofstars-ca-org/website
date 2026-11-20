@@ -8,7 +8,17 @@ import FooterSection, {
 
 import { to_key } from "@/utilities/key_mapping";
 
+import { validate_against_schema, ErrorData } from "@/schema/validation";
+
 export default function Footer({ data }: { data: footer_section[] }) {
+  // if (
+  //   !validate_against_schema(
+  //     "https://librarianofstars.ca/schema/components/page/footer.json",
+  //     data,
+  //   )
+  // ) {
+  //   return <ErrorData data={data} />;
+  // }
   return (
     <>
       <div className="footer">
@@ -18,7 +28,7 @@ export default function Footer({ data }: { data: footer_section[] }) {
             key={to_key(section.id)}
           >
             {index != 0 && <hr className="page-seperator vertical footer" />}
-            <FooterSection {...section} />
+            <FooterSection data={section} />
           </div>
         ))}
       </div>

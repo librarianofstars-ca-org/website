@@ -3,6 +3,7 @@ import "@/styles/components/elements/shared.css";
 import "@/styles/components/elements/structure/table_of_contents.css";
 
 import { LinkedHeading } from "@/components/elements/heading";
+import { validate_against_schema, ErrorData } from "@/schema/validation";
 
 export interface outlined_heading {
   order: number;
@@ -14,6 +15,14 @@ export interface outlined_heading {
 export type table_of_contents = outlined_heading[];
 
 export default function TableOfContents({ data }: { data: table_of_contents }) {
+  if (
+    !validate_against_schema(
+      "https://librarianofstars.ca/schema/components/elements/structure/table_of_contents.json",
+      data,
+    )
+  ) {
+    return <ErrorData data={data} />;
+  }
   return (
     <div className="table-of-contents">
       <TOCPlace place="start" />

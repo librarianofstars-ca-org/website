@@ -6,6 +6,9 @@ import Seperator from "@/components/elements/seperator";
 import TableOfContents, {
   table_of_contents,
 } from "@/components/elements/structure/table_of_contents";
+
+import { validate_against_schema, ErrorData } from "@/schema/validation";
+
 import { to_key } from "@/utilities/key_mapping";
 
 export interface sidebar_section {
@@ -17,6 +20,14 @@ export interface sidebar_section {
 export type sidebar = sidebar_section[];
 
 export default function Sidebar({ data }: { data: sidebar }) {
+  if (
+    !validate_against_schema(
+      "https://librarianofstars.ca/schema/components/page/sidebar.json",
+      data,
+    )
+  ) {
+    return <ErrorData data={data} />;
+  }
   return (
     <div className="sidebar wraper">
       <Seperator
