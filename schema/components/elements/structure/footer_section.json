@@ -5,12 +5,17 @@
     "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
     "title": { "type": "string" },
     "contents": {
-      "type": "object",
-      "properties": {
-        "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
-        "title": { "type": "string" },
-        "contents": { "type": "array", "items": { "type": "string" } }
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
+          "title": { "type": "string" },
+          "contents": { "type": "array", "items": { "type": "string" } }
+        },
+        "required": ["id", "title", "contents"]
       }
     }
-  }
+  },
+  "required": ["id", "title", "contents"]
 }
