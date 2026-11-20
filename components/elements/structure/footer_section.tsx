@@ -5,9 +5,10 @@ import Seperator from "@/components/elements/seperator";
 
 import "@/styles/components/elements/structure/footer_section.css";
 
-import { to_key_index_name } from "@/utilities/key_mapping";
+import { to_key } from "@/utilities/key_mapping";
 
 export interface footer_section_item {
+  id: { index: number; name: string };
   title: string;
   contents: ReactNode[];
 }
@@ -18,18 +19,20 @@ export interface footer_section {
   contents: footer_section_item[];
 }
 
-export default function FooterSection({ title, contents }: footer_section) {
+export default function FooterSection({ id, title, contents }: footer_section) {
   return (
-    <div className="footer-section">
+    <div
+      className="footer-section"
+      key={to_key(id)}
+    >
       <Heading
         level={4}
-        key={"title"}
         contents={title}
       />
       <dl>
-        {contents.map(({ title, contents }, index) => (
+        {contents.map(({ id, title, contents }, index) => (
           <div
-            key={to_key_index_name(index, "section")}
+            key={to_key(id)}
             className="footer-contents-wrapper"
           >
             <Seperator

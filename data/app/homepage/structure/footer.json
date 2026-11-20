@@ -3,8 +3,13 @@
     "id": { "index": 1, "name": "footer_section" },
     "title": "Credits",
     "contents": [
-      { "title": "Site Design", "contents": ["Librarian Of Stars"] },
       {
+        "id": { "index": 1, "name": "credits" },
+        "title": "Site Design",
+        "contents": ["Librarian Of Stars"]
+      },
+      {
+        "id": { "index": 2, "name": "credits" },
         "title": "Contributors",
         "contents": ["Librarian Of Stars", "ChrisNolan.ca"]
       }
@@ -15,6 +20,7 @@
     "title": "Contact",
     "contents": [
       {
+        "id": { "index": 1, "name": "contacts" },
         "title": "Email",
         "contents": [
           "TODO Fix Links:",
@@ -23,10 +29,12 @@
         ]
       },
       {
+        "id": { "index": 2, "name": "contacts" },
         "title": "Placeholder",
         "contents": ["account 1", "account 2", "account 3"]
       },
       {
+        "id": { "index": 3, "name": "contacts" },
         "title": "Github",
         "contents": ["Librarian Of Stars"]
       }
