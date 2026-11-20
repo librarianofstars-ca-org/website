@@ -1,0 +1,10 @@
+{
+  "$id": "https://librarianofstars.ca/schema/components/elements/heading.json",
+  "type": "object",
+  "properties": {
+    "contents": { "type": "string" },
+    "level": { "type": "number" },
+    "id": { "type": ["string", "null"] },
+    "className": { "type": ["string", "null"] }
+  }
+}

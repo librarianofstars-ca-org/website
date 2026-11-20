@@ -5,6 +5,8 @@ import schema_gallery from "@/schema/components/blocks/gallery.json";
 import schema_links from "@/schema/components/blocks/links.json";
 
 import schema_image from "@/schema/components/elements/image.json";
+import schema_heading from "@/schema/components/elements/heading.json";
+
 import schema_navbar from "@/schema/components/elements/structure/navbar.json";
 import schema_toc from "@/schema/components/elements/structure/table_of_contents.json";
 import schema_foot_sec from "@/schema/components/elements/structure/footer_section.json";
@@ -24,6 +26,7 @@ export const ajv_instance = new AJV({
     schema_key,
     schema_link,
     schema_image,
+    schema_heading,
     schema_navbar,
     schema_toc,
     schema_foot_sec,
