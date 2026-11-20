@@ -4,9 +4,11 @@ import Heading from "@/components/elements/heading";
 import Seperator from "@/components/elements/seperator";
 import { footer_section_contents } from "@/components/page_structure/footer";
 
+import "@/styles/components/elements/structure/footer_section.css";
+
 import { to_key_index_name } from "@/utilities/key_mapping";
 
-export default function FooterBlock({
+export default function FooterSection({
   title,
   contents,
 }: {

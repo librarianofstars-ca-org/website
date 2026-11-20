@@ -2,7 +2,7 @@ import "@/styles/components/shared.css";
 import "@/styles/components/page_structure/shared.css";
 import "@/styles/components/page_structure/footer.css";
 
-import FooterBlock from "@/components/elements/structure/footer_list";
+import FooterSection from "@/components/elements/structure/footer_section";
 
 import { to_key_index_name } from "@/utilities/key_mapping";
 import { ReactNode } from "react";
@@ -27,7 +27,7 @@ export default function Footer({ sections }: { sections: footer_sections }) {
             key={to_key_index_name(section.order, section.title)}
           >
             {index != 0 && <hr className="page-seperator vertical footer" />}
-            <FooterBlock
+            <FooterSection
               title={section.title}
               contents={section.contents}
             />
