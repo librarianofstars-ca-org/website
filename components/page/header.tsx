@@ -5,7 +5,7 @@ import "@/styles/components/page/header.css";
 import Seperator from "@/components/elements/seperator";
 
 import NavigationBar, { navbar } from "@/components/elements/structure/navbar";
-import { IdentifiedHeading } from "@/components/elements/heading";
+import Heading from "@/components/elements/heading";
 import { validate_against_schema, ErrorData } from "@/schema/validation";
 
 export interface header {
@@ -29,11 +29,13 @@ export default function Header({ data }: { data: header }) {
         isVertical={false}
         className="header"
       />
-      <IdentifiedHeading
-        headingId="#home"
-        className="page-title"
-        contents={data.page_title}
-        level={1}
+      <Heading
+        data={{
+          id: "#home",
+          className: "page-title",
+          contents: data.page_title,
+          level: 1,
+        }}
       />
     </div>
   );

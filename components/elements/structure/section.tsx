@@ -1,10 +1,7 @@
 import "@/styles/components/elements/shared.css";
 import "@/styles/components/elements/structure/section.css";
 
-import {
-  ident_heading_props,
-  IdentifiedHeading,
-} from "@/components/elements/heading";
+import Heading, { heading } from "@/components/elements/heading";
 import { ReactElement } from "react";
 
 import { block } from "@/components/blocks/generic_block";
@@ -15,7 +12,7 @@ export type section_content = ReactElement<typeof Section> | block;
 
 export type section = {
   id: { index: number; name: string };
-  heading: ident_heading_props;
+  heading: heading;
   contents: section_content[];
 };
 
@@ -33,12 +30,7 @@ export default function Section({ data }: { data: section }) {
           isVertical={false}
         />
       )}
-      <IdentifiedHeading
-        className="section-title"
-        headingId={data.heading.id}
-        contents={data.heading.contents}
-        level={data.heading.level}
-      />
+      <Heading data={{ ...data.heading, className: "section-title" }} />
       {data.contents}
     </div>
   );

@@ -11,14 +11,14 @@ import { to_key } from "@/utilities/key_mapping";
 import { validate_against_schema, ErrorData } from "@/schema/validation";
 
 export default function Footer({ data }: { data: footer_section[] }) {
-  // if (
-  //   !validate_against_schema(
-  //     "https://librarianofstars.ca/schema/components/page/footer.json",
-  //     data,
-  //   )
-  // ) {
-  //   return <ErrorData data={data} />;
-  // }
+  if (
+    !validate_against_schema(
+      "https://librarianofstars.ca/schema/components/page/footer.json",
+      data,
+    )
+  ) {
+    return <ErrorData data={data} />;
+  }
   return (
     <>
       <div className="footer">

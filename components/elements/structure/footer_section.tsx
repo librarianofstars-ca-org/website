@@ -34,10 +34,7 @@ export default function FooterSection({ data }: { data: footer_section }) {
       className="footer-section"
       key={to_key(data.id)}
     >
-      <Heading
-        level={4}
-        contents={data.title}
-      />
+      <Heading data={{ level: 4, contents: data.title }} />
       <dl>
         {data.contents.map((item, index) => (
           <div

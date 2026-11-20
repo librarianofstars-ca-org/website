@@ -30,9 +30,11 @@ export default function TableOfContents({ data }: { data: table_of_contents }) {
         <LinkedHeading
           key={outline_item.order.toString() + "-order"}
           link={outline_item.link}
-          contents={outline_item.display}
-          level={outline_item.level + 1}
-          className="toc-item"
+          heading_data={{
+            contents: outline_item.display,
+            level: outline_item.level + 1,
+            className: "toc-item",
+          }}
         />
       ))}
       <TOCPlace place="end" />
@@ -47,9 +49,11 @@ export function TOCPlace({ place }: { place: string }) {
         <LinkedHeading
           key={"start"}
           link={"#page-start"}
-          contents={"Start Of Page"}
-          level={7}
-          className="toc-place"
+          heading_data={{
+            contents: "Start Of Page",
+            level: 7,
+            className: "toc-place",
+          }}
         />
       );
     case "end":
@@ -57,9 +61,11 @@ export function TOCPlace({ place }: { place: string }) {
         <LinkedHeading
           key={"end"}
           link={"#page-end"}
-          contents={"End Of Page"}
-          level={7}
-          className="toc-place"
+          heading_data={{
+            contents: "Start Of Page",
+            level: 7,
+            className: "toc-place",
+          }}
         />
       );
   }

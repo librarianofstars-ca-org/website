@@ -1,8 +1,14 @@
 import { PageHead, PageBody } from "@/components/meta";
-import { IdentifiedHeading } from "@/components/elements/heading";
+import Heading, { heading } from "@/components/elements/heading";
 
 import "@/styles/pallette.css";
 import "@/styles/base.css";
+
+const page_marker_data: heading = {
+  contents: "",
+  level: 7,
+  className: "nav-id-hidden",
+};
 
 export default function RootLayout({
   children,
@@ -16,19 +22,9 @@ export default function RootLayout({
     >
       <PageHead />
       <PageBody>
-        <IdentifiedHeading
-          contents={""}
-          level={7}
-          className={"nav-id-hidden"}
-          headingId={"page_start"}
-        />
+        <Heading data={{ ...page_marker_data, id: "page_start" }} />
         {children}
-        <IdentifiedHeading
-          contents={""}
-          level={7}
-          className={"nav-id-hidden"}
-          headingId={"page_end"}
-        />
+        <Heading data={{ ...page_marker_data, id: "page_end" }} />
       </PageBody>
     </html>
   );
