@@ -1,7 +1,7 @@
 import GalleryBlock, { gallery_items } from "@/components/blocks/gallery_block";
 import ParagraphBlock from "@/components/blocks/paragraph_block";
 import LinkBLock from "@/components/blocks/link_block";
-import Section from "@/components/elements/section";
+import Section from "@/components/elements/structure/section";
 
 import Footer, { footer_sections } from "@/components/page_structure/footer";
 import Header from "@/components/page_structure/header";
@@ -9,14 +9,13 @@ import Sidebar from "@/components/page_structure/sidebar";
 import Main from "@/components/page_structure/main";
 import TableOfContents, {
   outlined_heading,
-} from "@/components/elements/table_of_contents";
+} from "@/components/elements/structure/table_of_contents";
 
 import "@/styles/shared.css";
 import "@/styles/app/shared.css";
 import "@/styles/app/homepage.css";
 
 import { to_key } from "@/utilities/key_mapping";
-
 
 import welcome_paragraph_data from "@/data/app/homepage/blocks/welcome.json";
 import summery_paragraph_data from "@/data/app/homepage/blocks/summery.json";
@@ -38,8 +37,6 @@ let outline: outlined_heading[] = [
   { order: 10, header: "Small Header", linked_id: "#test1", type: 5 },
   { order: 11, header: "Smaller Header", linked_id: "#test2", type: 6 },
 ];
-
-
 
 let homepage_footer_sections: footer_sections = [
   {
@@ -199,14 +196,12 @@ function HopePageProjectsLinkedSection() {
   return (
     <Section
       heading={{ level: 3, contents: "Projects", id: "linked_projects" }}
-      contents={
-        [
-          <LinkBLock
-            key={"gallery-2"}
-            data={showcase_links_data}
-          />,
-        ]
-      }
+      contents={[
+        <LinkBLock
+          key={"gallery-2"}
+          data={showcase_links_data}
+        />,
+      ]}
     />
   );
 }

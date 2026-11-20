@@ -4,7 +4,7 @@ import "@/styles/components/page_structure/header.css";
 
 import Seperator from "@/components/elements/seperator";
 
-import NavigationBar, { navlinks } from "@/components/elements/navbar";
+import NavigationBar, { navlinks } from "@/components/elements/structure/navbar";
 import { IdentifiedHeading } from "@/components/elements/heading";
 
 let defaultlinks: navlinks = Array(

@@ -1,6 +1,6 @@
 import "@/styles/components/shared.css";
 import "@/styles/components/elements/shared.css";
-import "@/styles/components/elements/navbar.css";
+import "@/styles/components/elements/structure/navbar.css";
 
 import Seperator from "@/components/elements/seperator";
 

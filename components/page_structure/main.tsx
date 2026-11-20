@@ -3,7 +3,7 @@ import "@/styles/components/page_structure/shared.css";
 import "@/styles/components/page_structure/main.css";
 
 import Seperator from "@/components/elements/seperator";
-import { sections } from "@/components/elements/section";
+import { sections } from "@/components/elements/structure/section";
 
 export default function Main({ children }: { children: sections }) {
   return (

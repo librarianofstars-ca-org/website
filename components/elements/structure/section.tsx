@@ -1,5 +1,5 @@
 import "@/styles/components/elements/shared.css";
-import "@/styles/components/elements/section.css";
+import "@/styles/components/elements/structure/section.css";
 
 import {
   ident_heading_props,
