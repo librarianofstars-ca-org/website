@@ -9,20 +9,25 @@ import { ReactElement } from "react";
 
 import { block } from "@/components/blocks/generic_block";
 import Seperator from "@/components/elements/seperator";
+import { to_key } from "@/utilities/key_mapping";
 
 export type section_content = ReactElement<typeof Section> | block;
 
-export type section_data = {
+export type section = {
+  id: { index: number; name: string };
   heading: ident_heading_props;
   contents: section_content[];
 };
 
 export type sections = ReactElement<typeof Section>[];
 
-export default function Section({ heading, contents }: section_data) {
+export default function Section({ data }: { data: section }) {
   return (
-    <div className="section">
-      {heading.level <= 3 && (
+    <div
+      className="section"
+      key={to_key(data.id)}
+    >
+      {data.heading.level <= 3 && (
         <Seperator
           className={"section-start"}
           isVertical={false}
@@ -30,13 +35,11 @@ export default function Section({ heading, contents }: section_data) {
       )}
       <IdentifiedHeading
         className="section-title"
-        headingId={heading.id}
-        contents={heading.contents}
-        level={heading.level}
+        headingId={data.heading.id}
+        contents={data.heading.contents}
+        level={data.heading.level}
       />
-      {/* <div className="section-contents"> */}
-      {contents}
-      {/* </div> */}
+      {data.contents}
     </div>
   );
 }

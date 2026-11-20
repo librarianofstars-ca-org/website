@@ -29,112 +29,113 @@ export default function HomePage() {
     <>
       <Header data={homepage_header_data} />
       <Sidebar data={homepage_sidebar_data} />
-      <HomePageMain />
+      <Main>
+        <HomePageWelcomeSplashSection />
+        <HomePageAboutMeSection />
+        <HomePageShowcaseSection />
+      </Main>
       <Footer data={homepage_footer_data} />
     </>
   );
 }
 
-function HomePageMain() {
-  return (
-    <Main>
-      <HomePageWelcomeSplashSection />
-      <HomePageAboutMeSection />
-      <HomePageShowcaseSection />
-    </Main>
-  );
-}
+let welcome_splash_data = {
+  id: { index: 1, name: "" },
+  heading: { level: 2, contents: "Welcome", id: "greatings" },
+  contents: [
+    <ParagraphBlock
+      key={to_key(welcome_paragraph_data.id)}
+      data={welcome_paragraph_data}
+    />,
+  ],
+};
 
 function HomePageWelcomeSplashSection() {
-  return (
-    <Section
-      heading={{ level: 2, contents: "Welcome", id: "greatings" }}
-      contents={[
-        <ParagraphBlock
-          key={to_key(welcome_paragraph_data.id)}
-          data={welcome_paragraph_data}
-        />,
-      ]}
-    />
-  );
+  return <Section data={welcome_splash_data} />;
 }
+
+let about_me_data = {
+  id: { index: 1, name: "" },
+  heading: { level: 2, contents: "About Me", id: "about" },
+  contents: [
+    <HomePageSummerySection key={"about-1"} />,
+    <HomePageLinksSection key={"about-2"} />,
+  ],
+};
 
 function HomePageAboutMeSection() {
-  return (
-    <Section
-      heading={{ level: 2, contents: "About Me", id: "about" }}
-      contents={[
-        <HomePageSummerySection key={"about-1"} />,
-        <HomePageLinksSection key={"about-2"} />,
-      ]}
-    />
-  );
+  return <Section data={about_me_data} />;
 }
+
+let summery_data = {
+  id: { index: 1, name: "" },
+  heading: { level: 3, contents: "Summery", id: "summery" },
+  contents: [
+    <ParagraphBlock
+      key="summery-1"
+      data={summery_paragraph_data}
+    />,
+  ],
+};
 
 function HomePageSummerySection() {
-  return (
-    <Section
-      heading={{ level: 3, contents: "Summery", id: "summery" }}
-      contents={[
-        <ParagraphBlock
-          key="summery-1"
-          data={summery_paragraph_data}
-        />,
-      ]}
-    />
-  );
+  return <Section data={summery_data} />;
 }
+
+let contact_me_data = {
+  id: { index: 1, name: "" },
+  heading: { level: 3, contents: "Links", id: "links" },
+  contents: [
+    <LinkBLock
+      key={"contact_me_1"}
+      data={contact_me_links_data}
+    />,
+  ],
+};
 
 function HomePageLinksSection() {
-  return (
-    <Section
-      heading={{ level: 3, contents: "Links", id: "links" }}
-      contents={[
-        <LinkBLock
-          key={"contact_me_1"}
-          data={contact_me_links_data}
-        />,
-      ]}
-    />
-  );
+  return <Section data={contact_me_data} />;
 }
+
+let showcase_data = {
+  id: { index: 1, name: "" },
+  heading: { level: 2, contents: "Showcase", id: "display" },
+  contents: [
+    <HomePageArtGallerySection key={"display-1"} />,
+    <HopePageProjectsLinkedSection key={"display-2"} />,
+  ],
+};
 
 function HomePageShowcaseSection() {
-  return (
-    <Section
-      heading={{ level: 2, contents: "Showcase", id: "display" }}
-      contents={[
-        <HomePageArtGallerySection key={"display-1"} />,
-        <HopePageProjectsLinkedSection key={"display-2"} />,
-      ]}
-    />
-  );
+  return <Section data={showcase_data} />;
 }
+
+let gallery_data = {
+  id: { index: 1, name: "" },
+  heading: { level: 3, contents: "Art", id: "gallery" },
+  contents: [
+    <GalleryBlock
+      key="gallery-1"
+      data={showcase_art_data}
+    />,
+  ],
+};
 
 function HomePageArtGallerySection() {
-  return (
-    <Section
-      heading={{ level: 3, contents: "Art", id: "gallery" }}
-      contents={[
-        <GalleryBlock
-          key="gallery-1"
-          data={showcase_art_data}
-        />,
-      ]}
-    />
-  );
+  return <Section data={gallery_data} />;
 }
 
+let linked_section_data = {
+  id: { index: 1, name: "linked_section" },
+  heading: { level: 3, contents: "Projects", id: "linked_projects" },
+  contents: [
+    <LinkBLock
+      key={"gallery-2"}
+      data={showcase_links_data}
+    />,
+  ],
+};
+
 function HopePageProjectsLinkedSection() {
-  return (
-    <Section
-      heading={{ level: 3, contents: "Projects", id: "linked_projects" }}
-      contents={[
-        <LinkBLock
-          key={"gallery-2"}
-          data={showcase_links_data}
-        />,
-      ]}
-    />
-  );
+  return <Section data={linked_section_data} />;
 }

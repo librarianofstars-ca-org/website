@@ -1,0 +1,9 @@
+{
+  "$id": "https://librarianofstars.ca/schema/components/elements/structure/navbar.json",
+  "type": "object",
+  "properties": {
+    "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },,
+    "heading": true,
+    "contents": true
+  }
+}
