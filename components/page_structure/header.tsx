@@ -4,7 +4,9 @@ import "@/styles/components/page_structure/header.css";
 
 import Seperator from "@/components/elements/seperator";
 
-import NavigationBar, { navlinks } from "@/components/elements/structure/navbar";
+import NavigationBar, {
+  navlinks,
+} from "@/components/elements/structure/navbar";
 import { IdentifiedHeading } from "@/components/elements/heading";
 
 let defaultlinks: navlinks = Array(
@@ -26,28 +28,16 @@ export default function Header({
   return (
     <div className="header">
       <NavigationBar links={links} />
-      <HeaderSeperator />
-      <PageTitle>Librarian Of Stars' Homepage!</PageTitle>
-    </div>
-  );
-}
-
-export function PageTitle({ children }) {
-  return (
-    <IdentifiedHeading
+      <Seperator
+        isVertical={false}
+        className="header"
+      />
+      <IdentifiedHeading
       headingId="#home"
       className="page-title"
-      contents={children}
+      contents={"Librarian Of Stars' Homepage!"}
       level={1}
     />
-  );
-}
-
-export function HeaderSeperator() {
-  return (
-    <Seperator
-      isVertical={false}
-      className="header"
-    />
+    </div>
   );
 }

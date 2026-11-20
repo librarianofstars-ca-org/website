@@ -7,18 +7,15 @@ import Seperator from "@/components/elements/seperator";
 export default function Sidebar({ children }) {
   return (
     <div className="sidebar wraper">
-      <SideBarSeperator />
+      <Seperator
+        isVertical={true}
+        className="sidebar left"
+      />
       <div className="sidebar contents">{children}</div>
-      <SideBarSeperator />
+      <Seperator
+        isVertical={true}
+        className="sidebar right"
+      />
     </div>
-  );
-}
-
-export function SideBarSeperator() {
-  return (
-    <Seperator
-      isVertical={true}
-      className="sidebar"
-    />
   );
 }
