@@ -23,7 +23,7 @@ import contact_me_links_data from "@/data/app/homepage/blocks/contact_me.json";
 import showcase_art_data from "@/data/app/homepage/blocks/art_show.json";
 import showcase_links_data from "@/data/app/homepage/blocks/projects.json";
 
-import homepage_footer_data from "@/data/app/homepage/structure/footer.json";
+import homepage_footer_data from "@/data/app/homepage/page/footer.json";
 
 let outline: outlined_heading[] = [
   { order: 0, header: "Homepage", linked_id: "#home", type: 1 },
