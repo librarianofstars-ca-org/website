@@ -8,9 +8,12 @@ import Link from "next/link";
 import Icon from "@/components/elements/icon";
 
 export type navlink = { id: string; linked: string; display: string };
-export type navlinks = Array<navlink>;
 
-export default function NavigationBar({ links }: { links: navlinks }) {
+export interface navbar {
+  links: navlink[];
+}
+
+export default function NavigationBar({ data }: { data: navbar }) {
   return (
     <nav>
       <Icon
@@ -21,7 +24,7 @@ export default function NavigationBar({ links }: { links: navlinks }) {
       />
       <NavSeperator />
       <NavLinks>
-        {links.map((link) => (
+        {data.links.map((link) => (
           <NavLink
             key={link.id}
             linked={link.linked}

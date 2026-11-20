@@ -173,6 +173,13 @@
       "url": "./schema/components/page/sidebar.json"
     },
     {
+      "fileMatch": [
+        "${workspaceFolder}/data/app/homepage/page/header.json",
+        "${workspaceFolder}/data/app/homepage/compiled/header.json"
+      ],
+      "url": "./schema/components/page/header.json"
+    },
+    {
       "fileMatch": ["${workspaceFolder}/data/compile_maps.json"],
       "schema": {
         "type": "array",

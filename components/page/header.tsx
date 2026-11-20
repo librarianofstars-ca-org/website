@@ -4,30 +4,18 @@ import "@/styles/components/page/header.css";
 
 import Seperator from "@/components/elements/seperator";
 
-import NavigationBar, {
-  navlinks,
-} from "@/components/elements/structure/navbar";
+import NavigationBar, { navbar } from "@/components/elements/structure/navbar";
 import { IdentifiedHeading } from "@/components/elements/heading";
 
-let defaultlinks: navlinks = Array(
-  { id: "0", linked: "./", display: "example" },
-  { id: "1", linked: "./about", display: "About Me!" },
-);
+export interface header {
+  page_title: string;
+  navigation: navbar;
+}
 
-export default function Header({
-  specificNavLinks,
-}: {
-  specificNavLinks?: navlinks;
-}) {
-  let links: navlinks;
-  if (specificNavLinks) {
-    links = defaultlinks.concat(specificNavLinks);
-  } else {
-    links = defaultlinks;
-  }
+export default function Header({ data }: { data: header }) {
   return (
     <div className="header">
-      <NavigationBar links={links} />
+      <NavigationBar data={data.navigation} />
       <Seperator
         isVertical={false}
         className="header"
@@ -35,7 +23,7 @@ export default function Header({
       <IdentifiedHeading
         headingId="#home"
         className="page-title"
-        contents={"Librarian Of Stars' Homepage!"}
+        contents={data.page_title}
         level={1}
       />
     </div>

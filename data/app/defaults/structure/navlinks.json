@@ -1,0 +1,4 @@
+[
+  { "id": "0", "linked": "./", "display": "example" },
+  { "id": "1", "linked": "./about", "display": "About Me!" }
+]

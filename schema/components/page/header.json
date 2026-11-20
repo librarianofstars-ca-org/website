@@ -1,0 +1,10 @@
+{
+  "$id": "https://librarianofstars.ca/schema/components/page/header.json",
+  "type": "object",
+  "properties": {
+    "page_title": { "type": "string" },
+    "navigation": {
+      "$ref": "https://librarianofstars.ca/schema/components/elements/structure/navbar.json"
+    }
+  }
+}

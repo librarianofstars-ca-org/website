@@ -1,0 +1,6 @@
+{
+  "page_title": "Librarian Of Stars",
+  "navigation": {
+    "links": { "datalink": "./app/defaults/structure/navlinks.json" }
+  }
+}

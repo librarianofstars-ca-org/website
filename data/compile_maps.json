@@ -18,5 +18,9 @@
   {
     "in": "./app/homepage/page/sidebar.json",
     "out": "./app/homepage/compiled/sidebar.json"
+  },
+  {
+    "in": "./app/homepage/page/header.json",
+    "out": "./app/homepage/compiled/header.json"
   }
 ]

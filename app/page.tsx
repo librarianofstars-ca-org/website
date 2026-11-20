@@ -22,6 +22,7 @@ import showcase_links_data from "@/data/app/homepage/blocks/projects.json";
 
 import homepage_footer_data from "@/data/app/homepage/page/footer.json";
 import homepage_sidebar_data from "@/data/app/homepage/compiled/sidebar.json";
+import homepage_header_data from "@/data/app/homepage/compiled/header.json";
 
 export default function HomePage() {
   return (
@@ -35,11 +36,7 @@ export default function HomePage() {
 }
 
 function HomePageHeader() {
-  return (
-    <Header
-    // specificNavLinks={[{ id: "3", linked: "./example", display: "test" }]}
-    />
-  );
+  return <Header data={homepage_header_data} />;
 }
 
 function HomePageSidebar() {
@@ -49,7 +46,6 @@ function HomePageSidebar() {
 function HomePageMain() {
   return (
     <Main>
-      {/* <Example data={test_data} /> */}
       <HomePageWelcomeSplashSection />
       <HomePageAboutMeSection />
       <HomePageShowcaseSection />
