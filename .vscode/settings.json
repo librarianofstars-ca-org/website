@@ -154,6 +154,20 @@
         "${workspaceFolder}/data/app/homepage/blocks/projects.json"
       ],
       "url": "./schema/components/blocks/links.json"
+    },
+    {
+      "fileMatch": ["${workspaceFolder}/data/compile_maps.json"],
+      "schema": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "in": { "type": "string" },
+            "out": { "type": "string" }
+          },
+          "required": ["in", "out"]
+        }
+      }
     }
   ]
 }
