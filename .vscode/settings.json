@@ -156,6 +156,23 @@
       "url": "./schema/components/blocks/links.json"
     },
     {
+      "fileMatch": ["${workspaceFolder}/data/app/homepage/page/footer.json"],
+      "url": "./schema/components/page/footer.json"
+    },
+    {
+      "fileMatch": [
+        "${workspaceFolder}/data/app/homepage/structure/outline.json"
+      ],
+      "url": "./schema/components/elements/structure/table_of_contents.json"
+    },
+    {
+      "fileMatch": [
+        "${workspaceFolder}/data/app/homepage/page/sidebar.json",
+        "${workspaceFolder}/data/app/homepage/compiled/sidebar.json"
+      ],
+      "url": "./schema/components/page/sidebar.json"
+    },
+    {
       "fileMatch": ["${workspaceFolder}/data/compile_maps.json"],
       "schema": {
         "type": "array",

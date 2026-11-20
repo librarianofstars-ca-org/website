@@ -7,9 +7,6 @@ import Footer from "@/components/page/footer";
 import Header from "@/components/page/header";
 import Sidebar from "@/components/page/sidebar";
 import Main from "@/components/page/main";
-import TableOfContents, {
-  outlined_heading,
-} from "@/components/elements/structure/table_of_contents";
 
 import "@/styles/shared.css";
 import "@/styles/app/shared.css";
@@ -24,21 +21,7 @@ import showcase_art_data from "@/data/app/homepage/blocks/art_show.json";
 import showcase_links_data from "@/data/app/homepage/blocks/projects.json";
 
 import homepage_footer_data from "@/data/app/homepage/page/footer.json";
-
-let outline: outlined_heading[] = [
-  { order: 0, header: "Homepage", linked_id: "#home", type: 1 },
-  { order: 1, header: "Welcome", linked_id: "#greating", type: 2 },
-  { order: 2, header: "Links", linked_id: "#links", type: 2 },
-  { order: 3, header: "Internal", linked_id: "#internal_links", type: 3 },
-  { order: 4, header: "External", linked_id: "#external_links", type: 3 },
-  { order: 5, header: "About Me", linked_id: "#about", type: 2 },
-  { order: 6, header: "Personal Details", linked_id: "#personal", type: 3 },
-  { order: 7, header: "Name", linked_id: "#personal_name", type: 4 },
-  { order: 8, header: "Nicknames", linked_id: "#personal_name_nicks", type: 5 },
-  { order: 9, header: "Pronouns", linked_id: "#personal_pronouns", type: 4 },
-  { order: 10, header: "Small Header", linked_id: "#test1", type: 5 },
-  { order: 11, header: "Smaller Header", linked_id: "#test2", type: 6 },
-];
+import homepage_sidebar_data from "@/data/app/homepage/compiled/sidebar.json";
 
 export default function HomePage() {
   return (
@@ -60,11 +43,7 @@ function HomePageHeader() {
 }
 
 function HomePageSidebar() {
-  return (
-    <Sidebar>
-      <TableOfContents contents_headers={outline} />
-    </Sidebar>
-  );
+  return <Sidebar data={homepage_sidebar_data} />;
 }
 
 function HomePageMain() {

@@ -4,27 +4,25 @@ import "@/styles/components/elements/structure/table_of_contents.css";
 
 import { LinkedHeading } from "@/components/elements/heading";
 
-export type outlined_heading = {
+export interface outlined_heading {
   order: number;
-  linked_id: string;
-  header: string;
-  type: number;
-};
+  link: string;
+  display: string;
+  level: number;
+}
 
-export default function TableOfContents({
-  contents_headers,
-}: {
-  contents_headers: outlined_heading[];
-}) {
+export type table_of_contents = outlined_heading[];
+
+export default function TableOfContents({ data }: { data: table_of_contents }) {
   return (
     <div className="table-of-contents">
       <TOCPlace place="start" />
-      {contents_headers.map((content_header) => (
+      {data.map((outline_item) => (
         <LinkedHeading
-          key={content_header.order.toString() + "-order"}
-          link={content_header.linked_id}
-          contents={content_header.header}
-          level={content_header.type + 1}
+          key={outline_item.order.toString() + "-order"}
+          link={outline_item.link}
+          contents={outline_item.display}
+          level={outline_item.level + 1}
           className="toc-item"
         />
       ))}

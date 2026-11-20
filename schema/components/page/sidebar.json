@@ -1,0 +1,18 @@
+{
+  "$id": "https://librarianofstars.ca/schema/components/page/sidebar.json",
+  "type": "array",
+  "items": {
+    "anyOf": [
+      {
+        "type": "object",
+        "properties": {
+          "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
+          "section_type": { "type": "string", "enum": ["TOC"] },
+          "contents": {
+            "$ref": "https://librarianofstars.ca/schema/components/elements/structure/table_of_contents.json"
+          }
+        }
+      }
+    ]
+  }
+}

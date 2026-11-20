@@ -1,0 +1,13 @@
+{
+  "$id": "https://librarianofstars.ca/schema/components/elements/structure/table_of_contents.json",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "order": { "type": "number" },
+      "link": { "type": "string" },
+      "display": { "type": "string" },
+      "level": { "type": "number" }
+    }
+  }
+}
