@@ -1,5 +1,18 @@
 {
   "$id": "https://librarianofstars.ca/schema/components/elements/structure/navbar.json",
   "type": "object",
-  "properties": {}
+  "properties": {
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "linked": { "type": "string" },
+          "display": { "type": "string" }
+        },
+        "required": ["id", "linked", "display"]
+      }
+    }
+  }
 }
