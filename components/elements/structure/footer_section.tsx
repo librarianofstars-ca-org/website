@@ -2,19 +2,23 @@ import { ReactNode } from "react";
 
 import Heading from "@/components/elements/heading";
 import Seperator from "@/components/elements/seperator";
-import { footer_section_contents } from "@/components/page/footer";
 
 import "@/styles/components/elements/structure/footer_section.css";
 
 import { to_key_index_name } from "@/utilities/key_mapping";
 
-export default function FooterSection({
-  title,
-  contents,
-}: {
+export interface footer_section_item {
   title: string;
-  contents: footer_section_contents;
-}) {
+  contents: ReactNode[];
+}
+
+export interface footer_section {
+  id: { index: number; name: string };
+  title: string;
+  contents: footer_section_item[];
+}
+
+export default function FooterSection({ title, contents }: footer_section) {
   return (
     <div className="footer-section">
       <Heading
@@ -23,7 +27,7 @@ export default function FooterSection({
         contents={title}
       />
       <dl>
-        {contents.map(({ type, content }, index) => (
+        {contents.map(({ title, contents }, index) => (
           <div
             key={to_key_index_name(index, "section")}
             className="footer-contents-wrapper"
@@ -32,8 +36,8 @@ export default function FooterSection({
               isVertical={false}
               className={"footer-contents"}
             />
-            <dt key={index}>{type}</dt>
-            {content.map((content: ReactNode, index: number) => (
+            <dt key={index}>{title}</dt>
+            {contents.map((content: ReactNode, index: number) => (
               <dd key={index}>{content}</dd>
             ))}
           </div>

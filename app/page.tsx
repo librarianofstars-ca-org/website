@@ -3,7 +3,7 @@ import ParagraphBlock from "@/components/blocks/paragraph_block";
 import LinkBLock from "@/components/blocks/link_block";
 import Section from "@/components/elements/structure/section";
 
-import Footer, { footer_sections } from "@/components/page/footer";
+import Footer from "@/components/page/footer";
 import Header from "@/components/page/header";
 import Sidebar from "@/components/page/sidebar";
 import Main from "@/components/page/main";
@@ -23,6 +23,8 @@ import contact_me_links_data from "@/data/app/homepage/blocks/contact_me.json";
 import showcase_art_data from "@/data/app/homepage/blocks/art_show.json";
 import showcase_links_data from "@/data/app/homepage/blocks/projects.json";
 
+import homepage_footer_data from "@/data/app/homepage/structure/footer.json";
+
 let outline: outlined_heading[] = [
   { order: 0, header: "Homepage", linked_id: "#home", type: 1 },
   { order: 1, header: "Welcome", linked_id: "#greating", type: 2 },
@@ -36,42 +38,6 @@ let outline: outlined_heading[] = [
   { order: 9, header: "Pronouns", linked_id: "#personal_pronouns", type: 4 },
   { order: 10, header: "Small Header", linked_id: "#test1", type: 5 },
   { order: 11, header: "Smaller Header", linked_id: "#test2", type: 6 },
-];
-
-let homepage_footer_sections: footer_sections = [
-  {
-    order: 1,
-    title: "Credits",
-    contents: [
-      { type: "Site Design", content: ["Librarian Of Stars"] },
-      {
-        type: "Contributors",
-        content: ["Librarian Of Stars", "ChrisNolan.ca"],
-      },
-    ],
-  },
-  {
-    order: 2,
-    title: "Contact",
-    contents: [
-      {
-        type: "Email",
-        content: [
-          <a href="mailto:contact@libarianofstars.ca">
-            contact@libarianofstars.ca
-          </a>,
-        ],
-      },
-      {
-        type: "Placeholder",
-        content: ["account 1", "account 2", "account 3"],
-      },
-      {
-        type: "Github",
-        content: ["Librarian Of Stars"],
-      },
-    ],
-  },
 ];
 
 export default function HomePage() {
@@ -207,5 +173,5 @@ function HopePageProjectsLinkedSection() {
 }
 
 function HomePageFooter() {
-  return <Footer sections={homepage_footer_sections} />;
+  return <Footer data={homepage_footer_data} />;
 }

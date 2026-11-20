@@ -1,0 +1,7 @@
+{
+  "$id": "https://librarianofstars.ca/schema/components/page/footer.json",
+  "type": "array",
+  "items": {
+    "$ref": "https://librarianofstars.ca/schema/components/elements/structure/footer_section.json"
+  }
+}
