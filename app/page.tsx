@@ -3,10 +3,10 @@ import ParagraphBlock from "@/components/blocks/paragraph_block";
 import LinkBLock from "@/components/blocks/link_block";
 import Section from "@/components/elements/structure/section";
 
-import Footer, { footer_sections } from "@/components/page_structure/footer";
-import Header from "@/components/page_structure/header";
-import Sidebar from "@/components/page_structure/sidebar";
-import Main from "@/components/page_structure/main";
+import Footer, { footer_sections } from "@/components/page/footer";
+import Header from "@/components/page/header";
+import Sidebar from "@/components/page/sidebar";
+import Main from "@/components/page/main";
 import TableOfContents, {
   outlined_heading,
 } from "@/components/elements/structure/table_of_contents";

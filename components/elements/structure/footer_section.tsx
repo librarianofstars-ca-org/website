@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 import Heading from "@/components/elements/heading";
 import Seperator from "@/components/elements/seperator";
-import { footer_section_contents } from "@/components/page_structure/footer";
+import { footer_section_contents } from "@/components/page/footer";
 
 import "@/styles/components/elements/structure/footer_section.css";
 

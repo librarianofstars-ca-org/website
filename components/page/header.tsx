@@ -1,6 +1,6 @@
 import "@/styles/components/shared.css";
-import "@/styles/components/page_structure/shared.css";
-import "@/styles/components/page_structure/header.css";
+import "@/styles/components/page/shared.css";
+import "@/styles/components/page/header.css";
 
 import Seperator from "@/components/elements/seperator";
 
@@ -33,11 +33,11 @@ export default function Header({
         className="header"
       />
       <IdentifiedHeading
-      headingId="#home"
-      className="page-title"
-      contents={"Librarian Of Stars' Homepage!"}
-      level={1}
-    />
+        headingId="#home"
+        className="page-title"
+        contents={"Librarian Of Stars' Homepage!"}
+        level={1}
+      />
     </div>
   );
 }
