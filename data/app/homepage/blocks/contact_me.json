@@ -1,5 +1,6 @@
 {
   "id": { "name": "contacts_block", "index": 1 },
+  "block_type": "links",
   "contents": [
     {
       "id": { "name": "contacts", "index": 1 },

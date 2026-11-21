@@ -180,6 +180,10 @@
       "url": "./schema/components/page/header.json"
     },
     {
+      "fileMatch": ["${workspaceFolder}/data/app/homepage/sections/*.json"],
+      "url": "./schema/components/elements/structure/section.json"
+    },
+    {
       "fileMatch": ["${workspaceFolder}/data/compile_maps.json"],
       "schema": {
         "type": "array",

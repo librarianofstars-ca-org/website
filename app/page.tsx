@@ -1,7 +1,7 @@
-import GalleryBlock, { gallery_items } from "@/components/blocks/gallery_block";
+import GalleryBlock from "@/components/blocks/gallery_block";
 import ParagraphBlock from "@/components/blocks/paragraph_block";
 import LinkBLock from "@/components/blocks/link_block";
-import Section from "@/components/elements/structure/section";
+import Section, { section } from "@/components/elements/structure/section";
 
 import Footer from "@/components/page/footer";
 import Header from "@/components/page/header";
@@ -23,119 +23,63 @@ import showcase_links_data from "@/data/app/homepage/blocks/projects.json";
 import homepage_footer_data from "@/data/app/homepage/page/footer.json";
 import homepage_sidebar_data from "@/data/app/homepage/compiled/sidebar.json";
 import homepage_header_data from "@/data/app/homepage/compiled/header.json";
+// import homepage_main_data from "@/data/app/homepage/compiled/main.json";
 
 export default function HomePage() {
   return (
     <>
       <Header data={homepage_header_data} />
       <Sidebar data={homepage_sidebar_data} />
-      <Main>
-        <HomePageWelcomeSplashSection />
-        <HomePageAboutMeSection />
-        <HomePageShowcaseSection />
+      <Main
+      // data={homepage_main_data}
+      >
+        <Section data={welcome_splash_data} />
+        <Section data={about_me_data} />
+        <Section data={showcase_data} />
       </Main>
       <Footer data={homepage_footer_data} />
     </>
   );
 }
 
-let welcome_splash_data = {
-  id: { index: 1, name: "" },
+let welcome_splash_data: section = {
+  id: { index: 1, name: "welcome" },
   heading: { level: 2, contents: "Welcome", id: "greatings" },
-  contents: [
-    <ParagraphBlock
-      key={to_key(welcome_paragraph_data.id)}
-      data={welcome_paragraph_data}
-    />,
-  ],
+  contents: [welcome_paragraph_data],
 };
 
-function HomePageWelcomeSplashSection() {
-  return <Section data={welcome_splash_data} />;
-}
-
-let about_me_data = {
-  id: { index: 1, name: "" },
-  heading: { level: 2, contents: "About Me", id: "about" },
-  contents: [
-    <HomePageSummerySection key={"about-1"} />,
-    <HomePageLinksSection key={"about-2"} />,
-  ],
-};
-
-function HomePageAboutMeSection() {
-  return <Section data={about_me_data} />;
-}
-
-let summery_data = {
-  id: { index: 1, name: "" },
+let summery_data: section = {
+  id: { index: 1, name: "summery" },
   heading: { level: 3, contents: "Summery", id: "summery" },
-  contents: [
-    <ParagraphBlock
-      key="summery-1"
-      data={summery_paragraph_data}
-    />,
-  ],
+  contents: [summery_paragraph_data],
 };
 
-function HomePageSummerySection() {
-  return <Section data={summery_data} />;
-}
-
-let contact_me_data = {
-  id: { index: 1, name: "" },
+let contact_me_data: section = {
+  id: { index: 1, name: "contact_me" },
   heading: { level: 3, contents: "Links", id: "links" },
-  contents: [
-    <LinkBLock
-      key={"contact_me_1"}
-      data={contact_me_links_data}
-    />,
-  ],
+  contents: [contact_me_links_data],
 };
 
-function HomePageLinksSection() {
-  return <Section data={contact_me_data} />;
-}
-
-let showcase_data = {
-  id: { index: 1, name: "" },
-  heading: { level: 2, contents: "Showcase", id: "display" },
-  contents: [
-    <HomePageArtGallerySection key={"display-1"} />,
-    <HopePageProjectsLinkedSection key={"display-2"} />,
-  ],
+let about_me_data: section = {
+  id: { index: 1, name: "about_me" },
+  heading: { level: 2, contents: "About Me", id: "about" },
+  contents: [summery_data, contact_me_data],
 };
 
-function HomePageShowcaseSection() {
-  return <Section data={showcase_data} />;
-}
-
-let gallery_data = {
-  id: { index: 1, name: "" },
+let gallery_data: section = {
+  id: { index: 1, name: "gallery" },
   heading: { level: 3, contents: "Art", id: "gallery" },
-  contents: [
-    <GalleryBlock
-      key="gallery-1"
-      data={showcase_art_data}
-    />,
-  ],
+  contents: [showcase_art_data],
 };
 
-function HomePageArtGallerySection() {
-  return <Section data={gallery_data} />;
-}
-
-let linked_section_data = {
+let linked_section_data: section = {
   id: { index: 1, name: "linked_section" },
   heading: { level: 3, contents: "Projects", id: "linked_projects" },
-  contents: [
-    <LinkBLock
-      key={"gallery-2"}
-      data={showcase_links_data}
-    />,
-  ],
+  contents: [showcase_links_data],
 };
 
-function HopePageProjectsLinkedSection() {
-  return <Section data={linked_section_data} />;
-}
+let showcase_data: section = {
+  id: { index: 1, name: "showcase" },
+  heading: { level: 2, contents: "Showcase", id: "display" },
+  contents: [gallery_data, linked_section_data],
+};

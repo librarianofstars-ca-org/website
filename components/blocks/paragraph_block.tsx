@@ -3,15 +3,14 @@ import "@/styles/components/blocks/paragraph_block.css";
 
 // import Seperator from "@/components/elements/seperator";
 
-import Block from "@/components/blocks/generic_block";
+import {BlockWraper, block_data } from "@/components/blocks/generic_block";
 
 export interface paragraph_data {
   id: { index: number; name: string };
   contents: string | boolean;
 }
 
-export interface paragraph_block {
-  id: { index: number; name: string };
+export interface paragraph_block extends block_data {
   contents: paragraph_data[];
 }
 
@@ -24,12 +23,13 @@ export default function ParagraphBlock({ data }: { data: paragraph_block }) {
     !validate_against_schema(
       "https://librarianofstars.ca/schema/components/blocks/paragraph.json",
       data,
-    )
+    ) ||
+    data.block_type != "paragraph"
   ) {
     return <ErrorData data={data} />;
   }
   return (
-    <Block
+    <BlockWraper
       type={"paragraph"}
       key={to_key(data.id)}
     >
@@ -39,7 +39,7 @@ export default function ParagraphBlock({ data }: { data: paragraph_block }) {
           data={paragraph}
         />
       ))}
-    </Block>
+    </BlockWraper>
   );
 }
 export function ParagraphElement({ data }: { data: paragraph_data }) {
