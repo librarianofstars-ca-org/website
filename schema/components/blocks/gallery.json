@@ -4,7 +4,6 @@
   "description": "A block of art pieces",
   "properties": {
     "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
-    "block_type": { "type": "string", "enum": ["gallery"] },
     "contents": {
       "type": "array",
       "description": "A array of embeded objects",

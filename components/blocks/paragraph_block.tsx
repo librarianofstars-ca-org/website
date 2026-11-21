@@ -23,8 +23,7 @@ export default function ParagraphBlock({ data }: { data: paragraph_block }) {
     !validate_against_schema(
       "https://librarianofstars.ca/schema/components/blocks/paragraph.json",
       data,
-    ) ||
-    data.block_type != "paragraph"
+    )
   ) {
     return <ErrorData data={data} />;
   }

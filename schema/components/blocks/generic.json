@@ -1,22 +1,25 @@
 {
   "$id": "https://librarianofstars.ca/schema/components/blocks/generic.json",
   "description": "Any of the block schema",
-  "anyOf": [
-    {
-      "$ref": "https://librarianofstars.ca/schema/components/blocks/gallery.json"
-    },
-    {
-      "$ref": "https://librarianofstars.ca/schema/components/blocks/links.json"
-    },
-    {
-      "$ref": "https://librarianofstars.ca/schema/components/blocks/paragraph.json"
-    }
-  ],
+  "type": "object",
   "properties": {
-    "content_type": {
+    "block_type": {
       "type": "string",
       "enum": ["gallery", "links", "paragraph"]
+    },
+    "contents": {
+      "anyOf": [
+        {
+          "$ref": "https://librarianofstars.ca/schema/components/blocks/gallery.json"
+        },
+        {
+          "$ref": "https://librarianofstars.ca/schema/components/blocks/links.json"
+        },
+        {
+          "$ref": "https://librarianofstars.ca/schema/components/blocks/paragraph.json"
+        }
+      ]
     }
   },
-  "required": ["content_type"]
+  "required": ["block_type", "contents"]
 }

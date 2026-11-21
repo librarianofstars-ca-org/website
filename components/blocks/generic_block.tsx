@@ -8,12 +8,13 @@ import ParagraphBlock, {
 import { to_key } from "@/utilities/key_mapping";
 
 export interface block_data {
+  id: { index: number; name: string };
+}
+export interface block {
   block_type: string;
   id: { index: number; name: string };
-  contents: any;
+  contents: gallery_block | link_block | paragraph_block;
 }
-
-export type block = gallery_block | link_block | paragraph_block;
 
 export function BlockWraper({
   type,
@@ -33,21 +34,21 @@ export default function GenericBlock({ data }: { data: block }) {
       return (
         <ParagraphBlock
           key={to_key(data.id)}
-          data={data as paragraph_block}
+          data={data.contents as paragraph_block}
         />
       );
     case "gallery":
       return (
         <GalleryBlock
           key={to_key(data.id)}
-          data={data as gallery_block}
+          data={data.contents as gallery_block}
         />
       );
     case "links":
       return (
         <LinkBLock
           key={to_key(data.id)}
-          data={data as link_block}
+          data={data.contents as link_block}
         />
       );
     default:

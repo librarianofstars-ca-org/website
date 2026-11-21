@@ -29,8 +29,7 @@ export default function GalleryBlock({ data }: { data: gallery_block }) {
     !validate_against_schema(
       "https://librarianofstars.ca/schema/components/blocks/gallery.json",
       data,
-    ) ||
-    data.block_type != "gallery"
+    )
   ) {
     return <ErrorData data={data} />;
   }

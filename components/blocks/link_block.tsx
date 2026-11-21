@@ -29,8 +29,7 @@ export default function LinkBLock({ data }: { data: link_block }) {
     !validate_against_schema(
       "https://librarianofstars.ca/schema/components/blocks/links.json",
       data,
-    ) ||
-    data.block_type != "links"
+    )
   ) {
     return <ErrorData data={data} />;
   }

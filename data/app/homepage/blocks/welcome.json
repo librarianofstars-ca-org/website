@@ -1,20 +1,23 @@
 {
   "id": { "index": 1, "name": "welcome" },
   "block_type": "paragraph",
-  "contents": [
-    {
-      "id": {
-        "index": 1,
-        "name": "welcome_text"
+  "contents": {
+    "id": { "index": 1, "name": "art-show" },
+    "contents": [
+      {
+        "id": {
+          "index": 1,
+          "name": "welcome_text"
+        },
+        "contents": "Welcome to my site"
       },
-      "contents": "Welcome to my site"
-    },
-    {
-      "id": {
-        "index": 2,
-        "name": "welcome_text"
-      },
-      "contents": "Some more info"
-    }
-  ]
+      {
+        "id": {
+          "index": 2,
+          "name": "welcome_text"
+        },
+        "contents": "Some more info"
+      }
+    ]
+  }
 }

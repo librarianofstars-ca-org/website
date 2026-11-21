@@ -1,42 +1,45 @@
 {
   "id": { "name": "contacts_block", "index": 1 },
   "block_type": "links",
-  "contents": [
-    {
-      "id": { "name": "contacts", "index": 1 },
-      "contents": {
-        "name": "TestLink",
-        "link_points_to": "https://librarianofstars.ca/example/link_test",
-        "display": "Testing",
-        "link_description": "test link discription"
+  "contents": {
+    "id": { "index": 1, "name": "art-show" },
+    "contents": [
+      {
+        "id": { "name": "contacts", "index": 1 },
+        "contents": {
+          "name": "TestLink",
+          "link_points_to": "https://librarianofstars.ca/example/link_test",
+          "display": "Testing",
+          "link_description": "test link discription"
+        }
+      },
+      {
+        "id": { "name": "contacts", "index": 2 },
+        "contents": {
+          "name": "example",
+          "link_points_to": "./example",
+          "display": "Example Link",
+          "link_description": "A Simple Example Link for testing"
+        }
+      },
+      {
+        "id": { "name": "contacts", "index": 3 },
+        "contents": {
+          "name": "example2",
+          "link_points_to": "./example/second",
+          "display": "Example Link 2",
+          "link_description": "A Simple Example Link for testing more things"
+        }
+      },
+      {
+        "id": { "name": "contacts", "index": 4 },
+        "contents": {
+          "name": "another example",
+          "link_points_to": "./example/second/#more",
+          "display": "Example Link 3",
+          "link_description": "A Simple Example Link"
+        }
       }
-    },
-    {
-      "id": { "name": "contacts", "index": 2 },
-      "contents": {
-        "name": "example",
-        "link_points_to": "./example",
-        "display": "Example Link",
-        "link_description": "A Simple Example Link for testing"
-      }
-    },
-    {
-      "id": { "name": "contacts", "index": 3 },
-      "contents": {
-        "name": "example2",
-        "link_points_to": "./example/second",
-        "display": "Example Link 2",
-        "link_description": "A Simple Example Link for testing more things"
-      }
-    },
-    {
-      "id": { "name": "contacts", "index": 4 },
-      "contents": {
-        "name": "another example",
-        "link_points_to": "./example/second/#more",
-        "display": "Example Link 3",
-        "link_description": "A Simple Example Link"
-      }
-    }
-  ]
+    ]
+  }
 }
