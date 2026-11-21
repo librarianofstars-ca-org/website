@@ -1,3 +1,8 @@
+import "@/styles/shared.css";
+import "@/styles/pallette.css";
+import "@/styles/base.css";
+import "@/styles/app/shared.css";
+
 import Body, { body } from "@/components/meta/body";
 import { Head, head } from "@/components/meta/head";
 

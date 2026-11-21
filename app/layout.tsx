@@ -1,20 +1,4 @@
-import { PageHead } from "@/components/meta/head";
-
-import "@/styles/pallette.css";
-import "@/styles/base.css";
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html
-      lang="en"
-      className="style-root"
-    >
-      <PageHead />
-      {children}
-    </html>
-  );
+// Need at least a root layout, can change to be more expansive later
+export default function RootLayout({ children }) {
+  return <>{children}</>;
 }

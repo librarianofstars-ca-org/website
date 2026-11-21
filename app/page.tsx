@@ -1,5 +1,3 @@
-import "@/styles/shared.css";
-import "@/styles/app/shared.css";
 import "@/styles/app/homepage.css";
 
 import Page from "@/components/meta/page";
