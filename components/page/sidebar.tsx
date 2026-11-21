@@ -16,7 +16,10 @@ export interface sidebar_section extends keyed_list {
   contents: table_of_contents; // | other sections
 }
 
-export type sidebar = sidebar_section[];
+export interface sidebar {
+  lines: boolean;
+  contents: sidebar_section[];
+}
 
 export default function Sidebar({ data }: { data: sidebar }) {
   if (
@@ -29,9 +32,11 @@ export default function Sidebar({ data }: { data: sidebar }) {
   }
   return (
     <div className="sidebar wraper">
-      <Seperator data={{ vertical: true, className: "sidebar left" }} />
+      {!data.lines || (
+        <Seperator data={{ vertical: true, className: "sidebar left" }} />
+      )}
       <div className="sidebar contents">
-        {data.map((sidebar_section) => {
+        {data.contents.map((sidebar_section) => {
           switch (sidebar_section.section_type) {
             case "TOC":
               return (
@@ -50,7 +55,9 @@ export default function Sidebar({ data }: { data: sidebar }) {
           }
         })}
       </div>
-      <Seperator data={{ vertical: true, className: "sidebar right" }} />
+      {!data.lines || (
+        <Seperator data={{ vertical: true, className: "sidebar left" }} />
+      )}
     </div>
   );
 }
