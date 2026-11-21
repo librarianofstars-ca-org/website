@@ -7,6 +7,7 @@ import schema_generic_block from "@/schema/components/blocks/generic.json";
 
 import schema_image from "@/schema/components/elements/image.json";
 import schema_icon from "@/schema/components/elements/icon.json";
+import schema_seperator from "@/schema/components/elements/seperator.json";
 import schema_heading from "@/schema/components/elements/heading.json";
 
 import schema_navbar from "@/schema/components/elements/structure/navbar.json";
@@ -37,6 +38,7 @@ export const ajv_instance = new AJV({
     schema_link,
     schema_image,
     schema_icon,
+    schema_seperator,
     schema_heading,
     schema_navbar,
     schema_toc,

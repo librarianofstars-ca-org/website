@@ -41,18 +41,13 @@ export default function GalleryBlock({ data }: { data: gallery_block }) {
 
 export function GalleryItem({ galleryitem }: { galleryitem: gallery_item }) {
   let display;
-  if (typeof galleryitem.contents === "string") {
-    display = galleryitem.contents;
-  } else if (typeof galleryitem.contents === "object") {
-    if (
-      !validate_against_schema(
-        "https://librarianofstars.ca/schema/components/elements/image.json",
-        galleryitem.contents,
-      )
-    ) {
-      return <ErrorData data={galleryitem.contents} />;
-    }
-    display = <Image data={{ ...galleryitem.contents }} />;
+  switch (typeof galleryitem.contents) {
+    case "string":
+      display = galleryitem.contents;
+      break;
+    case "object":
+      display = <Image data={{ ...galleryitem.contents }} />;
+      break;
   }
   return (
     <div

@@ -16,5 +16,7 @@
       "type": "string",
       "description": "Any extra styling for this in particular"
     }
-  }
+  },
+  "required": ["display", "shape"],
+  "additionalProperties": false
 }
