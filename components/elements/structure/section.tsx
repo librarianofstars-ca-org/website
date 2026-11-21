@@ -2,21 +2,18 @@ import "@/styles/components/elements/shared.css";
 import "@/styles/components/elements/structure/section.css";
 
 import Heading, { heading } from "@/components/elements/heading";
-import { ReactElement } from "react";
 
 import GenericBlock, { block } from "@/components/blocks/generic_block";
 import Seperator from "@/components/elements/seperator";
-import { to_key } from "@/utilities/key_mapping";
+import { keyed_list, to_key } from "@/utilities/key_mapping";
 
 export type section_content = section | block;
 
-export interface section {
+export interface section extends keyed_list {
   id: { index: number; name: string };
   heading: heading;
   contents: section_content[];
 }
-
-export type sections = ReactElement<typeof Section>[];
 
 export default function Section({ data }: { data: section }) {
   return (

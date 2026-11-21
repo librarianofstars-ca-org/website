@@ -3,15 +3,14 @@ import Link from "next/link";
 // import { navlink } from "@/components/elements/navbar";
 // import { IdentifiedHeading } from "@/components/elements/heading";
 
-import { BlockWraper, block_data } from "@/components/blocks/generic_block";
+import { BlockWraper } from "@/components/blocks/generic_block";
 
 import "@/styles/components/blocks/shared.css";
 import "@/styles/components/blocks/link_block.css";
-import { to_key } from "@/utilities/key_mapping";
+import { keyed_list, to_key } from "@/utilities/key_mapping";
 import { ErrorData, validate_against_schema } from "@/schema/validation";
 
-export interface link_data {
-  id: { index: number; name: string };
+export interface link_data extends keyed_list {
   contents: {
     name: string;
     link_points_to: string;
@@ -20,7 +19,7 @@ export interface link_data {
   };
 }
 
-export interface link_block extends block_data {
+export interface link_block extends keyed_list {
   contents: link_data[];
 }
 

@@ -5,17 +5,15 @@ import Seperator from "@/components/elements/seperator";
 
 import "@/styles/components/elements/structure/footer_section.css";
 
-import { to_key } from "@/utilities/key_mapping";
+import { keyed_list, to_key } from "@/utilities/key_mapping";
 import { ErrorData, validate_against_schema } from "@/schema/validation";
 
-export interface footer_section_item {
-  id: { index: number; name: string };
+export interface footer_section_item extends keyed_list {
   title: string;
   contents: string[]; //ReactNode[];
 }
 
-export interface footer_section {
-  id: { index: number; name: string };
+export interface footer_section extends keyed_list {
   title: string;
   contents: footer_section_item[];
 }

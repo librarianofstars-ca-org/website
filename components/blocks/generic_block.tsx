@@ -5,14 +5,11 @@ import LinkBLock, { link_block } from "@/components/blocks/link_block";
 import ParagraphBlock, {
   paragraph_block,
 } from "@/components/blocks/paragraph_block";
-import { to_key } from "@/utilities/key_mapping";
+import { keyed_list, to_key } from "@/utilities/key_mapping";
 
-export interface block_data {
-  id: { index: number; name: string };
-}
-export interface block {
+
+export interface block extends keyed_list {
   block_type: string;
-  id: { index: number; name: string };
   contents: gallery_block | link_block | paragraph_block;
 }
 

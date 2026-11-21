@@ -1,10 +1,11 @@
 import "@/styles/components/blocks/shared.css";
 import "@/styles/components/blocks/gallery_block.css";
 
-import {BlockWraper, block_data } from "@/components/blocks/generic_block";
+import { BlockWraper } from "@/components/blocks/generic_block";
+import { ErrorData, validate_against_schema } from "@/schema/validation";
+import { keyed_list, to_key } from "@/utilities/key_mapping";
 
-export type gallery_item = {
-  id: { index: number; name: string };
+export interface gallery_item extends keyed_list {
   contents:
     | string
     | {
@@ -16,13 +17,10 @@ export type gallery_item = {
       };
   // JSX.Element;
   label: string;
-};
-export interface gallery_block extends block_data {
+}
+export interface gallery_block extends keyed_list {
   contents: gallery_item[];
 }
-
-import { ErrorData, validate_against_schema } from "@/schema/validation";
-import { to_key } from "@/utilities/key_mapping";
 
 export default function GalleryBlock({ data }: { data: gallery_block }) {
   if (

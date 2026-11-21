@@ -9,10 +9,9 @@ import TableOfContents, {
 
 import { validate_against_schema, ErrorData } from "@/schema/validation";
 
-import { to_key } from "@/utilities/key_mapping";
+import { keyed_list, to_key } from "@/utilities/key_mapping";
 
-export interface sidebar_section {
-  id: { index: number; name: string };
+export interface sidebar_section extends keyed_list {
   section_type: string;
   contents: table_of_contents; // | other sections
 }
