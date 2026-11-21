@@ -36,3 +36,4 @@ export default function Page({ data }: { data: page }) {
     </body>
   );
 }
+

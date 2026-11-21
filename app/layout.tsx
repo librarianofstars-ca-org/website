@@ -1,5 +1,4 @@
-import { PageHead, PageBody } from "@/components/meta";
-import Heading, { heading } from "@/components/elements/heading";
+import { PageHead } from "@/components/meta/head";
 
 import "@/styles/pallette.css";
 import "@/styles/base.css";

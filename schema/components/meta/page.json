@@ -1,0 +1,10 @@
+{
+  "$id": "https://librarianofstars.ca/schema/components/meta/page.json",
+  "type": "object",
+  "properties": {
+    "head": true,
+    "body": {
+      "$ref": "https://librarianofstars.ca/schema/components/meta/body.json"
+    }
+  }
+}
