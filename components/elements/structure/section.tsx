@@ -4,17 +4,17 @@ import "@/styles/components/elements/structure/section.css";
 import Heading, { heading } from "@/components/elements/heading";
 import { ReactElement } from "react";
 
-import { block } from "@/components/blocks/generic_block";
+import GenericBlock, { block } from "@/components/blocks/generic_block";
 import Seperator from "@/components/elements/seperator";
 import { to_key } from "@/utilities/key_mapping";
 
-export type section_content = ReactElement<typeof Section> | block;
+export type section_content = section | block;
 
-export type section = {
+export interface section {
   id: { index: number; name: string };
   heading: heading;
   contents: section_content[];
-};
+}
 
 export type sections = ReactElement<typeof Section>[];
 
@@ -31,7 +31,26 @@ export default function Section({ data }: { data: section }) {
         />
       )}
       <Heading data={{ ...data.heading, className: "section-title" }} />
-      {data.contents}
+      {data.contents.map((section_content_item) => {
+        // is this a section (only sections have headings) (or is it a block)
+        if ((section_content_item as section).heading !== undefined) {
+          // Must be section
+          return (
+            <Section
+              key={to_key(section_content_item.id)}
+              data={section_content_item as section}
+            />
+          );
+        } else {
+          // Must be block
+          return (
+            <GenericBlock
+              key={to_key(section_content_item.id)}
+              data={section_content_item as block}
+            />
+          );
+        }
+      })}
     </div>
   );
 }

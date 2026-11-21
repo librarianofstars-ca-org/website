@@ -1,5 +1,6 @@
 {
   "id": { "index": 1, "name": "summery" },
+  "block_type": "paragraph",
   "contents": [
     {
       "id": { "index": 1, "name": "summery" },

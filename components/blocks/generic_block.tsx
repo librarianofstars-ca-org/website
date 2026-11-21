@@ -1,9 +1,21 @@
 import React, { ReactElement } from "react";
 import { ReactNode } from "react";
+import GalleryBlock, { gallery_block } from "@/components/blocks/gallery_block";
+import LinkBLock, { link_block } from "@/components/blocks/link_block";
+import ParagraphBlock, {
+  paragraph_block,
+} from "@/components/blocks/paragraph_block";
+import { to_key } from "@/utilities/key_mapping";
 
-export type block = ReactElement<typeof Block>;
+export interface block_data {
+  block_type: string;
+  id: { index: number; name: string };
+  contents: any;
+}
 
-export default function Block({
+export type block = gallery_block | link_block | paragraph_block;
+
+export function BlockWraper({
   type,
   children,
   wrapper = "div",
@@ -13,4 +25,32 @@ export default function Block({
   wrapper?: string;
 }) {
   return React.createElement(wrapper, { className: type + "-block" }, children);
+}
+
+export default function GenericBlock({ data }: { data: block }) {
+  switch (data.block_type) {
+    case "paragraph":
+      return (
+        <ParagraphBlock
+          key={to_key(data.id)}
+          data={data as paragraph_block}
+        />
+      );
+    case "gallery":
+      return (
+        <GalleryBlock
+          key={to_key(data.id)}
+          data={data as gallery_block}
+        />
+      );
+    case "links":
+      return (
+        <LinkBLock
+          key={to_key(data.id)}
+          data={data as link_block}
+        />
+      );
+    default:
+      return "No Block Type Found";
+  }
 }

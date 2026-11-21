@@ -1,5 +1,6 @@
 {
   "id": { "name": "projects-block", "index": 1 },
+  "block_type": "links",
   "contents": [
     {
       "id": { "name": "projects", "index": 1 },

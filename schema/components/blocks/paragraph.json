@@ -4,6 +4,7 @@
   "description": "A block of text",
   "properties": {
     "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
+    "block_type": { "type": "string", "enum": ["paragraph"] },
     "contents": {
       "type": "array",
       "description": "A array of paragraph objects",

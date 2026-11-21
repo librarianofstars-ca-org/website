@@ -42,31 +42,32 @@ export default function TableOfContents({ data }: { data: table_of_contents }) {
   );
 }
 
+const toc_place_data_default = {
+  level: 7,
+  className: "toc-place",
+};
+
 export function TOCPlace({ place }: { place: string }) {
+  let place_id: string, place_data;
   switch (place) {
     case "start":
-      return (
-        <LinkedHeading
-          key={"start"}
-          link={"#page-start"}
-          heading_data={{
-            contents: "Start Of Page",
-            level: 7,
-            className: "toc-place",
-          }}
-        />
-      );
+      place_id = "#page-start";
+      place_data = { ...toc_place_data_default, contents: "Start Of Page" };
+      break;
     case "end":
-      return (
-        <LinkedHeading
-          key={"end"}
-          link={"#page-end"}
-          heading_data={{
-            contents: "Start Of Page",
-            level: 7,
-            className: "toc-place",
-          }}
-        />
-      );
+      place_id = "#page-end";
+      place_data = { ...toc_place_data_default, contents: "End Of Page" };
+      break;
+    default:
+      place_id = "#not-set-place-id";
+      place_data = toc_place_data_default;
+      break;
   }
+  return (
+    <LinkedHeading
+      key={"end"}
+      link={place_id}
+      heading_data={place_data}
+    />
+  );
 }

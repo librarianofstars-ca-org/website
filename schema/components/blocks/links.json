@@ -12,6 +12,7 @@
   },
   "properties": {
     "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
+    "block_type": { "type": "string", "enum": ["links"] },
     "contents": {
       "type": "array",
       "items": {

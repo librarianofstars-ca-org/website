@@ -1,5 +1,6 @@
 {
   "id": { "index": 1, "name": "art-show" },
+  "block_type": "gallery",
   "contents": [
     {
       "id": { "index": 1, "name": "art-show" },

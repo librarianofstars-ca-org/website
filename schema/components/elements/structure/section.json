@@ -1,11 +1,35 @@
 {
-  "$id": "https://librarianofstars.ca/schema/components/elements/structure/navbar.json",
+  "$id": "https://librarianofstars.ca/schema/components/elements/structure/section.json",
+  "title": "section",
+  "description": "The `Section` component's data",
   "type": "object",
   "properties": {
     "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
     "heading": {
-      "$ref": "https://librarianofstars.ca/schema/components/elements/heading.json"
+      "description": "The title or heading for this section ",
+      "$ref": "https://librarianofstars.ca/schema/components/elements/heading.json",
+      "default": { "className": "section-title" }
     },
-    "contents": true
-  }
+    "content_types": {
+      "type": "array",
+      "enum": ["section", "gallery", "links", "paragraph"]
+    },
+    "contents": {
+      "type": "array",
+      "description": "What makes up the body of this section",
+      "items": {
+        "description": "Either a Block or another Section",
+        "anyOf": [
+          {
+            "$ref": "https://librarianofstars.ca/schema/components/blocks/generic.json"
+          },
+          {
+            "$ref": "#",
+            "$comment": "self-referential nesting"
+          }
+        ]
+      }
+    }
+  },
+  "required": ["id", "heading", "contents"]
 }
