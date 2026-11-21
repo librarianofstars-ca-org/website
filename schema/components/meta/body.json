@@ -22,5 +22,6 @@
       "$ref": "https://librarianofstars.ca/schema/components/page/footer.json"
     }
   },
-  "required": ["header_data", "sidebar_data", "main_data", "footer_data"]
+  "required": ["header_data", "sidebar_data", "main_data", "footer_data"],
+  "additionalProperties": false
 }

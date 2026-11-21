@@ -27,5 +27,6 @@
       "description": "What language is this page in"
     }
   },
-  "required": ["page_title", "page_discription", "page_author"]
+  "required": ["page_title", "page_discription", "page_author"],
+  "additionalProperties": false
 }

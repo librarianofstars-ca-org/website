@@ -24,12 +24,14 @@
             "items": {
               "type": "string",
               "description": "An item's contents element"
-            }
+            },
+            "minItems": 1
           }
         },
         "required": ["id", "title", "contents"],
         "additionalProperties": false
-      }
+      },
+      "minItems": 1
     }
   },
   "required": ["id", "title", "contents"],

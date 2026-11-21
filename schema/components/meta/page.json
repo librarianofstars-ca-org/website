@@ -10,5 +10,7 @@
     "body": {
       "$ref": "https://librarianofstars.ca/schema/components/meta/body.json"
     }
-  }
+  },
+  "required": ["head", "body"],
+  "additionalProperties": false
 }

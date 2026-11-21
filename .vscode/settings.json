@@ -126,10 +126,6 @@
       "url": "./schema/types/key.json"
     },
     {
-      "fileMatch": ["${workspaceFolder}/data/example_test.json"],
-      "url": "./schema/example.json"
-    },
-    {
       "fileMatch": [
         "${workspaceFolder}/data/tests/components/blocks/paragraph.json"
       ],
@@ -192,7 +188,8 @@
             "out": { "type": "string" }
           },
           "required": ["in", "out"]
-        }
+        },
+        "minItems": 1
       }
     }
   ]

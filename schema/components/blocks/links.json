@@ -28,7 +28,8 @@
         },
         "required": ["id", "contents"],
         "additionalProperties": false
-      }
+      },
+      "minItems": 1
     }
   },
   "required": ["id", "contents"],

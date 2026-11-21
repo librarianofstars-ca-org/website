@@ -10,10 +10,6 @@
       "$ref": "https://librarianofstars.ca/schema/components/elements/heading.json",
       "default": { "className": "section-title" }
     },
-    "content_types": {
-      "type": "array",
-      "enum": ["section", "gallery", "links", "paragraph"]
-    },
     "contents": {
       "type": "array",
       "description": "What makes up the body of this section",
@@ -28,7 +24,8 @@
             "$comment": "self-referential nesting"
           }
         ]
-      }
+      },
+      "minItems": 1
     }
   },
   "required": ["id", "heading", "contents"],

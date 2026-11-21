@@ -9,7 +9,8 @@
       "description": "Footer sections in this footer",
       "items": {
         "$ref": "https://librarianofstars.ca/schema/components/elements/structure/footer_section.json"
-      }
+      },
+      "minItems": 1
     }
   },
   "required": ["sections"],

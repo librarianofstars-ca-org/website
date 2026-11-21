@@ -20,7 +20,8 @@
         },
         "required": ["id", "linked", "display"],
         "additionalProperties": false
-      }
+      },
+      "minItems": 1
     }
   },
   "required": ["links"],
