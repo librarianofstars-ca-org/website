@@ -1,16 +1,5 @@
-div.footer {
-    display: flex;
-    grid-area: footer;
-    flex-flow: row nowrap;
-    place-content: center space-around;
 
-    color: var(--color-section-foot-text);
-
-    background-color: var(--color-section-foot-main);
-    outline-color: var(--color-section-foot-back);
-}
-
-div.footer div.footer-section {
+div.footer-section {
     display: grid;
     grid-auto-rows: minmax(1rem, 1fr);
     grid-template-columns: 1fr 1fr;
@@ -28,7 +17,7 @@ div.footer div.footer-section {
     background-color: var(--color-section-foot-main);
 }
 
-div.footer div.footer-section h4 {
+div.footer-section h4 {
     grid-column: 1 / -1; 
     grid-row: 1 / span 1;
     justify-self: center;
@@ -39,37 +28,37 @@ div.footer div.footer-section h4 {
     border-block-end-color: var(--color-section-foot-highlight);
 }
 
-div.footer div.footer-section-wrapper,
-div.footer div.footer-section dl,
-div.footer div.footer-section dl div.footer-contents-wrapper {
+div.footer-section-wrapper,
+div.footer-section dl,
+div.footer-section dl div.footer-contents-wrapper {
     display: contents;
 }
 
-div.footer div.footer-section dl dd,
-div.footer div.footer-section dl dt { 
+div.footer-section dl dd,
+div.footer-section dl dt { 
     padding-inline-end: var(--size-sm);
 }
 
-div.footer div.footer-section dl dt {
+div.footer-section dl dt {
     grid-column: 1 / span 1;
     justify-self: end;
 
     /* border-inline-end: var(--size-tn) solid var(--color-section-foot-highlight) ; */
 }
 
-div.footer div.footer-section dl dd {
+div.footer-section dl dd {
     display: list-item;
     grid-column: 2 / span 1;
     justify-self: start;
     margin-inline: var(--size-sm) 0;
 }
 
-div.footer div.footer-section dl dd::marker {
+div.footer-section dl dd::marker {
     content: "- ";
     color: var(--color-section-foot-highlight);
 }
 
-div.footer div.footer-section hr.footer-contents {
+div.footer-section hr.footer-contents {
     grid-column: 1 / -1;
 
     width: auto;
@@ -80,11 +69,3 @@ div.footer div.footer-section hr.footer-contents {
     background-color: var(--color-section-foot-accent);
     outline: none;
 }
-
-div.footer hr.footer {
-    height: 100%;
-    color: var(--color-section-foot-back);
-    background-color: var(--color-section-foot-back);
-    outline: none;
-}
-

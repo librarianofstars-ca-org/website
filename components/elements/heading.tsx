@@ -4,8 +4,9 @@ import "@/styles/components/elements/heading.css";
 
 import Link from "next/link";
 import React from "react";
+import { validate_against_schema, ErrorData } from "@/schema/validation";
 
-let level_map: { [id: number]: string } = {
+const level_map: { [id: number]: string } = {
   1: "h1",
   2: "h2",
   3: "h3",
@@ -21,46 +22,35 @@ function getlevelstring(level: number) {
   } else return "p";
 }
 
-export interface heading_props {
+export interface heading {
   contents: string;
   level: number;
   className?: string;
-}
-export interface ident_heading_props extends heading_props {
-  id: string;
+  id?: string;
 }
 
-function isIdentified(object: any): object is ident_heading_props {
-  return "id" in object;
-}
-
-export default function Heading(props: ident_heading_props | heading_props) {
-  let element_props: { className: string; id?: string };
-  if (isIdentified(props)) {
-    element_props = { className: props.className + " heading", id: props.id };
-  } else {
-    element_props = { className: props.className + " heading" };
+export default function Heading({ data }: { data: heading }) {
+  if (
+    !validate_against_schema(
+      "https://librarianofstars.ca/schema/components/elements/heading.json",
+      data,
+    )
+  ) {
+    return <ErrorData data={data} />;
   }
+  data = { ...data, className: data.className + " heading" };
   // Means: <level_map[level] className={ className } id?={ id }> {contents} </level_map[level]>
-  return React.createElement(
-    getlevelstring(props.level),
-    element_props,
-    props.contents,
-  );
+  return React.createElement(getlevelstring(data.level), data, data.contents);
 }
 
-export function IdentifiedHeading({ headingId, ...props }) {
-  return (
-    <Heading
-      id={headingId}
-      contents={props.contents}
-      level={props.level}
-      className={props.className}
-    />
-  );
-}
-
-export function LinkedHeading({ link, ...props }) {
+export function LinkedHeading({
+  link,
+  heading_data,
+  ...props
+}: {
+  link: string;
+  heading_data: heading;
+}) {
   return (
     <Link
       href={"/" + link}
@@ -69,8 +59,7 @@ export function LinkedHeading({ link, ...props }) {
       scroll={false}
     >
       <Heading
-        contents={props.contents}
-        level={props.level}
+        data={heading_data}
         {...props}
       />
     </Link>

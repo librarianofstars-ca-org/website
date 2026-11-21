@@ -1,0 +1,21 @@
+{
+  "$id": "https://librarianofstars.ca/schema/components/elements/structure/table_of_contents.json",
+  "title": "table_of_contents",
+  "description": "The `TableOfContents` component data",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "description": "Table of contents items",
+    "properties": {
+      "order": { "type": "number", "description": "What order is this" },
+      "link": {
+        "type": "string",
+        "description": "Heading hash this is linked to"
+      },
+      "display": { "type": "string", "description": "Display as text" },
+      "level": { "type": "number", "description": "Heading linked level" }
+    },
+    "required": ["order", "link", "display", "level"],
+    "additionalProperties": false
+  }
+}

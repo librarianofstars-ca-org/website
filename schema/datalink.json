@@ -1,0 +1,14 @@
+{
+  "$id": "https://librarianofstars.ca/schema/data/datalink",
+  "title": "datalink",
+  "description": "A datalink, to be replaced with another json file's contents",
+  "type": "object",
+  "properties": {
+    "datalink": {
+      "type": "string",
+      "description": "What file this is replaced by"
+    }
+  },
+  "required": ["datalink"],
+  "additionalProperties": false
+}

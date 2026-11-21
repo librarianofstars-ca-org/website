@@ -1,0 +1,18 @@
+{
+  "$id": "https://librarianofstars.ca/schema/components/page/main.json",
+  "type": "object",
+  "title": "main",
+  "description": "The main (body) component's data for a page",
+  "properties": {
+    "main_section_data": {
+      "type": "array",
+      "description": "Top-Level Sections (h2)",
+      "items": {
+        "$ref": "https://librarianofstars.ca/schema/components/elements/structure/section.json"
+      },
+      "minItems": 1
+    }
+  },
+  "required": ["main_section_data"],
+  "additionalProperties": false
+}

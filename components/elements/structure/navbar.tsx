@@ -1,16 +1,28 @@
 import "@/styles/components/shared.css";
 import "@/styles/components/elements/shared.css";
-import "@/styles/components/elements/navbar.css";
+import "@/styles/components/elements/structure/navbar.css";
 
 import Seperator from "@/components/elements/seperator";
 
 import Link from "next/link";
 import Icon from "@/components/elements/icon";
+import { validate_against_schema, ErrorData } from "@/schema/validation";
 
 export type navlink = { id: string; linked: string; display: string };
-export type navlinks = Array<navlink>;
 
-export default function NavigationBar({ links }: { links: navlinks }) {
+export interface navbar {
+  links: navlink[];
+}
+
+export default function NavigationBar({ data }: { data: navbar }) {
+  if (
+    !validate_against_schema(
+      "https://librarianofstars.ca/schema/components/elements/structure/navbar.json",
+      data,
+    )
+  ) {
+    return <ErrorData data={data} />;
+  }
   return (
     <nav>
       <Icon
@@ -21,7 +33,7 @@ export default function NavigationBar({ links }: { links: navlinks }) {
       />
       <NavSeperator />
       <NavLinks>
-        {links.map((link) => (
+        {data.links.map((link) => (
           <NavLink
             key={link.id}
             linked={link.linked}

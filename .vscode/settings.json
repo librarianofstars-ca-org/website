@@ -126,34 +126,56 @@
       "url": "./schema/types/key.json"
     },
     {
-      "fileMatch": ["${workspaceFolder}/data/example_test.json"],
-      "url": "./schema/example.json"
-    },
-    {
       "fileMatch": [
         "${workspaceFolder}/data/tests/components/blocks/paragraph.json"
       ],
       "url": "./schema/components/blocks/paragraph.json"
     },
     {
-      "fileMatch": [
-        "${workspaceFolder}/data/app/homepage/blocks/welcome.json",
-        "${workspaceFolder}/data/app/homepage/blocks/summery.json"
-      ],
-      "url": "./schema/components/blocks/paragraph.json"
+      "fileMatch": ["${workspaceFolder}/data/app/homepage/blocks/*.json"],
+      "url": "./schema/components/blocks/generic.json"
+    },
+    {
+      "fileMatch": ["${workspaceFolder}/data/app/homepage/page/footer.json"],
+      "url": "./schema/components/page/footer.json"
     },
     {
       "fileMatch": [
-        "${workspaceFolder}/data/app/homepage/blocks/art_show.json"
+        "${workspaceFolder}/data/app/homepage/structure/outline.json"
       ],
-      "url": "./schema/components/blocks/gallery.json"
+      "url": "./schema/components/elements/structure/table_of_contents.json"
     },
     {
       "fileMatch": [
-        "${workspaceFolder}/data/app/homepage/blocks/contact_me.json",
-        "${workspaceFolder}/data/app/homepage/blocks/projects.json"
+        "${workspaceFolder}/data/app/homepage/page/sidebar.json",
+        "${workspaceFolder}/data/app/homepage/compiled/sidebar.json"
       ],
-      "url": "./schema/components/blocks/links.json"
+      "url": "./schema/components/page/sidebar.json"
+    },
+    {
+      "fileMatch": [
+        "${workspaceFolder}/data/app/homepage/page/header.json",
+        "${workspaceFolder}/data/app/homepage/compiled/header.json"
+      ],
+      "url": "./schema/components/page/header.json"
+    },
+    {
+      "fileMatch": [
+        "${workspaceFolder}/data/app/homepage/page/main.json",
+        "${workspaceFolder}/data/app/homepage/compiled/main.json"
+      ],
+      "url": "./schema/components/page/main.json"
+    },
+    {
+      "fileMatch": [
+        "${workspaceFolder}/data/app/homepage/page.json",
+        "${workspaceFolder}/data/app/homepage/compiled/page.json"
+      ],
+      "url": "./schema/components/page/page.json"
+    },
+    {
+      "fileMatch": ["${workspaceFolder}/data/app/homepage/sections/*.json"],
+      "url": "./schema/components/elements/structure/section.json"
     },
     {
       "fileMatch": ["${workspaceFolder}/data/compile_maps.json"],
@@ -166,7 +188,8 @@
             "out": { "type": "string" }
           },
           "required": ["in", "out"]
-        }
+        },
+        "minItems": 1
       }
     }
   ]

@@ -1,0 +1,20 @@
+div.footer {
+    display: flex;
+    grid-area: footer;
+    flex-flow: row nowrap;
+    place-content: center space-around;
+
+    color: var(--color-section-foot-text);
+
+    background-color: var(--color-section-foot-main);
+    outline-color: var(--color-section-foot-back);
+}
+
+
+div.footer hr.footer {
+    height: 100%;
+    color: var(--color-section-foot-back);
+    background-color: var(--color-section-foot-back);
+    outline: none;
+}
+

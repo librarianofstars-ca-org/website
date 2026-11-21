@@ -14,5 +14,9 @@
   {
     "in": "./tests/compiler/four.json",
     "out": "./tests/compiler/compiled/four.json"
+  },
+  {
+    "in": "./app/homepage/page.json",
+    "out": "./app/homepage/compiled/page.json"
   }
 ]

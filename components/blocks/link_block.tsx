@@ -3,21 +3,14 @@ import Link from "next/link";
 // import { navlink } from "@/components/elements/navbar";
 // import { IdentifiedHeading } from "@/components/elements/heading";
 
-import Block from "@/components/blocks/generic_block";
+import { BlockWraper } from "@/components/blocks/generic_block";
 
 import "@/styles/components/blocks/shared.css";
 import "@/styles/components/blocks/link_block.css";
-import { to_key } from "@/utilities/key_mapping";
+import { keyed_list, to_key } from "@/utilities/key_mapping";
 import { ErrorData, validate_against_schema } from "@/schema/validation";
 
-// export type described_link = navlink & { name: string; description: string };
-// export type block_of_links = {
-//   blockTitle: string;
-//   describedLinks: described_link[];
-// };
-// import link_block_data from "@/schema/components/blocks/links.json";
-export interface link_data {
-  id: { index: number; name: string };
+export interface link_data extends keyed_list {
   contents: {
     name: string;
     link_points_to: string;
@@ -26,12 +19,11 @@ export interface link_data {
   };
 }
 
-export interface link_block_data {
-  id: { index: number; name: string };
+export interface link_block extends keyed_list {
   contents: link_data[];
 }
 
-export default function LinkBLock({ data }: { data: link_block_data }) {
+export default function LinkBLock({ data }: { data: link_block }) {
   if (
     !validate_against_schema(
       "https://librarianofstars.ca/schema/components/blocks/links.json",
@@ -41,7 +33,7 @@ export default function LinkBLock({ data }: { data: link_block_data }) {
     return <ErrorData data={data} />;
   }
   return (
-    <Block
+    <BlockWraper
       type={"link"}
       wrapper="dl"
       key={to_key(data.id)}
@@ -60,7 +52,7 @@ export default function LinkBLock({ data }: { data: link_block_data }) {
         />
       ))}
       {/* </dl> */}
-    </Block>
+    </BlockWraper>
   );
 }
 

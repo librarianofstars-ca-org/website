@@ -1,0 +1,45 @@
+{
+  "main_section_data": [
+    {
+      "id": { "index": 1, "name": "welcome" },
+      "heading": { "level": 2, "contents": "Welcome", "id": "greatings" },
+      "contents": [{ "datalink": "./app/homepage/blocks/welcome.json" }]
+    },
+    {
+      "id": { "index": 1, "name": "about_me" },
+      "heading": { "level": 2, "contents": "About Me", "id": "about" },
+      "contents": [
+        {
+          "id": { "index": 1, "name": "summery" },
+          "heading": { "level": 3, "contents": "Summery", "id": "summery" },
+          "contents": [{ "datalink": "./app/homepage/blocks/summery.json" }]
+        },
+        {
+          "id": { "index": 1, "name": "contact_me" },
+          "heading": { "level": 3, "contents": "Links", "id": "links" },
+          "contents": [{ "datalink": "./app/homepage/blocks/contact_me.json" }]
+        }
+      ]
+    },
+    {
+      "id": { "index": 1, "name": "showcase" },
+      "heading": { "level": 2, "contents": "Showcase", "id": "display" },
+      "contents": [
+        {
+          "id": { "index": 1, "name": "gallery" },
+          "heading": { "level": 3, "contents": "Art", "id": "gallery" },
+          "contents": [{ "datalink": "./app/homepage/blocks/art_show.json" }]
+        },
+        {
+          "id": { "index": 1, "name": "linked_section" },
+          "heading": {
+            "level": 3,
+            "contents": "Projects",
+            "id": "linked_projects"
+          },
+          "contents": [{ "datalink": "./app/homepage/blocks/projects.json" }]
+        }
+      ]
+    }
+  ]
+}

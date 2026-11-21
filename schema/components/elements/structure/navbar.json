@@ -1,0 +1,29 @@
+{
+  "$id": "https://librarianofstars.ca/schema/components/elements/structure/navbar.json",
+  "type": "object",
+  "title": "navbar",
+  "description": "Navbar component data",
+  "properties": {
+    "links": {
+      "type": "array",
+      "description": "Links in navigation bar",
+      "items": {
+        "type": "object",
+        "description": "A Link in the navigation bar",
+        "properties": {
+          "id": { "type": "string", "description": "link id" },
+          "linked": { "type": "string", "description": "Where does this go?" },
+          "display": {
+            "type": "string",
+            "description": "What does this display as text"
+          }
+        },
+        "required": ["id", "linked", "display"],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": ["links"],
+  "additionalProperties": false
+}

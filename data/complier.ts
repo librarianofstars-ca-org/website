@@ -44,7 +44,9 @@ function replace_data_links(
   value: { datalink: string | undefined }
 ): any{
   if (value.datalink != undefined ) {
-    return get_json_from_file(value.datalink)
+    let replace_with = get_json_from_file(value.datalink)
+    // console.log("replaced", value.datalink, "with", replace_with)
+    return replace_with
   } else return value // no change
 }
 

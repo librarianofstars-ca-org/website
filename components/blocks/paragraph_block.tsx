@@ -3,21 +3,16 @@ import "@/styles/components/blocks/paragraph_block.css";
 
 // import Seperator from "@/components/elements/seperator";
 
-import Block from "@/components/blocks/generic_block";
-
-export interface paragraph_data {
-  id: { index: number; name: string };
+import { BlockWraper } from "@/components/blocks/generic_block";
+import { ErrorData, validate_against_schema } from "@/schema/validation";
+import { keyed_list, to_key } from "@/utilities/key_mapping";
+export interface paragraph_data extends keyed_list {
   contents: string | boolean;
 }
 
-export interface paragraph_block {
-  id: { index: number; name: string };
+export interface paragraph_block extends keyed_list {
   contents: paragraph_data[];
 }
-
-// import schema from "@/schema/components/blocks/paragraph.json";
-import { ErrorData, validate_against_schema } from "@/schema/validation";
-import { to_key } from "@/utilities/key_mapping";
 
 export default function ParagraphBlock({ data }: { data: paragraph_block }) {
   if (
@@ -29,7 +24,7 @@ export default function ParagraphBlock({ data }: { data: paragraph_block }) {
     return <ErrorData data={data} />;
   }
   return (
-    <Block
+    <BlockWraper
       type={"paragraph"}
       key={to_key(data.id)}
     >
@@ -39,7 +34,7 @@ export default function ParagraphBlock({ data }: { data: paragraph_block }) {
           data={paragraph}
         />
       ))}
-    </Block>
+    </BlockWraper>
   );
 }
 export function ParagraphElement({ data }: { data: paragraph_data }) {
