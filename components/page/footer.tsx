@@ -10,7 +10,11 @@ import { to_key } from "@/utilities/key_mapping";
 
 import { validate_against_schema, ErrorData } from "@/schema/validation";
 
-export default function Footer({ data }: { data: footer_section[] }) {
+export interface footer {
+  sections: footer_section[];
+}
+
+export default function Footer({ data }: { data: footer }) {
   if (
     !validate_against_schema(
       "https://librarianofstars.ca/schema/components/page/footer.json",
@@ -22,7 +26,7 @@ export default function Footer({ data }: { data: footer_section[] }) {
   return (
     <>
       <div className="footer">
-        {data.map((section: footer_section, index: number) => (
+        {data.sections.map((section: footer_section, index: number) => (
           <div
             className="footer-section-wrapper"
             key={to_key(section.id)}
