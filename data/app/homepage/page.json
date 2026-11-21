@@ -1,6 +1,6 @@
 {
   "header_data": {
-    "datalink": "./app/homepage/page/header.json"
+    "datalink": "./app/defaults/page/header.json"
   },
   "sidebar_data": {
     "datalink": "./app/homepage/page/sidebar.json"
