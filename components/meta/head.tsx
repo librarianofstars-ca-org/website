@@ -1,23 +1,30 @@
-export function PageHead() {
+export interface head {
+  page_title: string;
+  page_discription: string;
+  page_author: string;
+  character_set?: string; // default "utf-8"
+}
+
+export function Head({ data }: { data: head }) {
   return (
     <head>
       {/* standard charset for web dev */}
-      <meta charSet="utf-8" />
+      <meta charSet={data.character_set || "utf-8"} />
       {/* Mobile view help */}
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1"
       />
       {/* Title of Page */}
-      <title>LibrarianOfStars's Homepage</title>
+      <title>{data.page_title}</title>
       {/* About me */}
       <meta
         name="description"
-        content="A simple index page, for my project of a website."
+        content={data.page_discription}
       />
       <meta
         name="author"
-        content="Librarian Of Stars"
+        content={data.page_author}
       />
 
       {/* <!-- Web icons -->

@@ -1,4 +1,9 @@
 {
+  "head": {
+    "page_title": "librarianofstars.ca's Homepage",
+    "page_discription": "Simple Landing page containing testing and about me",
+    "page_author": "Librarian Of Stars"
+  },
   "body": {
     "page_markers": true,
     "header_data": {

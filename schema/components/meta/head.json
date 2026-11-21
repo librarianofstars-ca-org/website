@@ -1,1 +1,11 @@
-{}
+{
+  "$id": "https://librarianofstars.ca/schema/components/meta/head.json",
+  "type": "object",
+  "properties": {
+    "page_title": { "type": "string" },
+    "page_discription": { "type": "string" },
+    "page_author": { "type": "string" },
+    "character_set": { "type": "string", "default": "utf-8" }
+  },
+  "required": ["page_title", "page_discription", "page_author"]
+}
