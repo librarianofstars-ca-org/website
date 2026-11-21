@@ -4,6 +4,7 @@ import Main, { main } from "@/components/page/main";
 import Footer, { footer } from "@/components/page/footer";
 
 import Heading, { heading } from "@/components/elements/heading";
+import { ErrorData, validate_against_schema } from "@/schema/validation";
 
 export interface body {
   page_markers: boolean;
@@ -20,6 +21,14 @@ const page_marker_data: heading = {
 };
 
 export default function Body({ data }: { data: body }) {
+  if (
+    !validate_against_schema(
+      "https://librarianofstars.ca/schema/components/meta/body.json",
+      data,
+    )
+  ) {
+    return <ErrorData data={data} />;
+  }
   return (
     <body id="page">
       {data.page_markers && (

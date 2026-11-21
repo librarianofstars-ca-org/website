@@ -21,6 +21,10 @@ import schema_sidebar from "@/schema/components/page/sidebar.json";
 import schema_footer from "@/schema/components/page/footer.json";
 import schema_main from "@/schema/components/page/main.json";
 
+import schema_body from "@/schema/components/meta/body.json";
+import schema_head from "@/schema/components/meta/head.json";
+import schema_page from "@/schema/components/meta/page.json";
+
 export const ajv_instance = new AJV({
   strict: true,
   allErrors: true,
@@ -42,6 +46,9 @@ export const ajv_instance = new AJV({
     schema_sidebar,
     schema_footer,
     schema_main,
+    schema_body,
+    schema_head,
+    schema_page,
   ],
 });
 
