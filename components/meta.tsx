@@ -40,7 +40,3 @@ export function PageHead() {
     </head>
   );
 }
-
-export function PageBody({ children }) {
-  return <body id="page">{children}</body>;
-}

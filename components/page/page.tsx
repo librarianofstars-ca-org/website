@@ -22,7 +22,7 @@ const page_marker_data: heading = {
 
 export default function Page({ data }: { data: page }) {
   return (
-    <>
+    <body id="page">
       {data.body.page_markers && (
         <Heading data={{ ...page_marker_data, id: "page_start" }} />
       )}
@@ -33,6 +33,6 @@ export default function Page({ data }: { data: page }) {
       {data.body.page_markers && (
         <Heading data={{ ...page_marker_data, id: "page_end" }} />
       )}
-    </>
+    </body>
   );
 }

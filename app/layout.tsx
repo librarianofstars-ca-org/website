@@ -15,7 +15,7 @@ export default function RootLayout({
       className="style-root"
     >
       <PageHead />
-      <PageBody>{children}</PageBody>
+      {children}
     </html>
   );
 }
