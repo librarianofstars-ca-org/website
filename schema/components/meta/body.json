@@ -1,8 +1,14 @@
 {
   "$id": "https://librarianofstars.ca/schema/components/meta/body.json",
+  "title": "head",
+  "description": "Contains data about the page body's contents",
   "type": "object",
   "properties": {
-    "page_markers": { "type": "boolean" },
+    "page_markers": {
+      "type": "boolean",
+      "default": false,
+      "description": "Should this display the page marker elements"
+    },
     "header_data": {
       "$ref": "https://librarianofstars.ca/schema/components/page/header.json"
     },
@@ -15,5 +21,6 @@
     "footer_data": {
       "$ref": "https://librarianofstars.ca/schema/components/page/footer.json"
     }
-  }
+  },
+  "required": ["header_data", "sidebar_data", "main_data", "footer_data"]
 }

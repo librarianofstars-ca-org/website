@@ -1,13 +1,16 @@
 {
   "$id": "https://librarianofstars.ca/schema/components/blocks/generic.json",
+  "title": "generic_block",
   "description": "Any of the block schema",
   "type": "object",
   "properties": {
     "block_type": {
       "type": "string",
-      "enum": ["gallery", "links", "paragraph"]
+      "enum": ["gallery", "links", "paragraph"],
+      "description": "Posible bLock types"
     },
     "contents": {
+      "description": "Any of the block types' data",
       "anyOf": [
         {
           "$ref": "https://librarianofstars.ca/schema/components/blocks/gallery.json"
@@ -21,5 +24,6 @@
       ]
     }
   },
-  "required": ["block_type", "contents"]
+  "required": ["block_type", "contents"],
+  "additionalProperties": false
 }

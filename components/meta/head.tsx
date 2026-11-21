@@ -3,6 +3,7 @@ export interface head {
   page_discription: string;
   page_author: string;
   character_set?: string; // default "utf-8"
+  language?: string; // default "en"
 }
 
 export function Head({ data }: { data: head }) {

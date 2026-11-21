@@ -1,10 +1,17 @@
 {
   "$id": "https://librarianofstars.ca/schema/components/page/header.json",
   "type": "object",
+  "title": "header",
+  "description": "The header component's data for a page",
   "properties": {
-    "page_title": { "type": "string" },
+    "page_title": {
+      "type": "string",
+      "description": "Displayed page title (h1)"
+    },
     "navigation": {
       "$ref": "https://librarianofstars.ca/schema/components/elements/structure/navbar.json"
     }
-  }
+  },
+  "required": ["page_title", "navigation"],
+  "additionalProperties": false
 }

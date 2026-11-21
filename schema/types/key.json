@@ -5,10 +5,12 @@
   "type": "object",
   "properties": {
     "index": {
-      "type": "number"
+      "type": "number",
+      "description": "What element in the list are you (expecting to be)"
     },
     "name": {
-      "type": "string"
+      "type": "string",
+      "description": "What id is the parent element type, or unique id for this element"
     }
   },
   "required": ["index", "name"],

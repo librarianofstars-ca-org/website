@@ -1,10 +1,25 @@
 {
   "$id": "https://librarianofstars.ca/schema/components/elements/heading.json",
   "type": "object",
+  "title": "heading",
+  "description": "Heading component data",
   "properties": {
-    "contents": { "type": "string" },
-    "level": { "type": "number" },
-    "id": { "type": ["string", "null"] },
-    "className": { "type": ["string", "null"] }
-  }
+    "contents": { "type": "string", "description": "Displayed heading text" },
+    "level": {
+      "type": "number",
+      "description": "level of heading (h2, h3...)"
+    },
+    "id": {
+      "type": ["string", "null"],
+      "default": null,
+      "description": "hash link for this heading"
+    },
+    "className": {
+      "type": ["string", "null"],
+      "default": null,
+      "description": "any extra classes for this heading"
+    }
+  },
+  "required": ["level", "contents"],
+  "additionalProperties": false
 }

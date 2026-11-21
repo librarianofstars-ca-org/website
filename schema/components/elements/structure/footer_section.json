@@ -1,21 +1,37 @@
 {
   "$id": "https://librarianofstars.ca/schema/components/elements/structure/footer_section.json",
   "type": "object",
+  "title": "footer_section",
+  "description": "Data about a portion of the footer",
   "properties": {
     "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
-    "title": { "type": "string" },
+    "title": {
+      "type": "string",
+      "description": "Section title displayed above list"
+    },
     "contents": {
       "type": "array",
+      "description": "The list of items in footer section",
       "items": {
         "type": "object",
+        "description": "An item in a footer section",
         "properties": {
           "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
-          "title": { "type": "string" },
-          "contents": { "type": "array", "items": { "type": "string" } }
+          "title": { "type": "string", "description": "Item title" },
+          "contents": {
+            "type": "array",
+            "description": "Item contents",
+            "items": {
+              "type": "string",
+              "description": "An item's contents element"
+            }
+          }
         },
-        "required": ["id", "title", "contents"]
+        "required": ["id", "title", "contents"],
+        "additionalProperties": false
       }
     }
   },
-  "required": ["id", "title", "contents"]
+  "required": ["id", "title", "contents"],
+  "additionalProperties": false
 }

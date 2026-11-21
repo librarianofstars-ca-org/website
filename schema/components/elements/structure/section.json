@@ -31,5 +31,6 @@
       }
     }
   },
-  "required": ["id", "heading", "contents"]
+  "required": ["id", "heading", "contents"],
+  "additionalProperties": false
 }

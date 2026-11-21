@@ -1,14 +1,23 @@
 {
   "$id": "https://librarianofstars.ca/schema/components/elements/image.json",
   "type": "object",
+  "title": "image",
   "description": "An embeded image",
   "properties": {
-    "link": { "type": "string" },
+    "link": { "type": "string", "description": "link source for image" },
     "size": {
       "type": "object",
+      "description": "display size for image (in px)",
       "properties": {
-        "width": { "type": "number" },
-        "height": { "type": "number" }
+        "width": {
+          "type": "number",
+          "description": "Width of image display (px)"
+        },
+        "height": {
+          "type": "number",
+          "default": "=width",
+          "description": "Height of image display (px)"
+        }
       },
       "required": ["width"]
     }

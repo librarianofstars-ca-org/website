@@ -1,12 +1,17 @@
 {
   "$id": "https://librarianofstars.ca/schema/components/page/footer.json",
   "type": "object",
+  "title": "footer",
+  "description": "The footer component's data for a page",
   "properties": {
     "sections": {
       "type": "array",
+      "description": "Footer sections in this footer",
       "items": {
         "$ref": "https://librarianofstars.ca/schema/components/elements/structure/footer_section.json"
       }
     }
-  }
+  },
+  "required": ["sections"],
+  "additionalProperties": false
 }

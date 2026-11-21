@@ -24,7 +24,7 @@ export default function Page({ data }: { data: page }) {
   }
   return (
     <html
-      lang="en"
+      lang={data.head.language || "en"}
       className="style-root"
     >
       <Head data={data.head} />

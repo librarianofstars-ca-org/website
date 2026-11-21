@@ -1,8 +1,12 @@
 {
   "$id": "https://librarianofstars.ca/schema/components/meta/page.json",
+  "title": "page",
+  "description": "Contains the data needed to make a page",
   "type": "object",
   "properties": {
-    "head": true,
+    "head": {
+      "$ref": "https://librarianofstars.ca/schema/components/meta/head.json"
+    },
     "body": {
       "$ref": "https://librarianofstars.ca/schema/components/meta/body.json"
     }
