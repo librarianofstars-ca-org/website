@@ -141,6 +141,12 @@
     },
     {
       "fileMatch": [
+        "${workspaceFolder}/data/app/defaults/structure/navbar.json"
+      ],
+      "url": "./schema/components/elements/structure/navbar.json"
+    },
+    {
+      "fileMatch": [
         "${workspaceFolder}/data/app/homepage/structure/outline.json"
       ],
       "url": "./schema/components/elements/structure/table_of_contents.json"

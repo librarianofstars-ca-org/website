@@ -4,7 +4,7 @@ import "@/styles/components/page/header.css";
 
 import Seperator from "@/components/elements/seperator";
 
-import NavigationBar, { navbar } from "@/components/elements/structure/navbar";
+import NavBar, { navbar } from "@/components/elements/structure/navbar";
 import Heading from "@/components/elements/heading";
 import { validate_against_schema, ErrorData } from "@/schema/validation";
 
@@ -24,7 +24,7 @@ export default function Header({ data }: { data: header }) {
   }
   return (
     <div className="header">
-      <NavigationBar data={data.navigation} />
+      <NavBar data={data.navigation} />
       <Seperator data={{ vertical: false, className: "header" }} />
       <Heading
         data={{

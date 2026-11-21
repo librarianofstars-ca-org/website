@@ -1,3 +1,5 @@
+import { ErrorData, validate_against_schema } from "@/schema/validation";
+
 export interface head {
   page_title: string;
   page_discription: string;
@@ -7,6 +9,14 @@ export interface head {
 }
 
 export function Head({ data }: { data: head }) {
+    if (
+      !validate_against_schema(
+        "https://librarianofstars.ca/schema/components/meta/head.json",
+        data,
+      )
+    ) {
+      return <ErrorData data={data} />;
+    }
   return (
     <head>
       {/* standard charset for web dev */}

@@ -19,4 +19,5 @@ div.header > h1 {
 div.header > hr {
     color: var(--color-section-head-accent);
     background-color: var(--color-section-head-highlight);
+    outline-color: var(--color-section-head-main);
 }

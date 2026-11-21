@@ -24,5 +24,5 @@ export default function Spacer({ data }: { data: spacer }) {
   ) {
     return <ErrorData data={data} />;
   }
-  return <div className={(data.className || "") + " spacer " + data.size} />;
+  return <div className={data.size + " spacer " + (data.className || "")} />;
 }

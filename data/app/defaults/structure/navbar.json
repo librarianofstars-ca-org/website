@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "id": { "name": "navigation", "index": 1 },
+      "item_type": "icon",
+      "contents": {
+        "display": { "size": { "width": 30 }, "source": "./test.svg" },
+        "shape": "circle"
+      }
+    },
+    {
+      "id": { "name": "navigation", "index": 2 },
+      "item_type": "seperator",
+      "contents": { "vertical": true, "className": "nav-bar" }
+    },
+    {
+      "id": { "name": "navigation", "index": 3 },
+      "item_type": "link",
+      "contents": { "id": "0", "linked": "./", "display": "example" }
+    },
+    {
+      "id": { "name": "navigation", "index": 4 },
+      "item_type": "link",
+      "contents": { "id": "1", "linked": "./about", "display": "About Me!" }
+    },
+    {
+      "id": { "name": "navigation", "index": 5 },
+      "item_type": "spacer",
+      "contents": { "size": "tiny" }
+    },
+    {
+      "id": { "name": "navigation", "index": 6 },
+      "item_type": "seperator",
+      "contents": { "vertical": true, "className": "nav-bar" }
+    },
+    {
+      "id": { "name": "navigation", "index": 7 },
+      "item_type": "spacer",
+      "contents": { "size": "large" }
+    }
+  ]
+}
