@@ -6,6 +6,8 @@ import Seperator from "@/components/elements/seperator";
 
 import Link from "next/link";
 import Icon, { icon } from "@/components/elements/icon";
+import Spacer from "@/components/elements/spacer";
+
 import { validate_against_schema, ErrorData } from "@/schema/validation";
 
 export type navlink = { id: string; linked: string; display: string };
@@ -32,7 +34,7 @@ export default function NavigationBar({ data }: { data: navbar }) {
           className: "nav-bar-icon" + (data.icon.className || ""),
         }}
       />
-      <NavSeperator />
+      <Seperator data={{ vertical: true, className: "nav-bar-sep" }} />
       <NavLinks>
         {data.links.map((link) => (
           <NavLink
@@ -42,9 +44,9 @@ export default function NavigationBar({ data }: { data: navbar }) {
           />
         ))}
       </NavLinks>
-      <NavSpacer length="tiny" />
-      <NavSeperator />
-      <NavSpacer length="large" />
+      <Spacer data={{ size: "tiny", className: "nav" }} />
+      <Seperator data={{ vertical: true, className: "nav-bar-sep" }} />
+      <Spacer data={{ size: "large", className: "nav" }} />
     </nav>
   );
 }
@@ -64,16 +66,4 @@ export function NavLink({ linked, display }) {
       </Link>
     </li>
   );
-}
-
-export function NavSeperator() {
-  return <Seperator data={{ vertical: true, className: "nav-bar-sep" }} />;
-}
-
-export function NavSpacer({
-  length = "normal",
-}: {
-  length?: "tiny" | "small" | "normal" | "large" | "huge";
-}) {
-  return <div className={"nav-spacer" + " " + length} />;
 }

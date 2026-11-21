@@ -66,29 +66,7 @@ nav li.nav-bar-link-item::marker {
     display: none;
 }
 
-nav div.nav-spacer.tiny {
-    flex-grow: 1;
-}
-
-nav div.nav-spacer.small {
-    flex-grow: 2;
-}
-
-nav div.nav-spacer.normal {
-    flex-grow: 4;
-}
-
-nav div.nav-spacer.large {
-    flex-grow: 8;
-}
-
-nav div.nav-spacer.huge {
-    flex-grow: 16;
-}
-
-nav div.nav-spacer {
+nav div.nav.spacer {
     flex-basis: var(--size-xs);
-    flex-shrink: 1;
     align-self: center;
-    height: 0;
 }

@@ -1,0 +1,24 @@
+{
+  "$id": "https://librarianofstars.ca/schema/components/elements/spacer.json",
+  "title": "seperator",
+  "description": "A seperator element (hr)",
+  "type": "object",
+  "properties": {
+    "size": {
+      "type": "string",
+      "enum": [
+        "tiny",
+        "extra_small",
+        "small",
+        "normal",
+        "large",
+        "extra_large",
+        "huge"
+      ],
+      "description": "The relative size of the spacer"
+    },
+    "className": { "type": "string" }
+  },
+  "required": ["size"],
+  "additionalProperties": false
+}
