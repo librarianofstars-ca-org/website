@@ -1,0 +1,12 @@
+{
+  "$id": "https://librarianofstars.ca/schema/components/page/main.json",
+  "type": "object",
+  "properties": {
+    "main_section_data": {
+      "type": "array",
+      "items": {
+        "$ref": "https://librarianofstars.ca/schema/components/elements/structure/section.json"
+      }
+    }
+  }
+}
