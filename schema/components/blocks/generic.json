@@ -4,6 +4,7 @@
   "description": "Any of the block schema",
   "type": "object",
   "properties": {
+    "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
     "block_type": {
       "type": "string",
       "enum": ["gallery", "links", "paragraph"],
@@ -24,6 +25,6 @@
       ]
     }
   },
-  "required": ["block_type", "contents"],
+  "required": ["id", "block_type", "contents"],
   "additionalProperties": false
 }

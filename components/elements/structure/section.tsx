@@ -6,6 +6,7 @@ import Heading, { heading } from "@/components/elements/heading";
 import GenericBlock, { block } from "@/components/blocks/generic_block";
 import Seperator from "@/components/elements/seperator";
 import { keyed_list, to_key } from "@/utilities/key_mapping";
+import { validate_against_schema, ErrorData } from "@/schema/validation";
 
 export type section_content = section | block;
 
@@ -16,6 +17,14 @@ export interface section extends keyed_list {
 }
 
 export default function Section({ data }: { data: section }) {
+  if (
+    !validate_against_schema(
+      "https://librarianofstars.ca/schema/components/elements/structure/section.json",
+      data,
+    )
+  ) {
+    return <ErrorData data={data} />;
+  }
   return (
     <div
       className="section"

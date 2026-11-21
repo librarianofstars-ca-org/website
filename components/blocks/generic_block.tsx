@@ -6,7 +6,7 @@ import ParagraphBlock, {
   paragraph_block,
 } from "@/components/blocks/paragraph_block";
 import { keyed_list, to_key } from "@/utilities/key_mapping";
-
+import { validate_against_schema, ErrorData } from "@/schema/validation";
 
 export interface block extends keyed_list {
   block_type: string;
@@ -26,6 +26,14 @@ export function BlockWraper({
 }
 
 export default function GenericBlock({ data }: { data: block }) {
+  if (
+    !validate_against_schema(
+      "https://librarianofstars.ca/schema/components/blocks/generic.json",
+      data,
+    )
+  ) {
+    return <ErrorData data={data} />;
+  }
   switch (data.block_type) {
     case "paragraph":
       return (

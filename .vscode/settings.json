@@ -136,24 +136,8 @@
       "url": "./schema/components/blocks/paragraph.json"
     },
     {
-      "fileMatch": [
-        "${workspaceFolder}/data/app/homepage/blocks/welcome.json",
-        "${workspaceFolder}/data/app/homepage/blocks/summery.json"
-      ],
-      "url": "./schema/components/blocks/paragraph.json"
-    },
-    {
-      "fileMatch": [
-        "${workspaceFolder}/data/app/homepage/blocks/art_show.json"
-      ],
-      "url": "./schema/components/blocks/gallery.json"
-    },
-    {
-      "fileMatch": [
-        "${workspaceFolder}/data/app/homepage/blocks/contact_me.json",
-        "${workspaceFolder}/data/app/homepage/blocks/projects.json"
-      ],
-      "url": "./schema/components/blocks/links.json"
+      "fileMatch": ["${workspaceFolder}/data/app/homepage/blocks/*.json"],
+      "url": "./schema/components/blocks/generic.json"
     },
     {
       "fileMatch": ["${workspaceFolder}/data/app/homepage/page/footer.json"],
