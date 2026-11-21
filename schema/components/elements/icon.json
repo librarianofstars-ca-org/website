@@ -1,0 +1,20 @@
+{
+  "$id": "https://librarianofstars.ca/schema/components/elements/icon.json",
+  "title": "icon",
+  "description": "A small icon included in a flow",
+  "type": "object",
+  "properties": {
+    "display": {
+      "$ref": "https://librarianofstars.ca/schema/components/elements/image.json"
+    },
+    "shape": {
+      "type": "string",
+      "enum": ["circle", "square", "rect"],
+      "description": "What shape is this icon cut out for"
+    },
+    "className": {
+      "type": "string",
+      "description": "Any extra styling for this in particular"
+    }
+  }
+}

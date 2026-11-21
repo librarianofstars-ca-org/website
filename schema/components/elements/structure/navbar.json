@@ -4,6 +4,9 @@
   "title": "navbar",
   "description": "Navbar component data",
   "properties": {
+    "icon": {
+      "$ref": "https://librarianofstars.ca/schema/components/elements/icon.json"
+    },
     "links": {
       "type": "array",
       "description": "Links in navigation bar",

@@ -4,17 +4,10 @@ import "@/styles/components/blocks/gallery_block.css";
 import { BlockWraper } from "@/components/blocks/generic_block";
 import { ErrorData, validate_against_schema } from "@/schema/validation";
 import { keyed_list, to_key } from "@/utilities/key_mapping";
+import Image, { image } from "../elements/image";
 
 export interface gallery_item extends keyed_list {
-  contents:
-    | string
-    | {
-        link: string;
-        size: {
-          width: number;
-          height?: number;
-        };
-      };
+  contents: string | image;
   // JSX.Element;
   label: string;
 }
@@ -59,15 +52,7 @@ export function GalleryItem({ galleryitem }: { galleryitem: gallery_item }) {
     ) {
       return <ErrorData data={galleryitem.contents} />;
     }
-    display = (
-      <img
-        width={galleryitem.contents.size.width}
-        height={
-          galleryitem.contents.size.height || galleryitem.contents.size.width
-        }
-        src={galleryitem.contents.link}
-      />
-    );
+    display = <Image data={{ ...galleryitem.contents }} />;
   }
   return (
     <div

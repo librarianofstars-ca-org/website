@@ -5,12 +5,13 @@ import "@/styles/components/elements/structure/navbar.css";
 import Seperator from "@/components/elements/seperator";
 
 import Link from "next/link";
-import Icon from "@/components/elements/icon";
+import Icon, { icon } from "@/components/elements/icon";
 import { validate_against_schema, ErrorData } from "@/schema/validation";
 
 export type navlink = { id: string; linked: string; display: string };
 
 export interface navbar {
+  icon: icon;
   links: navlink[];
 }
 
@@ -26,10 +27,10 @@ export default function NavigationBar({ data }: { data: navbar }) {
   return (
     <nav>
       <Icon
-        size={30}
-        shape={"circle"}
-        source={"./test.svg"}
-        className="nav-bar-icon"
+        data={{
+          ...data.icon,
+          className: "nav-bar-icon" + (data.icon.className || ""),
+        }}
       />
       <NavSeperator />
       <NavLinks>

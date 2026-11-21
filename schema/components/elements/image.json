@@ -4,7 +4,7 @@
   "title": "image",
   "description": "An embeded image",
   "properties": {
-    "link": { "type": "string", "description": "link source for image" },
+    "source": { "type": "string", "description": "link source for image" },
     "size": {
       "type": "object",
       "description": "display size for image (in px)",
@@ -22,6 +22,6 @@
       "required": ["width"]
     }
   },
-  "required": ["link", "size"],
+  "required": ["source", "size"],
   "additionalProperties": false
 }

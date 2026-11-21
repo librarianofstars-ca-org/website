@@ -1,6 +1,10 @@
 {
   "page_title": "Librarian Of Stars",
   "navigation": {
+    "icon": {
+      "display": { "size": { "width": 30 }, "source": "./test.svg" },
+      "shape": "circle"
+    },
     "links": { "datalink": "./app/defaults/structure/navlinks.json" }
   }
 }
