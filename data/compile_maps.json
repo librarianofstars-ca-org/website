@@ -16,15 +16,7 @@
     "out": "./tests/compiler/compiled/four.json"
   },
   {
-    "in": "./app/homepage/page/sidebar.json",
-    "out": "./app/homepage/compiled/sidebar.json"
-  },
-  {
-    "in": "./app/homepage/page/header.json",
-    "out": "./app/homepage/compiled/header.json"
-  },
-  {
-    "in": "./app/homepage/page/main.json",
-    "out": "./app/homepage/compiled/main.json"
+    "in": "./app/homepage/page.json",
+    "out": "./app/homepage/compiled/page.json"
   }
 ]

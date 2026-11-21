@@ -7,18 +7,15 @@ import "@/styles/shared.css";
 import "@/styles/app/shared.css";
 import "@/styles/app/homepage.css";
 
-import homepage_footer_data from "@/data/app/homepage/page/footer.json";
-import homepage_sidebar_data from "@/data/app/homepage/compiled/sidebar.json";
-import homepage_header_data from "@/data/app/homepage/compiled/header.json";
-import homepage_main_data from "@/data/app/homepage/compiled/main.json";
+import homepage_data from "@/data/app/homepage/compiled/page.json"
 
 export default function HomePage() {
   return (
     <>
-      <Header data={homepage_header_data} />
-      <Sidebar data={homepage_sidebar_data} />
-      <Main data={homepage_main_data} />
-      <Footer data={homepage_footer_data} />
+      <Header data={homepage_data.header_data} />
+      <Sidebar data={homepage_data.sidebar_data} />
+      <Main data={homepage_data.main_data} />
+      <Footer data={homepage_data.footer_data} />
     </>
   );
 }
