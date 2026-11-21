@@ -25,6 +25,8 @@ import schema_body from "@/schema/components/meta/body.json";
 import schema_head from "@/schema/components/meta/head.json";
 import schema_page from "@/schema/components/meta/page.json";
 
+import schema_datalink from "@/schema/datalink.json";
+
 export const ajv_instance = new AJV({
   strict: true,
   allErrors: true,
@@ -49,6 +51,7 @@ export const ajv_instance = new AJV({
     schema_body,
     schema_head,
     schema_page,
+    schema_datalink,
   ],
 });
 
