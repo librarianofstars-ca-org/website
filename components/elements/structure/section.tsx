@@ -31,10 +31,7 @@ export default function Section({ data }: { data: section }) {
       key={to_key(data.id)}
     >
       {data.heading.level <= 3 && (
-        <Seperator
-          className={"section-start"}
-          isVertical={false}
-        />
+        <Seperator data={{ className: "section-start", vertical: false }} />
       )}
       <Heading data={{ ...data.heading, className: "section-title" }} />
       {data.contents.map((section_content_item) => {

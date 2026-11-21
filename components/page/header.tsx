@@ -25,10 +25,7 @@ export default function Header({ data }: { data: header }) {
   return (
     <div className="header">
       <NavigationBar data={data.navigation} />
-      <Seperator
-        isVertical={false}
-        className="header"
-      />
+      <Seperator data={{ vertical: false, className: "header" }} />
       <Heading
         data={{
           id: "#home",

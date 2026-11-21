@@ -67,12 +67,7 @@ export function NavLink({ linked, display }) {
 }
 
 export function NavSeperator() {
-  return (
-    <Seperator
-      isVertical={true}
-      className="nav-bar-sep"
-    />
-  );
+  return <Seperator data={{ vertical: true, className: "nav-bar-sep" }} />;
 }
 
 export function NavSpacer({

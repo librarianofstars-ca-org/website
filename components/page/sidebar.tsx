@@ -29,10 +29,7 @@ export default function Sidebar({ data }: { data: sidebar }) {
   }
   return (
     <div className="sidebar wraper">
-      <Seperator
-        isVertical={true}
-        className="sidebar left"
-      />
+      <Seperator data={{ vertical: true, className: "sidebar left" }} />
       <div className="sidebar contents">
         {data.map((sidebar_section) => {
           switch (sidebar_section.section_type) {
@@ -53,10 +50,7 @@ export default function Sidebar({ data }: { data: sidebar }) {
           }
         })}
       </div>
-      <Seperator
-        isVertical={true}
-        className="sidebar right"
-      />
+      <Seperator data={{ vertical: true, className: "sidebar right" }} />
     </div>
   );
 }

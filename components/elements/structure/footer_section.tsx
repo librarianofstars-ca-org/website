@@ -40,8 +40,7 @@ export default function FooterSection({ data }: { data: footer_section }) {
             className="footer-contents-wrapper"
           >
             <Seperator
-              isVertical={false}
-              className={"footer-contents"}
+              data={{ vertical: false, className: "footer-contents" }}
             />
             <dt key={index}>{item.title}</dt>
             {item.contents.map((content: ReactNode, index: number) => (
