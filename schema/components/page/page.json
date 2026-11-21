@@ -2,17 +2,24 @@
   "$id": "https://librarianofstars.ca/schema/components/page/page.json",
   "type": "object",
   "properties": {
-    "header_data": {
-      "$ref": "https://librarianofstars.ca/schema/components/page/header.json"
-    },
-    "sidebar_data": {
-      "$ref": "https://librarianofstars.ca/schema/components/page/sidebar.json"
-    },
-    "main_data": {
-      "$ref": "https://librarianofstars.ca/schema/components/page/main.json"
-    },
-    "footer_data": {
-      "$ref": "https://librarianofstars.ca/schema/components/page/footer.json"
+    "head": true,
+    "body": {
+      "type": "object",
+      "properties": {
+        "page_markers": { "type": "boolean" },
+        "header_data": {
+          "$ref": "https://librarianofstars.ca/schema/components/page/header.json"
+        },
+        "sidebar_data": {
+          "$ref": "https://librarianofstars.ca/schema/components/page/sidebar.json"
+        },
+        "main_data": {
+          "$ref": "https://librarianofstars.ca/schema/components/page/main.json"
+        },
+        "footer_data": {
+          "$ref": "https://librarianofstars.ca/schema/components/page/footer.json"
+        }
+      }
     }
   }
 }

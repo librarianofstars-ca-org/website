@@ -1,14 +1,17 @@
 {
-  "header_data": {
-    "datalink": "./app/defaults/page/header.json"
-  },
-  "sidebar_data": {
-    "datalink": "./app/homepage/page/sidebar.json"
-  },
-  "main_data": {
-    "datalink": "./app/homepage/page/main.json"
-  },
-  "footer_data": {
-    "datalink": "./app/homepage/page/footer.json"
+  "body": {
+    "page_markers": true,
+    "header_data": {
+      "datalink": "./app/defaults/page/header.json"
+    },
+    "sidebar_data": {
+      "datalink": "./app/homepage/page/sidebar.json"
+    },
+    "main_data": {
+      "datalink": "./app/homepage/page/main.json"
+    },
+    "footer_data": {
+      "datalink": "./app/homepage/page/footer.json"
+    }
   }
 }
