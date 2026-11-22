@@ -16,7 +16,7 @@
     "out": "./tests/compiler/compiled/four.json"
   },
   {
-    "in": "./app/homepage/page.json",
+    "in": "./app/homepage/meta/page.json",
     "out": "./app/homepage/compiled/page.json"
   }
 ]

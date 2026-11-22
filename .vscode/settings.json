@@ -173,11 +173,19 @@
       "url": "./schema/components/page/main.json"
     },
     {
+      "fileMatch": ["${workspaceFolder}/data/app/homepage/body.json"],
+      "url": "./schema/components/meta/body.json"
+    },
+    {
+      "fileMatch": ["${workspaceFolder}/data/app/homepage/head.json"],
+      "url": "./schema/components/meta/head.json"
+    },
+    {
       "fileMatch": [
         "${workspaceFolder}/data/app/homepage/page.json",
         "${workspaceFolder}/data/app/homepage/compiled/page.json"
       ],
-      "url": "./schema/components/page/page.json"
+      "url": "./schema/components/meta/page.json"
     },
     {
       "fileMatch": ["${workspaceFolder}/data/app/homepage/sections/*.json"],
