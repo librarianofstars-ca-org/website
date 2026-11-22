@@ -1,0 +1,16 @@
+{
+  "$id": "https://librarianofstars.ca/schema/components/elements/seperator.json",
+  "title": "seperator",
+  "description": "A seperator element (hr)",
+  "type": "object",
+  "properties": {
+    "vertical": {
+      "type": "boolean",
+      "description": "Vertical or horizontal",
+      "default": false
+    },
+    "className": { "type": "string" }
+  },
+  "required": ["vertical"],
+  "additionalProperties": false
+}

@@ -2,15 +2,14 @@ import "@/styles/components/shared.css";
 import "@/styles/components/page/shared.css";
 import "@/styles/components/page/header.css";
 
-import Seperator from "@/components/elements/seperator";
+import {  to_key } from "@/utilities/key_mapping";
 
-import NavigationBar, { navbar } from "@/components/elements/structure/navbar";
-import Heading from "@/components/elements/heading";
 import { validate_against_schema, ErrorData } from "@/schema/validation";
 
+import HeaderSection, { header_section } from "../elements/structure/header_section";
+
 export interface header {
-  page_title: string;
-  navigation: navbar;
+  sections: header_section[];
 }
 
 export default function Header({ data }: { data: header }) {
@@ -24,19 +23,14 @@ export default function Header({ data }: { data: header }) {
   }
   return (
     <div className="header">
-      <NavigationBar data={data.navigation} />
-      <Seperator
-        isVertical={false}
-        className="header"
-      />
-      <Heading
-        data={{
-          id: "#home",
-          className: "page-title",
-          contents: data.page_title,
-          level: 1,
-        }}
-      />
+      {data.sections.map((section) => {
+        return (
+          <HeaderSection
+            key={to_key(section.id)}
+            data={section}
+          />
+        );
+      })}
     </div>
   );
 }

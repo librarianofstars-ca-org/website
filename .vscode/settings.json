@@ -141,6 +141,12 @@
     },
     {
       "fileMatch": [
+        "${workspaceFolder}/data/app/defaults/structure/navbar.json"
+      ],
+      "url": "./schema/components/elements/structure/navbar.json"
+    },
+    {
+      "fileMatch": [
         "${workspaceFolder}/data/app/homepage/structure/outline.json"
       ],
       "url": "./schema/components/elements/structure/table_of_contents.json"
@@ -167,11 +173,19 @@
       "url": "./schema/components/page/main.json"
     },
     {
+      "fileMatch": ["${workspaceFolder}/data/app/homepage/body.json"],
+      "url": "./schema/components/meta/body.json"
+    },
+    {
+      "fileMatch": ["${workspaceFolder}/data/app/homepage/head.json"],
+      "url": "./schema/components/meta/head.json"
+    },
+    {
       "fileMatch": [
         "${workspaceFolder}/data/app/homepage/page.json",
         "${workspaceFolder}/data/app/homepage/compiled/page.json"
       ],
-      "url": "./schema/components/page/page.json"
+      "url": "./schema/components/meta/page.json"
     },
     {
       "fileMatch": ["${workspaceFolder}/data/app/homepage/sections/*.json"],

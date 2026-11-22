@@ -17,7 +17,7 @@ div.footer-section {
     background-color: var(--color-section-foot-main);
 }
 
-div.footer-section h4 {
+div.footer-section .footer-section-title {
     grid-column: 1 / -1; 
     grid-row: 1 / span 1;
     justify-self: center;

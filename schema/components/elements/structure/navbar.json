@@ -3,27 +3,62 @@
   "type": "object",
   "title": "navbar",
   "description": "Navbar component data",
-  "properties": {
-    "links": {
-      "type": "array",
-      "description": "Links in navigation bar",
-      "items": {
-        "type": "object",
-        "description": "A Link in the navigation bar",
-        "properties": {
-          "id": { "type": "string", "description": "link id" },
-          "linked": { "type": "string", "description": "Where does this go?" },
-          "display": {
-            "type": "string",
-            "description": "What does this display as text"
-          }
+  "$defs": {
+    "nav_link": {
+      "type": "object",
+      "description": "A Link in the navigation bar",
+      "properties": {
+        "id": { "type": "string", "description": "link id" },
+        "linked": {
+          "type": "string",
+          "description": "Where does this go?"
         },
-        "required": ["id", "linked", "display"],
-        "additionalProperties": false
+        "display": {
+          "type": "string",
+          "description": "What does this display as text"
+        }
       },
-      "minItems": 1
+      "required": ["id", "linked", "display"],
+      "additionalProperties": false
     }
   },
-  "required": ["links"],
+  "properties": {
+    "contents": {
+      "type": "array",
+      "description": "What makes up this navbar?",
+      "items": {
+        "type": "object",
+        "description": "A navbar item data object",
+        "properties": {
+          "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
+          "item_type": {
+            "type": "string",
+            "description": "Descriminator for item type",
+            "enum": ["link", "icon", "spacer", "seperator"]
+          },
+          "contents": {
+            "description": "The item's data",
+            "oneOf": [
+              {
+                "$ref": "#/$defs/nav_link"
+              },
+              {
+                "$ref": "https://librarianofstars.ca/schema/components/elements/icon.json"
+              },
+              {
+                "$ref": "https://librarianofstars.ca/schema/components/elements/spacer.json"
+              },
+              {
+                "$ref": "https://librarianofstars.ca/schema/components/elements/seperator.json"
+              }
+            ]
+          }
+        },
+        "required": ["id", "item_type", "contents"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["contents"],
   "additionalProperties": false
 }

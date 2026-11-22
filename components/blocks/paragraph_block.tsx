@@ -1,8 +1,6 @@
 import "@/styles/components/blocks/shared.css";
 import "@/styles/components/blocks/paragraph_block.css";
 
-// import Seperator from "@/components/elements/seperator";
-
 import { BlockWraper } from "@/components/blocks/generic_block";
 import { ErrorData, validate_against_schema } from "@/schema/validation";
 import { keyed_list, to_key } from "@/utilities/key_mapping";

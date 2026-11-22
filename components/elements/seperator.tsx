@@ -1,16 +1,29 @@
 import "@/styles/components/shared.css";
 import "@/styles/components/elements/shared.css";
 import "@/styles/components/elements/seperator.css";
+import { ErrorData, validate_against_schema } from "@/schema/validation";
 
-export default function Seperator({ isVertical, className, ...props }) {
+export interface seperator {
+  vertical: boolean;
+  className?: string;
+}
+
+export default function Seperator({ data }: { data: seperator }) {
+  if (
+    !validate_against_schema(
+      "https://librarianofstars.ca/schema/components/elements/seperator.json",
+      data,
+    )
+  ) {
+    return <ErrorData data={data} />;
+  }
   return (
     <hr
       className={
-        className +
+        (data.className || "") +
         " page-seperator " +
-        (isVertical ? "vertical" : "horizontal")
+        (data.vertical ? "vertical" : "horizontal")
       }
-      {...props}
     />
   );
 }

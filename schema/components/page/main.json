@@ -4,15 +4,15 @@
   "title": "main",
   "description": "The main (body) component's data for a page",
   "properties": {
-    "main_section_data": {
+    "sections": {
       "type": "array",
-      "description": "Top-Level Sections (h2)",
+      "description": "Top-Level `MainSection`s (h2)",
       "items": {
-        "$ref": "https://librarianofstars.ca/schema/components/elements/structure/section.json"
+        "$ref": "https://librarianofstars.ca/schema/components/elements/structure/main_section.json"
       },
       "minItems": 1
     }
   },
-  "required": ["main_section_data"],
+  "required": ["sections"],
   "additionalProperties": false
 }

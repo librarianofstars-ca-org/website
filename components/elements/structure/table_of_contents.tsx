@@ -12,7 +12,10 @@ export interface outlined_heading {
   level: number;
 }
 
-export type table_of_contents = outlined_heading[];
+export interface table_of_contents {
+  places: boolean;
+  contents: outlined_heading[];
+}
 
 export default function TableOfContents({ data }: { data: table_of_contents }) {
   if (
@@ -25,8 +28,8 @@ export default function TableOfContents({ data }: { data: table_of_contents }) {
   }
   return (
     <div className="table-of-contents">
-      <TOCPlace place="start" />
-      {data.map((outline_item) => (
+      {!data.places || <TOCPlace place="start" />}
+      {data.contents.map((outline_item) => (
         <LinkedHeading
           key={outline_item.order.toString() + "-order"}
           link={outline_item.link}
@@ -37,7 +40,7 @@ export default function TableOfContents({ data }: { data: table_of_contents }) {
           }}
         />
       ))}
-      <TOCPlace place="end" />
+      {!data.places || <TOCPlace place="end" />}
     </div>
   );
 }
