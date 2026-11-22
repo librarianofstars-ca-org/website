@@ -4,7 +4,8 @@ import Main, { main } from "@/components/page/main";
 import Footer, { footer } from "@/components/page/footer";
 
 import Heading, { heading } from "@/components/elements/heading";
-import { ErrorData, validate_against_schema } from "@/schema/validation";
+
+import { render_if_valid_data } from "@/schema/validation";
 
 export interface body {
   page_markers: boolean;
@@ -21,15 +22,9 @@ const page_marker_data: heading = {
 };
 
 export default function Body({ data }: { data: body }) {
-  if (
-    !validate_against_schema(
-      "https://librarianofstars.ca/schema/components/meta/body.json",
-      data,
-    )
-  ) {
-    return <ErrorData data={data} />;
-  }
-  return (
+  return render_if_valid_data(
+    "https://librarianofstars.ca/schema/components/meta/body.json",
+    data,
     <body id="page">
       {data.page_markers && (
         <Heading data={{ ...page_marker_data, id: "page_start" }} />
@@ -41,6 +36,6 @@ export default function Body({ data }: { data: body }) {
       {data.page_markers && (
         <Heading data={{ ...page_marker_data, id: "page_end" }} />
       )}
-    </body>
+    </body>,
   );
 }

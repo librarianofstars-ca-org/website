@@ -2,7 +2,7 @@ import "@/styles/components/blocks/shared.css";
 import "@/styles/components/blocks/paragraph_block.css";
 
 import { BlockWraper } from "@/components/blocks/generic_block";
-import { ErrorData, validate_against_schema } from "@/schema/validation";
+import { render_if_valid_data } from "@/schema/validation";
 import { keyed_list, to_key } from "@/utilities/key_mapping";
 export interface paragraph_data extends keyed_list {
   contents: string | boolean;
@@ -13,15 +13,9 @@ export interface paragraph_block extends keyed_list {
 }
 
 export default function ParagraphBlock({ data }: { data: paragraph_block }) {
-  if (
-    !validate_against_schema(
-      "https://librarianofstars.ca/schema/components/blocks/paragraph.json",
-      data,
-    )
-  ) {
-    return <ErrorData data={data} />;
-  }
-  return (
+  return render_if_valid_data(
+    "https://librarianofstars.ca/schema/components/blocks/paragraph.json",
+    data,
     <BlockWraper
       type={"paragraph"}
       key={to_key(data.id)}
@@ -32,7 +26,7 @@ export default function ParagraphBlock({ data }: { data: paragraph_block }) {
           data={paragraph}
         />
       ))}
-    </BlockWraper>
+    </BlockWraper>,
   );
 }
 export function ParagraphElement({ data }: { data: paragraph_data }) {

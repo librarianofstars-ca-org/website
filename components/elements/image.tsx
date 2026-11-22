@@ -1,7 +1,8 @@
 import "@/styles/components/shared.css";
 import "@/styles/components/elements/shared.css";
 import "@/styles/components/elements/image.css";
-import { validate_against_schema, ErrorData } from "@/schema/validation";
+
+import { render_if_valid_data } from "@/schema/validation";
 
 export interface image {
   source: string;
@@ -10,20 +11,14 @@ export interface image {
 }
 
 export default function Image({ data }: { data: image }) {
-  if (
-    !validate_against_schema(
-      "https://librarianofstars.ca/schema/components/elements/image.json",
-      data,
-    )
-  ) {
-    return <ErrorData data={data} />;
-  }
-  return (
+  return render_if_valid_data(
+    "https://librarianofstars.ca/schema/components/elements/image.json",
+    data,
     <img
       width={data.size.width}
       height={data.size.height || data.size.width} // fallback to square
       src={data.source}
       className={"icon " + data.className}
-    />
+    />,
   );
 }

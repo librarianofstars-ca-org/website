@@ -1,5 +1,4 @@
-import { ErrorData, validate_against_schema } from "@/schema/validation";
-
+import { render_if_valid_data } from "@/schema/validation";
 export interface head {
   page_title: string;
   page_discription: string;
@@ -9,15 +8,9 @@ export interface head {
 }
 
 export function Head({ data }: { data: head }) {
-    if (
-      !validate_against_schema(
-        "https://librarianofstars.ca/schema/components/meta/head.json",
-        data,
-      )
-    ) {
-      return <ErrorData data={data} />;
-    }
-  return (
+  return render_if_valid_data(
+    "https://librarianofstars.ca/schema/components/meta/head.json",
+    data,
     <head>
       {/* standard charset for web dev */}
       <meta charSet={data.character_set || "utf-8"} />
@@ -55,6 +48,6 @@ export function Head({ data }: { data: head }) {
       rel="apple-touch-icon"
       href="/apple-touch-icon.png"
     /> --> */}
-    </head>
+    </head>,
   );
 }

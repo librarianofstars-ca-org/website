@@ -4,7 +4,7 @@ import "@/styles/components/page/main.css";
 
 import { to_key } from "@/utilities/key_mapping";
 
-import { validate_against_schema, ErrorData } from "@/schema/validation";
+import { render_if_valid_data } from "@/schema/validation";
 
 import MainSection, {
   main_section,
@@ -15,15 +15,9 @@ export interface main {
 }
 
 export default function Main({ data }: { data: main }) {
-  if (
-    !validate_against_schema(
-      "https://librarianofstars.ca/schema/components/page/main.json",
-      data,
-    )
-  ) {
-    return <ErrorData data={data} />;
-  }
-  return (
+  return render_if_valid_data(
+    "https://librarianofstars.ca/schema/components/page/main.json",
+    data,
     <div className="main-body">
       {data.sections.map((section) => {
         return (
@@ -33,6 +27,6 @@ export default function Main({ data }: { data: main }) {
           />
         );
       })}
-    </div>
+    </div>,
   );
 }

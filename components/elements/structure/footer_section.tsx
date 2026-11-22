@@ -6,7 +6,8 @@ import Seperator from "@/components/elements/seperator";
 import "@/styles/components/elements/structure/footer_section.css";
 
 import { keyed_list, to_key } from "@/utilities/key_mapping";
-import { ErrorData, validate_against_schema } from "@/schema/validation";
+
+import { render_if_valid_data } from "@/schema/validation";
 
 export interface footer_section_item extends keyed_list {
   title: string;
@@ -19,15 +20,9 @@ export interface footer_section extends keyed_list {
 }
 
 export default function FooterSection({ data }: { data: footer_section }) {
-  if (
-    !validate_against_schema(
-      "https://librarianofstars.ca/schema/components/elements/structure/footer_section.json",
-      data,
-    )
-  ) {
-    return <ErrorData data={data} />;
-  }
-  return (
+  return render_if_valid_data(
+    "https://librarianofstars.ca/schema/components/elements/structure/footer_section.json",
+    data,
     <>
       {data.id.index > 1 && (
         <Seperator data={{ vertical: true, className: "footer" }} />
@@ -56,6 +51,6 @@ export default function FooterSection({ data }: { data: footer_section }) {
           ))}
         </dl>
       </div>
-    </>
+    </>,
   );
 }

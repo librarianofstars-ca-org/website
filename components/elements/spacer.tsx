@@ -1,7 +1,8 @@
 import "@/styles/components/shared.css";
 import "@/styles/components/elements/shared.css";
 import "@/styles/components/elements/spacer.css";
-import { ErrorData, validate_against_schema } from "@/schema/validation";
+
+import { render_if_valid_data } from "@/schema/validation";
 
 export interface spacer {
   size:
@@ -16,13 +17,9 @@ export interface spacer {
 }
 
 export default function Spacer({ data }: { data: spacer }) {
-  if (
-    !validate_against_schema(
-      "https://librarianofstars.ca/schema/components/elements/spacer.json",
-      data,
-    )
-  ) {
-    return <ErrorData data={data} />;
-  }
-  return <div className={data.size + " spacer " + (data.className || "")} />;
+  return render_if_valid_data(
+    "https://librarianofstars.ca/schema/components/elements/spacer.json",
+    data,
+    <div className={data.size + " spacer " + (data.className || "")} />,
+  );
 }
