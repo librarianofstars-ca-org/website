@@ -1,5 +1,5 @@
 import "@/styles/components/elements/shared.css";
-import "@/styles/components/elements/structure/section.css";
+import "@/styles/components/elements/structure/main_section.css";
 
 import Heading, { heading } from "@/components/elements/heading";
 
@@ -16,7 +16,7 @@ export interface section extends keyed_list {
   contents: section_content[];
 }
 
-export default function Section({ data }: { data: section }) {
+export default function MainSection({ data }: { data: section }) {
   if (
     !validate_against_schema(
       "https://librarianofstars.ca/schema/components/elements/structure/section.json",
@@ -39,7 +39,7 @@ export default function Section({ data }: { data: section }) {
         if ((section_content_item as section).heading !== undefined) {
           // Must be section
           return (
-            <Section
+            <MainSection
               key={to_key(section_content_item.id)}
               data={section_content_item as section}
             />

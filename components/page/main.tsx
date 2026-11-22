@@ -2,7 +2,9 @@ import "@/styles/components/shared.css";
 import "@/styles/components/page/shared.css";
 import "@/styles/components/page/main.css";
 
-import Section, { section } from "@/components/elements/structure/section";
+import MainSection, {
+  section,
+} from "@/components/elements/structure/main_section";
 import { to_key } from "@/utilities/key_mapping";
 import { validate_against_schema, ErrorData } from "@/schema/validation";
 
@@ -23,7 +25,7 @@ export default function Main({ data }: { data: main }) {
     <div className="main-body">
       {data.main_section_data.map((section) => {
         return (
-          <Section
+          <MainSection
             key={to_key(section.id)}
             data={section}
           />

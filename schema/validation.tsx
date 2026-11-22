@@ -14,7 +14,7 @@ import schema_heading from "@/schema/components/elements/heading.json";
 import schema_navbar from "@/schema/components/elements/structure/navbar.json";
 import schema_toc from "@/schema/components/elements/structure/table_of_contents.json";
 import schema_foot_sec from "@/schema/components/elements/structure/footer_section.json";
-import schema_section from "@/schema/components/elements/structure/section.json";
+import schema_section from "@/schema/components/elements/structure/main_section.json";
 
 import schema_key from "@/schema/types/key.json";
 import schema_link from "@/schema/types/link.json";
