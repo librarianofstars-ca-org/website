@@ -6,7 +6,7 @@ import Heading, { heading } from "@/components/elements/heading";
 import GenericBlock, { block } from "@/components/blocks/generic_block";
 import Seperator from "@/components/elements/seperator";
 import { keyed_list, to_key } from "@/utilities/key_mapping";
-import { validate_against_schema, ErrorData } from "@/schema/validation";
+import { render_if_valid_data } from "@/schema/validation";
 
 export type section_content = main_section | block;
 
@@ -16,15 +16,9 @@ export interface main_section extends keyed_list {
 }
 
 export default function MainSection({ data }: { data: main_section }) {
-  if (
-    !validate_against_schema(
-      "https://librarianofstars.ca/schema/components/elements/structure/main_section.json",
-      data,
-    )
-  ) {
-    return <ErrorData data={data} />;
-  }
-  return (
+  return render_if_valid_data(
+    "https://librarianofstars.ca/schema/components/elements/structure/main_section.json",
+    data,
     <div
       className="section"
       key={to_key(data.id)}
@@ -57,6 +51,6 @@ export default function MainSection({ data }: { data: main_section }) {
           );
         }
       })}
-    </div>
+    </div>,
   );
 }

@@ -8,7 +8,8 @@ import Link from "next/link";
 import Icon, { icon } from "@/components/elements/icon";
 import Spacer, { spacer } from "@/components/elements/spacer";
 
-import { validate_against_schema, ErrorData } from "@/schema/validation";
+import { render_if_valid_data } from "@/schema/validation";
+
 import { keyed_list, to_key } from "@/utilities/key_mapping";
 
 export interface navlink {
@@ -27,16 +28,9 @@ export interface navbar {
 }
 
 export default function NavBar({ data }: { data: navbar }) {
-  if (
-    !validate_against_schema(
-      "https://librarianofstars.ca/schema/components/elements/structure/navbar.json",
-      data,
-    )
-  ) {
-    // console.log(ajv_instance.errors);
-    return <ErrorData data={data} />;
-  }
-  return (
+  return render_if_valid_data(
+    "https://librarianofstars.ca/schema/components/elements/structure/navbar.json",
+    data,
     <nav>
       <ul className="nav-bar-items">
         {data.contents.map((item) => {
@@ -72,20 +66,14 @@ export default function NavBar({ data }: { data: navbar }) {
           }
         })}
       </ul>
-    </nav>
+    </nav>,
   );
 }
 
 export function NavLink({ data }: { data: navlink }) {
-  if (
-    !validate_against_schema(
-      "https://librarianofstars.ca/schema/components/elements/structure/navbar.json#/$defs/nav_link",
-      data,
-    )
-  ) {
-    return <ErrorData data={data} />;
-  }
-  return (
+  return render_if_valid_data(
+    "https://librarianofstars.ca/schema/components/elements/structure/navbar.json#/$defs/nav_link",
+    data,
     <li
       className="nav-bar"
       key={data.id}
@@ -96,6 +84,6 @@ export function NavLink({ data }: { data: navlink }) {
       >
         {data.display}
       </Link>
-    </li>
+    </li>,
   );
 }

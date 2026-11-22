@@ -8,7 +8,7 @@ import { BlockWraper } from "@/components/blocks/generic_block";
 import "@/styles/components/blocks/shared.css";
 import "@/styles/components/blocks/link_block.css";
 import { keyed_list, to_key } from "@/utilities/key_mapping";
-import { ErrorData, validate_against_schema } from "@/schema/validation";
+import { render_if_valid_data } from "@/schema/validation";
 
 export interface link_data extends keyed_list {
   contents: {
@@ -24,15 +24,9 @@ export interface link_block extends keyed_list {
 }
 
 export default function LinkBLock({ data }: { data: link_block }) {
-  if (
-    !validate_against_schema(
-      "https://librarianofstars.ca/schema/components/blocks/links.json",
-      data,
-    )
-  ) {
-    return <ErrorData data={data} />;
-  }
-  return (
+  return render_if_valid_data(
+    "https://librarianofstars.ca/schema/components/blocks/links.json",
+    data,
     <BlockWraper
       type={"link"}
       wrapper="dl"
@@ -52,7 +46,7 @@ export default function LinkBLock({ data }: { data: link_block }) {
         />
       ))}
       {/* </dl> */}
-    </BlockWraper>
+    </BlockWraper>,
   );
 }
 

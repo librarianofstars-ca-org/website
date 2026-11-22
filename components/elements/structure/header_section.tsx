@@ -1,8 +1,10 @@
 import Seperator, { seperator } from "@/components/elements/seperator";
 import NavBar, { navbar } from "@/components/elements/structure/navbar";
 import Heading, { heading } from "@/components/elements/heading";
+
 import { keyed_list, to_key } from "@/utilities/key_mapping";
-import { ErrorData, validate_against_schema } from "@/schema/validation";
+
+import { render_if_valid_data } from "@/schema/validation";
 
 export interface header_section extends keyed_list {
   section_type: "navigation" | "seperator" | "page_title";
@@ -10,14 +12,14 @@ export interface header_section extends keyed_list {
 }
 
 export default function HeaderSection({ data }: { data: header_section }) {
-  if (
-    !validate_against_schema(
-      "https://librarianofstars.ca/schema/components/elements/structure/header_section.json",
-      data,
-    )
-  ) {
-    return <ErrorData data={data} />;
-  }
+  return render_if_valid_data(
+    "https://librarianofstars.ca/schema/components/elements/structure/header_section.json",
+    data,
+    <PickHeaderSection data={data} />,
+  );
+}
+
+function PickHeaderSection({ data }: { data: header_section }) {
   switch (data.section_type) {
     case "navigation":
       return (
