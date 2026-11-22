@@ -4,7 +4,8 @@ import "@/styles/components/elements/heading.css";
 
 import Link from "next/link";
 import React from "react";
-import { validate_against_schema, ErrorData } from "@/schema/validation";
+
+import { render_if_valid_data } from "@/schema/validation";
 
 const level_map: { [id: number]: string } = {
   1: "h1",
@@ -30,17 +31,13 @@ export interface heading {
 }
 
 export default function Heading({ data }: { data: heading }) {
-  if (
-    !validate_against_schema(
-      "https://librarianofstars.ca/schema/components/elements/heading.json",
-      data,
-    )
-  ) {
-    return <ErrorData data={data} />;
-  }
   data = { ...data, className: data.className + " heading" };
-  // Means: <level_map[level] className={ className } id?={ id }> {contents} </level_map[level]>
-  return React.createElement(getlevelstring(data.level), data, data.contents);
+  return render_if_valid_data(
+    "https://librarianofstars.ca/schema/components/elements/heading.json",
+    data,
+    React.createElement(getlevelstring(data.level), data, data.contents),
+    // Means: <level_map[level] className={ className } id?={ id }> {contents} </level_map[level]>
+  );
 }
 
 export function LinkedHeading({
