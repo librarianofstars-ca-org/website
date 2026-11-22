@@ -9,7 +9,8 @@
       "type": "array",
       "items": {
         "$ref": "https://librarianofstars.ca/schema/components/elements/structure/sidebar_section.json"
-      }
+      },
+      "minItems": 1
     }
   },
   "required": ["sections"]

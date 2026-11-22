@@ -2,7 +2,10 @@
   "sections": [
     {
       "id": { "index": 1, "name": "footer_section" },
-      "title": "Credits",
+      "section_title": {
+        "contents": "Credits",
+        "level": 4
+      },
       "contents": [
         {
           "id": { "index": 1, "name": "credits" },
@@ -18,7 +21,10 @@
     },
     {
       "id": { "index": 2, "name": "footer_section" },
-      "title": "Contact",
+      "section_title": {
+        "contents": "Contact",
+        "level": 4
+      },
       "contents": [
         {
           "id": { "index": 1, "name": "contacts" },

@@ -11,8 +11,7 @@ import { validate_against_schema, ErrorData } from "@/schema/validation";
 export type section_content = main_section | block;
 
 export interface main_section extends keyed_list {
-  id: { index: number; name: string };
-  heading: heading;
+  section_title: heading;
   contents: section_content[];
 }
 
@@ -30,13 +29,17 @@ export default function MainSection({ data }: { data: main_section }) {
       className="section"
       key={to_key(data.id)}
     >
-      {data.heading.level <= 3 && (
+      {data.section_title.level <= 3 && (
         <Seperator data={{ className: "section-start", vertical: false }} />
       )}
-      <Heading data={{ ...data.heading, className: "section-title" }} />
+      <Heading
+        data={{ ...data.section_title, className: "main-section-title" }}
+      />
       {data.contents.map((section_content_item) => {
         // is this a section (only sections have headings) (or is it a block)
-        if ((section_content_item as main_section).heading !== undefined) {
+        if (
+          (section_content_item as main_section).section_title !== undefined
+        ) {
           // Must be section
           return (
             <MainSection

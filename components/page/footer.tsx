@@ -27,13 +27,10 @@ export default function Footer({ data }: { data: footer }) {
     <>
       <div className="footer">
         {data.sections.map((section: footer_section, index: number) => (
-          <div
-            className="footer-section-wrapper"
+          <FooterSection
             key={to_key(section.id)}
-          >
-            {index != 0 && <hr className="page-seperator vertical footer" />}
-            <FooterSection data={section} />
-          </div>
+            data={section}
+          />
         ))}
       </div>
     </>

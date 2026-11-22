@@ -2,11 +2,13 @@ import "@/styles/components/shared.css";
 import "@/styles/components/page/shared.css";
 import "@/styles/components/page/main.css";
 
+import { to_key } from "@/utilities/key_mapping";
+
+import { validate_against_schema, ErrorData } from "@/schema/validation";
+
 import MainSection, {
   main_section,
 } from "@/components/elements/structure/main_section";
-import { to_key } from "@/utilities/key_mapping";
-import { validate_against_schema, ErrorData } from "@/schema/validation";
 
 export interface main {
   sections: main_section[];

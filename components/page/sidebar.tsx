@@ -3,18 +3,14 @@ import "@/styles/components/page/shared.css";
 import "@/styles/components/page/sidebar.css";
 
 import Seperator from "@/components/elements/seperator";
-import TableOfContents, {
-  table_of_contents,
-} from "@/components/elements/structure/table_of_contents";
+
+import { to_key } from "@/utilities/key_mapping";
 
 import { validate_against_schema, ErrorData } from "@/schema/validation";
 
-import { keyed_list, to_key } from "@/utilities/key_mapping";
-
-export interface sidebar_section extends keyed_list {
-  section_type: string;
-  contents: table_of_contents; // | other sections
-}
+import SidebarSection, {
+  sidebar_section,
+} from "@/components/elements/structure/sidebar_section";
 
 export interface sidebar {
   lines: boolean;
@@ -37,22 +33,12 @@ export default function Sidebar({ data }: { data: sidebar }) {
       )}
       <div className="sidebar contents">
         {data.sections.map((section) => {
-          switch (section.section_type) {
-            case "TOC":
-              return (
-                <TableOfContents
-                  key={to_key(section.id)}
-                  data={section.contents}
-                />
-              );
-            default:
-              return (
-                <span className="error">
-                  Could not find sidebar section type
-                  {section.section_type}
-                </span>
-              );
-          }
+          return (
+            <SidebarSection
+              key={to_key(section.id)}
+              data={section}
+            />
+          );
         })}
       </div>
       {!data.lines || (

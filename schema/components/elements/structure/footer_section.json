@@ -3,37 +3,43 @@
   "type": "object",
   "title": "footer_section",
   "description": "Data about a portion of the footer",
+  "$defs": {
+    "footer_section_item": {
+      "type": "object",
+      "description": "An item in a footer section",
+      "properties": {
+        "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
+        "title": { "type": "string", "description": "Item title" },
+        "contents": {
+          "type": "array",
+          "description": "Item contents",
+          "items": {
+            "type": "string",
+            "description": "An item's contents element"
+          },
+          "minItems": 1
+        }
+      },
+      "required": ["id", "title", "contents"],
+      "additionalProperties": false
+    }
+  },
   "properties": {
     "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
-    "title": {
-      "type": "string",
-      "description": "Section title displayed above list"
+    "section_title": {
+      "description": "Section title displayed above list",
+      "$ref": "https://librarianofstars.ca/schema/components/elements/heading.json",
+      "default": { "className": "footer-section-title" }
     },
     "contents": {
       "type": "array",
-      "description": "The list of items in footer section",
+      "description": "The list of footer section items",
       "items": {
-        "type": "object",
-        "description": "An item in a footer section",
-        "properties": {
-          "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
-          "title": { "type": "string", "description": "Item title" },
-          "contents": {
-            "type": "array",
-            "description": "Item contents",
-            "items": {
-              "type": "string",
-              "description": "An item's contents element"
-            },
-            "minItems": 1
-          }
-        },
-        "required": ["id", "title", "contents"],
-        "additionalProperties": false
+        "$ref": "#/$defs/footer_section_item"
       },
       "minItems": 1
     }
   },
-  "required": ["id", "title", "contents"],
+  "required": ["id", "section_title", "contents"],
   "additionalProperties": false
 }
