@@ -1,0 +1,23 @@
+div.header {
+    grid-area: header;
+}
+
+div.header > nav {
+    margin-block: var(--size-xs) var(--size-sm);
+}
+
+div.header > h1 {
+    width: 85%;
+    margin-block-end: var(--size-sm);
+    border-color: var(--color-section-head-accent);
+
+    color: var(--color-section-head-text);
+
+    background-color: var(--color-section-head-main);
+}
+
+div.header > hr {
+    color: var(--color-section-head-accent);
+    background-color: var(--color-section-head-highlight);
+    outline-color: var(--color-section-head-main);
+}

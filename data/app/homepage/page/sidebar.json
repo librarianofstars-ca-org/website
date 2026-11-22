@@ -1,0 +1,12 @@
+{
+  "lines": true,
+  "sections": [
+    {
+      "id": { "index": 1, "name": "outline" },
+      "section_type": "TOC",
+      "contents": {
+        "datalink": "./app/homepage/structure/outline.json"
+      }
+    }
+  ]
+}

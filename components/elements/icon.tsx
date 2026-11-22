@@ -2,33 +2,30 @@ import "@/styles/components/shared.css";
 import "@/styles/components/elements/shared.css";
 import "@/styles/components/elements/icon.css";
 
-export default function Icon({
-  size,
-  shape,
-  source,
-  className,
-}: {
-  size: number | [number, number]; // In pixels
+import Image, { image } from "@/components/elements/image";
+import { validate_against_schema, ErrorData } from "@/schema/validation";
+
+export interface icon {
+  display: image;
   shape: "circle" | "square" | "rect";
-  source: string;
   className?: string;
-}) {
-  // [Width, Height]
-  let icon_width: number;
-  let icon_height: number;
-  if (typeof size === "number") {
-    icon_width = size;
-    icon_height = size;
-  } else {
-    icon_width = size[0];
-    icon_height = size[1];
+}
+
+export default function Icon({ data }: { data: icon }) {
+  if (
+    !validate_against_schema(
+      "https://librarianofstars.ca/schema/components/elements/icon.json",
+      data,
+    )
+  ) {
+    return <ErrorData data={data} />;
   }
   return (
-    <img
-      width={icon_width}
-      height={icon_height}
-      src={source}
-      className={className + " icon " + shape}
+    <Image
+      data={{
+        ...data.display,
+        className: (data.className ? data.className : "") + " " + data.shape,
+      }}
     />
   );
 }

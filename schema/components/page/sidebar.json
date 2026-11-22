@@ -1,0 +1,17 @@
+{
+  "$id": "https://librarianofstars.ca/schema/components/page/sidebar.json",
+  "type": "object",
+  "title": "sidebar",
+  "description": "The sidebar component's data for a page",
+  "properties": {
+    "lines": { "type": "boolean", "default": true },
+    "sections": {
+      "type": "array",
+      "items": {
+        "$ref": "https://librarianofstars.ca/schema/components/elements/structure/sidebar_section.json"
+      },
+      "minItems": 1
+    }
+  },
+  "required": ["sections"]
+}

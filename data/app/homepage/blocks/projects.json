@@ -1,0 +1,18 @@
+{
+  "id": { "name": "projects-block", "index": 1 },
+  "block_type": "links",
+  "contents": {
+    "id": { "index": 1, "name": "art-show" },
+    "contents": [
+      {
+        "id": { "name": "projects", "index": 1 },
+        "contents": {
+          "name": "example",
+          "link_points_to": "example.projects.librarianofstars.ca",
+          "display": "Ex Project",
+          "link_description": "A example of a project to fit into the flow, filled in later with real stuff i've worked on"
+        }
+      }
+    ]
+  }
+}

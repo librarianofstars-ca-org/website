@@ -1,0 +1,26 @@
+
+div.spacer.tiny {
+    flex-grow: 1;
+}
+
+div.spacer.small {
+    flex-grow: 2;
+}
+
+div.spacer.normal {
+    flex-grow: 4;
+}
+
+div.spacer.large {
+    flex-grow: 8;
+}
+
+div.spacer.huge {
+    flex-grow: 16;
+}
+
+div.spacer {
+    flex-shrink: 1;
+    width: 0;
+    height: 0;
+}

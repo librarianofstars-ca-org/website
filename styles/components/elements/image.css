@@ -1,0 +1,5 @@
+img {
+    border-style: solid;
+    border-width: var(--size-tn);
+    border-radius: var(--size-tn);
+}

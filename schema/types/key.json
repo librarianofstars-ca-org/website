@@ -1,0 +1,18 @@
+{
+  "$id": "https://librarianofstars.ca/schema/types/key.json",
+  "title": "Array Key",
+  "description": "A object storing key data for a array element",
+  "type": "object",
+  "properties": {
+    "index": {
+      "type": "number",
+      "description": "What element in the list are you (expecting to be)"
+    },
+    "name": {
+      "type": "string",
+      "description": "What id is the parent element type, or unique id for this element"
+    }
+  },
+  "required": ["index", "name"],
+  "additionalProperties": false
+}

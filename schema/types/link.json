@@ -1,0 +1,17 @@
+{
+  "$id": "https://librarianofstars.ca/schema/types/link.json",
+  "type": "object",
+  "title": "link",
+  "description": "Link data",
+  "properties": {
+    "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
+    "link_points": {
+      "type": "string",
+      "description": "href for link to go to"
+    },
+    "display": {
+      "type": "string",
+      "description": "What is displayed as the link text"
+    }
+  }
+}

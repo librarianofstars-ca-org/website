@@ -1,33 +1,60 @@
 import "@/styles/components/blocks/shared.css";
 import "@/styles/components/blocks/gallery_block.css";
 
-import { JSX } from "react/jsx-runtime";
+import { BlockWraper } from "@/components/blocks/generic_block";
+import { ErrorData, validate_against_schema } from "@/schema/validation";
+import { keyed_list, to_key } from "@/utilities/key_mapping";
+import Image, { image } from "../elements/image";
 
-import Block from "@/components/blocks/generic_block";
+export interface gallery_item extends keyed_list {
+  contents: string | image;
+  // JSX.Element;
+  label: string;
+}
+export interface gallery_block extends keyed_list {
+  contents: gallery_item[];
+}
 
-export type gallery_item = { show: JSX.Element; label: string };
-export type gallery_items = gallery_item[];
-
-export default function GalleryBlock({ items }: { items: gallery_items }) {
+export default function GalleryBlock({ data }: { data: gallery_block }) {
+  if (
+    !validate_against_schema(
+      "https://librarianofstars.ca/schema/components/blocks/gallery.json",
+      data,
+    )
+  ) {
+    return <ErrorData data={data} />;
+  }
   return (
-    <Block
+    <BlockWraper
       type="gallery"
       wrapper="ul"
     >
-      {items.map((item) => (
+      {data.contents.map((item) => (
         <GalleryItem
-          key={item.label}
+          key={to_key(item.id)}
           galleryitem={item}
         />
       ))}
-    </Block>
+    </BlockWraper>
   );
 }
 
 export function GalleryItem({ galleryitem }: { galleryitem: gallery_item }) {
+  let display;
+  switch (typeof galleryitem.contents) {
+    case "string":
+      display = galleryitem.contents;
+      break;
+    case "object":
+      display = <Image data={{ ...galleryitem.contents }} />;
+      break;
+  }
   return (
-    <div className="gallery-item">
-      <li className="gallery-display">{galleryitem.show}</li>
+    <div
+      className="gallery-item"
+      key={to_key(galleryitem.id)}
+    >
+      <li className="gallery-display">{display}</li>
       <span className="gallery-label">{galleryitem.label}</span>
     </div>
   );

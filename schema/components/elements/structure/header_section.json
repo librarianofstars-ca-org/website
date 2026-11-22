@@ -1,0 +1,39 @@
+{
+  "$id": "https://librarianofstars.ca/schema/components/elements/structure/header_section.json",
+  "title": "section",
+  "description": "Any header section data",
+  "type": "object",
+  "$defs": {
+    "header_section_item": {
+      "anyOf": [
+        {
+          "description": "Navigation bar item in header",
+          "$ref": "https://librarianofstars.ca/schema/components/elements/structure/navbar.json"
+        },
+        {
+          "description": "Page title item in header",
+          "$ref": "https://librarianofstars.ca/schema/components/elements/heading.json"
+        },
+        {
+          "description": "Seperator item in header",
+          "$ref": "https://librarianofstars.ca/schema/components/elements/seperator.json"
+        }
+      ]
+    }
+  },
+  "properties": {
+    "id": {
+      "$ref": "https://librarianofstars.ca/schema/types/key.json"
+    },
+    "section_type": {
+      "type": "string",
+      "enum": ["navigation", "page_title", "seperator"],
+      "description": "Discriminator for header sections"
+    },
+    "contents": {
+      "$ref": "#/$defs/header_section_item"
+    }
+  },
+  "required": ["id", "section_type", "contents"],
+  "additionalProperties": false
+}

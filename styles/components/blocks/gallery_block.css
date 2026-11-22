@@ -39,8 +39,7 @@ div.gallery-item *.gallery-display * {
 }
 
 div.gallery-item *.gallery-display img { 
-    border: var(--size-tn) solid var(--color-block-show-highlight);
-    border-radius: var(--size-tn);
+    border-color: var(--color-block-show-highlight);
 }
 
 .gallery-item span.gallery-label {

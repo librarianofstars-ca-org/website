@@ -1,38 +1,44 @@
 import "@/styles/components/blocks/shared.css";
 import "@/styles/components/blocks/paragraph_block.css";
 
-// import Seperator from "@/components/elements/seperator";
+import { BlockWraper } from "@/components/blocks/generic_block";
+import { ErrorData, validate_against_schema } from "@/schema/validation";
+import { keyed_list, to_key } from "@/utilities/key_mapping";
+export interface paragraph_data extends keyed_list {
+  contents: string | boolean;
+}
 
-import Block from "@/components/blocks/generic_block";
+export interface paragraph_block extends keyed_list {
+  contents: paragraph_data[];
+}
 
-export type content_element = { index: number; show?: string; isBr?: boolean };
-export type content_elements = content_element[];
-
-export default function ParagraphBlock({
-  contents,
-}: {
-  contents: content_elements;
-}) {
+export default function ParagraphBlock({ data }: { data: paragraph_block }) {
+  if (
+    !validate_against_schema(
+      "https://librarianofstars.ca/schema/components/blocks/paragraph.json",
+      data,
+    )
+  ) {
+    return <ErrorData data={data} />;
+  }
   return (
-    <Block type={"paragraph"}>
-      {/* <Seperator
-        isVertical={false}
-        className=" start-paragraph-block"
-      /> */}
-      {contents.map((element) =>
-        element.isBr ? (
-          <p
-            key={element.index}
-            className="break-line paragraph-block empty"
-          />
-        ) : (
-          <p key={element.index}> {element.show} </p>
-        ),
-      )}
-      {/* <Seperator
-        isVertical={false}
-        className=" end-paragraph-block"
-      /> */}
-    </Block>
+    <BlockWraper
+      type={"paragraph"}
+      key={to_key(data.id)}
+    >
+      {data.contents.map((paragraph) => (
+        <ParagraphElement
+          key={to_key(paragraph.id)}
+          data={paragraph}
+        />
+      ))}
+    </BlockWraper>
   );
+}
+export function ParagraphElement({ data }: { data: paragraph_data }) {
+  if (data.contents) {
+    return <p>{data.contents}</p>;
+  } else {
+    return <p className="break-line paragraph-block empty" />;
+  }
 }

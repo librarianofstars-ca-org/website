@@ -1,0 +1,17 @@
+{
+  "$id": "https://librarianofstars.ca/schema/components/page/header.json",
+  "type": "object",
+  "title": "header",
+  "description": "The header component's data for a page",
+  "properties": {
+    "sections": {
+      "type": "array",
+      "items": {
+        "$ref": "https://librarianofstars.ca/schema/components/elements/structure/header_section.json"
+      },
+      "minItems": 1
+    }
+  },
+  "required": ["sections"],
+  "additionalProperties": false
+}

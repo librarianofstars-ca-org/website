@@ -1,0 +1,40 @@
+{
+  "$id": "https://librarianofstars.ca/schema/components/blocks/gallery.json",
+  "type": "object",
+  "title": "gallery",
+  "description": "A block of art pieces",
+  "properties": {
+    "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
+    "contents": {
+      "type": "array",
+      "description": "A array of embeded objects",
+      "items": {
+        "type": "object",
+        "description": "A keyed embed object",
+        "properties": {
+          "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
+          "contents": {
+            "anyOf": [
+              {
+                "$ref": "https://librarianofstars.ca/schema/components/elements/image.json"
+              },
+              {
+                "type": "string",
+                "description": "Placeholder text for an item"
+              }
+            ]
+          },
+          "label": {
+            "type": "string",
+            "description": "Label of the gallery item/embed object"
+          }
+        },
+        "required": ["id", "contents", "label"],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": ["id", "contents"],
+  "additionalProperties": false
+}

@@ -1,0 +1,32 @@
+{
+  "$id": "https://librarianofstars.ca/schema/components/elements/structure/sidebar_section.json",
+  "title": "section",
+  "description": "Any sidebar section data",
+  "type": "object",
+  "$defs": {
+    "sidebar_section_item": {
+      "anyOf": [
+        {
+          "description": "Table of contents item in sidebar",
+          "$ref": "https://librarianofstars.ca/schema/components/elements/structure/table_of_contents.json"
+        },
+        { "$comment": "Add more later?" }
+      ]
+    }
+  },
+  "properties": {
+    "id": {
+      "$ref": "https://librarianofstars.ca/schema/types/key.json"
+    },
+    "section_type": {
+      "type": "string",
+      "enum": ["TOC"],
+      "description": "Discriminator for sidebar sections (unused)"
+    },
+    "contents": {
+      "$ref": "#/$defs/sidebar_section_item"
+    }
+  },
+  "required": ["id", "section_type", "contents"],
+  "additionalProperties": false
+}

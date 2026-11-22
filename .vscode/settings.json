@@ -8,7 +8,11 @@
     "**/app/**/template.tsx": "${dirname(1)}/${dirname} - template.tsx",
     "**/app/**/default.tsx": "${dirname(1)}/${dirname} - default.tsx",
     "**/app/**/route.ts": "${dirname(1)}/${dirname} - route.ts",
-    "**/styles/**/shared.css": "${dirname(1)}/${dirname} - shared.css"
+    "**/styles/**/shared.css": "${dirname(1)}/${dirname} - shared.css",
+    "**/data/**/*.json": "${dirname(1)}/${dirname} - ${filename}.json (data)",
+    "**/schema/**/*.json": "${dirname(1)}/${dirname} - ${filename}.json (schema)",
+    "site/*/.gitplaceholder": "site/${dirname}/.gitplaceholder",
+    "site/**/.gitplaceholder": "${dirname(1)}/**/${dirname}/.gitplaceholder"
   },
   "editor.detectIndentation": false,
   "editor.tabSize": 4,
@@ -36,34 +40,32 @@
   "html.format.indentInnerHtml": true,
   "html.format.wrapAttributes": "force-expand-multiline",
   "githubPullRequests.queries": [
-	{
-		"label": "My Review Needed",
-		"query": "is:open review-requested:${user}"
-	},
-	{
-		"label": "Assigned To Me",
-		"query": "is:open assignee:${user}"
-	},
-	{
-		"label": "Created By Me",
-		"query": "author:${user}"
-	},
-	{
-		"label": "Mentions Me",
-		"query": "is:open mentions:${user}"
-	},
-	{
-		"label": "Other Open In My Repo",
-		"query": "is:open -assignee:${user} repo:${owner}/${repository}"
-	}
+    {
+      "label": "My Review Needed",
+      "query": "is:open review-requested:${user}"
+    },
+    {
+      "label": "Assigned To Me",
+      "query": "is:open assignee:${user}"
+    },
+    {
+      "label": "Created By Me",
+      "query": "author:${user}"
+    },
+    {
+      "label": "Mentions Me",
+      "query": "is:open mentions:${user}"
+    },
+    {
+      "label": "Other Open In My Repo",
+      "query": "is:open -assignee:${user} repo:${owner}/${repository}"
+    }
   ],
   "githubIssues.queries": [
     {
       "label": "My Issues",
       "query": "is:open assignee:${user} repo:${owner}/${repository}",
-      "groupBy": [
-        "milestone"
-      ]
+      "groupBy": ["milestone"]
     },
     {
       "label": "Open Issues",
@@ -82,16 +84,21 @@
   "githubPullRequests.defaultDeletionMethod.selectRemote": true,
   "githubPullRequests.postDone": "checkoutPullRequestBaseBranchAndPull",
   "githubPullRequests.ignoreSubmodules": true,
-  "githubPullRequests.labelCreated": ["status:ready",],
+  "githubPullRequests.labelCreated": ["status:ready"],
   "iridium.npm.packageManager": "npm",
-  "iridium.npm.runAudit":true,
-  "iridium.npm.maxNumberOfResults":6,
-  "iridium.npm.excludeVersions": ["beta", "experimental",],
+  "iridium.npm.runAudit": true,
+  "iridium.npm.maxNumberOfResults": 6,
+  "iridium.npm.excludeVersions": ["beta", "experimental"],
   "npm-intellisense.importQuotes": "\"",
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "stylelint.validate": ["css", "postcss", "javascriptreact", "typescriptreact"],
+  "stylelint.validate": [
+    "css",
+    "postcss",
+    "javascriptreact",
+    "typescriptreact"
+  ],
   "editor.codeActionsOnSave": {
     "source.fixAll.stylelint": "explicit"
   },
@@ -99,5 +106,105 @@
     "editor.codeActionsOnSave": {
       "source.fixAll.stylelint": "never"
     }
-  }
+  },
+  "json.validate.enable": true,
+  "json.schemaDownload.trustedDomains": {
+    "https://librarianofstars.ca": true,
+    "https://github.com": true,
+    "https://raw.githubusercontent.com": true
+  },
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "${workspaceFolder}/schema/**/*.json",
+        "${workspaceFolder}/schema/**/*.schema.json"
+      ],
+      "url": "https://json-schema.org/draft-07/schema"
+    },
+    {
+      "fileMatch": ["${workspaceFolder}/data/tests/types/key.json"],
+      "url": "./schema/types/key.json"
+    },
+    {
+      "fileMatch": [
+        "${workspaceFolder}/data/tests/components/blocks/paragraph.json"
+      ],
+      "url": "./schema/components/blocks/paragraph.json"
+    },
+    {
+      "fileMatch": ["${workspaceFolder}/data/app/homepage/blocks/*.json"],
+      "url": "./schema/components/blocks/generic.json"
+    },
+    {
+      "fileMatch": ["${workspaceFolder}/data/app/homepage/page/footer.json"],
+      "url": "./schema/components/page/footer.json"
+    },
+    {
+      "fileMatch": [
+        "${workspaceFolder}/data/app/defaults/structure/navbar.json"
+      ],
+      "url": "./schema/components/elements/structure/navbar.json"
+    },
+    {
+      "fileMatch": [
+        "${workspaceFolder}/data/app/homepage/structure/outline.json"
+      ],
+      "url": "./schema/components/elements/structure/table_of_contents.json"
+    },
+    {
+      "fileMatch": [
+        "${workspaceFolder}/data/app/homepage/page/sidebar.json",
+        "${workspaceFolder}/data/app/homepage/compiled/sidebar.json"
+      ],
+      "url": "./schema/components/page/sidebar.json"
+    },
+    {
+      "fileMatch": [
+        "${workspaceFolder}/data/app/homepage/page/header.json",
+        "${workspaceFolder}/data/app/homepage/compiled/header.json"
+      ],
+      "url": "./schema/components/page/header.json"
+    },
+    {
+      "fileMatch": [
+        "${workspaceFolder}/data/app/homepage/page/main.json",
+        "${workspaceFolder}/data/app/homepage/compiled/main.json"
+      ],
+      "url": "./schema/components/page/main.json"
+    },
+    {
+      "fileMatch": ["${workspaceFolder}/data/app/homepage/body.json"],
+      "url": "./schema/components/meta/body.json"
+    },
+    {
+      "fileMatch": ["${workspaceFolder}/data/app/homepage/head.json"],
+      "url": "./schema/components/meta/head.json"
+    },
+    {
+      "fileMatch": [
+        "${workspaceFolder}/data/app/homepage/page.json",
+        "${workspaceFolder}/data/app/homepage/compiled/page.json"
+      ],
+      "url": "./schema/components/meta/page.json"
+    },
+    {
+      "fileMatch": ["${workspaceFolder}/data/app/homepage/sections/*.json"],
+      "url": "./schema/components/elements/structure/section.json"
+    },
+    {
+      "fileMatch": ["${workspaceFolder}/data/compile_maps.json"],
+      "schema": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "in": { "type": "string" },
+            "out": { "type": "string" }
+          },
+          "required": ["in", "out"]
+        },
+        "minItems": 1
+      }
+    }
+  ]
 }

@@ -1,0 +1,73 @@
+nav {
+    display: flex;
+    flex-flow: row nowrap;
+    place-items: stretch;
+
+    /* width: 90vw; */
+    margin-inline: var(--size-lg);
+    padding-inline: var(--size-lg);
+    border: var(--size-tn) solid var(--color-element-nav-accent);
+    border-radius: var(--size-xs);
+
+    background-color: var(--color-element-nav-back);
+}
+
+nav .nav-bar-items {
+    display: contents;
+}
+
+nav .nav-bar-items  hr.nav-bar {
+    flex: 0 0 var(--size-tn);
+
+    margin-inline: var(--size-lg);
+
+    color: var(--color-element-nav-accent);
+
+    background-color: var(--color-element-nav-accent);
+    outline: 0;
+}
+
+nav .nav-bar-items img.icon {
+    flex: 0 0 auto;
+    border-color: var(--color-element-nav-highlight);
+}
+
+
+nav .nav-bar-items li.nav-bar {
+    flex: 0 0 auto;
+    margin-block: var(--size-sm);
+    margin-inline-start: var(--size-md);
+    text-align: center;
+}
+
+nav .nav-bar-items li.nav-bar:first-child {
+    margin-inline-start: 0;
+}
+
+nav .nav-bar-items li.nav-bar::marker {
+    content: "";
+    display: none;
+}
+
+nav .nav-bar-items li a.navigation {
+    padding: var(--size-xs);
+    border: solid var(--size-tn) var(--color-element-nav-highlight);
+    border-radius: var(--size-xs);
+
+    color: var(--color-element-nav-text);
+    text-decoration: underline solid var(--color-meta-links-unvisited) var(--size-tn);
+
+    background-color: var(--color-element-nav-main);
+}
+
+nav .nav-bar-items li a.navigation:hover {
+    border-color: var(--color-element-nav-invert-text);
+    color: var(--color-element-nav-invert-highlight);
+    text-decoration-color: var(--color-meta-links-invert-unvisited); 
+    background-color:  var(--color-element-nav-invert-main);
+}
+
+nav .nav-bar-items div.nav.spacer {
+    flex-basis: var(--size-xs);
+    align-self: center;
+}

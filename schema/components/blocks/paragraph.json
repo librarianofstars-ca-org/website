@@ -1,0 +1,34 @@
+{
+  "$id": "https://librarianofstars.ca/schema/components/blocks/paragraph.json",
+  "type": "object",
+  "title": "paragraph",
+  "description": "`ParagraphBlock` component data",
+  "properties": {
+    "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
+    "contents": {
+      "type": "array",
+      "description": "A array of paragraph objects",
+      "items": {
+        "type": "object",
+        "description": "A paragraph object",
+        "properties": {
+          "id": { "$ref": "https://librarianofstars.ca/schema/types/key.json" },
+          "contents": {
+            "anyOf": [
+              { "type": "string", "description": "Text in paragraph" },
+              {
+                "type": "boolean",
+                "description": "Is this a breakline? false if so."
+              }
+            ]
+          }
+        },
+        "required": ["id", "contents"],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": ["id", "contents"],
+  "additionalProperties": false
+}

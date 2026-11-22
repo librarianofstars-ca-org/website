@@ -1,0 +1,29 @@
+.section {
+    margin-block: var(--size-sm);
+    margin-inline: var(--size-xs);
+    border-color: var(--color-element-section-main);
+    border-style: solid;
+    border-block-width: 0;
+    border-inline-width: var(--size-tn);
+    border-radius: var(--size-tn);
+}
+
+.main-section-title {
+    margin-block: 0 var(--size-sm);
+    border-color: var(--color-element-section-main)
+}
+
+h2.main-section-title,
+h3.main-section-title {
+    background-color: var(--color-element-section-main);   
+}
+
+h2.main-section-title {
+    width: 80%;
+    border-color: var(--color-element-section-accent);
+}
+
+h3.main-section-title {
+    width: 75%;
+    border-color: var(--color-element-section-highlight);
+}
