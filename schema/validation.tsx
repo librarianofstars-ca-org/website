@@ -32,6 +32,7 @@ import schema_head from "@/schema/components/meta/head.json";
 import schema_page from "@/schema/components/meta/page.json";
 
 import schema_datalink from "@/schema/datalink.json";
+import { JSX } from "react/jsx-runtime";
 
 export const ajv_instance = new AJV({
   strict: true,
@@ -66,21 +67,19 @@ export const ajv_instance = new AJV({
   ],
 });
 
-export function validate_against_schema(id: string, data: any): boolean {
-  return ajv_instance.validate<typeof data>(id, data);
-}
-
-export function validation_function_for_schema(
-  id: string,
-): (data: any) => boolean {
-  const validate = ajv_instance.getSchema(id);
-  if (!validate) {
+export function render_if_valid_data<component_type>(
+  schema_id: string,
+  data: component_type,
+  valid_render: JSX.Element,
+) {
+  if (ajv_instance.validate<component_type>(schema_id, data)) {
+    return valid_render;
+  } else {
     console.log(ajv_instance.errors);
-    return () => false;
+    return (
+      <span className="error">
+        Invalid data: {JSON.stringify(data, null, 2)}
+      </span>
+    );
   }
-  return validate;
-}
-
-export function ErrorData(data) {
-  return <span className="error">Invalid data: {JSON.stringify(data)}</span>;
 }
