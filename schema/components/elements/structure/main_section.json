@@ -1,5 +1,5 @@
 {
-  "$id": "https://librarianofstars.ca/schema/components/elements/structure/section.json",
+  "$id": "https://librarianofstars.ca/schema/components/elements/structure/main_section.json",
   "title": "section",
   "description": "The `Section` component's data",
   "type": "object",

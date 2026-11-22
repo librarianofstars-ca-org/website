@@ -6,9 +6,9 @@
   "properties": {
     "sections": {
       "type": "array",
-      "description": "Top-Level Sections (h2)",
+      "description": "Top-Level `MainSection`s (h2)",
       "items": {
-        "$ref": "https://librarianofstars.ca/schema/components/elements/structure/section.json"
+        "$ref": "https://librarianofstars.ca/schema/components/elements/structure/main_section.json"
       },
       "minItems": 1
     }
