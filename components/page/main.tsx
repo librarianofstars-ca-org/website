@@ -9,7 +9,7 @@ import { to_key } from "@/utilities/key_mapping";
 import { validate_against_schema, ErrorData } from "@/schema/validation";
 
 export interface main {
-  main_section_data: section[];
+  sections: section[];
 }
 
 export default function Main({ data }: { data: main }) {
@@ -23,7 +23,7 @@ export default function Main({ data }: { data: main }) {
   }
   return (
     <div className="main-body">
-      {data.main_section_data.map((section) => {
+      {data.sections.map((section) => {
         return (
           <MainSection
             key={to_key(section.id)}

@@ -1,5 +1,5 @@
 {
-  "main_section_data": [
+  "sections": [
     {
       "id": { "index": 1, "name": "welcome" },
       "heading": { "level": 2, "contents": "Welcome", "id": "greatings" },

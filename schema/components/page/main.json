@@ -4,7 +4,7 @@
   "title": "main",
   "description": "The main (body) component's data for a page",
   "properties": {
-    "main_section_data": {
+    "sections": {
       "type": "array",
       "description": "Top-Level Sections (h2)",
       "items": {
@@ -13,6 +13,6 @@
       "minItems": 1
     }
   },
-  "required": ["main_section_data"],
+  "required": ["sections"],
   "additionalProperties": false
 }

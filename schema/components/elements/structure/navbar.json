@@ -23,7 +23,7 @@
     }
   },
   "properties": {
-    "items": {
+    "contents": {
       "type": "array",
       "description": "What makes up this navbar?",
       "items": {
@@ -59,6 +59,6 @@
       }
     }
   },
-  "required": ["items"],
+  "required": ["contents"],
   "additionalProperties": false
 }

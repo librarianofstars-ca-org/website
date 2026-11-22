@@ -18,7 +18,7 @@ export interface sidebar_section extends keyed_list {
 
 export interface sidebar {
   lines: boolean;
-  contents: sidebar_section[];
+  sections: sidebar_section[];
 }
 
 export default function Sidebar({ data }: { data: sidebar }) {
@@ -36,20 +36,20 @@ export default function Sidebar({ data }: { data: sidebar }) {
         <Seperator data={{ vertical: true, className: "sidebar left" }} />
       )}
       <div className="sidebar contents">
-        {data.contents.map((sidebar_section) => {
-          switch (sidebar_section.section_type) {
+        {data.sections.map((section) => {
+          switch (section.section_type) {
             case "TOC":
               return (
                 <TableOfContents
-                  key={to_key(sidebar_section.id)}
-                  data={sidebar_section.contents}
+                  key={to_key(section.id)}
+                  data={section.contents}
                 />
               );
             default:
               return (
                 <span className="error">
                   Could not find sidebar section type
-                  {sidebar_section.section_type}
+                  {section.section_type}
                 </span>
               );
           }

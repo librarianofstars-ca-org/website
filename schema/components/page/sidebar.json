@@ -5,7 +5,7 @@
   "description": "The sidebar component's data for a page",
   "properties": {
     "lines": { "type": "boolean", "default": true },
-    "contents": {
+    "sections": {
       "type": "array",
       "items": {
         "anyOf": [
@@ -33,5 +33,5 @@
       }
     }
   },
-  "required": ["contents"]
+  "required": ["sections"]
 }

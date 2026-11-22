@@ -23,7 +23,7 @@ export interface navbar_item extends keyed_list {
 }
 
 export interface navbar {
-  items: navbar_item[];
+  contents: navbar_item[];
 }
 
 export default function NavBar({ data }: { data: navbar }) {
@@ -39,7 +39,7 @@ export default function NavBar({ data }: { data: navbar }) {
   return (
     <nav>
       <ul className="nav-bar-items">
-        {data.items.map((item) => {
+        {data.contents.map((item) => {
           switch (item.item_type) {
             case "icon":
               return (
