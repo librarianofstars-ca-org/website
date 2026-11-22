@@ -1,6 +1,26 @@
 {
-  "page_title": "Librarian Of Stars",
-  "navigation": {
-    "datalink": "./app/defaults/structure/navbar.json"
-  }
+  "sections": [
+    {
+      "id": { "name": "header", "index": 1 },
+      "section_type": "navigation",
+      "contents": {
+        "datalink": "./app/defaults/structure/navbar.json"
+      }
+    },
+    {
+      "id": { "name": "header", "index": 2 },
+      "section_type": "seperator",
+      "contents": { "vertical": false, "className": "header" }
+    },
+    {
+      "id": { "name": "header", "index": 3 },
+      "section_type": "page_title",
+      "contents": {
+        "id": "#home",
+        "className": "page-title",
+        "contents": "Librarian Of Stars's page",
+        "level": 1
+      }
+    }
+  ]
 }

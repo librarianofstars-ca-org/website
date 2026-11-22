@@ -13,8 +13,11 @@ import schema_heading from "@/schema/components/elements/heading.json";
 
 import schema_navbar from "@/schema/components/elements/structure/navbar.json";
 import schema_toc from "@/schema/components/elements/structure/table_of_contents.json";
-import schema_foot_sec from "@/schema/components/elements/structure/footer_section.json";
-import schema_section from "@/schema/components/elements/structure/main_section.json";
+
+import schema_footer_section from "@/schema/components/elements/structure/footer_section.json";
+import schema_main_section from "@/schema/components/elements/structure/main_section.json";
+import schema_sidebar_section from "@/schema/components/elements/structure/sidebar_section.json";
+import schema_header_section from "@/schema/components/elements/structure/header_section.json";
 
 import schema_key from "@/schema/types/key.json";
 import schema_link from "@/schema/types/link.json";
@@ -44,8 +47,10 @@ export const ajv_instance = new AJV({
     schema_heading,
     schema_navbar,
     schema_toc,
-    schema_foot_sec,
-    schema_section,
+    schema_header_section,
+    schema_sidebar_section,
+    schema_main_section,
+    schema_footer_section,
     schema_paragraph,
     schema_gallery,
     schema_links,
